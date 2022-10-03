@@ -1,0 +1,10 @@
+@charset "utf-8";
+//  Components -> Ribbon
+// --------------------------------------------------
+
+// Alternate styles
+@each $color, $value in $element-colors {
+  .ribbon-#{$color} {
+    @include ribbon($background: $value);
+  }
+}

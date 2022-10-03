@@ -1,0 +1,68 @@
+// state
+@mixin hover {
+  &:hover,
+  &.hover {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active,
+  &.active {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:focus,
+  &.focus,
+  &:focus-within,
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    @content;
+  }
+}
+
+@mixin readonly {
+  &[readonly],
+  &.readonly {
+    @content;
+  }
+}
+
+@mixin disabled-readonly {
+  &[disabled],
+  &[readonly] {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}

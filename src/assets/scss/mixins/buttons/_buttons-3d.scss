@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+//   Mixins > Buttons 3d
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// Button 3d Variant
+@mixin button-3d-variant($background, $hover-background: darken($background, 7.5%)) {
+  @include gradient-bg($background);
+
+  border: 0;
+  box-shadow: 0 4px 0 0 darken($background, 20%), 0 0 20px 0 rgba($background, 0.2);
+  color: color-yiq($background);
+  transition: $transition-3d-Button;
+
+  @include btn-hover {
+    @include gradient-bg($hover-background);
+
+    box-shadow: 0 4px 0 0 darken($background, 25%), 0 0 20px 0 rgba($background, 0.2);
+    color: color-yiq($hover-background);
+    transform: translateY(0);
+  }
+
+
+  @include btn-focus {
+    box-shadow: 0 4px 0 0 darken($background, 25%), 0 0 20px 0 rgba($background, 0.2);
+  }
+
+
+  @include btn-active {
+    box-shadow: 0 0 0 0 darken($background, 25%), 0 0 20px 0 rgba($background, 0.2);
+    transform: translateY(4px);
+
+    @include btn-focus {
+      box-shadow: 0 0 0 0 darken($background, 25%), 0 0 20px 0 rgba($background, 0.2);
+    }
+  }
+}

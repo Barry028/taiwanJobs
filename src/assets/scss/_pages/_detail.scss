@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+//  Pages > detail
+// --------------------------------------------------
+
+.t-detail-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  .t-detail-header-cnt {
+    box-shadow: $shadow-panel;
+    font-size: 1rem;
+
+    &.is-fix {
+      border-radius: 0 0 $border-radius $border-radius;
+      border-top: 0.25rem solid $primary-200;
+
+      .t-detail-bg {
+        transition: $transition;
+
+        @include visually-hidden-card;
+      }
+
+      .t-detail-main {
+        transition: $transition;
+        padding: .75rem 1.25rem;
+
+        .t-detail-lt {
+          .t-detail-corp-group {
+            transition: $transition;
+
+            @include visually-hidden-card;
+
+            .t-detail-corp-img {}
+          }
+        }
+
+        .t-detail-rt {
+          .t-applys-progress {
+            .t-progress-wrap {}
+          }
+
+          .t-tag {
+            position: absolute;
+            left: 1rem;
+            top: 0.25rem;
+          }
+
+          .t-btn-fav {}
+
+          .t-btn-apply {}
+        }
+      }
+    }
+
+    .t-detail-bg {
+      @include img-bg-ratio($parent: "t-detail-bg", $ratio: 16%, $fill: cover);
+
+      position: relative;
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    .t-detail-main {
+      position: relative;
+      padding: 1.25rem 1.75rem;
+
+      @include flex($justify: space-between, $flex-wrap: wrap, $align-items: self-end);
+
+      .t-detail-lt {
+        position: relative;
+        flex: 1 1 auto;
+
+        .t-detail-corp-group {
+          display: flex;
+          align-items: self-end;
+          transition: $transition;
+
+          .t-detail-corp-img {
+            @extend .t-detail-corp-img;
+
+            width: 8rem;
+            height: 8rem;
+            border-width: 0.25rem;
+            box-shadow: 0 2px 12px rgba($dark, 0.24);
+          }
+
+          .t-detail-corp {
+            margin-left: 1rem;
+          }
+        }
+
+        .t-details-txts {
+          margin-bottom: .5rem;
+        }
+      }
+
+      .t-detail-rt {
+        flex: 1 1 auto;
+        text-align: right;
+
+        .t-applys-progress {
+          .t-progress-wrap {
+            max-width: 15rem;
+          }
+        }
+
+        .t-tag {
+          margin-bottom: .75rem;
+        }
+
+        .t-btn-fav {
+          margin-right: 0.5rem;
+        }
+
+        .t-btn-apply {
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+}
+
+.t-detail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.t-detail-slider {
+  position: relative;
+  padding: 4rem 0;
+}
+
+#detailHeader {
+  @include loop-class-six(".is-fix") {
+    top: 0;
+    width: 100%;
+  }
+}
+
+#sidePanel {
+  @include loop-class-six(".is-fix") {
+    top: 0;
+    margin-top: 0.75rem;
+    width: 100%;
+
+    hr ~ dl {
+      transition: $transition;
+
+      @include visually-hidden-card;
+    }
+  }
+
+
+  @include loop-class-six(".is-absolute") {
+    bottom: 0;
+  }
+}
+
+#tuJobFilter {
+  @include loop-class-six(".is-fix") {
+    top: 0;
+  }
+}

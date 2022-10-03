@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+//   Mixins > Buttons Inverse
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Button Inverse Variant
+@mixin button-inverse-variant($color: color-yiq($color), $color-hover: $white) {
+  background-color: rgba($color, 0.12);
+  background-image: none;
+  border-color: rgba($color, 0);
+  transition: $transition-base;
+
+  &:not(.btn-inverse-light) {
+    color: $color;
+  }
+
+  @include btn-hover {
+    background-color: $color;
+    border-color: $color;
+    color: $color-hover;
+  }
+
+
+  @include btn-focus {
+    box-shadow: 0 0 0 4px rgba($color, 0.5);
+  }
+
+
+  @include btn-active {
+    .show > &.dropdown-toggle {
+      background-color: $color;
+      border-color: $color;
+      color: $color-hover;
+    }
+  }
+}

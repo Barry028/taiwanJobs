@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+//  Symbols Lists
+// --------------------------------------------------
+.t-side {
+  .t-side-item {
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    a {
+      display: block;
+
+      @include hover {
+        opacity: 0.80;
+      }
+    }
+  }
+}

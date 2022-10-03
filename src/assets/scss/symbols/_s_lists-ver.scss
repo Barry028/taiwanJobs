@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+//  Symbols Lists
+// --------------------------------------------------
+.t-list {
+  .t-list-item {
+    position: relative;
+    border-radius: $border-radius-sm;
+    display: block;
+    padding: 0.625rem 0.875rem;
+    background-color: $white;
+    transition: $transition;
+    font-size: 0.9375rem;
+
+    @include hover {
+      background-color: $gray-50;
+    }
+
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+
+    .t-list-link-sm {
+      font-size: 80%;
+    }
+
+    .t-list-link {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: .375rem;
+      }
+    }
+  }
+}
+
+.t-list-groups-ver {
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+
+  @include flex($justify: start, $align-content: start, $align-items: start, $flex-dir: column, $flex-wrap: wrap);
+
+  line-height: $t-line-height-card;
+
+  &[data-list="like"] {
+    > .t-list-groups-ver-item {
+      &:before {
+        background-color: transparent;
+        transform: none;
+        width: 1rem;
+        height: 1rem;
+
+        @include svg-bg-icon(like, $grey-400, center, contain);
+      }
+    }
+  }
+
+  .t-list-groups-ver-item {
+    position: relative;
+    padding-left: 2rem;
+
+    .t-list-groups-ver {
+      margin-top: 1rem;
+      font-size: 90%;
+
+      .t-list-groups-ver-item {
+        padding-left: 1.5rem;
+
+        &:before {
+          top: 0.625em;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: $grey-200;
+      border-radius: $border-radius-sm;
+      transform: rotate(30deg);
+    }
+  }
+}

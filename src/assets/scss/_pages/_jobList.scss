@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+//  Pages > JobList
+// --------------------------------------------------
+
+.t-sticky-hr {
+  position: relative;
+  height: 0.75rem;
+  width: 100%;
+  background-color: $primary-50;
+  transform: translateY(-1rem);
+  border-radius: 0.25rem;
+}
+
+.t-scroll-trigger {
+  border-top: 2px solid $grey-200;
+  padding: 1rem 0;
+  text-align: center;
+  color: $grey-600;
+}
+
+.t-search-list {
+  background-color: $default;
+  position: relative;
+  padding: 1.5rem .5rem;
+
+  .search-list-cnt {
+    position: relative;
+
+    .search-list-tags {
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    @at-root .search-list-items {
+      background-color: $white;
+
+      .search-list-item {
+        border-bottom: 1.5px solid $border;
+        transition: $transition-base;
+
+        // &:first-child {
+        //   margin-top: .5rem;
+        // }
+
+        // &:not(:last-child) {
+        //   margin-bottom: 1.25rem;
+        // }
+     
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+$fixedAreaR:           2rem !default;
+$fixedAreaB:           $fixedAreaR !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$default-bg:                 $default  !default;
+$body-bg:                    if(isDarkMode(), $dark, $default) !default;
+$body-color:                 $dark     !default;
+$body-text-align:            null      !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$images-path:                  "../images/"                     !default;
+$background-noise:             url("#{$images-path}noise.svg")  !default;
+$background:                   $primary                         !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$escaped-characters: (
+	("<", "%3c"),
+	(">", "%3e"),
+	("#", "%23"),
+	("(", "%28"),
+	(")", "%29"),
+) !default;
+
+// Options
+$enable-caret:                           true !default;
+$enable-rounded:                         true !default;
+$enable-shadows:                         true !default;
+$enable-gradients:                       true !default;
+$enable-transitions:                     true !default;
+$enable-reduced-motion:                  true !default;
+$enable-smooth-scroll:                   true !default;
+$enable-grid-classes:                    true !default;
+$enable-container-classes:               true !default;
+$enable-cssgrid:                         false !default;
+$enable-button-pointers:                 true !default;
+$enable-rfs:                             true !default;
+$enable-validation-icons:                true !default;
+$enable-negative-margins:                false !default;
+$enable-deprecation-messages:            true !default;
+$enable-important-utilities:             true !default;
+$legacy-support-for-ie:                  true !default;
+$enable-responsive-font-sizes:           false !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$color-contrast-dark:             $black;
+$color-contrast-light:            $white;
+
+$theme-color-interval:            8%     !default;
+$theme-color-interval-sec:        12%    !default;
+$yiq-contrasted-threshold:        204    !default;
+
+$yiq-text-dark:                   $dark  !default;
+$yiq-text-light:                  $white !default;
+$min-contrast-ratio:              2.4    !default; // 4.5
+
+$color-contrast-dark:             $dark  !default;
+$color-contrast-light:            $white !default;
+
+$theme-colors-rgb:                map-loop($theme-colors, to-rgb, "$value") !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$gradient:                       linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: (0: 0,
+1: $spacer * .25,
+2: $spacer * .5,
+3: $spacer,
+4: $spacer * 1.5,
+5: $spacer * 2,
+6: $spacer * 2.5,
+7: $spacer * 3,
+8: $spacer * 3.5,
+9: $spacer * 4,
+10: $spacer * 4.5) !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Position
+// scss-docs-start position-map
+$position-values: (0: 0,
+50: 50%,
+100: 100%) !default;
+
+$stretched-link-pseudo-element: after !default;
+$stretched-link-z-index:        1 !default;
+$paragraph-margin-bottom:       1rem !default;
+
+$component-active-color: $white !default;
+$component-active-bg: $primary !default;
+
+$caret-width:                   .3125rem !default;
+$caret-vertical-align:          $caret-width * .85 !default;
+$caret-spacing: $caret-width *  .85 !default;
+$caret-width:                   .4375rem                          !default;
+$caret-vertical-align:          middle                            !default;
+$caret-spacing:                 $caret-width * .75                !default;
+$caret-solid-width:             .375rem                           !default;
+$caret-solid-height:            .375rem                           !default;
+$caret-solid-border-width:      .125rem                           !default;
+$caret-solid-vertical-align:    middle                            !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+$aspect-ratios: (
+	"1x1":    100%,
+	"4x3":   calc(3 / 4 * 100%),
+	"16x9":  calc(9 / 16 * 100%),
+	"21x9":  calc(9 / 21 * 100%)) !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Body
+
+$primary-light:                $primary-300      !default;
+$primary-inverse:              $primary-800      !default;
+$component-active-color:       $primary-inverse  !default;
+$component-active-bg:          $primary          !default;
+$component-hover-bg:           $primary-light    !default;
+$component-hover-color:        $primary          !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Colors
+$paragraph-color:    $dark !default;
+$link-color:         $primary;
+$link-hover-color:   darken($primary, 12%);
+$active-color:       $link-color !default;
+$disabled-color:     $gray-400 !default;
+$text-muted:         darken($gray-500, 5%) !default;
+
+$white-50: rgba($white, 0.4) !default;
+$white-70: rgba($white, 0.66) !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Backgrounds
+$light-bg-color: $gray-300 !default;
+$overlay-soft-bg-color: rgba($dark, 0.25) !default;
+$secondary-bg-color: transparent !default;
+$active-bg-color: $primary !default;
+$disabled-bg-color: rgba($gray-300, 0.5) !default;
+
+////////////////////////////////////////////////////////////////////////////////
+
+//== Margin & Padding Default
+$default-num:     				1rem 											!default;
+
+//==  Utilities
+$displays:        none, inline, inline-block, block, table, inline-table, table-row, table-cell, flex, inline-flex, grid !default;
+$overflows:       auto, hidden , visible !default;
+$positions:       static, relative, absolute, fixed, sticky !default;
+$user-selects:    all, auto, none 	!default;
+$text-aligns:     left, right, center, justify!default;
+$vertical-aligns: baseline, top, middle, bottom, text-bottom, text-top !default;
+$floats:          none, left, right !default;
+$pointer-events:  auto, none !default;
+$word-wraps:      normal, break-word !default;
+$white-spaces:    normal, nowrap 	 !default;
+$cursors:         auto, default, pointer, move, zoom-in, zoom-out, help, wait, grab, not-allowed!default;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Paragraphs
+$paragraph-margin-bottom: 1rem !default;
+
+
+$component-active-color: $primary-800 !default;
+$component-active-bg: $primary !default;
+$component-hover-bg: $primary-200 !default;
+$component-hover-color: $primary !default;
+
+// Custom hover and active background colors
+$hover-bg: rgba($gray-100, 0.8) !default;
+
+// Custom variable(to remove)
+$active-bg: $hover-bg !default;
+
+
+
+
+

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+//   Components > skeletons
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// <div class="example-container">
+//   <h1>Default Skeleton</h1>
+//   <div class="t-skeleton-default t-skeleton-animated-background"></div>
+// </div>
+
+// <div class="example-container">
+//   <h1>Image & text Skeleton</h1>
+//   <div class="t-skeleton-image-text t-skeleton-animated-background"></div>
+//   <div class="t-skeleton-image-text t-skeleton-animated-background"></div>
+// </div>
+
+.t-skeleton-default {
+  @include skeleton-default($height: 4.375rem);
+}
+
+.t-skeleton-image-text {
+  @include skeleton-image-text($height: 4.375rem, $size: 1.25rem);
+
+  + .t-skeleton-image-text {
+    margin-top: 1.25rem;
+  }
+}
+
+.t-skeleton-animated-background {
+  @include skeleton($background: $grey-100, $background-image: $dark, $background-size: 12.5rem);
+}

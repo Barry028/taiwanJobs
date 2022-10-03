@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+//  Pages > indexJob
+// --------------------------------------------------
+
+%t-index-btn {
+  position: relative;
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  box-shadow: 0.5rem 0.5rem $primary-100;
+  letter-spacing: 2px;
+}
+
+.t-section-btn {
+  @extend %t-index-btn;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 6rem;
+}
+
+.t-imgs-1-1 {
+  border: 1px solid $border;
+  border-radius: $border-radius;
+  object-fit: cover;
+  aspect-ratio: auto 1 / 1;
+}
+
+.media-full {
+  width: 100%;
+  border-radius: $border-radius;
+
+  > img,
+  iframe {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}
+
+.t-list-group-card {
+  padding: 0.5rem;
+
+  &:hover {
+    border-radius: $border-radius;
+    background-color: $primary-25;
+    color: $primary-800;
+    text-decoration: none;
+
+    .t-tag {
+      text-decoration: none;
+    }
+
+    .t-list-group-card-para {
+      text-decoration: underline;
+    }
+  }
+
+  .t-tag {
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+  }
+
+  .t-list-group-card-para {
+    letter-spacing: 0.5px;
+    font-size: 0.9375rem;
+    color: $dark;
+
+    @include text_ellipsis(3, 1.5);
+  }
+}
+
+$section-padding: 2.75rem 0 4rem;
+$hero-box-shadow: 0 0.625rem 1.875rem $primary-100;
+
+.t-hero-list > div {
+  &:nth-child(1) {
+    border-bottom: 1px solid $border;
+  }
+
+  &:nth-child(2) {
+    border-left: 1px solid $border;
+  }
+
+  &:nth-child(3) {
+    border-right: 1px solid $border;
+  }
+
+  &:nth-child(4) {
+    border-top: 1px solid $border;
+  }
+}
+
+.t-index {
+  background-color: $white;
+
+  .main-search-bar {
+    .mian-serach-form {
+      border-radius: 8px;
+
+      .t-form-inline .t-form-group {
+        margin-right: 0;
+
+        // border-radius: 0;
+
+        .t-form-control {
+          // border-radius: 0;
+
+          // margin-right: 0;
+       
+        }
+      }
+    }
+  }
+
+  .main-hero-content {
+    background-color: $primary-25;
+    padding: $section-padding;
+
+    .t-hero-box {
+      background-color: $white;
+      box-shadow: $hero-box-shadow;
+      border-radius: $border-radius;
+    }
+  }
+
+  .main-job-list {
+    padding: $section-padding;
+  }
+
+  .main-duty-list {
+    padding: $section-padding;
+
+    .t-job-card {}
+  }
+
+  .main-type-list {
+    padding: $section-padding;
+
+    .t-type-icons {
+      display: block;
+      text-align: center;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      border: 0.1875rem dotted $border;
+      border-radius: $border-radius;
+      transition: $card-transition;
+
+      &:hover {
+        background-color: $primary-50;
+        border-color: $primary-100;
+      }
+
+      img {
+        background: $grey-50;
+        border-radius: 50%;
+        display: block;
+        padding: 0.5rem;
+        margin: 0 auto 0.75rem;
+        aspect-ratio: auto 1 / 1;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+        color: $dark;
+      }
+    }
+  }
+
+  .main-recruit {
+    position: relative;
+    padding: $section-padding;
+
+    &:after {
+      content: '';
+      background-color: $primary-25;
+      width: 100%;
+      height: 16rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    > * {
+      position: relative;
+    }
+  }
+
+  .main-adv-cards {
+    padding: 2.75rem 0;
+  }
+}

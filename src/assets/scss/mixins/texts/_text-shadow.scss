@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+//  Mixins > Text shadow
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// text-shadow: long-shadow($depth: 6, $shadowColor: rgba($dark, 0.08))
+@function long-shadow($depth: 10, $shadowColor: rgba($dark, 0.08)) {
+  $shadow: -1px 1px $shadowColor;
+
+  @for $i from 1 through $depth {
+    $shadow: #{$shadow}, #{$i}px #{$i}px #{$shadowColor};
+  }
+
+  @return $shadow;
+}
+
+// @include text-shadow($shadow: $white);
+@mixin text-shadow-v1($shadow: $white) {
+  text-shadow: rgba($shadow, 1) 0.075em 0px 0px, rgba($shadow, 1) 0px 0.075em 0px, rgba($shadow, 1) 0px -0.075em 0px, rgba($shadow, 1) -0.075em 0px 0px, rgba($shadow, 1) -0.075em -0.075em 0px, rgba($shadow, 1) 0.075em -0.075em 0px, rgba($shadow, 1) 0.075em 0.075em 0px, rgba($shadow, 1) -0.075em 0.075em 0px;
+}
+
+// @include text-shadow-v2($shadow: $white, $shadow2: $dark)
+@mixin text-shadow-v2($shadow: $white, $shadow2: $dark) {
+  text-shadow: 1px 1px 0px $shadow, 2px 2px 0px $shadow2, 3px 3px 0px $shadow;
+}
+
+// @include text-shaded($size: 1px, $shadow: $primary ,$through: 10);
+@mixin text-shaded($size: 1px, $shadow: $primary, $through: 10) {
+  font-weight: 700;
+
+  // --shadow-color: $color;
+  $value: ();
+
+  @for $i from 1 through $through {
+    $num: $i * $size;
+    $theShadow: #{-$num} $num $shadow;
+    $value: append($value, $theShadow, comma);
+  }
+
+  text-shadow: $value;
+}
+
+// @include text-shadow-v3(2px,2px,2px,rgba(0,0,0,.25));
+// @include text-shadow-v3(-1px,-2px,3px,#00FFFF, 1px,2px,3px,#0080FF);
+@mixin text-shadow-v3($x1: 2px, $y1: 2px, $blur1: 5px, $color1: $dark, $x2: null, $y2: null, $blur2: null, $color2: null) {
+  font-weight: 700;
+
+  @if $x2 {
+    text-shadow: $x1 $y1 $blur1 $color1, $x2 $y2 $blur2 $color2;
+  }
+  @else {
+    text-shadow: $x1 $y1 $blur1 $color1;
+  }
+}
+
+// text-shadow: super-text-shadow(rgb(69,255,253), 20);
+@function super-text-shadow($color, $depth: 10, $offset-x: 1px, $offset-y: 1px, $blur: 0) {
+  $shadow: ();
+
+  @for $i from 0 through $depth {
+    $x: $offset-x + $i;
+    $y: $offset-y + $i;
+
+    $shadow: append($shadow, #{$x $y $blur $color}, "comma");
+  }
+
+  @return $shadow;
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix($white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage);
+}
+

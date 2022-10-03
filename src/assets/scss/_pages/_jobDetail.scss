@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+//   Pages > Detail
+// --------------------------------------------------
+
+.t-detail-header.t-job-header {
+  .t-detail-header-cnt {
+    .t-detail-main {
+      .t-detail-lt {
+        .t-detail-corp-group {
+          transform: translateY(-6.5rem);
+          position: absolute;
+
+          .t-detail-corp-img {
+            width: 6.5rem;
+            height: 6.5rem;
+          }
+        }
+      }
+
+      .t-detail-rt {
+
+        .t-applys-progress {
+          .t-progress-wrap {
+            max-width: 15rem;
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+.t-job-slider {
+  background-color: $primary-25;
+}

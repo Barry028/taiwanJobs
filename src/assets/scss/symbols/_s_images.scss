@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+//  Symbols  Images
+// --------------------------------------------------
+
+.t-img-overlay {
+  display: block;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border-radius: $border-radius;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark, 0.66);
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &:after {
+    content: '';
+
+    @include absolute-center;
+
+    display: block;
+    opacity: 0;
+
+    @include size(2rem);
+
+    z-index: 1;
+    transition: $transition;
+  }
+
+  &[data-fslightbox="youtube"] {
+    &:after {
+      @include svg-bg-icon(youtube, $white, center, contain);
+    }
+  }
+
+  &[data-fslightbox="gallery"] {
+    &:after {
+      @include svg-bg-icon(zoomin, $white, center, contain);
+    }
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.t-detail-corp-img {
+  flex: 0 0 auto;
+  border-radius: $border-radius;
+  border: 0.125rem solid $grey-100;
+  width: 4rem;
+  height: 4rem;
+}

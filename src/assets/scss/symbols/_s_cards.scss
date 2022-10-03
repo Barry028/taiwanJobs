@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+//  Symbols -> Cards
+// --------------------------------------------------
+
+.t-card-title {
+
+  position: relative;
+  margin-bottom: 0.875rem;
+  font-weight: 700;
+  font-size: 125%;
+  display: flex;
+  transition: $transition-base;
+
+  @include hover {
+    font-size: 127.5%;
+    text-decoration: none;
+    background-size: 200% .125rem;
+  }
+
+}

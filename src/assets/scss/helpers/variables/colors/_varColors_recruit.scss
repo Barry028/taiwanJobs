@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+// Varibles Colors 
+// ========================================================
+
+$primary: 				                                      #4667CC ;
+$secondary: 			                                     #1BC5BD ;
+$tertiary:				                                      #D10303 ;
+$quaternary: 			                                    #CA7B1E ;
+$success: 				                                      #50CD89;
+$danger: 				                                       #F1416C;
+$warning: 				                                        #FFC700;
+$info: 					                                        #009EF7;
+$navy:                                                          #1C3879;
+$dimNavy:                                                       #414796;
+$neutral:                                                       #1E2540;
+
+$primary-25:  																				 	                   tint-color($primary, 95%);
+$primary-50:                                           tint-color($primary, 90%);
+$primary-100:                                          tint-color($primary, 80%);
+$primary-200:                                          tint-color($primary, 60%);
+$primary-300:                                          tint-color($primary, 40%);
+$primary-400:                                          tint-color($primary, 20%);
+$primary-500:                                          $primary ;
+$primary-600:                                          shade-color($primary, 20%);
+$primary-700:                                          shade-color($primary, 40%);
+$primary-800:                                          shade-color($primary, 60%);
+$primary-900:                                          shade-color($primary, 80%);
+
+$secondary-25:  																			                    tint-color($secondary, 95%);
+$secondary-50:                                         tint-color($secondary, 90%);
+$secondary-100:                                        tint-color($secondary, 80%);
+$secondary-200:                                        tint-color($secondary, 60%);
+$secondary-300:                                        tint-color($secondary, 40%);
+$secondary-400:                                        tint-color($secondary, 20%);
+$secondary-500:                                        $secondary;
+$secondary-600:                                        shade-color($secondary, 20%);
+$secondary-700:                                        shade-color($secondary, 40%);
+$secondary-800:                                        shade-color($secondary, 60%);
+$secondary-900:                                        shade-color($secondary, 80%);
+
+$tertiary-25:  																			                     tint-color($tertiary, 95%);
+$tertiary-50:                                          tint-color($tertiary, 90%);
+$tertiary-100:                                         tint-color($tertiary, 80%);
+$tertiary-200:                                         tint-color($tertiary, 60%);
+$tertiary-300:                                         tint-color($tertiary, 40%);
+$tertiary-400:                                         tint-color($tertiary, 20%);
+$tertiary-500:                                         $tertiary;
+$tertiary-600:                                         shade-color($tertiary, 20%);
+$tertiary-700:                                         shade-color($tertiary, 40%);
+$tertiary-800:                                         shade-color($tertiary, 60%);
+$tertiary-900:                                         shade-color($tertiary, 80%);
+
+$quaternary-25:  																			                   tint-color($quaternary, 95%);
+$quaternary-50:                                        tint-color($quaternary, 90%);
+$quaternary-100:                                       tint-color($quaternary, 80%);
+$quaternary-200:                                       tint-color($quaternary, 60%);
+$quaternary-300:                                       tint-color($quaternary, 40%);
+$quaternary-400:                                       tint-color($quaternary, 20%);
+$quaternary-500:                                       $quaternary;
+$quaternary-600:                                       shade-color($quaternary, 20%);
+$quaternary-700:                                       shade-color($quaternary, 40%);
+$quaternary-800:                                       shade-color($quaternary, 60%);
+$quaternary-900:                                       shade-color($quaternary, 80%);
+
+$success-25:   																			                     tint-color($success, 95%);
+$success-50:                                           tint-color($success, 90%);
+$success-100:                                          tint-color($success, 80%);
+$success-200:                                          tint-color($success, 60%);
+$success-300:                                          tint-color($success, 40%);
+$success-400:                                          tint-color($success, 20%);
+$success-500:                                          $success;
+$success-600:                                          shade-color($success, 20%);
+$success-700:                                          shade-color($success, 40%);
+$success-800:                                          shade-color($success, 60%);
+$success-900:                                          shade-color($success, 80%);
+
+$danger-25:   																			                      tint-color($danger, 95%);
+$danger-50:                                            tint-color($danger, 90%);
+$danger-100:                                           tint-color($danger, 80%);
+$danger-200:                                           tint-color($danger, 60%);
+$danger-300:                                           tint-color($danger, 40%);
+$danger-400:                                           tint-color($danger, 20%);
+$danger-500:                                           $danger;
+$danger-600:                                           shade-color($danger, 20%);
+$danger-700:                                           shade-color($danger, 40%);
+$danger-800:                                           shade-color($danger, 60%);
+$danger-900:                                           shade-color($danger, 80%);
+
+$warning-25:  										   tint-color($warning, 95%);
+$warning-50:                                           tint-color($warning, 90%);
+$warning-100:                                          tint-color($warning, 80%);
+$warning-200:                                          tint-color($warning, 60%);
+$warning-300:                                          tint-color($warning, 40%);
+$warning-400:                                          tint-color($warning, 20%);
+$warning-500:                                          $warning;
+$warning-600:                                          shade-color($warning, 20%);
+$warning-700:                                          shade-color($warning, 40%);
+$warning-800:                                          shade-color($warning, 60%);
+$warning-900:                                          shade-color($warning, 80%);
+
+$info-25:  											   tint-color($info, 95%);
+$info-50:                                              tint-color($info, 90%);
+$info-100:                                             tint-color($info, 80%);
+$info-200:                                             tint-color($info, 60%);
+$info-300:                                             tint-color($info, 40%);
+$info-400:                                             tint-color($info, 20%);
+$info-500:                                             $info;
+$info-600:                                             shade-color($info, 20%);
+$info-700:                                             shade-color($info, 40%);
+$info-800:                                             shade-color($info, 60%);
+$info-900:                                             shade-color($info, 80%);
+
+$navy-25:  											   tint-color($navy, 95%);
+$navy-50:                                              tint-color($navy, 90%);
+$navy-100:                                             tint-color($navy, 80%);
+$navy-200:                                             tint-color($navy, 60%);
+$navy-300:                                             tint-color($navy, 40%);
+$navy-400:                                             tint-color($navy, 20%);
+$navy-500:                                             $navy;
+$navy-600:                                             shade-color($navy, 20%);
+$navy-700:                                             shade-color($navy, 40%);
+$navy-800:                                             shade-color($navy, 60%);
+$navy-900:                                             shade-color($navy, 80%);
+
+$dimNavy-25:  										   tint-color($dimNavy, 95%);
+$dimNavy-50:                                           tint-color($dimNavy, 90%);
+$dimNavy-100:                                          tint-color($dimNavy, 80%);
+$dimNavy-200:                                          tint-color($dimNavy, 60%);
+$dimNavy-300:                                          tint-color($dimNavy, 40%);
+$dimNavy-400:                                          tint-color($dimNavy, 20%);
+$dimNavy-500:                                          $dimNavy;
+$dimNavy-600:                                          shade-color($dimNavy, 20%);
+$dimNavy-700:                                          shade-color($dimNavy, 40%);
+$dimNavy-800:                                          shade-color($dimNavy, 60%);
+$dimNavy-900:                                          shade-color($dimNavy, 80%);
+
+$neutral-25:  																				 	                   tint-color($neutral, 95%);
+$neutral-50:                                           tint-color($neutral, 95%);
+$neutral-100:                                          tint-color($neutral, 90%);
+$neutral-200:                                          tint-color($neutral, 80%);
+$neutral-300:                                          tint-color($neutral, 70%);
+$neutral-400:                                          tint-color($neutral, 60%);
+$neutral-500:                                          tint-color($neutral, 50%);
+$neutral-600:                                          tint-color($neutral, 40%);
+$neutral-700:                                          tint-color($neutral, 30%);
+$neutral-800:                                          tint-color($neutral, 20%);
+$neutral-900:                                          tint-color($neutral, 10%);
+
+    // --tu-neutral-25: #f4f4f5;
+    // --tu-neutral-50: #e9e9ec;
+    // --tu-neutral-100: #d2d3d9;
+    // --tu-neutral-200: #a5a8b3;
+    // --tu-neutral-300: #787c8c;
+    // --tu-neutral-400: #4b5166;
+    // --tu-neutral-500: #1E2540;
+    // --tu-neutral-600: #1c213b;
+    // --tu-neutral-700: #191e36;
+    // --tu-neutral-800: #171a32;
+    // --tu-neutral-900: #14172d;
+
+//== Black Colors
+$white:                       #ffffff;
+$gray-25:                     #f8f8f8;
+$gray-50:                     #f0f0f0;
+$gray-100:                    #e1e1e1;
+$gray-200:                    #d2d2d2;
+$gray-300:                    #c3c3c3;
+$gray-400:                    #b4b4b4;
+$gray-500:                    #a5a5a5;
+$gray-600:                    #787878;
+$gray-700:                    #4b4b4b;
+$gray-800:                    #3c3c3c;
+$gray-900:                    #2d2d2d;
+$black:                       #0f0f0f;
+
+//== Dark Colors
+$grey-25:                     #f5f5f7;
+$grey-50:                     #f1f1f2;
+$grey-100:                    #e3e3e5;
+$grey-200:                    #d5d5d9;
+$grey-300:                    #c7c7cc;
+$grey-400:                    #ababb3;
+$grey-500:                    #9d9da6;
+$grey-600:                    #656673;
+$grey-700:                    #575867;
+$grey-800:                    #494a5a;
+$grey-900:                    #2d2e41;
+$dark:                        #121328;
+
+// fusv-enable
+$blue:                        #00BFFF;
+$purple:                      #9370DB;
+$indigo:                      #3B3DBF;
+$pink:                        #FF69B4;
+$red:                         #DC143C;
+$orange:                      #FF7F50;
+$yellow:                      #F5DF4D;
+$lime:                        #ADFF2F;
+$green:                       #66CDAA;
+$teal:                        #7efff5;
+$cyan:                        #22B8CF;
+
+
+//== Theme Soft Colors
+$primary-soft:                                               rgba($primary, .075);
+$secondary-soft:                                             rgba($secondary, .075);
+$tertiary-soft:                                              rgba($tertiary, .075);
+$quaternary-soft:                                            rgba($quaternary, .075);
+$success-soft:                                               rgba($success, .075);
+$info-soft:                                                  rgba($info, .075);
+$warning-soft:                                               rgba($warning, .075);
+$danger-soft:                                                rgba($danger, .075);
+$light-soft:                                                 rgba($gray-100, .075);
+$dark-soft:                                                  rgba($dark, .075);
+$neutral-soft:                                               rgba($neutral, .075);
+$dimNavy-soft:                                               rgba($dimNavy, .075);
+$navy-soft:                                                  rgba($navy, .075);
+
+//== Theme Soft Colors
+$primary-light:                                             $primary-200;
+$secondary-light:                                           $secondary-200;
+$tertiary-light:                                            $tertiary-200;
+$quaternary-light:                                          $quaternary-200;
+$success-light:                                             $success-200;
+$info-light:                                                $info-200;
+$warning-light:                                             $warning-200;
+$danger-light:                                              $danger-200;
+$dark-light:                                                $grey-200;
+$neutral-light:                                             $neutral-200;
+$dimNavy-light:                                             $dimNavy-200;
+$navy-light:                                                $navy-200;
+
+//== Theme Inverse Colors
+$primary-inverse:                                              if(isDarkMode(), $primary-800, $primary-200);
+$secondary-inverse:                                            if(isDarkMode(), $secondary-800, $secondary-200);
+$tertiary-inverse:                                             if(isDarkMode(), $tertiary-800, $tertiary-200);
+$quaternary-inverse:                                           if(isDarkMode(), $quaternary-800, $quaternary-200);
+$success-inverse:                                              if(isDarkMode(), $success-800, $success-200);
+$info-inverse:                                                 if(isDarkMode(), $info-800, $info-200);
+$warning-inverse:                                              if(isDarkMode(), $warning-800, $warning-200);
+$danger-inverse:                                               if(isDarkMode(), $danger-800, $danger-200);
+$dark-inverse:                                                 if(isDarkMode(), $grey-800, $grey-200);
+$neutral-inverse:                                              if(isDarkMode(), $neutral-800, $neutral-200);
+$dimNavy-inverse:                                              if(isDarkMode(), $dimNavy-800, $dimNavy-200);
+$navy-inverse:                                                 if(isDarkMode(), $navy-800, $navy-200);
+
+// fusv-disable
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+
+$purple-100: tint-color($purple, 80%);
+$purple-200: tint-color($purple, 60%);
+$purple-300: tint-color($purple, 40%);
+$purple-400: tint-color($purple, 20%);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 20%);
+$purple-700: shade-color($purple, 40%);
+$purple-800: shade-color($purple, 60%);
+$purple-900: shade-color($purple, 80%);
+
+$pink-100: tint-color($pink, 80%);
+$pink-200: tint-color($pink, 60%);
+$pink-300: tint-color($pink, 40%);
+$pink-400: tint-color($pink, 20%);
+$pink-500: $pink;
+$pink-600: shade-color($pink, 20%);
+$pink-700: shade-color($pink, 40%);
+$pink-800: shade-color($pink, 60%);
+$pink-900: shade-color($pink, 80%);
+
+$red-100: tint-color($red, 80%);
+$red-200: tint-color($red, 60%);
+$red-300: tint-color($red, 40%);
+$red-400: tint-color($red, 20%);
+$red-500: $red;
+$red-600: shade-color($red, 20%);
+$red-700: shade-color($red, 40%);
+$red-800: shade-color($red, 60%);
+$red-900: shade-color($red, 80%);
+
+$orange-100: tint-color($orange, 80%);
+$orange-200: tint-color($orange, 60%);
+$orange-300: tint-color($orange, 40%);
+$orange-400: tint-color($orange, 20%);
+$orange-500: $orange;
+$orange-600: shade-color($orange, 20%);
+$orange-700: shade-color($orange, 40%);
+$orange-800: shade-color($orange, 60%);
+$orange-900: shade-color($orange, 80%);
+
+$yellow-100: tint-color($yellow, 80%);
+$yellow-200: tint-color($yellow, 60%);
+$yellow-300: tint-color($yellow, 40%);
+$yellow-400: tint-color($yellow, 20%);
+$yellow-500: $yellow;
+$yellow-600: shade-color($yellow, 20%);
+$yellow-700: shade-color($yellow, 40%);
+$yellow-800: shade-color($yellow, 60%);
+$yellow-900: shade-color($yellow, 80%);
+
+$green-100: tint-color($green, 80%);
+$green-200: tint-color($green, 60%);
+$green-300: tint-color($green, 40%);
+$green-400: tint-color($green, 20%);
+$green-500: $green;
+$green-600: shade-color($green, 20%);
+$green-700: shade-color($green, 40%);
+$green-800: shade-color($green, 60%);
+$green-900: shade-color($green, 80%);
+
+$teal-100: tint-color($teal, 80%);
+$teal-200: tint-color($teal, 60%);
+$teal-300: tint-color($teal, 40%);
+$teal-400: tint-color($teal, 20%);
+$teal-500: $teal;
+$teal-600: shade-color($teal, 20%);
+$teal-700: shade-color($teal, 40%);
+$teal-800: shade-color($teal, 60%);
+$teal-900: shade-color($teal, 80%);
+
+$lime-100: tint-color($lime, 80%);
+$lime-200: tint-color($lime, 60%);
+$lime-300: tint-color($lime, 40%);
+$lime-400: tint-color($lime, 20%);
+$lime-500: $lime;
+$lime-600: shade-color($lime, 20%);
+$lime-700: shade-color($lime, 40%);
+$lime-800: shade-color($lime, 60%);
+$lime-900: shade-color($lime, 80%);
+
+
+$cyan-100: tint-color($cyan, 80%);
+$cyan-200: tint-color($cyan, 60%);
+$cyan-300: tint-color($cyan, 40%);
+$cyan-400: tint-color($cyan, 20%);
+$cyan-500: $cyan;
+$cyan-600: shade-color($cyan, 20%);
+$cyan-700: shade-color($cyan, 40%);
+$cyan-800: shade-color($cyan, 60%);
+$cyan-900: shade-color($cyan, 80%);
+
+//== Brands colors
+$facebook:              #3b5999;
+$twitter:               #1da1f2;
+$google-plus:           #dd4b39;
+$instagram:             #e4405f;
+$pinterest:             #bd081c;
+$youtube:               #cd201f;
+$slack:                 #3aaf85;
+$dribbble:              #ea4c89;
+$github:                #222222;
+$dropbox:               #1e90ff;
+$twitch:                #4b367c;
+$paypal:                #ecb32c;
+$behance:               #0057ff;
+$reddit:                #e84422;
+$linkedin:              #0E76a8;
+
+//== customs Colors
+$link:                                             darken($primary, 8%);
+$link-hover:                                       darken($primary, 16%);
+$link-blue:                                        $navy;
+$link-blue-hover:                                  darken($navy, 8%);
+
+$Snow           : #FFFAFA;
+$Honeydew       : #f0fff0;
+$Mintcream      : #f5fffa;
+$Azure          : #F0FFFF;
+$Aliceblue      : #F0F8FF;
+$GhostWhite     : #F8F8FF;
+$WhiteSmoke     : #F5F5F5;
+$SeaShell       : #FFF5EE;
+$Beige          : #F5F5DC;
+$OldLace        : #FDF5E6;
+$FloralWhite    : #FFFAF0;
+$Ivory          : #FFFFF0;
+$AntiqueWhite   : #FAEBD7;
+$Linen          : #FAF0E6;
+$LavenderBlush  : #FFF0F5;
+$MistyRose      : #FFE4E1;
+$LightSlateGray : #778899;
+$SlateGray      : #708090;
+$DarkSlateGray  : #2F4F4F;
+
+$seafoam:                                          #dbf5f0;
+$ivory:                                            #f4efdb;
+$granny:                                           #c1ffc1;
+$tiffany:                                          #a4e5e0;
+$similar:                                          #f5f2eb;
+$meteorite:                                        #332a7c;
+$water-light:                                      #edeff6;
+$bright:                                           #eaeef6;
+$magnolia:                                         #f4f3fd;
+$flash:                                            #f2f3f5;
+$soap:                                             #CBD4F4;
+$pale:                                             #F7D9E3;
+$water:                                            #CBF0F4;
+$whereas:                                          #f2f0eb;
+$hawthorn:                                         #884C5E;
+$paua:                                             #302C4D;
+$lichen-blue:                                      #5D89B4;
+$lutos:                                            #E2C1C0;
+$dried-mos:                                        #CCB97E;
+$volcanic-glass:                                   #615C61;
+$plaza-taupe:                                      #AEA393;
+$white-sand:                                       #DBD5D1;
+$cloud-dancer:                                     #F0EEE9;
+$deep-taupe:                                       #7B6660;
+
+$gray:                                             $gray-700;
+$lightgray:                                        $gray-500;
+$gray-light:                                       $gray-100; 
+$gray-lighter:                                     $gray-50;
+
+$grey:                                             $grey-700;
+$lightgrey:                                        $grey-500;
+$grey-light:                                       $grey-100; 
+$grey-lighter:                                     $grey-50;
+
+$light:                                            #B8B8D2;
+$lighter:                                          #eaeaf2;
+$lightest:                                         #f6f6fa;
+
+$default:                                          #F5F5F6;
+$default-dark:                                     #E4E4EB;
+
+$border:                                           $gray-50;
+$border-g:                                         $grey-50;
+$border-n:                                         $neutral-50;
+
+
+    // --blue: #0092e4;
+    // --red: #DE524C;
+    // --yellow: #E7B549;
+    // --green: #24A8AF;
+    // --cyan: #55AFE7;
+    // --white: #fff;
+    // --gray: #424866;
+    // --primary: #0092e4;
+    // --secondary: #596080;
+    // --success: #24A8AF;
+    // --info: #55AFE7;
+    // --warning: #E7B549;
+    // --danger: #DE524C;
+    // --light: #FAFAFC;
+    // --dark: #1C2033;
+    // --body: #1C2033;
+    // --cyan: #55AFE7;

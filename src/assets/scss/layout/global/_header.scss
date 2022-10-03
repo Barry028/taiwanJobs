@@ -1,0 +1,80 @@
+//
+//  Layout -> Header 
+// --------------------------------------------------
+.t-header {
+  position: relative;
+  background-color: $white;
+  // border: $border 2px solid;
+  width: 100%;
+  transition: $transition-header;
+  z-index: $zindex-header;
+
+  .t-header-top {
+    background-color: $dark;
+    color: $white;
+    text-align: justify;
+    text-align-last: justify;
+
+    @media (max-width: $screen-sm-min) {
+      display: none;
+    }
+
+    .t-header-top-lf-list {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+    }
+
+    .t-header-top-rf-list {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+    }
+
+    .t-header-top-list-item {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      &.active {
+        .t-header-top-list-link  {
+          color: $primary-100;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.25rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: -0.625rem;
+          top: 50%;
+          transform: translate3D(0, -50%, 0);
+          width: 1px;
+          height: 50%;
+          background-color: rgba($white, .4);
+        }
+      }
+
+      .t-header-top-list-link {
+        display: block;
+        color: currentColor;
+        font-size: .875rem;
+        padding: .5rem 0;
+
+        &:hover {
+          @include opacity(0.66);
+        }
+      }
+    }
+  }
+
+  .t-header-inner {}
+
+  .t-header-section {}
+}
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
+  <meta charset="UTF-8">
+  <title>勞動力發展署 - 職業訓練視覺化分析平台</title>
+  <link rel="stylesheet" href="https://assets.codepen.io/2845599/pixel-icon.css">
+  <!-- Vendor -->
+  <!--[if lte IE 9]>
+        <script src="vender/IE_Supports/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="vender/IE_Supports/respond/dest/respond.min.js"></script>
+        <script src="vender/IE_Supports/Placeholders/dist/placeholders.jquery.min.js"></script>
+        <script src="vender/IE_Supports/Placeholders/dist/placeholders.prototype.min.js"></script>
+        <script src="vender/IE_Supports/Placeholders/dist/placeholders.yui3.min.js"></script>
+    <![endif]-->
+  <script>
+  (function(d) {
+    var config = {
+        kitId: 'ufg8zbw',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h = d.documentElement,
+      t = setTimeout(function() { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout),
+      tk = d.createElement("script"),
+      f = false,
+      s = d.getElementsByTagName("script")[0],
+      a;
+    h.className += " wf-loading";
+    tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+    tk.async = true;
+    tk.onload = tk.onreadystatechange = function() {
+      a = this.readyState;
+      if (f || a && a != "complete" && a != "loaded") return;
+      f = true;
+      clearTimeout(t);
+      try { Typekit.load(config) } catch (e) {}
+    };
+    s.parentNode.insertBefore(tk, s)
+  })(document);
+  </script>
+</head>
+
+<body>
+  <div id="show">
+    <ul id="icon1" class="row">
+      <select class="weui-cell__bd" name="pro_id" id="sel">
+      </select>
+    </ul>
+  </div>
+  <!-- HEADER -->
+</body>
+<script>
+/**
+ * 使用ajax获取服务器json 数组
+ */
+var ul = document.getElementsByTagName('ul')[0]
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://assets.codepen.io/2845599/pixel-icon_selection20220630.json', true);
+// xhr.open("GET", "https://assets.codepen.io/2845599/bbiticon_selection.json", true); //创建一个连接
+
+/**
+ * 获取数据后的处理程序
+ */
+
+xhr.onload = function() {
+  /*
+   * ReadyState -->
+   * 0 - 是初始状态
+   * 1 - 是开始创建连接
+   * 2 - 客户端向服务端发送数据
+   * 3 - 服务端开始向客户端返回数据
+   * 4 - 客户端接收数据完毕
+   * Status --> 
+   * HTTP 狀態碼 200 成功
+   */
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    var json = xhr.responseText; //获取到json字符串，还需解析
+    var obj = JSON.parse(json); //解析字符串---解析成object数组
+    var obj = obj.icons;
+    console.log(obj);
+
+    for (var i = 0; i < obj.length; i++) {
+      var pro = obj[i];
+      var lis = document.createElement('li');
+      var icon = "<i class='bbion-" + pro.properties.name + "'>";
+
+      lis.innerHTML = icon;
+
+      ul.appendChild(lis);
+
+
+      document.getElementById("sel").options.add(new Option(pro.properties.name, pro.properties.id));
+      //使用纯js为select动态添加option
+    }
+  }
+}
+xhr.send();
+</script>
+<script>
+// var ul = document.getElementsByTagName('ul')[0];
+// //创建一个xhr对象
+// var xhr = new XMLHttpRequest();
+
+// //请求过程中，readyState会发生变化
+// // 0 - 是初始状态
+// // 1 - 是开始创建连接
+// // 2 - 客户端向服务端发送数据
+// // 3 - 服务端开始向客户端返回数据
+// // 4 - 客户端接收数据完毕
+// xhr.onreadystatechange = function() {
+//   console.log(this.readyState); //1,2,3,4      
+// }
+// xhr.onload = function() {
+//   //在数据加载完毕后执行onload
+//   //      if(this.readyState == 4){
+//   //          console.log("ok");
+//   //      }
+//   //      这是PHP文件传过来的json字符串 this.responseText，需要转为数组
+//   //      1.可以用json.parse
+//   //      2.可以用eval
+//   //      如果 jsondata.php 中的数据没有严格遵守JSON  格式，不能使用JSON和eval
+//   //      console.log(this.responseText);
+//   //      console.log(JSON.parse(this.responseText));
+//   //      console.log(eval("("+this.responseText+")"));
+//   //      注释掉json格式的数据，可以输出任意文本
+//   document.getElementById("show").innerHTML = this.responseText;
+//   var a = JSON.parse(this.responseText.icons.icon.roperties.name);
+//   for (var i = 0; i < a.length; i++) {
+//     var lis = document.createElement('li');
+//     lis.innerHTML = a[i].properties.name;
+//     ul.appendChild(lis);
+//   }
+// }
+// //open方法
+// //true 异步 false 同步（卡）
+// xhr.open("GET", "https://assets.codepen.io/2845599/bbiticon_selection.json", true); //创建一个连接
+// xhr.send(null);
+</script>
+<script>
+// $.ajax({
+//   url: "https://assets.codepen.io/2845599/bbiticon_selection.json",
+//   dataType: "json",
+//   success: function(data) {
+//     var icons = data.icons;
+
+//     $.each(icons, function(key, icon) {
+
+//       $('[data-toggle="tooltip"]').tooltip();
+
+//       if (icon.setId == 30) {
+//         $('#icon1').append(
+//           "<li class='col-xl-2'>\
+//               <div class='gui-icon-cnt text-32'>\
+//                   <a class='link--grey' href='javascript:;' data-toggle=tooltip title=nre-" + icon.properties.name + ">\
+//                       <i class='tub-" + icon.properties.name + "'>\
+//                         <font></font>\
+//                         <font></font>\
+//                         <font></font>\
+//                         <font></font>\
+//                         <font></font>\
+//                         <font></font>\
+//                         <font></font>\
+//                       </i>\
+//                   </a>\
+//                   <p>tub-" + icon.properties.name + "</p>\
+//               </div>\
+//           </li>")
+//       }
+
+//     })
+
+//   },
+//   error: function(jqXHR, textStatus, errorThrown) {
+//     console.log('ERROR', textStatus, errorThrown);
+//   }
+// });
+</script>
+
+</html>

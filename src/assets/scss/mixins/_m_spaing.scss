@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+//   Mixins > Spaing
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin padding($dir: x, $size: null) {
+    @if $dir == "x" {
+        padding-left: $size;
+        padding-right: $size;
+    }
+    @else if $dir == "y" {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+    @else if $dir == "a" {
+        padding: $size;
+    }
+}
+
+@mixin margin($dir: x, $size: null) {
+    @if $dir == "x" {
+        margin-left: $size;
+        margin-right: $size;
+    }
+    @else if $dir == "y" {
+        margin-top: $size;
+        margin-bottom: $size;
+    }
+    @else if $dir == "a" {
+        margin: $size;
+    }
+}
+
+
+/// Provides a concise, one-line method for setting `margin` on specific edges
+/// of a box. Use a `null` value to “skip” edges of the box with standard
+/// CSS shorthand.
+///
+/// @argument {list} $values
+///   List of margin values; accepts CSS shorthand.
+///
+/// @example scss
+///   .element {
+///     @include margin(null auto);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     margin-left: auto;
+///     margin-right: auto;
+///   }
+///
+/// @example scss
+///   .element {
+///     @include t-margin(10px 3em 20vh null);
+///   }
+///
+///   // CSS Output
+///   .element {
+///     margin-bottom: 20vh;
+///     margin-right: 3em;
+///     margin-top: 10px;
+///   }
+///
+/// @require {mixin} _directional-property
+
+@mixin t-margin($values) {
+  @include _directional-property(margin, null, $values);
+}
+
+@mixin t-padding($values) {
+  @include _directional-property(padding, null, $values);
+}
+
+
+
+
+
+

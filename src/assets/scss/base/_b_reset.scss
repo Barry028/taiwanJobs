@@ -1,0 +1,97 @@
+//
+//  Base -> Reset
+// --------------------------------------------------
+// @import url("https://use.typekit.net/vdu2fgj.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: $font-size-pixel-base;
+  // scroll-behavior: smooth;
+  &.js-font-scale {
+    &-up {
+      &-1st {
+        font-size: #{$font-size-pixel-base + 1px};
+      }
+
+      &-2nd {
+        font-size: #{$font-size-pixel-base + 2px};
+      }
+
+      &-3rd {
+        font-size: #{$font-size-pixel-base + 3px};
+      }
+
+      &-4th {
+        font-size: #{$font-size-pixel-base + 4px};
+      }
+    }
+
+    &-down {
+      &-1st {
+        font-size: #{$font-size-pixel-base - 1px};
+      }
+
+      &-2nd {
+        font-size: #{$font-size-pixel-base - 2px};
+      }
+
+      &-3rd {
+        font-size: #{$font-size-pixel-base - 3px};
+      }
+
+      &-4th {
+        font-size: #{$font-size-pixel-base - 4px};
+      }
+    }
+  }
+  @media (max-width: $screen-lg-min) {
+    font-size: $font-size-pixel-lg;
+  }
+
+  @media (max-width: $screen-md-min) {
+    font-size: $font-size-pixel-md;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    font-size: $font-size-pixel-sm;
+  }
+
+  @media (max-width: $screen-xs-min) {
+    font-size: $font-size-pixel-xs;
+  }
+}
+
+body {
+  // background-color: $white;
+  background-color: _var('body-bg' , $default);
+  color: _var('body-color' , $dark);
+  font-family: $font-family-base;
+  font-style: normal;
+  line-height: $line-height-base;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+// // simple (no scale)  
+// p {
+//   @include font-size(15px);
+// }
+
+// //  fluid scale based on default bounding
+// :root {
+//   @include font-size(16px, 24px);
+// }
+
+// //  fluid scale based on custom bounding
+// //  (you could also change defaults) 
+// :root {
+//   @include font-size(16px, 24px, 320px, 960px);
+// }

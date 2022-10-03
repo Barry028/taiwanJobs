@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+//  Pages > login
+// --------------------------------------------------
+
+.login-bg {
+  background-color: #f7f7f7;
+}
+
+.login-card {
+  background-color: #FFF;
+}
+
+.login-card h1.t-title {
+  background-image: linear-gradient(to left, #FD7079 0%, #B7030E 100%);
+  color: #FFF;
+  font-size: 1.75rem;
+  font-weight: 200;
+  padding: .6em;
+  border-radius: 10px 10px 0 0;
+}
+
+.login-card h1.t-title span {
+  font-size: 1.25rem;
+  padding-left: 10px;
+}
+
+.login-card form {
+  margin: 0 1em;
+}
+
+.login-card input {
+  background-color: #F0F0F0;
+}
+
+.login-card .form-help a {
+  font-size: 0.9em;
+  float: right;
+  color: #204B91;
+}
+
+.login-card form .btn-login {
+  background-image: linear-gradient(to right, #DB2D2E, #E2626A);
+  border: none;
+  color: #FFF;
+}
+
+.login-card .break-line {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: #000;
+  position: relative;
+}
+
+.login-card .break-line::before {
+  background: #E5E5E5 none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 45%;
+  top: .6em;
+  left: 0;
+}
+
+.login-card .break-line::after {
+  background: #E5E5E5 none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: .6em;
+  width: 45%;
+  right: 0;
+}
+
+.login-card .btn-social {
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
+  background-color: #FFF !important;
+}
+
+.login-card .btn-social:hover {
+  background-color: #F0F0F0 !important;
+}
+
+.login-card .code {
+  border: 1px solid #E5E5E5;
+}
+
+.login-card .content {
+  margin: 0 2em;
+}
+
+.login-card .content p {
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
+
+.login-card .content a {
+  color: #204B91;
+}
+
+.login-card .btn-login {
+  /*	background-image: linear-gradient(to right, #DB2D2E, #E2626A);*/
+  border: 1px solid #E2626A;
+  color: #D10310;
+  background-color: #FFF;
+}
+
+.login-card .hr-line {
+  border: 1px solid #F0F0F0;
+}
+
+.login-card .hr-dashed {
+  border: 1px dashed #F0F0F0;
+  margin: 2em 0;
+}
+
+.login-card .login-footer {
+  background-color: #DEE2E6;
+}
+
+.login-card .login-footer a {
+  color: #204B91;
+}

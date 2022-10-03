@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// 
+//  Mixins > heading
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@function lightness-shift($colour) {
+  @if lightness($colour) < 25% {
+    @return lighten($colour, 10%);
+  }
+  @else {
+    @return darken($colour, 10%);
+  }
+}
+
+@mixin heading-shadow(
+    $colour: lightness-shift($primary), 
+    $size: 0.125rem) {
+  @if lightness($colour) < 25% {
+    $colour: lighten($colour, 10%);
+  }
+  @else {
+    $colour: darken($colour, 10%);
+  }
+
+  text-shadow: $size $size $colour;
+}
+
+
+// @include heading-shadow-v1($color-1: $danger, $color-2: $dark);
+@mixin heading-shadow-v1($color-1: $danger, $color-2: $dark) {
+  font-weight: 700;
+  $value: ();
+  @for $i from 1 through $through {
+    $num: $i * $size;
+    $theShadow: #{-$num} $num $shadow;
+    $value: append($value, $theShadow, comma);
+  }
+  text-shadow: $value;
+  text-shadow: 
+  0px 1px $color-1, 
+  1px 2px $color-1, 
+  2px 3px $color-1,
+  3px 4px $color-1, 
+  4px 5px $color-1,
+  8px 9px rgba($color-2, 0.12);
+}
+
+// @include heading-shadow-v2($color: $dark);
+@mixin heading-shadow-v2($color: $primary) {
+  font-weight: 700;
+  text-shadow: 
+  0 0.1em 1.25em $color, 
+  0.05em -0.03em 0 $color,
+  0.05em 0.005em 0 $color, 
+  0em 0.08em 0 $color, 
+  0.05em 0.08em 0 $color,
+  0px -0.03em 0 $color, 
+  -0.03em -0.03em 0 $color, 
+  -0.03em 0.08em 0 $color,
+  -0.03em 0 0 $color;
+}
+
+// @include heading-shadow-v3($color: $primary, $shadow: darken($primary, 16%));
+@mixin heading-shadow-v3($color: $primary, $shadow: darken($primary, 16%),$through: 24) {
+  color: $color;
+  $value: ();
+  @for $i from 1 through $through {
+    $num: $i * 0.25 + px;
+    $theShadow: $num $num $shadow;
+    $value: append($value, $theShadow, comma);
+  }
+  text-shadow: $value;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+//   Mixins > Buttons rotate
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin button-rotate {
+  @include btn-hover {
+    transform: scale(1.125);
+
+    >i {
+      transform: rotate(290deg);
+    }
+  }
+}
+
+
+// .t-fl-halftone{
+// filter: blur(2px) contrast(3000%) grayscale(1);
+// mix-blend-mode: screen;}
+
+// .t-fl-blurs {
+//   filter:
+//     grayscale(1) brightness(80%) contrast(150%) blur(2px);
+//   mix-blend-mode: $blend-mode;
+// }

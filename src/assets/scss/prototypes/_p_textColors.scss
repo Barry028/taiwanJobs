@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+//==  Prototypes -> Texts Color 
+//====================================================
+@each $color, $value in $element-colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+
+  %text-#{$color} {
+    color: $value !important;
+  }
+}
+
+@each $color, $value in $element-colors {
+  .link-#{$color} {
+    color: $value !important;
+
+    &:hover {
+      color: lighten($value, 20%) !important;
+    }
+  }
+  %link-#{$color} {
+    color: $value !important;
+    &:hover {
+      color: lighten($value, 20%) !important;
+    }
+  }
+}
