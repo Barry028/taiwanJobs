@@ -3,17 +3,20 @@
 //  Mixins > Text Emphasis
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 // @include text-underfont($parent ,$color: $primary , $size: .25rem .25rem, $fw: 500, $pb: 0.25rem)
-@mixin text-underfont($color: $primary, $size: 0.25rem 0.25rem, $fw: 500, $pb: 0.25rem) {
+@mixin text-underfont($color: $primary, $size: 200% 0.25rem, $fw: 500, $pb: 0.25rem) {
+  width: max-content;
   padding-bottom: $pb;
   font-weight: $fw;
+  display: flex;
 
-  @include gradient-x(tint-color($color, 88%), tint-color($color, 66%), -20%);
+  @include gradient-x(tint-color($color, 40%), shade-color($color, 40%), -20%);
 
   background-size: $size;
   background-repeat: repeat-x;
   background-position: center bottom;
   transition: $transition;
 }
+
 
 // @include text_gradient_under($color1: #84fab0, $color2: #8fd3f4, $w: 100%, $h: 0.5rem)
 @mixin text_gradient_under($color1: #84fab0, $color2: #8fd3f4, $w: 100%, $h: 0.5rem) {
@@ -22,5 +25,5 @@
   background-repeat: no-repeat;
   background-size: $w $h;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
+  transition: $transition;
 }

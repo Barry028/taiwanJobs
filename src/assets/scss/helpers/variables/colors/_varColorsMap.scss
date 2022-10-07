@@ -336,7 +336,7 @@ $cyans: (
 	"cyan-900": $cyan-900) !default;
 
 ////////////////////////////////////////////////////////////////////////////////
-
+$line: #1BB91F;
 //== Brand Colors
 $brand-colors: () !default;
 $brand-colors: map-merge((
@@ -354,7 +354,8 @@ $brand-colors: map-merge((
 	"behance": $behance,
 	"reddit" : $reddit,
 	"github": $github,
-	"linkedin": $linkedin), 
+	"linkedin": $linkedin,
+	"line": $line), 
 $brand-colors);
 
 //== Theme Colors
@@ -482,7 +483,10 @@ $theme-inverse-colors: (
 		"warning":     $warning-inverse,
 		"info":        $info-inverse,
 		"dark":        $dark-inverse,
-		"white":       $white,
+		"grey":        $grey-inverse,
+
+
+		"white":       $white-inverse,
 		"neutral":     $neutral-inverse,
 		"navy":        $navy-inverse,
 		"dimNavy":     $dimNavy-inverse,
@@ -490,19 +494,21 @@ $theme-inverse-colors: (
 
 //== Theme Light Colors
 $theme-light-colors: (
-		"light-primary":     $primary-light,
-		"light-secondary":   $secondary-light,
-		"light-tertiary":    $tertiary-light,
-		"light-quaternary":  $quaternary-light,
-		"light-success":     $success-light,
-		"light-danger":      $danger-light,
-		"light-warning":     $warning-light,
-		"light-info":        $info-light,
-		"light-dark":        $dark-light,
-		"light-white":       $white,
-		"light-neutral":     $neutral-light,
-		"light-navy":        $navy-light,
-		"light-dimNavy":     $dimNavy-light,
+		"primary":     $primary-light,
+		"secondary":   $secondary-light,
+		"tertiary":    $tertiary-light,
+		"quaternary":  $quaternary-light,
+		"success":     $success-light,
+		"danger":      $danger-light,
+		"warning":     $warning-light,
+		"info":        $info-light,
+		"dark":        $dark-light,
+		"grey":        $grey-light,
+
+		"white":       $white-light,
+		"neutral":     $neutral-light,
+		"navy":        $navy-light,
+		"dimNavy":     $dimNavy-light,
 ) !default;
 
 //== Theme Text Colors

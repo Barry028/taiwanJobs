@@ -3,7 +3,12 @@
 //   Mixins > Text
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// @include title;
 @mixin title {
+  font-weight: $font-family-display-weight;
+  font-family: $font-family-display;
+  letter-spacing: 0.05em;
+  line-height: 1.125em;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight-bold;
 }
@@ -54,7 +59,3 @@
     }
   }
 }
-
-
-
-

@@ -30,28 +30,27 @@
 }
 
 // randomOpacityShadow($color: $bgColor ,$opacity: 100 , $max:100 ,$min: 40);
-// 
-// 
-// @function randomOpacityShadow($color: $dark, $opacity: 100, $max: 100, $min: 1) {
-//   @return rgba($color, randomNums($min, $max) / $opacity);
-// }
-
-@function custome-box-shadow($n: 6, $multip: 0.25, $color: $primary) {
+@function randomOpacityShadow($color: $dark, $opacity: 100, $max: 100, $min: 1) {
+  @return rgba($color, randomNums($min, $max) / $opacity);
+}
+    // text-shadow: custome-box-shadow-r(12, 0.25, $secondary-300);
+ // text-shadow: custome-box-shadow-l(12, 0.25, $secondary-300);
+@function custome-box-shadow-r($n: 6, $multip: 0.25, $color: $primary) {
   $box-shadow: "";
 
   @for $i from 1 through $n {
-    $shadows: unquote('#{$i * $multip}+"px "+#{$i * $multip}+#{"px " + $color}');
+    $shadows: #{$i * $multip}+"px "+#{$i * $multip}+#{"px " + $color};
     $box-shadow: $box-shadow + $shadows + " ,";
   }
 
   @return str_slice(unquote($box-shadow), 0, str_length($box-shadow) - 1);
 }
 
-@function custome-box-shadow-v2($n: 6, $multip: 0.25, $color: $primary) {
+@function custome-box-shadow-l($n: 6, $multip: 0.25, $color: $primary) {
   $box-shadow: "";
 
   @for $i from 1 through $n {
-    $shadows: unquote('#{-$i * $multip}+"px "+#{$i * $multip}+#{"px " + $color}');
+    $shadows: #{-$i * $multip}+"px "+#{$i * $multip}+#{"px " + $color};
     $box-shadow: $box-shadow + $shadows + " ,";
   }
 

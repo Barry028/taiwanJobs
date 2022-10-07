@@ -1,4 +1,49 @@
 "use strict";
+
+function animate({
+    timing,
+    draw,
+    duration,
+    complete
+}) {
+    let start = performance.now();
+
+    requestAnimationFrame(function animate(time) {
+        // timeFraction goes from 0 to 1
+        let timeFraction = (time - start) / duration;
+        if (timeFraction > 1) timeFraction = 1;
+
+        // calculate the current animation state
+        let progress = timing(timeFraction);
+
+        draw(progress); // draw it
+
+        if (timeFraction < 1) {
+            requestAnimationFrame(animate);
+        }
+
+        if (timeFraction == 1) {
+            complete(progress)
+        }
+    });
+}
+
+function makeEaseOut(timing) {
+    return function(timeFraction) {
+        return 1 - timing(1 - timeFraction);
+    }
+}
+
+function bounce(timeFraction) {
+    for (let a = 0, b = 1; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+            return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+    }
+}
+
+
+
 const JsDarkMode = function(element, options) {
     ///////////////////////////////
     // **  Private variables  ** //
@@ -18,10 +63,11 @@ const JsDarkMode = function(element, options) {
         dark_linearGradient: "#fcf81c,#d5ef0d,#b7ff4a",
         light_linearGradient: "#97e6ff,#1b449c,#006bfc",
     };
-    const svgVan = element.querySelector("svg");
+
+    var svgVan = document.getElementById('tuChangeMode')
 
     var options = JsUtils.deepExtend({}, defaultOptions, options);
-
+    console.log(svgVan)
     const darkLinearGradient =
         svgVan.getAttribute("data-tu-dark-gradient") || options.dark_linearGradient || defaultOptions.dark_linearGradient;
 
@@ -36,7 +82,8 @@ const JsDarkMode = function(element, options) {
     // ** Private methods  ** //
     ////////////////////////////
 
-
+    const moonPath = "M28 0C35 0 42 3 47 8 52 13 55 20 55 28 55 35 52 42 47 47 42 52 35 55 28 55 20 55 13 52 8 47 3 42 0 35 0 28 0 20 3 13 8 8 13 3 20 0 28 0Z";
+    const sunPath =  "M28 0C35 0 42 3 47 8 34 10 27 20 27 28 27 35 34 45 47 47 42 52 35 55 28 55 20 55 13 52 8 47 3 42 0 35 0 28 0 20 3 13 8 8 13 3 20 0 28 0Z";
 
 
     const _construct = function _construct() {
@@ -45,39 +92,55 @@ const JsDarkMode = function(element, options) {
         } else {
             _init();
         }
+        
     };
 
     const _init = function _init() {
 
         const darkMode = localStorage.getItem(options.storageName);
+
         const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        // console.log(isDarkMode)
         if (isDarkMode) {
             document.documentElement.setAttribute("data-theme", "dark");
+            let path = sunPath;
         } else {
             document.documentElement.setAttribute("data-theme", "light");
+            let path = moonPath;
         }
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '-2 -2 60 60');
+        const iconPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         const linearGradientArrayKey = ['gradientUnits', 'id', "x1", "x2", "y1", "y2"];
         const linearGradientArrayVal = ['userSpaceOnUse', 'data-tu-gradient', "18", "50", "62", "6"];
         const linearGradient = document.createElement("linearGradient");
         for (let i = 0; i < linearGradientArrayKey.length; i++) {
-            linearGradient.setAttribute(linearGradientArrayKey[i], linearGradientArrayVal[i])
+          console.log(linearGradientArrayKey[i])
+            linearGradient.setAttribute(linearGradientArrayKey[i] , linearGradientArrayVal[i])
         }
-        const path =
-            "M 0 35 c 0 -2 1 -4 3 -4 c 1 0 2 0 3 1 A 19 19 0 0 0 33 6 a 4 4 0 0 1 -1 -3 c 0 -2 2 -4 4 -3 A 32 32 0 1 1 0 35 z";
-        const svgInner =
-            '<path fill="url(#' + gradID + ')"' + 'fill-rule="evenodd" d="' + path + '" clip-rule="evenodd" />';
-        svgVan.appendChild(linearGradient);
-        svgVan.innerHTML += svgInner;
+        let linearGradients = linearGradient.outerHTML;
+
+        iconPath.setAttribute('d', moonPath);
+        iconPath.setAttribute('fill', 'url(#' + gradID + ')');
+        iconPath.setAttribute('stroke', 'white');
+        iconPath.setAttribute('stroke-width', '2.5');
+        iconPath.setAttribute('stroke-opacity', '0.66');
+        iconPath.setAttribute('fill-rule', 'evenodd');
+
+        svg.appendChild(iconPath);
+        svg.innerHTML = linearGradients;
+        svg.appendChild(iconPath);
+        svgVan.appendChild(svg);
 
         that.uid = JsUtils.getUniqueId("scheme");
         that.element = element;
         that.element.setAttribute("data-tu-scheme", "true");
 
-
         darkMode === "enabled" ? openDarkMode() : offDarkMode();
+
         _handlers();
+
         JsUtils.data(that.element).set("scheme", that);
+
     };
 
     const openDarkMode = function openDarkMode() {
@@ -96,27 +159,21 @@ const JsDarkMode = function(element, options) {
                     )
                     .join("");
             });
+        svgVan.querySelector('path').setAttribute('d', moonPath)
         body.classList.add(options.className);
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem(options.storageName, "enabled");
     };
 
     const offDarkMode = function offDarkMode() {
+
         window.matchMedia("(prefers-color-scheme: light)");
-        svgVan
-            .querySelectorAll("#" + gradID + "")
-            .forEach(function(linearGradient, i) {
-                let colors = lightLinearGradient;
-                linearGradient.innerHTML = colors
-                    .split(",")
-                    .map(
-                        (color, idx, colors) =>
-                        `<stop offset="${
-                (idx * 1) / colors.length
-              }" stop-color="${color}"/>`
-                    )
-                    .join("");
-            });
+        svgVan.querySelectorAll("#" + gradID + "").forEach(function(linearGradient, i) {
+            let colors = lightLinearGradient;
+            linearGradient.innerHTML = colors.split(",").map((color, idx, colors) =>
+                `<stop offset="${(idx * 1) / colors.length}" stop-color="${color}"/>`).join("");
+        });
+        svgVan.querySelector('path').setAttribute('d', sunPath);
         body.classList.remove(options.className);
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem(options.storageName, "");
@@ -177,7 +234,7 @@ JsDarkMode.createInstances = function() {
 
     let elements = body.querySelectorAll(selector);
     let darkMode;
-
+    console.log(elements)
     if (elements && elements.length > 0) {
         for (let i = 0, len = elements.length; i < len; i++) {
             darkMode = new JsDarkMode(elements[i]);

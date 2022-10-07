@@ -1,5 +1,68 @@
-//  pages -> list card
+@charset "utf-8";
+
+//  Symbols -> list card
 // --------------------------------------------------
+
+.t-list-card.t-list-card-user {
+  .t-list-card-lt {
+    align-self: normal;
+  }
+
+  .t-list-card-ct {
+    padding-right: 1rem;
+    position: relative;
+    display: flex;
+
+    .t-user-card-img-cnt {
+      flex: 0 0 auto;
+      text-align: center;
+
+      .t-resume-img {
+        margin: 0 auto;
+      }
+    }
+
+    .t-definition-list {
+      margin-bottom: 0.375rem;
+      .t-definition-term {
+        flex: 0 0 auto;
+      }
+    }
+
+    .t-user-card-cnt {
+      flex: 1 1 auto;
+      padding-left: 1rem;
+    }
+
+    .t-list-substance {
+      line-height: 1.625;
+      margin-top: 1rem;
+      padding-top: 1rem;
+
+      .t-badge {
+        &:not(:last-child) {
+          margin-right: .5rem;
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      background-color: $border;
+      width: .125rem;
+      height: 100%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .t-definition-list {
+    font-size: 0.875rem;
+    line-height: 1.625;
+  }
+}
 
 .t-list-card {
   padding: 1.75rem 2rem 1.75rem .5rem;

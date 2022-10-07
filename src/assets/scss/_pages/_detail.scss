@@ -145,7 +145,7 @@
   @include loop-class-six(".is-fix") {
     top: 0;
     margin-top: 0.75rem;
-    width: 100%;
+    width: inherit;
 
     hr ~ dl {
       transition: $transition;

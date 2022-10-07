@@ -60,7 +60,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@
               <font></font>
             </i>
             <font class="">全台灣</font>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -147,9 +147,9 @@
         <div class="row justify-content-center">
           <div class="col-sm-6">
 			  <img src="../../assets/images/recruit/img-step02.svg" alt="STEP.2 上傳證明文件" class="t-center-block my-6">
-			  <div class="login-card t-shadow mt-5 mb-5 rounded--12">
-			  <h1 class="t-title mb-5">求才廠商<span>註冊</span>
-				  <div class="t-float-right"><span class="t-text-yellow">STEP.2</span><span>上傳證明文件</span></div></h1>
+			  <div class="t-login-card t-shadow mt-5 mb-5 rounded--12">
+			  <h1 class="t-login-title mb-5">求才廠商<span>註冊</span>
+				  <div class="t-float-right"><span class="t-t-fc-yellow">STEP.2</span><span>上傳證明文件</span></div></h1>
             <form action="" method="post" class="t-form t-txt-left">
               <div class="t-form col-12">
 				  <div class="clear-fix px-4 mb-2">
@@ -160,7 +160,7 @@
 				  </div>
 				  <div class="alert--danger mx-3 my-4 p-1 t-txt-center rounded--4"><small>檔案格式請以 PNG、JPG、PDF 為限，各文件大小不得超過 5 MB。</small></div>
                 <div class="t-form-group">
-                  <label class="mb-2 t-font-w-300" for="">營利事業登記證明 / 身分證正、反面影本</label>
+                  <label class="mb-2 t-fw-300" for="">營利事業登記證明 / 身分證正、反面影本</label>
                   <div class="file-upload">
 					  <div class="image-upload-wrap">
 						  <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
@@ -178,7 +178,7 @@
 					</div>
                 </div>
                 <div class="t-form-group">
-                  <label class="t-font-w-300" for="">勞健就保相關證明文件</label>
+                  <label class="t-fw-300" for="">勞健就保相關證明文件</label>
                   <div class="file-upload">
 					  <div class="image-upload-wrap">
 						  <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
@@ -196,13 +196,13 @@
 					</div>
                 </div>
              	<div class="t-form-group mb-1">
-                <label class="t-font-w-300" for="">其他證明文件</label>
+                <label class="t-fw-300" for="">其他證明文件</label>
 					<div class="rounded--4 justify-content-between my-2 p-3 t-flex t-border-1 t-border-solid t-border-soft-dark">
 						<div class="w-col-8">
 							<div class="t-float-left w-col-6"><img src="../../assets/images/recruit/icon-file-png.svg" alt="png"><span class="ml-1">立案證書.png</span></div>
-							<div class="text-grey"><span>32MB</span></div>
+							<div class="t-fc-grey"><span>32MB</span></div>
 						</div>
-						<div class="badge rounded-circle">
+						<div class="t-badge rounded-circle">
 							<a href="#">
 								<i class="svg-icon svg-icon-1hx" aria-hidden="true">
 									<img src="../../assets/images/recruit/icon-trash-2.svg" alt="delete">
@@ -213,9 +213,9 @@
 					<div class="rounded--4 justify-content-between my-2 p-3 t-flex t-border-1 t-border-solid t-border-soft-dark">
 						<div class="w-col-8">
 							<div class="t-float-left w-col-6"><img src="../../assets/images/recruit/icon-file-jpg.svg" alt="png"><span class="ml-1">統編證明.jpg</span></div>
-							<div class="text-grey"><span>32MB</span></div>
+							<div class="t-fc-grey"><span>32MB</span></div>
 						</div>
-						<div class="badge rounded-circle">
+						<div class="t-badge rounded-circle">
 							<a href="#">
 								<i class="svg-icon svg-icon-1hx" aria-hidden="true">
 									<img src="../../assets/images/recruit/icon-trash-2.svg" alt="delete">
@@ -225,14 +225,14 @@
 					</div>
 					<div class="rounded--4 justify-content-between my-2 p-3 t-flex t-border-1 t-border-solid t-border-soft-dark">
 						<div class="w-col-8">
-							<div class="t-float-left w-col-6"><img src="../../assets/images/recruit/icon-file-pdf.svg" alt="png"><span class="text-lightgrey ml-1">開業執照.pdf</span></div>
+							<div class="t-float-left w-col-6"><img src="../../assets/images/recruit/icon-file-pdf.svg" alt="png"><span class="t-fc-lightgrey ml-1">開業執照.pdf</span></div>
 							<div class="t-float-left">
 								<div class="progress" style="height: 16px;">
 								<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 							</div>
 							</div>
 						</div>
-						<div class="badge rounded-circle">
+						<div class="t-badge rounded-circle">
 							<a href="#">
 								<i class="svg-icon svg-icon-1hx" aria-hidden="true">
 									<img src="../../assets/images/recruit/icon-delete.svg" alt="cancel">
@@ -299,7 +299,7 @@
               <li>
                 服務時間：週一至週日 24 小時全天服務
               </li>
-              <li class="text-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
+              <li class="t-fc-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
             </ul>
           </div>
           <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
@@ -309,10 +309,10 @@
                 <a class="btn footer-btn" href="javascript:;">服務據點</a>
               </li>
               <li>
-                <p>上週瀏覽人次：<span class="text-primary">4502541</span></p>
+                <p>上週瀏覽人次：<span class="t-fc-primary">4502541</span></p>
               </li>
               <li>
-                <p>目前線上人數：<span class="text-primary">1044</span></p>
+                <p>目前線上人數：<span class="t-fc-primary">1044</span></p>
               </li>
             </ul>
           </div>

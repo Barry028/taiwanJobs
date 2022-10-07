@@ -1,7 +1,7 @@
-//
+@charset "UTF-8";
+
 //  Base -> Reset
 // --------------------------------------------------
-// @import url("https://use.typekit.net/vdu2fgj.css");
 *,
 *::before,
 *::after {
@@ -11,65 +11,54 @@
 html {
   height: 100%;
   font-size: $font-size-pixel-base;
-  // scroll-behavior: smooth;
-  &.js-font-scale {
-    &-up {
-      &-1st {
-        font-size: #{$font-size-pixel-base + 1px};
-      }
+  transition: 0.6s ease-in;
 
-      &-2nd {
-        font-size: #{$font-size-pixel-base + 2px};
-      }
-
-      &-3rd {
-        font-size: #{$font-size-pixel-base + 3px};
-      }
-
-      &-4th {
-        font-size: #{$font-size-pixel-base + 4px};
-      }
-    }
-
-    &-down {
-      &-1st {
-        font-size: #{$font-size-pixel-base - 1px};
-      }
-
-      &-2nd {
-        font-size: #{$font-size-pixel-base - 2px};
-      }
-
-      &-3rd {
-        font-size: #{$font-size-pixel-base - 3px};
-      }
-
-      &-4th {
-        font-size: #{$font-size-pixel-base - 4px};
-      }
-    }
-  }
-  @media (max-width: $screen-lg-min) {
-    font-size: $font-size-pixel-lg;
-  }
-
-  @media (max-width: $screen-md-min) {
-    font-size: $font-size-pixel-md;
-  }
-
-  @media (max-width: $screen-sm-min) {
-    font-size: $font-size-pixel-sm;
-  }
-
+  // 如果螢幕寬度為 576px 以下 就套用 css 設定
   @media (max-width: $screen-xs-min) {
+    font-size: $font-size-pixel-xxs;
+
+    @include font-scale($font-size-pixel-xxs);
+  }
+
+  // 如果螢幕寬度為 576px 以上 且 767.98px 以下，就套用 css 設定
+  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
     font-size: $font-size-pixel-xs;
+
+    @include font-scale($font-size-pixel-xs);
+  }
+
+  // 如果螢幕寬度為 768px 以上 且 991.98px 以下，就套用 css 設定
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    font-size: $font-size-pixel-sm;
+
+    @include font-scale($font-size-pixel-sm);
+  }
+
+  // 如果螢幕寬度為 992px 以上 且 1199.98px 以下，就套用 css 設定
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    font-size: $font-size-pixel-md;
+
+    @include font-scale($font-size-pixel-md);
+  }
+
+  // 如果螢幕寬度為 1200px 以上 且 1399.98px 以下，就套用 css 設定
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    font-size: $font-size-pixel-lg;
+
+    @include font-scale($font-size-pixel-lg);
+  }
+
+  // 如果螢幕寬度為 1400px 以上 就套用 css 設定
+  @media (min-width: $screen-xl-min) {
+    font-size: $font-size-pixel-xl;
+
+    @include font-scale($font-size-pixel-xl);
   }
 }
 
 body {
-  // background-color: $white;
-  background-color: _var('body-bg' , $default);
-  color: _var('body-color' , $dark);
+  background-color: _var("body-bg", $default);
+  color: _var("body-color", $dark);
   font-family: $font-family-base;
   font-style: normal;
   line-height: $line-height-base;
@@ -78,6 +67,7 @@ body {
   min-height: 100%;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
+  transition: 0.6s ease-in;
 }
 
 // // simple (no scale)  

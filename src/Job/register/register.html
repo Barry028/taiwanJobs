@@ -60,7 +60,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -87,7 +87,7 @@
               </svg>
             </i>
             <text class="">全台灣</text>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -143,29 +143,29 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-6">
-			  <div class="login-card t-shadow mt-5 mb-5 rounded--12">
-			  <h1 class="t-title mb-5">求職會員<span>註冊</span>
+			  <div class="t-login-card t-shadow mt-5 mb-5 rounded--12">
+			  <h1 class="t-login-title mb-5">求職會員<span>註冊</span>
 				  <img src="../../assets/images/jobs/icon-addUser.svg" alt="註冊" class="t-float-right"></h1>
             <form action="" method="post" class="t-form t-txt-left">
               <div class="t-form col-12">
                 <div class="t-form-group">
-                  <label class="mb-2 t-font-w-500" for="btLogDate">帳　　號(電子郵件)</label>
+                  <label class="mb-2 t-fw-500" for="btLogDate">帳　　號(電子郵件)</label>
                   <div class="input-group">
                     <input autocomplete="off" class="t-form-control rounded--36" id="MPemail" name="register" placeholder="請輸入您的電子信箱" title="請輸入您的電子信箱" type="text" value="">
                     <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/jobs/icon-email.svg" alt="email">
                     </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入您的帳號(您的電子信箱)</font>
+                    <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入您的帳號(您的電子信箱)</font>
                   </div>
                 </div>
                 <div class="t-form-group">
-                  <label class="mb-2 t-font-w-500" for="btLogDate">密　　碼</label>
+                  <label class="mb-2 t-fw-500" for="btLogDate">密　　碼</label>
                   <div class="input-group">
                     <input autocomplete="off" class="t-form-control rounded--36" id="MPpassword" name="register" placeholder="請輸入您的密碼" title="請輸入您的密碼" type="password" value="">
                     <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/jobs/icon-lock.svg" alt="password">
                     </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入您的密碼</font>
+                    <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入您的密碼</font>
                   </div>
                 </div>
              	<div class="t-form-group">
@@ -175,7 +175,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/jobs/icon-user.svg" alt="user">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入您的姓名</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入您的姓名</font>
                 </div>
               </div>
               	<div class="t-form-group">
@@ -185,7 +185,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/jobs/icon-id.svg" alt="id">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入您的身分證字號 / 居留證號</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入您的身分證字號 / 居留證號</font>
                 </div>
               </div>
 				  <div class="t-form-group t-txt-center">

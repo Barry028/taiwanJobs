@@ -20,7 +20,6 @@
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 
-
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -81,8 +80,40 @@
 // ::-webkit-scrollbar-track {
 //   background: #333;
 // }
+[data-scroll="x"] {
+  &::-webkit-scrollbar {
+    height: .5rem;
+  }
 
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
+  &::-webkit-scrollbar-thumb {
+    border-radius: .25rem;
+    visibility: hidden;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      height: .5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($grey, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($grey, 0.24);
+      border: 2px solid $white;
+      visibility: visible;
+
+      &:hover {
+        background-color: rgba($grey, 0.66);
+      }
+    }
+  }
+}
 
 // [data-scroll="x"] {
 //   overflow-x: auto;

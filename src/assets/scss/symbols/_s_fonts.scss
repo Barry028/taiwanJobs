@@ -2,12 +2,24 @@
 
 //  Symbols Fonts
 // --------------------------------------------------
-
 .t-para {
   line-height: $t-line-height-card;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  margin-top: .625rem;
+}
+
+.t-para-l {
+  line-height: $t-line-height-card;
+  font-size: 0.875rem;
   padding-left: 1rem;
   margin-bottom: 1.5rem;
+  color: $grey-800;
+}
+
+.t-para-t {
+  line-height: $t-line-height-card;
+  font-size: 0.875rem;
+  margin-top: 1rem;
   color: $grey-800;
 }
 

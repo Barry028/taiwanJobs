@@ -1,7 +1,7 @@
 //
 //  Components -> Badges
 // --------------------------------------------------
-.badge {
+.t-badge {
   display: inline-flex;
   align-items: center;
   padding: $badge-padding-y $badge-padding-x;
@@ -16,9 +16,71 @@
   border-radius: $badge-border-radius;
   margin-bottom: 0;
   user-select: none;
+  transition: $transition;
 
-  &.badge-rounded {
+  @each $name, $value in $element-colors {
+    &.t-badge-#{$name} {
+      color: color-contrast($value, $dark, $white, $min-contrast-ratio);
+      background-color: $value;
+    }
+
+    &.t-badge-darken-#{$name} {
+      color: theme-light-color($name);
+      background-color: theme-inverse-color($name);
+    }
+
+    &.t-badge-light-#{$name} {
+      color: theme-inverse-color($name);
+      background-color: theme-light-color($name);
+    }
+  }
+
+  // Fixed size
+  &.t-badge--circle,
+  &.t-badge--square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: $badge-size;
+    min-width: $badge-size;
+    padding: 0 0.1rem;
+  }
+
+  // Circle
+  &.t-badge--circle {
     border-radius: 50%;
+    padding: 0;
+    min-width: unset;
+    width: $badge-size;
+  }
+
+  // Sizes
+  &.t-badge--sm {
+    min-width: $badge-size-sm;
+    font-size: $badge-font-size-sm;
+
+    &.badge--circle {
+      width: $badge-size-sm;
+      height: $badge-size-sm;
+    }
+  }
+
+  &.t-badge--lg {
+    min-width: $badge-size-lg;
+    font-size: $badge-font-size-lg;
+
+    &.t-badge--circle {
+      width: $badge-size-lg;
+      height: $badge-size-lg;
+    }
+  }
+
+  &.t-badge--rounded {
+    border-radius: 50%;
+  }
+
+  &:not(:last-child) {
+    margin-right: .5rem;
   }
 
   &:empty {
@@ -37,24 +99,26 @@
     }
   }
 
-  .active & {
-    background-color: $link;
-    color: $white;
+  @include link {
+    text-decoration: none;
   }
 
-  .active &,
-  & {
-    @each $color, $value in $element-colors {
-      &.t-badge-#{$color} {
-        @include badge-variant($value);
-      }
-    }
 
-    @each $color, $value in $element-soft-colors {
-      &.t-badge-#{$color} {
-        @include badge-soft-variant($color);
-      }
-    }
+  @include link-btn {
+    text-decoration: none;
+  }
+
+
+  @include hover {
+    opacity: 0.88;
+
+    @include scale(1.05);
+  }
+
+
+  > .active & {
+    background-color: $link;
+    color: $white;
   }
 
   .btn & {
@@ -66,72 +130,5 @@
   .btn-group-xs > .btn & {
     top: 0;
     padding: .125rem .25rem;
-  }
-
-  > i,
-  > font {
-    vertical-align: middle;
-  }
-
-  > i + font {
-    margin-left: .25rem;
-  }
-}
-
-//
-// Badge
-//
-
-.badge {
-  // Fixed size
-  &.badge-circle,
-  &.badge-square {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: $badge-size;
-    min-width: $badge-size;
-    padding: 0 0.1rem;
-  }
-
-  // Circle
-  &.badge-circle {
-    border-radius: 50%;
-    padding: 0;
-    min-width: unset;
-    width: $badge-size;
-  }
-
-  // Sizes
-  &.badge-sm {
-    min-width: $badge-size-sm;
-    font-size: $badge-font-size-sm;
-
-    &.badge-circle {
-      width: $badge-size-sm;
-      height: $badge-size-sm;
-    }
-  }
-
-  &.badge-lg {
-    min-width: $badge-size-lg;
-    font-size: $badge-font-size-lg;
-
-    &.badge-circle {
-      width: $badge-size-lg;
-      height: $badge-size-lg;
-    }
-  }
-}
-
-@each $name, $value in $theme-colors {
-  .badge-#{$name} {
-    color: theme-inverse-color($name);
-    background-color: $value;
-  }
-
-  .badge-light-#{$name} {
-    color: $value;
-    background-color: theme-light-color($name);
   }
 }

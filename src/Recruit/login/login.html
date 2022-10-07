@@ -12,9 +12,9 @@
   <!-- iCon  -->
   <link rel="stylesheet" type="text/css" href="../../assets/vendor/icon-turbotech_blur-v1.0/style.css">
   <!-- CSS  -->
-<!--  <link rel="stylesheet" type="text/css" href="../../assets/css/all.css">-->
+  <!--  <link rel="stylesheet" type="text/css" href="../../assets/css/all.css">-->
   <link rel="stylesheet" type="text/css" href="../../assets/css/all_recruit.css">
-	<link rel="stylesheet" type="text/css" href="login.css">
+  <link rel="stylesheet" type="text/css" href="login.css">
   <!--[if lte IE 9]>
         <script src="../../assets/vender/IE_Supports/html5shiv/dist/html5shiv.min.js"></script>
         <script src="../../assets/vender/IE_Supports/respond/dest/respond.min.js"></script>
@@ -61,7 +61,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@
               <font></font>
             </i>
             <font class="">全台灣</font>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -147,60 +147,64 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-6">
-			  <div class="login-card t-shadow mt-5 mb-5 rounded--12">
-			  <h1 class="t-title mb-5">求才廠商<span>登入</span>
-				  <img src="../../assets/images/jobs/icon-login.svg" alt="登入" class="t-float-right"></h1>
-            <form action="" method="post" class="t-form t-txt-left">
-              <div class="t-form col-12">
-                <div class="t-form-group">
-                  <label class="mb-2 t-font-w-500" for="btLogDate">帳　　號(統一編號)</label>
-                  <div class="input-group">
-                    <input autocomplete="off" class="t-form-control rounded--36" id="MPemail" name="register" placeholder="請輸入帳號 (統一編號或是帳號)" title="請輸入帳號 (統一編號或是帳號)" type="text" value="">
-                    <i class="svg-icon svg-icon-1hx" aria-hidden="true">
-                      <img src="../../assets/images/jobs/icon-email.svg" alt="email">
-                    </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入帳號 (統一編號或是帳號)</font>
+
+
+            
+            <div class="t-login-card t-shadow mt-5 mb-5 rounded--12">
+              <h1 class="t-login-title mb-5">求才廠商<span>登入</span>
+                <img src="../../assets/images/jobs/icon-login.svg" alt="登入" class="t-float-right"></h1>
+              <form action="" method="post" class="t-form t-txt-left">
+                <div class="t-form col-12">
+                  <div class="t-form-group">
+                    <label class="mb-2 t-fw-500" for="btLogDate">帳　　號(統一編號)</label>
+                    <div class="input-group">
+                      <input autocomplete="off" class="t-form-control rounded--36" id="MPemail" name="register" placeholder="請輸入帳號 (統一編號或是帳號)" title="請輸入帳號 (統一編號或是帳號)" type="text" value="">
+                      <i class="svg-icon svg-icon-1hx" aria-hidden="true">
+                        <img src="../assets/images/jobs/icon-email.svg" alt="email">
+                      </i>
+                      <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入帳號 (統一編號或是帳號)</font>
+                    </div>
+                  </div>
+                  <div class="t-form-group">
+                    <div class="form-help">
+                      <a href="../forgotPassword/forgotPassword.html">忘記密碼？</a>
+                    </div>
+                    <label class="mb-2 t-fw-500" for="btLogDate">密　　碼</label>
+                    <div class="input-group">
+                      <input autocomplete="off" class="t-form-control rounded--36" id="MPpassword" name="register" placeholder="請輸入您的密碼" title="請輸入您的密碼" type="password" value="">
+                      <i class="svg-icon svg-icon-1hx" aria-hidden="true">
+                        <img src="../../assets/images/jobs/icon-lock.svg" alt="password">
+                      </i>
+                      <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入您的密碼</font>
+                    </div>
+                  </div>
+                  <div class="t-form-group">
+                    <button type="reset" class="btn btn--block rounded--36 btn--lg btn-login">求才廠商登入</button>
+                  </div>
+                  <div class="t-form-group t-txt-center">
+                    <a href="register.html" class="t-link-grey">立即註冊加入求職會員！</a>
+                  </div>
+                  <div class="break-line">或</div>
+                  <div class="row mb-6">
+                    <div class="col-6">
+                      <button href="#" class="btn btn-social btn--block p-4">
+                        <i class="svg-icon svg-icon-1hx" aria-hidden="true">
+                          <img src="../../assets/images/jobs/icon-facebook.svg" alt="facebook">
+                        </i> 使用 Facebook 註冊</button>
+                    </div>
+                    <div class="col-6">
+                      <button href="#" class="btn btn-social btn--block p-4">
+                        <i class="svg-icon svg-icon-1hx" aria-hidden="true">
+                          <img src="../../assets/images/jobs/icon-line.svg" alt="facebook">
+                        </i>使用 Line 註冊</button>
+                    </div>
                   </div>
                 </div>
-                <div class="t-form-group">
-					<div class="form-help"><a href="forgotPassword.html">忘記密碼？</a></div>
-                  <label class="mb-2 t-font-w-500" for="btLogDate">密　　碼</label>
-                  <div class="input-group">
-                    <input autocomplete="off" class="t-form-control rounded--36" id="MPpassword" name="register" placeholder="請輸入您的密碼" title="請輸入您的密碼" type="password" value="">
-                    <i class="svg-icon svg-icon-1hx" aria-hidden="true">
-                      <img src="../../assets/images/jobs/icon-lock.svg" alt="password">
-                    </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入您的密碼</font>
-                  </div>
-                </div>
-				  <div class="t-form-group">
-					  <button type="reset" class="btn btn--block rounded--36 btn--lg btn-login">求才廠商登入</button>
-				  </div>
-				  <div class="t-form-group t-txt-center">
-				  	<a href="register.html" style="color: #666666;">立即註冊加入求職會員！</a>
-				  </div>
-                	<div class="break-line">或</div>
-				  <div class="row mb-6">
-				  <div class="col-6">
-				  	<button href="#" class="btn btn-social btn--block p-4">
-						<i class="svg-icon svg-icon-1hx" aria-hidden="true">
-                      <img src="../../assets/images/jobs/icon-facebook.svg" alt="facebook">
-                  </i> 使用 Facebook 註冊</button>
-				  </div>
-				  <div class="col-6">
-				  	<button href="#" class="btn btn-social btn--block p-4">
-						<i class="svg-icon svg-icon-1hx" aria-hidden="true">
-                      <img src="../../assets/images/jobs/icon-line.svg" alt="facebook">
-                  </i>使用 Line 註冊</button>
-				  </div>
-					  </div>
+              </form>
+              <div class="login-footer p-4">
+                如有相關疑問，請於服務時間 （週一至週五8:30至18:30，不含國定假日）來電台灣就業通客服中心 <a href="tel:0800-777-888">0800-777-888</a>，或來信客服信箱，我們將於上班時間主動與您聯繫。
               </div>
-              
-            </form>
-				  <div class="login-footer p-4">
-				  	如有相關疑問，請於服務時間 （週一至週五8:30至18:30，不含國定假日）來電台灣就業通客服中心 <a href="tel:0800-777-888">0800-777-888</a>，或來信客服信箱，我們將於上班時間主動與您聯繫。
-				  </div>
-				  </div>
+            </div>
           </div>
         </div>
       </div>
@@ -242,7 +246,7 @@
               <li>
                 服務時間：週一至週日 24 小時全天服務
               </li>
-              <li class="text-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
+              <li class="t-fc-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
             </ul>
           </div>
           <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
@@ -252,10 +256,10 @@
                 <a class="btn footer-btn" href="javascript:;">服務據點</a>
               </li>
               <li>
-                <p>上週瀏覽人次：<span class="text-primary">4502541</span></p>
+                <p>上週瀏覽人次：<span class="t-fc-primary">4502541</span></p>
               </li>
               <li>
-                <p>目前線上人數：<span class="text-primary">1044</span></p>
+                <p>目前線上人數：<span class="t-fc-primary">1044</span></p>
               </li>
             </ul>
           </div>

@@ -1,5 +1,7 @@
-//
-//  Layout -> SideBar 
+@charset "utf-8";
+
+
+//  Layout -> SideBar Backend
 // --------------------------------------------------
 .side-bar-menu {
   position: relative;
@@ -96,9 +98,8 @@
   }
 
   [data-sub="true"] {
-
-    >.side-main-list-link,
-    >.side-sub-menu-link {
+    > .side-main-list-link,
+    > .side-sub-menu-link {
       &:after {
         content: '';
         position: absolute;
@@ -109,7 +110,7 @@
       }
     }
 
-    >.side-main-list-link {
+    > .side-main-list-link {
       &:after {
         width: 1.375rem;
         height: 0.6875rem;
@@ -118,7 +119,7 @@
       }
     }
 
-    >.side-sub-menu-link {
+    > .side-sub-menu-link {
       &:after {
         width: 1.25rem;
         height: 0.625rem;
@@ -128,7 +129,7 @@
     }
 
     &.open {
-      >.side-main-list-link {
+      > .side-main-list-link {
         &:after {
           transform: translateY(-50%) rotate(90deg);
 
@@ -136,7 +137,7 @@
         }
       }
 
-      >.side-sub-menu-link {
+      > .side-sub-menu-link {
         &:after {
           transform: translateY(-50%) rotate(90deg);
 
@@ -144,7 +145,7 @@
         }
       }
 
-      +.side-sub-menu {
+      + .side-sub-menu {
         margin: $side-sub-menu-margin;
 
         @include visually-visible;
@@ -152,7 +153,7 @@
     }
 
     &.active {
-      >.side-main-list-link {
+      > .side-main-list-link {
         &:after {
           @include svg-bg-icon(arrow-end, $white, center, contain);
         }
@@ -164,8 +165,9 @@
     padding-top: .25rem;
     height: calc(100% - 3.375rem);
 
-    >.js-scrollbar {
+    > .js-scrollbar {
       height: calc(100% - 14rem);
+
       // mask: linear-gradient($dark 95%, transparent);
 
       .mCustomScrollBox {
@@ -226,14 +228,14 @@
           }
         }
 
-        >.side-sub-menu {
+        > .side-sub-menu {
           margin: $side-sub-menu-margin;
 
           @include visually-visible;
 
           .side-sub-menu-item {
             &.open {
-              +.side-sub-menu {
+              + .side-sub-menu {
                 margin: $side-sub-menu-margin-3th;
               }
             }
@@ -267,7 +269,7 @@
           }
         }
 
-        >.side-sub-menu {
+        > .side-sub-menu {
           margin: $side-sub-menu-margin;
         }
       }
@@ -336,7 +338,7 @@
         }
       }
 
-      +.side-sub-menu {
+      + .side-sub-menu {
         .side-sub-menu-item {
           color: $side-bar-sub-list-item-font-color-3th;
 
@@ -446,7 +448,6 @@
     }
   }
 
-
   &.side-bar-menu-fixed {
     position: fixed;
     left: 0;
@@ -456,20 +457,20 @@
     animation: fadeInDown 0 0.125s;
 
     &:not(.min_size) {
-      +.main-content {
+      + .main-content {
         margin-left: $side-bar-width;
       }
     }
 
     &.side-bar-menu-with-icon {
-      +.main-content {
+      + .main-content {
         margin-left: $side-bar-icon-width;
       }
     }
 
     &.min_size,
     &.click_min_size {
-      +.main-content {
+      + .main-content {
         margin-left: $side-bar-minsize-width;
       }
     }
@@ -481,9 +482,7 @@
     &.min_size,
     &.click_min_size {
       .side-main-menu {
-
-        >.js-scrollbar {
-
+        > .js-scrollbar {
           .side-main-list-item {
             padding: 0.375rem 0.5rem .375rem 0;
           }
@@ -491,22 +490,19 @@
       }
     }
 
-
-    +.main-content {
+    + .main-content {
       margin-left: 0;
       width: calc(100% - #{$side-bar-icon-width});
     }
 
-
     .side-main-menu {
       height: calc(100% - 3.375rem);
 
-      >.js-scrollbar {
+      > .js-scrollbar {
         height: calc(100% - 14rem);
 
         .side-main-list-item {
           padding: 0.375rem 0.5rem .375rem 0;
-
 
           &:nth-child(2) {
             &:hover:not(.active):not(.open) {
@@ -517,7 +513,7 @@
                   color: $secondary;
                 }
 
-                span,font {
+                span, font {
                   color: $secondary;
                 }
               }
@@ -530,7 +526,7 @@
                 color: $secondary-300;
               }
 
-              span,font {
+              span, font {
                 color: $secondary-800;
               }
             }
@@ -545,7 +541,7 @@
                   color: $tertiary-600;
                 }
 
-                span,font {
+                span, font {
                   color: $tertiary;
                 }
               }
@@ -558,7 +554,7 @@
                 color: $tertiary-500;
               }
 
-              span,font {
+              span, font {
                 color: $tertiary-800;
               }
             }
@@ -573,7 +569,7 @@
                   color: $quaternary-700;
                 }
 
-                span,font {
+                span, font {
                   color: $quaternary-700;
                 }
               }
@@ -586,7 +582,7 @@
                 color: $quaternary-600;
               }
 
-              span,font {
+              span, font {
                 color: $quaternary-800;
               }
             }
@@ -601,7 +597,7 @@
                   color: $info-700;
                 }
 
-                span,font {
+                span, font {
                   color: $info-700;
                 }
               }
@@ -614,7 +610,7 @@
                 color: $info-600;
               }
 
-              span,font {
+              span, font {
                 color: $info-800;
               }
             }
@@ -629,7 +625,7 @@
                   color: $warning-700;
                 }
 
-                span,font {
+                span, font {
                   color: $warning-700;
                 }
               }
@@ -642,7 +638,7 @@
                 color: $warning-600;
               }
 
-              span,font {
+              span, font {
                 color: $warning-800;
               }
             }
@@ -678,8 +674,8 @@
 
           &:hover,
           &.open {
-            >.side-main-list-link {
-              +.side-sub-menu {
+            > .side-main-list-link {
+              + .side-sub-menu {
                 @include visually-visible;
 
                 &:before {
@@ -690,7 +686,7 @@
                   display: block;
 
                   &.open {
-                    +.side-sub-menu {
+                    + .side-sub-menu {
                       @include visually-visible;
 
                       transform: translateX(-0.5rem);
@@ -785,6 +781,7 @@
 
       .side-main-title-inner {
         width: 0;
+
         @include visually-hidden;
       }
 
@@ -796,13 +793,14 @@
 
       .toggle-menu {
         position: relative;
-top: auto;
+        top: auto;
         right: auto;
-transform: translateY(0%);
+        transform: translateY(0%);
+
         // transform: initial;
         box-shadow: $side-bar-toggle-menu-shadow $side-bar-toggle-menu-min-size-shadow-color;
 
-        >span {
+        > span {
           background-color: $side-bar-toggle-menu-dot-color;
           width: $side-bar-toggle-menu-dot-min-size-width;
           height: $side-bar-toggle-menu-dot-min-size-height;
@@ -830,7 +828,7 @@ transform: translateY(0%);
     }
 
     .side-main-menu {
-      >.js-scrollbar {
+      > .js-scrollbar {
         height: 100%;
 
         .side-main-list-item {
@@ -851,10 +849,11 @@ transform: translateY(0%);
 
             span {
               @include visually-hidden;
+
               margin: 0;
             }
 
-            >font {
+            > font {
               font-size: .875rem;
             }
           }
@@ -869,8 +868,8 @@ transform: translateY(0%);
 
           &:hover,
           &.open {
-            >.side-main-list-link {
-              +.side-sub-menu {
+            > .side-main-list-link {
+              + .side-sub-menu {
                 @include visually-visible;
 
                 &:before {
@@ -881,7 +880,7 @@ transform: translateY(0%);
                   display: block;
 
                   &.open {
-                    +.side-sub-menu {
+                    + .side-sub-menu {
                       @include visually-visible;
 
                       transform: translateX(-0.5rem);
@@ -914,6 +913,7 @@ transform: translateY(0%);
         position: absolute;
         left: 100%;
         top: 0;
+
         @include visually-hidden;
 
         width: $side-bar-min-size-sub-menu-width;
@@ -932,11 +932,10 @@ transform: translateY(0%);
           transform: rotate(45deg);
           opacity: 0;
         }
-
       }
     }
 
-    +.main-content {
+    + .main-content {
       margin-left: 0;
       width: calc(100% - #{$side-bar-minsize-width});
     }
@@ -949,8 +948,4 @@ transform: translateY(0%);
   }
 
   &:not(.side-bar-menu-with-icon) {}
-
-
-
-
 }

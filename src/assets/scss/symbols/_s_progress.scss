@@ -2,26 +2,16 @@
 
 //  Symbols  Progress
 // --------------------------------------------------
+.t-resume-progress,
 .t-applys-progress {
   display: flex;
   flex-flow: column;
   align-items: flex-end;
 
   .t-progress-wrap {
-    width: 100%;
-    height: .5rem;
-    border-radius: $border-radius-sm;
-    overflow: hidden;
-    background-color: $grey-50;
-    margin: .5rem 0;
-
-    .t-progress-bar {
-      display: block;
-      height: inherit;
-      border-radius: $border-radius-sm;
-      width: 0;
-      background-color: $primary;
-    }
+    border-radius: $border-radius;
+    margin-top: 0.5rem;
+    border: $white 2px solid;
   }
 
   .t-applys-txt {
@@ -34,3 +24,20 @@
     }
   }
 }
+
+// .t-progress-wrap {
+//   width: 100%;
+//   height: .5rem;
+//   border-radius: $border-radius-sm;
+//   overflow: hidden;
+//   background-color: $grey-50;
+//   margin: .5rem 0;
+
+//   .t-progress-bar {
+//     display: block;
+//     height: inherit;
+//     border-radius: $border-radius-sm;
+//     width: 0;
+//     background-color: $primary;
+//   }
+// }

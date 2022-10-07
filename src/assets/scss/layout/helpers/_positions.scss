@@ -2,6 +2,8 @@
 
 //  Layout -> positions 
 // --------------------------------------------------
+
+
 .is-fix {
   @include loop-class-six(".is-fix") {
     position: fixed;

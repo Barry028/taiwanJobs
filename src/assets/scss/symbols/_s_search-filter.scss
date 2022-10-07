@@ -13,20 +13,37 @@
   padding: 0 0.75rem;
   z-index: 9;
 
-  @include flex($justify: end, $align-content: center, $align-items: center, $flex-dir: row, $flex-wrap: wrap-reverse);
+  @include flex($justify: space-between, $align-content: center, $align-items: center, $flex-dir: row, $flex-wrap: inherit);
 
   @extend .flex-row-auto;
+
+  @media (max-width: $screen-md-min) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: start;
+
+    .search-filter-list-lt {
+      // width: 100%;
+   
+    }
+  }
 
   .search-filter-list-lt,
   .search-filter-list-rt {
     position: relative;
+    display: flex;
 
-    @extend .t-flex;
+    // @extend .t-flex;
+ 
   }
 
   .search-filter-list-lt {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
     padding: 0.5rem 0.5rem 0.5rem 0;
+
+    @media (max-width: $screen-md-min) {
+      align-self: flex-end;
+    }
 
     @extend .align-items-end;
 
@@ -87,7 +104,15 @@
   .search-filter-list-rt {
     // overflow: auto;
 
+    @media (max-width: $screen-md-min) {
+      align-self: flex-start;
+    }
+
     @extend .flex-center;
+
+    .t-form-group {
+      display: flex;
+    }
 
     padding: 0.5rem 0 0.5rem 1rem;
 

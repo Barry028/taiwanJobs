@@ -1,55 +1,61 @@
 // SHHADOW
 // =========================================================
-$u-box-shadow: 0 0.5rem 1.5rem 0.5rem rgba($black, 0.075) !default;
-$u-box-shadow-xs: 0 0.1rem 0.75rem 0.25rem rgba($black, 0.05) !default;
-$u-box-shadow-sm: 0 0.1rem 1rem 0.25rem rgba($black, 0.05) !default;
-$u-box-shadow-lg: 0 1rem 2rem 1rem rgba($black, 0.1) !default;
+$u-box-shadow:          0 0.5rem 1.5rem 0.5rem rgba($black, 0.075)   !default;
+$u-box-shadow-xs:       0 0.1rem 0.75rem 0.25rem rgba($black, 0.05)  !default;
+$u-box-shadow-sm:       0 0.1rem 1rem 0.25rem rgba($black, 0.05)     !default;
+$u-box-shadow-lg:       0 1rem 2rem 1rem rgba($black, 0.1)           !default;
 
 $box-shadow:            0 0.5rem 1rem rgba($dark, 0.15)                 !default;
 $box-shadow-lg:         0 1rem 3rem rgba($dark, 0.175)                  !default;
 $box-shadow-md:         0 0.75rem 2.5rem rgba($dark, 0.125)             !default;
 $box-shadow-sm:         0 0.375rem .75rem rgba($dark, 0.075)            !default;
 $box-shadow-xs:         0 0.125rem .25rem rgba($dark, 0.025)            !default;
-$box-shadow-inset: inset 0rem 1px 2px rgba($black, .075) !default;
+$box-shadow-inset:      inset 0rem 1px 2px rgba($black, .075)           !default;
 
-$t-box-shadow: 0rem .5rem 1rem rgba($black, .16) !default;
-$t-box-shadow-sm: 0rem .125rem .25rem rgba($black, .85) !default;
-$t-box-shadow-lg: 0rem 1rem 3rem rgba($black, .175) !default;
-$t-box-shadow-inset: inset 0rem 1px 2px rgba($black, .075) !default;
+$t-box-shadow:             0rem .5rem 1rem rgba($black, .16) !default;
+$t-box-shadow-sm:          0rem .125rem .25rem rgba($black, .85) !default;
+$t-box-shadow-lg:          0rem 1rem 3rem rgba($black, .175) !default;
+$t-box-shadow-inset:       inset 0rem 1px 2px rgba($black, .075) !default;
 
-$tt-box-shadow: 0rem .375rem 1.5rem 0rem rgba($gray-600, .125) !default;
-$tt-box-shadow-sm: 0rem .1875rem .375rem rgba($gray-600, .25) !default;
-$tt-box-shadow-lg: 0rem 1rem 1.75rem 0rem rgba($dark, .1) !default;
-$tt-box-shadow-xl: 0 2.75rem 5.5rem -3.5rem rgba($dark, .2),
-                    0 2rem 4rem -2rem rgba($dark, .3) !default;
+$tt-box-shadow:            0rem .375rem 1.5rem 0rem rgba($gray-600, .125) !default;
+$tt-box-shadow-sm:         0rem .1875rem .375rem rgba($gray-600, .25) !default;
+$tt-box-shadow-lg:         0rem 1rem 1.75rem 0rem rgba($dark, .1) !default;
+$tt-box-shadow-xl:         0 2.75rem 5.5rem -3.5rem rgba($dark, .2), 0 2rem 4rem -2rem rgba($dark, .3) !default;
 // noColor
-$t-btn-box-shadow: 0 0.75rem 1.125rem -0.5rem !default;
-$t-btn-box-shadow-hover: 0 0.75rem 1.25rem -0.375rem !default;
-$t-btn-box-shadow-active: 0 0.5rem 1.5rem -0.625rem !default;
-$t-btn-box-shadow-focus: 0 0.875rem 1.5rem -0.125rem !default;
+$t-btn-box-shadow:                       0 0.75rem 1.125rem -0.5rem        !default;
+$t-btn-box-shadow-hover:                 0 0.75rem 1.25rem -0.375rem       !default;
+$t-btn-box-shadow-active:                0 0.5rem 1.5rem -0.625rem         !default;
+$t-btn-box-shadow-focus:                 0 0.875rem 1.5rem -0.125rem       !default;
+
+$t-card-box-shadow:                       0 0.75rem 1.125rem -0.5rem        !default;
+$t-card-box-shadow-hover:                 0 0.75rem 1.25rem -0.375rem       !default;
+$t-card-box-shadow-active:                0 0.5rem 1.5rem -0.625rem         !default;
+$t-card-box-shadow-focus:                 0 0.875rem 1.5rem -0.125rem       !default;
+
+
 
 // $shadow-card:           0 0 1.25rem 0 rgba($grey-500, .08)!default;
 $shadow-card:           0 .5rem .5rem 0 rgba($grey-300, .12)                !default;
 $shadow-card-hover:     0 .75rem 1.5rem 0 rgba($grey-300, .08)              !default;
-$shadow-setting-card:   0 .25rem 1rem 0 rgba($primary, .66)              !default;
-$shadow-sidebar:        0px 0px 80px 50px rgba($grey-300, 0.12)         !default;
-$shadow-header:         0px 10px 30px 0px rgba($grey-700, .08)          !default;
-$shadow-tab:            0 0.1875rem 0.375rem 0 rgba($grey-700 , .24)    !default;
-$shadow-tab-hover:      0 0.25rem 0.5rem 0 rgba($grey-800, .36)        !default;
-$shadow-dropdown:       0 0.6125rem 2.5rem 0.6125rem rgba($grey, .18)   !default;
-$shadow-panel:          0px 0px 2.5rem 1.25rem rgba($grey-600, 0.12)         !default;
-$shadow-panel-fixed:    0px 0px 2.5rem 1.25rem rgba($grey-800, 0.18)         !default;
+$shadow-setting-card:   0 .25rem 1rem 0 rgba($primary, .66)                 !default;
+$shadow-sidebar:        0px 0px 80px 50px rgba($grey-300, 0.12)             !default;
+$shadow-header:         0px 10px 30px 0px rgba($grey-700, .08)              !default;
+$shadow-tab:            0 0.1875rem 0.375rem 0 rgba($grey-700 , .24)        !default;
+$shadow-tab-hover:      0 0.25rem 0.5rem 0 rgba($grey-800, .36)             !default;
+$shadow-dropdown:       0 0.6125rem 2.5rem 0.6125rem rgba($grey, .18)       !default;
+$shadow-panel:          0px 0px 2.5rem 1.25rem rgba($grey-600, 0.12)        !default;
+$shadow-panel-fixed:    0px 0px 2.5rem 1.25rem rgba($grey-800, 0.18)        !default;
 
 
 //   .menu-sub-dropdown  box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 15%);
-$shadow-dropdown-v2:   0px 0px 50px 0px rgba($dark, 0.26)!default;
-$shd--hv--ver--01:      0 2px 4px 0 rgba($dark, 0.04)             !default;
-$shd--hv--ver--01--hv:  0 20px 40px 0 rgba($dark, 0.08)             !default;
+$shadow-dropdown-v2:    0px 0px 50px 0px rgba($dark, 0.26)               !default;
+$shd--hv--ver--01:      0 2px 4px 0 rgba($dark, 0.04)                   !default;
+$shd--hv--ver--01--hv:  0 20px 40px 0 rgba($dark, 0.08)                 !default;
 $shd--hv--ver--02:      13px 32px 36px -14px rgba($dark, 0.12)          !default;
 $shd--hv--ver--02--hv:  13px 32px 36px -14px rgba($dark, 0.32)          !default;
-$shd--hv--ver--03:      0 0.125rem 0.25rem rgba($dark, 0.08)          !default;
-$shd--hv--ver--03--hv:  0 0.175rem 0.275rem rgba($dark, 0.16)         !default;
-$shd--hv--ver--04:      0 20px 24px -12px rgba($dark, 0.08)           !default;
-$shd--hv--ver--04--hv:  0 22px 28px -14px rgba($dark, 0.16)           !default;
-$shd--hv--ver--05:      0 3px 10px 0 rgba($dark, 0.12)              !default;
-$shd--hv--ver--05--hv:  0 30px 60px 0 rgba($dark, 0.12)             !default;
+$shd--hv--ver--03:      0 0.125rem 0.25rem rgba($dark, 0.08)            !default;
+$shd--hv--ver--03--hv:  0 0.175rem 0.275rem rgba($dark, 0.16)           !default;
+$shd--hv--ver--04:      0 20px 24px -12px rgba($dark, 0.08)             !default;
+$shd--hv--ver--04--hv:  0 22px 28px -14px rgba($dark, 0.16)             !default;
+$shd--hv--ver--05:      0 3px 10px 0 rgba($dark, 0.12)                  !default;
+$shd--hv--ver--05--hv:  0 30px 60px 0 rgba($dark, 0.12)                 !default;

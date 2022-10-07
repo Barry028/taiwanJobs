@@ -3,14 +3,15 @@
 
 // stylelint-disable value-keyword-case halyard-text halyard-display halyard-micro
 $font-family-serif:                'Merriweather', serif !default;
-$font-family-sans-serif:           'halyard-display', 'source-han-sans-traditional', system-ui, -apple-system, 
+$font-family-sans-serif:           'parity-sans', -apple-system,  system-ui,
                                    BlinkMacSystemFont, segoe ui, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif, 
                                    apple color emoji, segoe ui emoji, segoe ui symbol !default;
 // $font-family-monospace:            SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // 400 500 700
-$font-family-monospace:            Menlo, Monaco, Consolas, 'Courier New', monospace  !default;
-$font-family-base:                 $font-family-sans-serif                            !default;
-
+$font-family-monospace:            'parity-sans-mono', Monaco, Consolas, 'Courier New', monospace  !default;
+$font-family-base:                  $font-family-sans-serif                            !default;
+$font-family-display:              'parity-sans-display'                              !default;
+$font-family-display-weight:        800                                               !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
@@ -49,12 +50,26 @@ $font-size-base:                                             $font-size         
 $font-size-root:                                             null                      !default;
 
 $font-size-pixel-base:                                       16px                      !default;
-$font-size-pixel-xl:                                         20px                      !default;
+$font-size-pixel-xxl:                                        20px                      !default;
+$font-size-pixel-xl:                                         19px                      !default;
 $font-size-pixel-lg:                                         18px                      !default;
 $font-size-pixel-md:                                         $font-size-pixel-base     !default;
-$font-size-pixel-sm:                                         14px                      !default;
-$font-size-pixel-xs:                                         13px                      !default;
-$font-size-pixel-xxs:                                        12px                      !default;
+$font-size-pixel-sm:                                         15px                      !default;
+$font-size-pixel-xs:                                         14px                      !default;
+$font-size-pixel-xxs:                                        13px                      !default;
+
+
+// $font-size-pixels:
+$font-size-pixels: (
+  xxs: $font-size-pixel-xxs,
+  xs:  $font-size-pixel-xs,
+  sm:  $font-size-pixel-sm,
+  md:  $font-size-pixel-md,
+  lg:  $font-size-pixel-lg,
+  xl:  $font-size-pixel-xl,
+  xxl: $font-size-pixel-xxl
+) !default;
+
 
 $font-size-none:                                             0                              !default;
 $font-size-xl:                                               PxRem($font-size-pixel-xl)     !default;

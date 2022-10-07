@@ -1,3 +1,48 @@
+@charset "utf-8";
+
+//  Mixins > font Size
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin font-scale($params) {
+  &.js-font-scale {
+    &-up {
+      &-1st {
+        font-size: #{$params + 1px};
+      }
+
+      &-2nd {
+        font-size: #{$params + 2px};
+      }
+
+      &-3rd {
+        font-size: #{$params + 3px};
+      }
+
+      &-4th {
+        font-size: #{$params + 4px};
+      }
+    }
+
+    &-down {
+      &-1st {
+        font-size: #{$params - 1px};
+      }
+
+      &-2nd {
+        font-size: #{$params - 2px};
+      }
+
+      &-3rd {
+        font-size: #{$params - 3px};
+      }
+
+      &-4th {
+        font-size: #{$params - 4px};
+      }
+    }
+  }
+}
+
+// will override defaults
 $layout-max-width: 720px;
 $font-bound-min: 320px;
 
@@ -7,8 +52,6 @@ $font-bound-max: 720px;
 //  default font scale bounding
 $font-lock-min: 400px !default;
 $font-lock-max: 1000px !default;
-
-// will override defaults
 
 // ==============================
 // Font size mixin

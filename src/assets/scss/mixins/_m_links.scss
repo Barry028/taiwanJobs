@@ -2,9 +2,20 @@
 
 //  Mixins > links
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
+// @include link {};
 @mixin link {
-  @at-root a#{&}{
+  @at-root a#{&} {
+    @content;
+  }
+}
+
+// @include link-btn {};
+@mixin link-btn {
+  @at-root a#{&} {
+    @content;
+  }
+
+  @at-root .btn#{&} {
     @content;
   }
 }

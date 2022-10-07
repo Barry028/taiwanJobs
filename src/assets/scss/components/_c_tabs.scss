@@ -468,7 +468,7 @@
 // -------------------------
 .tab-content {
 
-  &:not(.tab-fade):not(.tab-sliding) {
+  &:not(.tab-fade):not(.t-tab-sliding) {
 
     >.tab-pane {
       display: none;
@@ -498,7 +498,7 @@
     }
   }
 
-  &.tab-sliding {
+  &.t-tab-sliding {
     position: relative;
     display: inline-block;
     width: 100%;

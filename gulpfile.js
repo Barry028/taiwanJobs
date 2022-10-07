@@ -1,6 +1,6 @@
 // var async = require('async');
-// gulp default
-
+// npm install --save-dev gulp-imagemin@7.1.0 安裝舊版
+const fs = require("fs");
 const {
   src,
   dest,
@@ -9,17 +9,21 @@ const {
 } = require('gulp')
   // const async = require('async');
 const gulp = require('gulp');
-
+// const gulpLoadPlugins = require('gulp-load-plugins');
 const babel = require('gulp-babel');
-
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const postcssPresetEnv = require('postcss-preset-env');
+const atImport = require("postcss-import")
 const postcss_html = require('gulp-html-postcss');
+const nested = require('postcss-nested');
 const reporter = require('gulp-reporter');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const url = require("postcss-url")
+// const imagemin = require('gulp-imagemin');
+// const webp = require('gulp-webp');
 // 合併檔案
 const concat = require('gulp-concat');
 const minify = require("gulp-babel-minify");
@@ -52,7 +56,18 @@ const lodash = require('lodash');
 //         }
 //     }]
 // };
+// function imgs() {
+//   return src('src/assets/*')
+//     .pipe(webp())
+//     .pipe(imagemin())
+//     .dest('./dist/')
+// }
 
+// gulp.task("img", function() {
+//   return Observable.return(
+//     imgs()
+//   );
+// });
 // const purgecss = require('gulp-purgecss');
 
 // SASS 非同步 
@@ -63,6 +78,7 @@ gulp.task("sass", function() {
 });
 
 function scssTask() {
+  var plugins = [nested];
   return src('./src/assets/scss/*.scss')
     .pipe(sourcemaps.init({
       loadMaps: true
@@ -73,7 +89,14 @@ function scssTask() {
         // postCssSvgo(),
         // cssnano(),
         // autoprefixer(),
-        postcssPresetEnv( /* pluginOptions */ )
+
+        postcssPresetEnv({
+          stage: 3,
+          features: {
+            'nesting-rules': true
+          },
+          browsers: 'last 2 versions',
+        })
       ]))
     .pipe(sass().on('error', sass.logError))
     // .pipe(sourcemaps.write('./')) // 生成 sourcemaps 文件 (.map)
@@ -84,8 +107,6 @@ function scssTask() {
     }))
     .pipe(dest('./src/assets/css/'));
 }
-
-
 
 
 
@@ -209,6 +230,7 @@ function watchTask() {
     scssTask,
     babelEs5,
     purgeSass,
+    // imgs
     // readToolMethod
     // browsersyncReload
   ));
@@ -218,5 +240,6 @@ exports.default = series(
   scssTask,
   babelEs5,
   purgeSass,
+  // imgs
   // readToolMethod
 );

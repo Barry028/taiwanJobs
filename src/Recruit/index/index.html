@@ -53,7 +53,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -80,7 +80,7 @@
               </svg>
             </i>
             <text class="">全台灣</text>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -148,9 +148,16 @@
                     找公司
                   </label>
                 </div>
-                <div class="t-tab-contents tab-sliding">
+                <div class="t-talk-bubble btm-left-in-auto">
+                  <div class="t-talk-text">
+                    4月27日新增
+                    <strong>1,234</strong>
+                    筆開啟履歷數！
+                  </div>
+                </div>
+                <div class="t-tab-contents t-tab-sliding">
                   <div id="tab_content_1" class="t-tab-content pb-2">
-                    <form action="" class="t-search-inner">
+                    <form action="../resumeListing/resumeListing.html" class="t-search-inner">
                       <div class="t-form-inline w-100 t-flex align-items-center justify-content-center flex-sm-nowrap">
                         <div class="t-form-group t-flex align-items-center serach-form-group">
                           <div class="t-input-group">
@@ -195,7 +202,7 @@
                       </div>
                     </form>
                     <ul class="hot-links-list">
-                      <p class="links-list-title text-dark t-font-w-700 ">熱門關鍵字</p>
+                      <p class="links-list-title t-fc-dark t-fw-700 ">熱門關鍵字</p>
                       <li class="links-list-item">
                         <a href="javascript:;" class="links-list-link">
                           製程技術員
@@ -260,12 +267,12 @@
               </h2>
               <label class="t-section-heading-lab">不用錢!</label>
             </div>
-            <h3 class="t-txt-22 t-font-w-400 text-grey">
+            <h3 class="t-fs-22 t-fw-400 t-fc-grey">
               台灣就業通 [找人才] 提供廠商人才查詢、產經趨勢、徵才活動報名、
               計劃法規、產訓資源、資遣通報等資源，是您找好人才的最佳幫手！
             </h3>
             <p class="pt-4">
-              目前已有 <strong class="t-txt-28 text-primary t-font-w-700"> 45,250 </strong> 人於就業通上求職！
+              目前已有 <strong class="t-fs-28 t-fc-primary t-fw-700"> 45,250 </strong> 人於就業通上求職！
             </p>
             <a href="javascript:;" class="t-section-btn btn btn--pointer btn--primary btn--lg mt-6">
               探索更多職缺
@@ -294,394 +301,25 @@
           </h2>
           <label class="t-section-heading-lab">xXXXXs</label>
         </div>
-        <p class="pb-6 t-txt-18">
+        <p class="pb-6 t-fs-18">
           找人才專區整合線上與線下徵才資源，提供最新的人才訊息，企業登入後即可發送通知邀請面試！
         </p>
         <div class="t-flex flex-wrap align-items-center justify-content-between">
           <div class="col-sm-6 col-lg-4 px-2 my-3">
             <!-- card -->
             <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
+              <button type="button" aria-label="收藏人才" class="btn btn--flush 
+              btn--square btn--sm rounded--40 t-btn-fav" href="javascript:;">
+                <i class="svg-icon svg-icon-2x"><svg>
                     <use href="#ic-star"></use>
                   </svg></i>
               </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
+              <div class="t-user-card-main">
+                <div class="t-resume-img img-container">
                   <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
                 </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
-                    限刊登中會員觀看姓名
-                  </a>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      新北市・新莊區
-                    </li>
-                    <li class="t-list-txts-item">
-                      待業中
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      臺北市開南高中(畢) - 商業經營科
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      5 年以上工作經歷
-                    </li>
-                  </ul>
-                </figcaption>
-              </div>
-              <footer class="t-card-footer">
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    工作地點
-                  </dt>
-                  <dd class="t-definition-description">
-                    新北市、台北市
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    希望職務
-                  </dt>
-                  <dd class="t-definition-description">
-                    百貨人員、餐飲人員、儲備幹部
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    產業經驗
-                  </dt>
-                  <dd class="t-definition-description">
-                    批發業、百貨業、製造業
-                  </dd>
-                </dl>
-              </footer>
-              <div class="t-card-bt t-txt-center flex-center t-flex">
-                <ul class="t-list-txts">
-                  <li class="t-list-txts-item">
-                    人才編號：14409485
-                  </li>
-                  <li class="t-list-txts-item">
-                    更新時間：2021/07/29
-                  </li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-          <div class="col-sm-6 col-lg-4 px-2 my-3">
-            <!-- card -->
-            <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
-                    <use href="#ic-star"></use>
-                  </svg></i>
-              </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
-                  <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
-                </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
-                    限刊登中會員觀看姓名
-                  </a>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      新北市・新莊區
-                    </li>
-                    <li class="t-list-txts-item">
-                      待業中
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      臺北市開南高中(畢) - 商業經營科
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      5 年以上工作經歷
-                    </li>
-                  </ul>
-                </figcaption>
-              </div>
-              <footer class="t-card-footer">
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    工作地點
-                  </dt>
-                  <dd class="t-definition-description">
-                    新北市、台北市
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    希望職務
-                  </dt>
-                  <dd class="t-definition-description">
-                    百貨人員、餐飲人員、儲備幹部
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    產業經驗
-                  </dt>
-                  <dd class="t-definition-description">
-                    批發業、百貨業、製造業
-                  </dd>
-                </dl>
-              </footer>
-              <div class="t-card-bt t-txt-center flex-center t-flex">
-                <ul class="t-list-txts">
-                  <li class="t-list-txts-item">
-                    人才編號：14409485
-                  </li>
-                  <li class="t-list-txts-item">
-                    更新時間：2021/07/29
-                  </li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-          <div class="col-sm-6 col-lg-4 px-2 my-3">
-            <!-- card -->
-            <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
-                    <use href="#ic-star"></use>
-                  </svg></i>
-              </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
-                  <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
-                </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
-                    限刊登中會員觀看姓名
-                  </a>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      新北市・新莊區
-                    </li>
-                    <li class="t-list-txts-item">
-                      待業中
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      臺北市開南高中(畢) - 商業經營科
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      5 年以上工作經歷
-                    </li>
-                  </ul>
-                </figcaption>
-              </div>
-              <footer class="t-card-footer">
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    工作地點
-                  </dt>
-                  <dd class="t-definition-description">
-                    新北市、台北市
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    希望職務
-                  </dt>
-                  <dd class="t-definition-description">
-                    百貨人員、餐飲人員、儲備幹部
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    產業經驗
-                  </dt>
-                  <dd class="t-definition-description">
-                    批發業、百貨業、製造業
-                  </dd>
-                </dl>
-              </footer>
-              <div class="t-card-bt t-txt-center flex-center t-flex">
-                <ul class="t-list-txts">
-                  <li class="t-list-txts-item">
-                    人才編號：14409485
-                  </li>
-                  <li class="t-list-txts-item">
-                    更新時間：2021/07/29
-                  </li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-          <div class="col-sm-6 col-lg-4 px-2 my-3">
-            <!-- card -->
-            <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
-                    <use href="#ic-star"></use>
-                  </svg></i>
-              </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
-                  <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
-                </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
-                    限刊登中會員觀看姓名
-                  </a>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      新北市・新莊區
-                    </li>
-                    <li class="t-list-txts-item">
-                      待業中
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      臺北市開南高中(畢) - 商業經營科
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      5 年以上工作經歷
-                    </li>
-                  </ul>
-                </figcaption>
-              </div>
-              <footer class="t-card-footer">
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    工作地點
-                  </dt>
-                  <dd class="t-definition-description">
-                    新北市、台北市
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    希望職務
-                  </dt>
-                  <dd class="t-definition-description">
-                    百貨人員、餐飲人員、儲備幹部
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    產業經驗
-                  </dt>
-                  <dd class="t-definition-description">
-                    批發業、百貨業、製造業
-                  </dd>
-                </dl>
-              </footer>
-              <div class="t-card-bt t-txt-center flex-center t-flex">
-                <ul class="t-list-txts">
-                  <li class="t-list-txts-item">
-                    人才編號：14409485
-                  </li>
-                  <li class="t-list-txts-item">
-                    更新時間：2021/07/29
-                  </li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-          <div class="col-sm-6 col-lg-4 px-2 my-3">
-            <!-- card -->
-            <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
-                    <use href="#ic-star"></use>
-                  </svg></i>
-              </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
-                  <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
-                </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
-                    限刊登中會員觀看姓名
-                  </a>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      新北市・新莊區
-                    </li>
-                    <li class="t-list-txts-item">
-                      待業中
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      臺北市開南高中(畢) - 商業經營科
-                    </li>
-                  </ul>
-                  <ul class="t-list-txts">
-                    <li class="t-list-txts-item">
-                      5 年以上工作經歷
-                    </li>
-                  </ul>
-                </figcaption>
-              </div>
-              <footer class="t-card-footer">
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    工作地點
-                  </dt>
-                  <dd class="t-definition-description">
-                    新北市、台北市
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    希望職務
-                  </dt>
-                  <dd class="t-definition-description">
-                    百貨人員、餐飲人員、儲備幹部
-                  </dd>
-                </dl>
-                <dl class="t-definition-list mb-1">
-                  <dt class="t-definition-term">
-                    產業經驗
-                  </dt>
-                  <dd class="t-definition-description">
-                    批發業、百貨業、製造業
-                  </dd>
-                </dl>
-              </footer>
-              <div class="t-card-bt t-txt-center flex-center t-flex">
-                <ul class="t-list-txts">
-                  <li class="t-list-txts-item">
-                    人才編號：14409485
-                  </li>
-                  <li class="t-list-txts-item">
-                    更新時間：2021/07/29
-                  </li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-          <div class="col-sm-6 col-lg-4 px-2 my-3">
-            <!-- card -->
-            <figure class="t-card t-user-card">
-              <button type="button" aria-label="收藏公司" class="btn btn--flush btn--square btn--lg rounded--40 t-btn-fav" href="javascript:;">
-                <i class="svg-icon svg-icon-2hx"><svg>
-                    <use href="#ic-star"></use>
-                  </svg></i>
-              </button>
-              <div class="t-flex px-4 py-3">
-                <div class="t-resume-img img-container t-w-4">
-                  <div class="image" style="background-image : url(../../assets/images/placeholder-user.svg)"></div>
-                </div>
-                <figcaption class="t-user-card-cnt pl-4">
-                  <a href="javascript:;" class="t-card-title text-inherit">
+                <figcaption class="t-user-card-cnt">
+                  <a href="javascript:;" class="t-card-title t-fc-inherit">
                     限刊登中會員觀看姓名
                   </a>
                   <ul class="t-list-txts">
@@ -765,7 +403,7 @@
             </h2>
             <label class="t-section-heading-lab">JOBs INDUSTRY</label>
           </div>
-          <p class="pb-6 t-txt-18">
+          <p class="pb-6 t-fs-18">
             各式最新消息，讓您掌握第一手資訊！
           </p>
           <hr data-hr-style="twill">
@@ -882,10 +520,10 @@
           <h2 class="t-section-heading-main" section-title="知名企業專區">
             知名企業專區
           </h2>
-          <label class="t-section-heading-lab text-white">知名企業專區</label>
+          <label class="t-section-heading-lab t-fc-white">知名企業專區</label>
         </div>
-        <p class="pb-6 t-txt-18">
-          目前已有 <strong class="t-txt-28 text-primary">72,765</strong> 家企業成為臺灣就業通認證企業，共同打造優質工作環境！
+        <p class="pb-6 t-fs-18">
+          目前已有 <strong class="t-fs-28 t-fc-primary">72,765</strong> 家企業成為臺灣就業通認證企業，共同打造優質工作環境！
         </p>
         <div class="t-flex flex-wrap align-items-center justify-content-between">
           <div class="col-sm-6 col-lg-4 px-2">
@@ -900,7 +538,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -926,7 +564,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -952,7 +590,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -978,7 +616,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -1004,7 +642,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -1030,7 +668,7 @@
               </div>
               <figcaption class="t-card-figcaption">
                 <label class="t-tag t-tag-primary" data-bs-toggle="tooltip" data-bs-placement="top">政府認證</label>
-                <a href="javascript:;" class="t-card-title text-inherit">
+                <a href="javascript:;" class="t-card-title t-fc-inherit">
                   遠東新世紀股份有限公司
                 </a>
                 <ul class="t-list-txts">
@@ -1076,9 +714,9 @@
               </h2>
               <label class="t-section-heading-lab">求職充電站</label>
             </div>
-            <p class="pb-6 t-txt-18">
-              目前已累計 <strong class="t-txt-28 text-primary">83</strong> 篇充電文章，並已有
-              <strong class="t-txt-28 text-primary">35,250</strong> 人參與適性測驗！
+            <p class="pb-6 t-fs-18">
+              目前已累計 <strong class="t-fs-28 t-fc-primary">83</strong> 篇充電文章，並已有
+              <strong class="t-fs-28 t-fc-primary">35,250</strong> 人參與適性測驗！
               <!-- swiper -->
               <div class="js-swiper-hero js-swiper-navigation swiper">
                 <div class="swiper-wrapper">
@@ -1110,12 +748,12 @@
                     </a>
                   </div>
                 </div>
-                <div class="js-swiper-hero-button-next swiper-button-next"></div>
-                <div class="js-swiper-hero-button-prev swiper-button-prev"></div>
+                <div class="swiper-slider-buttons-center-y">
+                  <button class="js-swiper-hero-button-prev swiper-button-prev swiper-button-prev-soft-dark"></button>
+                  <button class="js-swiper-hero-button-next swiper-button-next swiper-button-next-soft-dark"></button>
+                </div>
               </div>
-              <!-- <div class="js-swiper-hero-pagination swiper-pagination"></div> -->
           </div>
-        </div>
     </section>
   </main>
   <!-- Footer -->
@@ -1154,7 +792,7 @@
               <li>
                 服務時間：週一至週日 24 小時全天服務
               </li>
-              <li class="text-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
+              <li class="t-fc-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
             </ul>
           </div>
           <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
@@ -1164,10 +802,10 @@
                 <a class="btn footer-btn" href="javascript:;">服務據點</a>
               </li>
               <li>
-                <p>上週瀏覽人次：<span class="text-primary">4502541</span></p>
+                <p>上週瀏覽人次：<span class="t-fc-primary">4502541</span></p>
               </li>
               <li>
-                <p>目前線上人數：<span class="text-primary">1044</span></p>
+                <p>目前線上人數：<span class="t-fc-primary">1044</span></p>
               </li>
             </ul>
           </div>
@@ -1200,21 +838,21 @@
       </div>
     </section>
   </footer>
-  <!-- float toolsbar -->
+  <!-- Float toolsbar -->
   <ul class="t-float-toolsbar">
     <li class="t-float-toolsbar-item t-float-toolsbar-item--highlight">
       <a class="t-float-toolsbar-link" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" title="輔助專區">
-        <span class="t-float-toolsbar-link-icon">
-          <img src="../../assets/images/ic-business-plan.svg" alt="輔助專區">
-        </span>
+        <i class="svg-icon svg-icon-2x"><svg>
+            <use href="#ic-business-plan"></use>
+          </svg></i>
         <text class="t-float-toolsbar-link-txt">輔助專區</text>
       </a>
     </li>
     <li class="t-float-toolsbar-item">
-      <a class="t-float-toolsbar-link" href="javascript:;">
-        <span class="t-float-toolsbar-link-icon">
-          <img src="../../assets/images/ic-sitemap.svg" alt="網站地圖" data-bs-toggle="tooltip" data-bs-placement="left" title="網站地圖">
-        </span>
+      <a class="t-float-toolsbar-link" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" title="網站地圖">
+        <i class="svg-icon svg-icon-2x"><svg>
+            <use href="#ic-sitemap"></use>
+          </svg></i>
         <text class="t-float-toolsbar-link-txt">網站地圖</text>
       </a>
     </li>
@@ -1226,9 +864,11 @@
       </a>
     </li>
   </ul>
+
+
   <!-- ChangeMode -->
   <div class="t-float-change-mode" id="tuChangeMode">
-    <svg xmlns="http://www.w3.org/8000/svg" viewBox="0 0 64 64"></svg>
+
   </div>
   <!-- Scrolltop -->
   <a href="javascript:;" id="tuScrolltop" class="tu-scrolltop">
@@ -1241,7 +881,29 @@
     </div>
   </div> -->
   <!-- SVG Symbols -->
+  <!-- SVG Symbols -->
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden="true">
+    <!-- <i class="svg-icon"><svg><use href="#ic-eye"></use></svg></i> -->
+    <symbol id="ic-eye" viewBox="0 0 24 24">
+      <title>EYE</title>
+      <g fill="currentColor">
+        <path d="M21.3 9.2c-2.4-3.7-5.7-5.8-9.3-5.8A9.7 9.7 0 0 0 7 5a13.4 13.4 0 0 0-4.3 4.3 5.8 5.8 0 0 0 0 5.6c2.4 3.7 5.7 5.8 9.3 5.8a9.7 9.7 0 0 0 5-1.5 13.4 13.4 0 0 0 4.3-4.3 5.8 5.8 0 0 0 0-5.6ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Z" opacity=".4" />
+        <path d="M12 9.1a2.9 2.9 0 1 0 2.9 2.9A2.9 2.9 0 0 0 12 9.1Z" data-name="Vector" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-business-plan"></use></svg></i> -->
+    <symbol id="ic-business-plan" viewBox="0 0 28 28">
+      <title>BUSINESS-PLAN</title>
+      <path fill="none" d="M0 0h28v28H0z" />
+      <path fill="currentColor" d="M11.1 13.3h-.9a.4.4 0 1 1 0-.9h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-.9a.4.4 0 1 1 0-.9h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-.9a.4.4 0 1 1 0-.9h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm12-5.3a.9.9 0 0 0-.9.9v2.7H17V6.2h2.7a.9.9 0 0 0 0-1.8H5.3a.9.9 0 0 0-.9 1V23a.9.9 0 0 0 1 .9H23a.9.9 0 0 0 .9-.9V9a.9.9 0 0 0-.9-1Zm-.9 14.2H17V17h5.3Zm0-7H16a.9.9 0 0 0-.9.8v6.2H6.2v-16h9v6.2a.9.9 0 0 0 .8 1h6.2Zm-12-2.8h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4h-.9a.4.4 0 1 1 0-.9Zm1 1h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm12-5.4a.9.9 0 0 0-1 .9v2.7H17V6.2h2.7a.9.9 0 0 0 0-1.8H5.3a.9.9 0 0 0-.9 1V23a.9.9 0 0 0 1 .9H23a.9.9 0 0 0 .9-.9V9a.9.9 0 0 0-.9-1Zm-1 14.2H17V17h5.3Zm0-7H16a.9.9 0 0 0-.9.8v6.2H6.2v-16h9v6.2a.9.9 0 0 0 .8 1h6.2Zm-12-2.8h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4h-.9a.4.4 0 1 1 0-.9Zm1 1h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.8v-1a.9.9 0 0 0-1.8 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm16-8.7-3.5-3.6a1 1 0 0 0-.6-.2H1.8a.9.9 0 0 0-1 .9v24.9a.9.9 0 0 0 1 .8h24.9a.9.9 0 0 0 .8-.8V5.3a1 1 0 0 0-.2-.6Zm-1.4 21H2.7v-23h19.5v2.6a.9.9 0 0 0 1 1h2.6ZM22.2 9v2.7H17V6.2h2.7a.9.9 0 0 0 0-1.8H5.3a.9.9 0 0 0-.9 1V23a.9.9 0 0 0 1 .9H23a.9.9 0 0 0 .9-.9V9a.9.9 0 1 0-1.8 0Zm0 13.3H17V17h5.3Zm0-7H16a.9.9 0 0 0-.9.8v6.2H6.2v-16h9v6.2a.9.9 0 0 0 .8 1h6.2Zm-12-2.8h2.2a.9.9 0 0 0 0-1.7h-.9v-1a.9.9 0 0 0-1.7 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4h-.9a.4.4 0 1 1 0-.9Zm1 1h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.9v-1a.9.9 0 0 0-1.7 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Zm0 0h-1a.4.4 0 1 1 0-1h2.2a.9.9 0 0 0 0-1.7h-.9v-1a.9.9 0 0 0-1.7 0v1a2.2 2.2 0 0 0 .4 4.4h1a.4.4 0 0 1 0 .9H8.8a.9.9 0 0 0 0 1.8h.9v.9a.9.9 0 0 0 1.8 0v-1a2.2 2.2 0 0 0-.5-4.4Z" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-sitemap"></use></svg></i> -->
+    <symbol id="ic-sitemap" viewBox="0 0 32 32">
+      <title>SITEMAP</title>
+      <g fill="currentColor">
+        <path d="M7.6 22.6H1.9a1 1 0 0 0-.9.9v3.8a1 1 0 0 0 1 .9h5.6a1 1 0 0 0 .9-1v-3.7a1 1 0 0 0-1-1ZM18.8 22.6h-5.6a1 1 0 0 0-1 .9v3.8a1 1 0 0 0 1 .9h5.6a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-1-1ZM5.7 18.8h7.5a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-1-1H5.7a1 1 0 0 0-1 1V18a1 1 0 0 0 1 1ZM17.9 14.1V18a1 1 0 0 0 1 1h7.4a1 1 0 0 0 1-1V14a1 1 0 0 0-1-1h-7.5a1 1 0 0 0-1 1ZM11.3 9.4h9.4a1 1 0 0 0 1-.9V4.8a1 1 0 0 0-1-1h-9.4a1 1 0 0 0-1 1v3.7a1 1 0 0 0 1 1ZM30 22.6h-5.6a1 1 0 0 0-.9.9v3.8a1 1 0 0 0 1 .9H30a1 1 0 0 0 .9-1v-3.7a1 1 0 0 0-1-1Z" />
+      </g>
+    </symbol>
     <!-- <i class="svg-icon"><svg><use href="#ic-share"></use></svg></i> -->
     <symbol id="ic-share" viewBox="0 0 24 24">
       <title>SHARE</title>

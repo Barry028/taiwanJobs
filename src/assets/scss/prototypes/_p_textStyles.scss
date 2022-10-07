@@ -4,11 +4,11 @@
 //====================================================
 
 @for $i from 1 through 9 {
-  .t-font-w-#{$i * 100} {
+  .t-fw-#{$i * 100} {
     font-weight: #{$i * 100} !important;
   }
 
-  %t-font-w-#{$i * 100} {
+  %t-fw-#{$i * 100} {
     font-weight: #{$i * 100};
   }
 }

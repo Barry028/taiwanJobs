@@ -44,8 +44,7 @@ const JsHeader = function(element, options) {
     // console.log(options.ignorePageElID)
 
     let ignoreEl = document.getElementById(options.ignorePageElID)
-    if (ignoreEl) { return } 
-    else if (JsUtils.data(element).has('header')) {
+    if (ignoreEl) { return } else if (JsUtils.data(element).has('header')) {
       that = JsUtils.data(element).get('header');
     } else {
       _init();
@@ -96,6 +95,12 @@ const JsHeader = function(element, options) {
       header.classList.remove(fixClass);
       _headerShow(hideClass, showClass);
 
+
+      if (document.getElementById('sidePanel')) {
+        if (!header.classList.contains(hideClass)) {
+          document.getElementById('sidePanel').style.transform = "translateY(0)";
+        }
+      }
       if (subFixedElem) {
         subFixedElem.style.transform = "translateY(0)";
       }
@@ -114,9 +119,15 @@ const JsHeader = function(element, options) {
     header.classList.remove(hideClass);
     header.classList.add(showClass);
 
+
     if (subFixedElem) {
       if (!header.classList.contains(hideClass)) {
         subFixedElem.style.transform = "translateY(" + headerHeight + "px)";
+      }
+    }
+    if (document.getElementById('sidePanel')) {
+      if (!header.classList.contains(hideClass)) {
+        document.getElementById('sidePanel').style.transform = "translateY(" + headerHeight + "px)";
       }
     }
 
@@ -126,6 +137,12 @@ const JsHeader = function(element, options) {
     header.classList.remove(showClass);
     header.classList.add(hideClass);
 
+    if (document.getElementById('sidePanel')) {
+      if (!header.classList.contains(hideClass)) {
+        document.getElementById('sidePanel').style.transform = "translateY(0)";
+      }
+    }
+    
     if (subFixedElem) {
       if (header.classList.contains(hideClass)) {
         subFixedElem.style.transform = "translateY(0)";

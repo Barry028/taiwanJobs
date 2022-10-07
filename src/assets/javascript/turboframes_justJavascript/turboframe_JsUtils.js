@@ -340,7 +340,7 @@ const JsUtils = (function() {
 
       return function() {
         // console.log(args)
-          // console.log("throttle");
+        // console.log("throttle");
         var _this = this;
         var args = arguments;
         // console.log(_this)
@@ -398,6 +398,9 @@ const JsUtils = (function() {
         el = el.parentNode;
       }
       return false;
+    },
+    trim: function(string) {
+      return string.trim();
     },
     /////////////////////////////
     // **   sleep   ** //
@@ -705,8 +708,9 @@ const JsUtils = (function() {
     },
 
     ///////////////////////
-    // **   animate   ** //
+    // **   Animate   ** //
     ///////////////////////
+    // JsUtils.easing()
     easing: function(t, b, c, d) {
       return c * (0.5 - Math.cos(t / d * Math.PI) / 2) + b;
     },
@@ -746,6 +750,7 @@ const JsUtils = (function() {
       var start = window.performance && window.performance.now ? window.performance.now() : +new Date();
       return rAF(loop);
     },
+
     // fadeToggle fadeIn fadeOut
     // fade.slide('fadeToggle', document.getElementById('a1'), 400, function () {
     //   console.log('fadeToggle');
@@ -861,6 +866,7 @@ const JsUtils = (function() {
     //   }
     //   return requestAnimationFrame(slideAnimations);
     // },
+
     slide: function(el, dir, speed, callback, recalcMaxHeight) {
       if (!el || (dir == 'up' && JsUtils.visible(el) === false) || (dir == 'down' && JsUtils.visible(el) === true)) {
         return;
@@ -962,40 +968,54 @@ const JsUtils = (function() {
       if (!el) {
         return;
       }
+
       if (value !== undefined) {
         if (important === true) {
-          el.style.setProperty(styleProp, value, "important");
+          el.style.setProperty(styleProp, value, 'important');
         } else {
           el.style[styleProp] = value;
         }
       } else {
-        var defaultView = (el.ownerDocument || document)
-          .defaultView;
+        var defaultView = (el.ownerDocument || document).defaultView;
+
+        // W3C standard way:
         if (defaultView && defaultView.getComputedStyle) {
-          styleProp = styleProp.replace(/([A-Z])/g, "-$1")
-            .toLowerCase();
-          return defaultView.getComputedStyle(el, null)
-            .getPropertyValue(styleProp);
-        } else if (el.currentStyle) {
+          // sanitize property name to css notation
+          // (hyphen separated words eg. font-Size)
+          styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+
+          return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        } else if (el.currentStyle) { // IE
+          // sanitize property name to camelCase
           styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
             return letter.toUpperCase();
           });
+
           value = el.currentStyle[styleProp];
+
+          // convert other units to pixels on IE
           if (/^\d+(em|pt|%|ex)?$/i.test(value)) {
             return (function(value) {
               var oldLeft = el.style.left,
                 oldRsLeft = el.runtimeStyle.left;
+
               el.runtimeStyle.left = el.currentStyle.left;
               el.style.left = value || 0;
               value = el.style.pixelLeft + "px";
               el.style.left = oldLeft;
               el.runtimeStyle.left = oldRsLeft;
+
               return value;
             })(value);
           }
+
           return value;
         }
       }
+    },
+
+    getBody: function() {
+      return document.getElementsByTagName('body')[0];
     },
 
     hasClasses: function(el, classes) {
@@ -1059,9 +1079,11 @@ const JsUtils = (function() {
         }
       }
     },
+
     //////////////////////////
     // **   actualCss   ** //
     /////////////////////////
+
     actualCss: function(el, prop, cache) {
       var css = "";
       if (el instanceof HTMLElement === false) {
@@ -1103,9 +1125,38 @@ const JsUtils = (function() {
         el.style.display = "none";
       }
     },
+
+    animateClass: function(el, animationName, callback) {
+      var animation;
+      var animations = {
+        animation: 'animationend',
+        OAnimation: 'oAnimationEnd',
+        MozAnimation: 'mozAnimationEnd',
+        WebkitAnimation: 'webkitAnimationEnd',
+        msAnimation: 'msAnimationEnd',
+      };
+
+      for (var t in animations) {
+        if (el.style[t] !== undefined) {
+          animation = animations[t];
+        }
+      }
+
+      JsUtils.addClass(el, animationName);
+
+      JsUtils.one(el, animation, function() {
+        JsUtils.removeClass(el, animationName);
+      });
+
+      if (callback) {
+        JsUtils.one(el, animation, callback);
+      }
+    },
+
     /////////////////////////////
     // **   eventHandles   ** //
     ////////////////////////////
+
     addEvent: function(el, type, handler, one) {
       if (typeof el !== "undefined" && el !== null) {
         el.addEventListener(type, handler);
@@ -1225,6 +1276,7 @@ const JsUtils = (function() {
         JsUtils.css(el, vendors[i] + 'animation-duration', value);
       }
     },
+    
     /////////////////////////////
     // **   scroll   ** //
     ////////////////////////////
@@ -1301,8 +1353,7 @@ const JsUtils = (function() {
     },
 
     getScrollTop: function() {
-      return (document.scrollingElement || document.documentElement)
-        .scrollTop;
+      return (document.scrollingElement || document.documentElement).scrollTop;
     },
 
     getHighestZindex: function(el) {
@@ -1539,9 +1590,7 @@ const JsUtils = (function() {
     //     })()
     //   };
     // },
-    trim: function(string) {
-      return string.trim();
-    },
+
     /**
      *  按照一定順序的屬性對資料進行分組
      *  JsUtils.groupByProps(arrayOcj, 'count'); 
@@ -1603,37 +1652,32 @@ const JsUtils = (function() {
     colorLighten: function(color, amount) {
       const addLight = function(color, amount) {
         let cc = parseInt(color, 16) + amount;
-        let c = cc > 255 ? 255 : cc;
-        c = c.toString(16)
-          .length > 1 ? c.toString(16) : `0${c.toString(16)}`;
+        let c = (cc > 255) ? 255 : (cc);
+        c = (c.toString(16).length > 1) ? c.toString(16) : `0${c.toString(16)}`;
         return c;
-      };
-      color = color.indexOf("#") >= 0 ? color.substring(1, color.length) : color;
+      }
+
+      color = (color.indexOf("#") >= 0) ? color.substring(1, color.length) : color;
       amount = parseInt((255 * amount) / 100);
-      return (color = `#${addLight(color.substring(0, 2), amount)}${addLight(
-        color.substring(2, 4),
-        amount
-      )}${addLight(color.substring(4, 6), amount)}`);
+
+      return color = `#${addLight(color.substring(0,2), amount)}${addLight(color.substring(2,4), amount)}${addLight(color.substring(4,6), amount)}`;
     },
 
     colorDarken: function(color, amount) {
       const subtractLight = function(color, amount) {
         let cc = parseInt(color, 16) - amount;
-        let c = cc < 0 ? 0 : cc;
-        c = c.toString(16)
-          .length > 1 ? c.toString(16) : `0${c.toString(16)}`;
+        let c = (cc < 0) ? 0 : (cc);
+        c = (c.toString(16).length > 1) ? c.toString(16) : `0${c.toString(16)}`;
+
         return c;
-      };
-      color = color.indexOf("#") >= 0 ? color.substring(1, color.length) : color;
+      }
+
+      color = (color.indexOf("#") >= 0) ? color.substring(1, color.length) : color;
       amount = parseInt((255 * amount) / 100);
-      return (color = `#${subtractLight(
-        color.substring(0, 2),
-        amount
-      )}${subtractLight(color.substring(2, 4), amount)}${subtractLight(
-        color.substring(4, 6),
-        amount
-      )}`);
+
+      return color = `#${subtractLight(color.substring(0,2), amount)}${subtractLight(color.substring(2,4), amount)}${subtractLight(color.substring(4,6), amount)}`;
     },
+
 
     isHexColor(code) {
       return /^#[0-9A-F]{6}$/i.test(code);

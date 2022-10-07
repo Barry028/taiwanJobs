@@ -28,9 +28,19 @@
   @return 0 $primary-offset $blur $color;
 }
 
-// 
-//  Mixins > Box Shadow
-// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+
+
+
+@mixin bottom-box-shadow($color, $whith: 0.25rem) {
+  box-shadow: inset 0 -#{$whith} 0 $color;
+
+  @include link {
+    background: $color;
+  }
+}
+
 
 @mixin box-shadow-blur($color1: #CF77F3, $color2: #009BFF, $color3: #2AC9DB) {
   box-shadow: 1.25rem 0.3125rem 2.5rem $color1, 0 0.3125rem 2.5rem $color2, -1.25rem 0.3125rem 2.5rem $color3;

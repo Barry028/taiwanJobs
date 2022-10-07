@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
       slideShadows: true,
     },
     loop: true,
-    pagination: {
-      el: '.js-swiper-hero-pagination',
-      clickable: true,
-    },
     navigation: {
       nextEl: '.js-swiper-hero-button-next',
       prevEl: '.js-swiper-hero-button-prev',

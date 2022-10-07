@@ -2,125 +2,139 @@
 
 //  Pages > login
 // --------------------------------------------------
+$color_1: #FFF;
+$color_2: #204B91;
+$color_3: #000;
+$primary: #D10310;
+$grey-50: #f7f7f7;
+$background_color_2: #FFF;
+$background_color_3: #F0F0F0;
+$background_color_4: #DEE2E6;
 
-.login-bg {
-  background-color: #f7f7f7;
+.t-form-control {
+  font-size: 1.125rem;
+  padding-top: .875rem;
+  padding-bottom: .875rem;
+  background-color: $grey-50;
+
+  @include placeholder {
+    color: $grey-300;
+  }
 }
 
-.login-card {
-  background-color: #FFF;
+.t-login-section {
+  padding: 3rem 0;
+  background-color: $grey-50;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
-.login-card h1.t-title {
-  background-image: linear-gradient(to left, #FD7079 0%, #B7030E 100%);
-  color: #FFF;
-  font-size: 1.75rem;
-  font-weight: 200;
-  padding: .6em;
-  border-radius: 10px 10px 0 0;
+.t-login-card {
+  background-color: $background_color_2;
+
+  .t-login-heading {
+    position: relative;
+    user-select: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 5rem;
+      height: 5rem;
+      opacity: 0.48;
+      transform: rotate(-15deg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg id='login' opacity='0.66'%3E%3Cpath id='Path_243261' data-name='Path 243261' d='M36.167,0H13.25A6.25,6.25,0,0,0,7,6.25V16.667a2.083,2.083,0,0,0,4.167,0V6.25A2.083,2.083,0,0,1,13.25,4.167H36.167A2.083,2.083,0,0,1,38.25,6.25v37.5a2.083,2.083,0,0,1-2.083,2.083H13.25a2.083,2.083,0,0,1-2.083-2.083V33.333a2.083,2.083,0,1,0-4.167,0V43.75A6.25,6.25,0,0,0,13.25,50H36.167a6.25,6.25,0,0,0,6.25-6.25V6.25A6.25,6.25,0,0,0,36.167,0Z' transform='translate(7.583)' fill='%23fff'/%3E%3Cpath id='Path_243262' data-name='Path 243262' d='M2.083,18.417H28.3L25.61,21.11a2.083,2.083,0,1,0,2.946,2.946l6.25-6.25a2.117,2.117,0,0,0,0-2.946l-6.25-6.25a2.083,2.083,0,1,0-2.946,2.946L28.3,14.25H2.083a2.083,2.083,0,0,0,0,4.167Z' transform='translate(0 8.667)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    &:after {
+      content: attr(data-title);
+      position: absolute;
+      right: 0;
+      top: 0.5rem;
+      z-index: 1;
+      font-weight: 900;
+      font-size: 3.5rem;
+      line-height: 1;
+      text-align: center;
+      -webkit-text-stroke: 2px rgba($white, 0.12);
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .t-login-title {
+    @include bg-gradient-circles($primary, $primary-300);
+
+    color: $white;
+    font-size: 2.25rem;
+    font-weight: 500;
+    padding: 1.125rem 2rem;
+    border-radius: $border-radius $border-radius 0 0;
+    letter-spacing: .09375rem;
+
+    strong {
+      @include text-shaded($size: 0.5px, $shadow: rgba($primary-800, 0.32), $through: 10);
+    }
+
+    small {
+      font-size: 60%;
+      padding-left: .625rem;
+      font-weight: 400;
+    }
+  }
+
+  .form-help {
+    a {
+      font-size: 0.9em;
+      float: right;
+      color: $color_2;
+    }
+
+    top: .6em;
+    left: 0;
+  }
+
+  &::after {
+    background: #E5E5E5 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 45%;
+    right: 0;
+  }
 }
 
-.login-card h1.t-title span {
-  font-size: 1.25rem;
-  padding-left: 10px;
-}
-
-.login-card form {
-  margin: 0 1em;
-}
-
-.login-card input {
-  background-color: #F0F0F0;
-}
-
-.login-card .form-help a {
-  font-size: 0.9em;
-  float: right;
-  color: #204B91;
-}
-
-.login-card form .btn-login {
-  background-image: linear-gradient(to right, #DB2D2E, #E2626A);
-  border: none;
-  color: #FFF;
-}
-
-.login-card .break-line {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  margin-top: 0;
-  color: #000;
-  position: relative;
-}
-
-.login-card .break-line::before {
-  background: #E5E5E5 none repeat scroll 0 0;
-  content: "";
-  height: 2px;
-  position: absolute;
-  width: 45%;
-  top: .6em;
-  left: 0;
-}
-
-.login-card .break-line::after {
-  background: #E5E5E5 none repeat scroll 0 0;
-  content: "";
-  height: 2px;
-  position: absolute;
-  top: .6em;
-  width: 45%;
-  right: 0;
-}
-
-.login-card .btn-social {
-  border-radius: 0;
+.code {
   border: 1px solid #E5E5E5;
-  background-color: #FFF !important;
 }
 
-.login-card .btn-social:hover {
-  background-color: #F0F0F0 !important;
-}
-
-.login-card .code {
-  border: 1px solid #E5E5E5;
-}
-
-.login-card .content {
+.content {
   margin: 0 2em;
+
+  p {
+    line-height: 1.8em;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: $color_2;
+  }
 }
 
-.login-card .content p {
-  line-height: 1.8em;
-  margin-bottom: 1em;
-}
-
-.login-card .content a {
-  color: #204B91;
-}
-
-.login-card .btn-login {
-  /*	background-image: linear-gradient(to right, #DB2D2E, #E2626A);*/
-  border: 1px solid #E2626A;
-  color: #D10310;
-  background-color: #FFF;
-}
-
-.login-card .hr-line {
+.hr-line {
   border: 1px solid #F0F0F0;
 }
 
-.login-card .hr-dashed {
+.hr-dashed {
   border: 1px dashed #F0F0F0;
   margin: 2em 0;
 }
 
-.login-card .login-footer {
-  background-color: #DEE2E6;
-}
-
-.login-card .login-footer a {
-  color: #204B91;
+.t-login-footer {
+  border-radius: 0 0 $border-radius $border-radius;
+  background-color: $background_color_4;
 }

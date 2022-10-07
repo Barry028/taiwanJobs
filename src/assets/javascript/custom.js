@@ -1,3 +1,9 @@
+  
+
+
+
+
+
   // JsYoutubeThumb API Youtube 截圖
   const JsYoutubeThumb = (function() {
 
@@ -178,8 +184,6 @@
 
     }, 250);
   }
-
-
 
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -373,13 +377,6 @@
     })
 
 
-    // const tuHeader = new JsHeader('tuHeader',{
-    //   // subFixedID: '',
-    //   fixClass: 'is-fix',
-    //   hideClass: 'is-hide',
-    //   showClass: 'is-show',
-    //   showDelay: 100,
-    // });
 
     // // Darkmode
     // const darkmodeBtns = document.getElementById("tuChangeMode");

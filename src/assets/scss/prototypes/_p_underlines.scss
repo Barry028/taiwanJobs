@@ -3,7 +3,6 @@
 //==  Prototypes -> Under  
 //====================================================
 
-
 %t-underline {
   padding-bottom: .25rem;
   text-decoration: none;
@@ -11,41 +10,41 @@
   background-size: 100% 0.125em;
   background-repeat: no-repeat;
   background-position: left 100%;
+
+  @include link {
+    &:hover {
+      background-size: 100% 0.25em;
+      text-decoration: none;
+    }
+  }
 }
+
 // <h3 data-underline="white"> 12313123131323</h3>
 $under-width: 0.025em;
+
 [data-underline="white"] {
-  text-shadow: 
-  rgba($white, 1) #{$under-width}      0                  0, 
-  rgba($white, 1) 0                    #{$under-width}    0, 
-  rgba($white, 1) 0                    -#{$under-width}   0, 
-  rgba($white, 1) -#{$under-width}     0                  0, 
-  rgba($white, 1) -#{$under-width}     -#{$under-width}   0, 
-  rgba($white, 1) #{$under-width}      -#{$under-width}   0, 
-  rgba($white, 1) #{$under-width}      #{$under-width}    0, 
-  rgba($white, 1) -#{$under-width}     #{$under-width}    0;
+  text-shadow: rgba($white, 1) #{$under-width} 0 0, rgba($white, 1) 0 #{$under-width} 0, rgba($white, 1) 0 -#{$under-width} 0, rgba($white, 1) -#{$under-width} 0 0, rgba($white, 1) -#{$under-width} -#{$under-width} 0, rgba($white, 1) #{$under-width} -#{$under-width} 0, rgba($white, 1) #{$under-width} #{$under-width} 0, rgba($white, 1) -#{$under-width} #{$under-width} 0;
 
   @extend %t-underline;
 }
+
 // <h3 data-underline="dark"> 12313123131323</h3>
 [data-underline="dark"] {
-  text-shadow: 
-  rgba($dark, 1) #{$under-width}      0                  0, 
-  rgba($dark, 1) 0                    #{$under-width}    0, 
-  rgba($dark, 1) 0                    -#{$under-width}   0, 
-  rgba($dark, 1) -#{$under-width}     0                  0, 
-  rgba($dark, 1) -#{$under-width}     -#{$under-width}   0, 
-  rgba($dark, 1) #{$under-width}      -#{$under-width}   0, 
-  rgba($dark, 1) #{$under-width}      #{$under-width}    0, 
-  rgba($dark, 1) -#{$under-width}     #{$under-width}    0;
+  text-shadow: rgba($dark, 1) #{$under-width} 0 0, rgba($dark, 1) 0 #{$under-width} 0, rgba($dark, 1) 0 -#{$under-width} 0, rgba($dark, 1) -#{$under-width} 0 0, rgba($dark, 1) -#{$under-width} -#{$under-width} 0, rgba($dark, 1) #{$under-width} -#{$under-width} 0, rgba($dark, 1) #{$under-width} #{$under-width} 0, rgba($dark, 1) -#{$under-width} #{$under-width} 0;
 
   @extend %t-underline;
 }
 
-
-
 @each $name, $value in $element-colors {
-  .t-under-#{$name} {
-    @include text-underfont($value, 0.25rem 0.25rem, 500, 0.25rem);
+
+  [data-under="#{$name}"] {
+    @include text-underfont($value, 200% 0.375rem, 500, 0.125rem);
+    @include link {
+
+      &:hover {
+        background-position: -100% 100%;
+        text-decoration: none;
+      }
+    }
   }
 }

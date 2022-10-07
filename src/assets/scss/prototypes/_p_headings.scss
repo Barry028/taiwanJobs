@@ -2,6 +2,23 @@
 
 
 
+.t-heading-title,
+.t-heading-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+
+  > i {
+    font-size: 125%;
+    margin-right: .5rem;
+  }
+
+  > big {
+    font-size: 137.5%;
+  }
+}
+
 
 [data-heading] {
   position: relative;

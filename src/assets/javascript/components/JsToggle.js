@@ -1,6 +1,6 @@
 
 // Class definition
-var JsToggle = function(element, options) {
+const JsToggle = function(element, options) {
     ////////////////////////////
     // ** Private variables  ** //
     ////////////////////////////

@@ -104,7 +104,8 @@
   .t-search-inner {
     
     .t-form-inline {
-      @media (max-width: $screen-sm-min) {
+      
+      @media (max-width: $screen-md-min) {
         flex-wrap: wrap;
       }
 
@@ -141,25 +142,25 @@
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3) {
-          @media (max-width: $screen-sm-min) {
+          @media (max-width: $screen-md-min) {
             width: 50%;
           }
         }
 
-        @media (max-width: $screen-sm-min) {
+        @media (max-width: $screen-md-min) {
           flex: 0 0 auto;
           padding: 0.5rem;
           width: 50%;
           margin-right: 0;
         }
 
-        @media (max-width: $screen-sm-min) {}
+        @media (max-width: $screen-md-min) {}
       }
 
       .t-inner-search-btn {
         width: 20%;
 
-        @media (max-width: $screen-sm-min) {
+        @media (max-width: $screen-md-min) {
           flex: 0 0 auto;
           padding: 0.5rem;
           width: 50%;

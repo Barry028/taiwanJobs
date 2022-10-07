@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
+  <meta charset="UTF-8">
+  <title>台灣就業通 </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <!-- iCon  -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/icon-turbotech_blur-v1.0/style.css">
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+  <!--[if lte IE 9]>
+        <script src="assets/vender/IE_Supports/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="assets/vender/IE_Supports/respond/dest/respond.min.js"></script>
+        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.jquery.min.js"></script>
+        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.prototype.min.js"></script>
+        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.yui3.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+  :root {
+  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  --font-serif: ui-serif,serif;
+  --font-mono: Dank Mono,Operator Mono,Inconsolata,Fira Mono,ui-monospace,SF Mono,Monaco,Droid Sans Mono,Source Code Pro,monospace;
+  --font-weight-1: 100;
+  --font-weight-2: 200;
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+  --font-weight-8: 800;
+  --font-weight-9: 900;
+  --font-lineheight-00: .95;
+  --font-lineheight-0: 1.1;
+  --font-lineheight-1: 1.25;
+  --font-lineheight-2: 1.375;
+  --font-lineheight-3: 1.5;
+  --font-lineheight-4: 1.75;
+  --font-lineheight-5: 2;
+  --font-letterspacing-0: -.05em;
+  --font-letterspacing-1: .025em;
+  --font-letterspacing-2: .050em;
+  --font-letterspacing-3: .075em;
+  --font-letterspacing-4: .150em;
+  --font-letterspacing-5: .500em;
+  --font-letterspacing-6: .750em;
+  --font-letterspacing-7: 1em;
+  --font-size-00: .5rem;
+  --font-size-0: .75rem;
+  --font-size-1: 1rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.5rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.5rem;
+  --font-size-7: 3rem;
+  --font-size-8: 3.5rem;
+  --font-size-fluid-0: clamp(.75rem,2vw,1rem);
+  --font-size-fluid-1: clamp(1rem,4vw,1.5rem);
+  --font-size-fluid-2: clamp(1.5rem,6vw,2.5rem);
+  --font-size-fluid-3: clamp(2rem,9vw,3.5rem);
+  --size-000: -.5rem;
+  --size-00: -.25rem;
+  --size-1: .25rem;
+  --size-2: .5rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 7.5rem;
+  --size-12: 10rem;
+  --size-13: 15rem;
+  --size-14: 20rem;
+  --size-15: 30rem;
+  --size-fluid-1: clamp(.5rem,1vw,1rem);
+  --size-fluid-2: clamp(1rem,2vw,1.5rem);
+  --size-fluid-3: clamp(1.5rem,3vw,2rem);
+  --size-fluid-4: clamp(2rem,4vw,3rem);
+  --size-fluid-5: clamp(4rem,5vw,5rem);
+  --size-fluid-6: clamp(5rem,7vw,7.5rem);
+  --size-fluid-7: clamp(7.5rem,10vw,10rem);
+  --size-fluid-8: clamp(10rem,20vw,15rem);
+  --size-fluid-9: clamp(15rem,30vw,20rem);
+  --size-fluid-10: clamp(20rem,40vw,30rem);
+  --size-content-1: 20ch;
+  --size-content-2: 45ch;
+  --size-content-3: 60ch;
+  --size-header-1: 20ch;
+  --size-header-2: 25ch;
+  --size-header-3: 35ch;
+  --size-xxs: 240px;
+  --size-xs: 360px;
+  --size-sm: 480px;
+  --size-md: 768px;
+  --size-lg: 1024px;
+  --size-xl: 1440px;
+  --size-xxl: 1920px;
+  --ease-1: cubic-bezier(.25,0,.5,1);
+  --ease-2: cubic-bezier(.25,0,.4,1);
+  --ease-3: cubic-bezier(.25,0,.3,1);
+  --ease-4: cubic-bezier(.25,0,.2,1);
+  --ease-5: cubic-bezier(.25,0,.1,1);
+  --ease-in-1: cubic-bezier(.25,0,1,1);
+  --ease-in-2: cubic-bezier(.50,0,1,1);
+  --ease-in-3: cubic-bezier(.70,0,1,1);
+  --ease-in-4: cubic-bezier(.90,0,1,1);
+  --ease-in-5: cubic-bezier(1,0,1,1);
+  --ease-out-1: cubic-bezier(0,0,.75,1);
+  --ease-out-2: cubic-bezier(0,0,.50,1);
+  --ease-out-3: cubic-bezier(0,0,.3,1);
+  --ease-out-4: cubic-bezier(0,0,.1,1);
+  --ease-out-5: cubic-bezier(0,0,0,1);
+  --ease-in-out-1: cubic-bezier(.1,0,.9,1);
+  --ease-in-out-2: cubic-bezier(.3,0,.7,1);
+  --ease-in-out-3: cubic-bezier(.5,0,.5,1);
+  --ease-in-out-4: cubic-bezier(.7,0,.3,1);
+  --ease-in-out-5: cubic-bezier(.9,0,.1,1);
+  --ease-elastic-1: cubic-bezier(.5,.75,.75,1.25);
+  --ease-elastic-2: cubic-bezier(.5,1,.75,1.25);
+  --ease-elastic-3: cubic-bezier(.5,1.25,.75,1.25);
+  --ease-elastic-4: cubic-bezier(.5,1.5,.75,1.25);
+  --ease-elastic-5: cubic-bezier(.5,1.75,.75,1.25);
+  --ease-squish-1: cubic-bezier(.5,-.1,.1,1.5);
+  --ease-squish-2: cubic-bezier(.5,-.3,.1,1.5);
+  --ease-squish-3: cubic-bezier(.5,-.5,.1,1.5);
+  --ease-squish-4: cubic-bezier(.5,-.7,.1,1.5);
+  --ease-squish-5: cubic-bezier(.5,-.9,.1,1.5);
+  --ease-step-1: steps(2);
+  --ease-step-2: steps(3);
+  --ease-step-3: steps(4);
+  --ease-step-4: steps(7);
+  --ease-step-5: steps(10);
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+  --layer-4: 4;
+  --layer-5: 5;
+  --layer-important: 2147483647;
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+  --shadow-1: 0 1px 2px -1px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --shadow-2: 0 3px 5px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 7px 14px -5px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 5%));
+  --shadow-3: 0 -1px 3px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 2%)),0 1px 2px -5px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 2%)),0 2px 5px -5px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 4%)),0 4px 12px -5px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 5%)),0 12px 15px -5px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 7%));
+  --shadow-4: 0 -2px 5px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 2%)),0 1px 1px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 2px 2px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 5px 5px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 4%)),0 9px 9px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 5%)),0 16px 16px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 6%));
+  --shadow-5: 0 -1px 2px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 2%)),0 2px 1px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 5px 5px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 10px 10px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 4%)),0 20px 20px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 5%)),0 40px 40px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 7%));
+  --shadow-6: 0 -1px 2px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 2%)),0 3px 2px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 7px 5px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 3%)),0 12px 10px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 4%)),0 22px 18px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 5%)),0 41px 33px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 6%)),0 100px 80px -2px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 7%));
+  --inner-shadow-0: inset 0 0 0 1px hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color)/calc(var(--shadow-strength) + 9%));
+  --ratio-square: 1;
+  --ratio-landscape: 4/3;
+  --ratio-portrait: 3/4;
+  --ratio-widescreen: 16/9;
+  --ratio-ultrawide: 18/5;
+  --ratio-golden: 1.6180/1;
+  --gray-0: #f8f9fa;
+  --gray-1: #f1f3f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --gray-4: #ced4da;
+  --gray-5: #adb5bd;
+  --gray-6: #868e96;
+  --gray-7: #495057;
+  --gray-8: #343a40;
+  --gray-9: #212529;
+  --red-0: #fff5f5;
+  --red-1: #ffe3e3;
+  --red-2: #ffc9c9;
+  --red-3: #ffa8a8;
+  --red-4: #ff8787;
+  --red-5: #ff6b6b;
+  --red-6: #fa5252;
+  --red-7: #f03e3e;
+  --red-8: #e03131;
+  --red-9: #c92a2a;
+  --pink-0: #fff0f6;
+  --pink-1: #ffdeeb;
+  --pink-2: #fcc2d7;
+  --pink-3: #faa2c1;
+  --pink-4: #f783ac;
+  --pink-5: #f06595;
+  --pink-6: #e64980;
+  --pink-7: #d6336c;
+  --pink-8: #c2255c;
+  --pink-9: #a61e4d;
+  --grape-0: #f8f0fc;
+  --grape-1: #f3d9fa;
+  --grape-2: #eebefa;
+  --grape-3: #e599f7;
+  --grape-4: #da77f2;
+  --grape-5: #cc5de8;
+  --grape-6: #be4bdb;
+  --grape-7: #ae3ec9;
+  --grape-8: #9c36b5;
+  --grape-9: #862e9c;
+  --violet-0: #f3f0ff;
+  --violet-1: #e5dbff;
+  --violet-2: #d0bfff;
+  --violet-3: #b197fc;
+  --violet-4: #9775fa;
+  --violet-5: #845ef7;
+  --violet-6: #7950f2;
+  --violet-7: #7048e8;
+  --violet-8: #6741d9;
+  --violet-9: #5f3dc4;
+  --indigo-0: #edf2ff;
+  --indigo-1: #dbe4ff;
+  --indigo-2: #bac8ff;
+  --indigo-3: #91a7ff;
+  --indigo-4: #748ffc;
+  --indigo-5: #5c7cfa;
+  --indigo-6: #4c6ef5;
+  --indigo-7: #4263eb;
+  --indigo-8: #3b5bdb;
+  --indigo-9: #364fc7;
+  --blue-0: #e7f5ff;
+  --blue-1: #d0ebff;
+  --blue-2: #a5d8ff;
+  --blue-3: #74c0fc;
+  --blue-4: #4dabf7;
+  --blue-5: #339af0;
+  --blue-6: #228be6;
+  --blue-7: #1c7ed6;
+  --blue-8: #1971c2;
+  --blue-9: #1864ab;
+  --cyan-0: #e3fafc;
+  --cyan-1: #c5f6fa;
+  --cyan-2: #99e9f2;
+  --cyan-3: #66d9e8;
+  --cyan-4: #3bc9db;
+  --cyan-5: #22b8cf;
+  --cyan-6: #15aabf;
+  --cyan-7: #1098ad;
+  --cyan-8: #0c8599;
+  --cyan-9: #0b7285;
+  --teal-0: #e6fcf5;
+  --teal-1: #c3fae8;
+  --teal-2: #96f2d7;
+  --teal-3: #63e6be;
+  --teal-4: #38d9a9;
+  --teal-5: #20c997;
+  --teal-6: #12b886;
+  --teal-7: #0ca678;
+  --teal-8: #099268;
+  --teal-9: #087f5b;
+  --green-0: #ebfbee;
+  --green-1: #d3f9d8;
+  --green-2: #b2f2bb;
+  --green-3: #8ce99a;
+  --green-4: #69db7c;
+  --green-5: #51cf66;
+  --green-6: #40c057;
+  --green-7: #37b24d;
+  --green-8: #2f9e44;
+  --green-9: #2b8a3e;
+  --lime-0: #f4fce3;
+  --lime-1: #e9fac8;
+  --lime-2: #d8f5a2;
+  --lime-3: #c0eb75;
+  --lime-4: #a9e34b;
+  --lime-5: #94d82d;
+  --lime-6: #82c91e;
+  --lime-7: #74b816;
+  --lime-8: #66a80f;
+  --lime-9: #5c940d;
+  --yellow-0: #fff9db;
+  --yellow-1: #fff3bf;
+  --yellow-2: #ffec99;
+  --yellow-3: #ffe066;
+  --yellow-4: #ffd43b;
+  --yellow-5: #fcc419;
+  --yellow-6: #fab005;
+  --yellow-7: #f59f00;
+  --yellow-8: #f08c00;
+  --yellow-9: #e67700;
+  --orange-0: #fff4e6;
+  --orange-1: #ffe8cc;
+  --orange-2: #ffd8a8;
+  --orange-3: #ffc078;
+  --orange-4: #ffa94d;
+  --orange-5: #ff922b;
+  --orange-6: #fd7e14;
+  --orange-7: #f76707;
+  --orange-8: #e8590c;
+  --orange-9: #d9480f;
+  --gradient-1: linear-gradient(to bottom right,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
+  --gradient-2: linear-gradient(to bottom right,#48005c,#8300e2,#a269ff);
+  --gradient-3: radial-gradient(circle at top right,#0ff,rgba(0,255,255,0)),radial-gradient(circle at bottom left,#ff1492,rgba(255,20,146,0));
+  --gradient-4: linear-gradient(to bottom right,#00f5a0,#00d9f5);
+  --gradient-5: conic-gradient(from -270deg at 75% 110%,#f0f,#fffaf0);
+  --gradient-6: conic-gradient(from -90deg at top left,#000,#fff);
+  --gradient-7: linear-gradient(to bottom right,#72c6ef,#004e8f);
+  --gradient-8: conic-gradient(from 90deg at 50% 0%,#111,50%,#222,#111);
+  --gradient-9: conic-gradient(from .5turn at bottom center,#add8e6,#fff);
+  --gradient-10: conic-gradient(from 90deg at 40% -25%,gold,#f79d03,#ee6907,#e6390a,#de0d0d,#d61039,#cf1261,#c71585,#cf1261,#d61039,#de0d0d,#ee6907,#f79d03,gold,gold,gold);
+  --gradient-11: conic-gradient(at bottom left,#ff1493,cyan);
+  --gradient-12: conic-gradient(from 90deg at 25% -10%,#ff4500,#d3f340,#7bee85,#afeeee,#7bee85);
+  --gradient-13: radial-gradient(circle at 50% 200%,#000142,#3b0083,#b300c3,#ff059f,#ff4661,#ffad86,#fff3c7);
+  --gradient-14: conic-gradient(at top right,lime,cyan);
+  --gradient-15: linear-gradient(to bottom right,#c7d2fe,#fecaca,#fef3c7);
+  --gradient-16: radial-gradient(circle at 50% -250%,#374151,#111827,#000);
+  --gradient-17: conic-gradient(from -90deg at 50% -25%,blue,#8a2be2);
+  --gradient-18: linear-gradient(0deg,rgba(255,0,0,.8),rgba(255,0,0,0) 75%),linear-gradient(60deg,rgba(255,255,0,.8),rgba(255,255,0,0) 75%),linear-gradient(120deg,rgba(0,255,0,.8),rgba(0,255,0,0) 75%),linear-gradient(180deg,rgba(0,255,255,.8),rgba(0,255,255,0) 75%),linear-gradient(240deg,rgba(0,0,255,.8),rgba(0,0,255,0) 75%),linear-gradient(300deg,rgba(255,0,255,.8),rgba(255,0,255,0) 75%);
+  --gradient-19: linear-gradient(to bottom right,#ffe259,#ffa751);
+  --gradient-20: conic-gradient(from -135deg at -10% center,orange,#ff7715,#ff522a,#ff3f47,#ff5482,#ff69b4);
+  --gradient-21: conic-gradient(from -90deg at 25% 115%,red,#f06,#f0c,#c0f,#60f,#00f,#00f,#00f,#00f);
+  --gradient-22: linear-gradient(to bottom right,#acb6e5,#86fde8);
+  --gradient-23: linear-gradient(to bottom right,#536976,#292e49);
+  --gradient-24: conic-gradient(from .5turn at 0% 0%,#00c476,10%,#82b0ff,90%,#00c476);
+  --gradient-25: conic-gradient(at 125% 50%,#b78cf7,#ff7c94,#ffcf0d,#ff7c94,#b78cf7);
+  --gradient-26: linear-gradient(to bottom right,#9796f0,#fbc7d4);
+  --gradient-27: conic-gradient(from .5turn at bottom left,#ff1493,#639);
+  --gradient-28: conic-gradient(from -90deg at 50% 105%,#fff,orchid);
+  --gradient-29: radial-gradient(circle at top right,#bfb3ff,rgba(191,179,255,0)),radial-gradient(circle at bottom left,#86acf9,rgba(134,172,249,0));
+  --gradient-30: radial-gradient(circle at top right,#00ff80,rgba(0,255,128,0)),radial-gradient(circle at bottom left,#adffd6,rgba(173,255,214,0));
+  --noise-1: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");--noise-2:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.05' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");--noise-3:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.25' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");--noise-4:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 2056 2056' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");--noise-5:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 2056 2056' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  --noise-filter-1: contrast(300%) brightness(100%);
+  --noise-filter-2: contrast(200%) brightness(150%);
+  --noise-filter-3: contrast(200%) brightness(250%);
+  --noise-filter-4: contrast(200%) brightness(500%);
+  --noise-filter-5: contrast(200%) brightness(1000%);
+  --animation-fade-in: fade-in .5s var(--ease-3);
+  --animation-fade-in-bloom: fade-in-bloom 2s var(--ease-3);
+  --animation-fade-out: fade-out .5s var(--ease-3);
+  --animation-fade-out-bloom: fade-out-bloom 2s var(--ease-3);
+  --animation-scale-up: scale-up .5s var(--ease-3);
+  --animation-scale-down: scale-down .5s var(--ease-3);
+  --animation-slide-out-up: slide-out-up .5s var(--ease-3);
+  --animation-slide-out-down: slide-out-down .5s var(--ease-3);
+  --animation-slide-out-right: slide-out-right .5s var(--ease-3);
+  --animation-slide-out-left: slide-out-left .5s var(--ease-3);
+  --animation-slide-in-up: slide-in-up .5s var(--ease-3);
+  --animation-slide-in-down: slide-in-down .5s var(--ease-3);
+  --animation-slide-in-right: slide-in-right .5s var(--ease-3);
+  --animation-slide-in-left: slide-in-left .5s var(--ease-3);
+  --animation-shake-x: shake-x .75s var(--ease-out-5);
+  --animation-shake-y: shake-y .75s var(--ease-out-5);
+  --animation-spin: spin 2s linear infinite;
+  --animation-ping: ping 5s var(--ease-out-3) infinite;
+  --animation-blink: blink 1s var(--ease-out-3) infinite;
+  --animation-float: float 3s var(--ease-in-out-3) infinite;
+  --animation-bounce: bounce 2s var(--ease-squish-2) infinite;
+  --animation-pulse: pulse 2s var(--ease-out-3) infinite;
+  --border-size-1: 1px;
+  --border-size-2: 2px;
+  --border-size-3: 5px;
+  --border-size-4: 10px;
+  --border-size-5: 25px;
+  --radius-1: 2px;
+  --radius-2: 5px;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+  --radius-5: 4rem;
+  --radius-6: 8rem;
+  --radius-round: 1e5px;
+  --radius-blob-1: 30% 70% 70% 30%/53% 30% 70% 47%;
+  --radius-blob-2: 53% 47% 34% 66%/63% 46% 54% 37%;
+  --radius-blob-3: 37% 63% 56% 44%/49% 56% 44% 51%;
+  --radius-blob-4: 63% 37% 37% 63%/43% 37% 63% 57%;
+  --radius-blob-5: 49% 51% 48% 52%/57% 44% 56% 43%;
+  --radius-conditional-1: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-1));
+  --radius-conditional-2: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-2));
+  --radius-conditional-3: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-3));
+  --radius-conditional-4: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-4));
+  --radius-conditional-5: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-5));
+  --radius-conditional-6: clamp(0px,calc(100vw - 100%) * 1e5,var(--radius-6));
+}
+
+@media (prefers-color-scheme:dark) {
+  :where(html) {
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bloom {
+  0% {
+    filter: brightness(1) blur(20px);
+    opacity: 0;
+  }
+
+  10% {
+    filter: brightness(2) blur(10px);
+    filter: brightness(.5) blur(10px);
+    opacity: 1;
+  }
+
+  to {
+    filter: brightness(1) blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-bloom {
+  to {
+    filter: brightness(1) blur(20px);
+    opacity: 0;
+  }
+
+  10% {
+    filter: brightness(2) blur(10px);
+    filter: brightness(.5) blur(10px);
+    opacity: 1;
+  }
+
+  0% {
+    filter: brightness(1) blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes scale-down {
+  to {
+    transform: scale(.75);
+  }
+}
+
+@keyframes slide-out-up {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-out-down {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-out-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-out-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shake-x {
+  0%, to {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5%);
+  }
+
+  40% {
+    transform: translateX(5%);
+  }
+
+  60% {
+    transform: translateX(-5%);
+  }
+
+  80% {
+    transform: translateX(5%);
+  }
+}
+
+@keyframes shake-y {
+  0%, to {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-5%);
+  }
+
+  40% {
+    transform: translateY(5%);
+  }
+
+  60% {
+    transform: translateY(-5%);
+  }
+
+  80% {
+    transform: translateY(5%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes ping {
+  90%, to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes blink {
+  0%, to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes bounce {
+  25% {
+    transform: translateY(-20%);
+  }
+
+  40% {
+    transform: translateY(-3%);
+  }
+
+  0%, 60%, to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(.9);
+  }
+}
+</style>
+<body class="t-index-sec">
+  <header id="tuHeader" data-tu-header="true" class="t-header">
+    <section class="t-header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <ul class="t-header-top-lf-list">
+              <li class="t-header-top-list-item">
+                <a href="#U" title="上方功能區塊, 快速鍵: Alt+U " id="AU" accesskey="U" name="U" class="quicklink t-header-top-list-link">:::</a>
+              </li>
+              <li class="t-header-top-list-item active">
+                <a href="javascript:;" class="t-header-top-list-link">Taiwan Jobs 台灣就業通</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">找工作</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">找人才</a>
+              </li>
+            </ul>
+            <ul class="t-header-top-rf-list">
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">最新消息</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">關於我們</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">微型創業</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">常見問題</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
+              </li>
+              <li class="t-header-top-list-item">
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-left" type="button" aria-label="主要選單" aria-expanded="false" aria-controls="navBar" data-bs-toggle="collapse" data-bs-target="#navBar">
+          <i class="svg-icon svg-icon-2hx">
+            <svg>
+              <use href="#ic-burger"></use>
+            </svg>
+          </i>
+        </button>
+        <div class="navbar-group">
+          <a href="javascript:;" class="navbar-brand">
+            <img class="navbar-brand-logo" src="assets/images/logo-primary.svg" alt="台灣就業通 TaiwanJobs">
+          </a>
+          <div class="navbar-item hidden-sm">
+            <i class="svg-icon">
+              <svg>
+                <use href="#ic-gps"></use>
+              </svg>
+            </i>
+            <text class="">全台灣</text>
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
+              <small>[切換地區]</small>
+            </a>
+          </div>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" aria-label="會員登入 / 註冊" aria-expanded="false" aria-controls="" data-toggle="collapse" data-target="">
+          <i class="svg-icon svg-icon-2hx">
+            <svg>
+              <use href="#ic-user"></use>
+            </svg>
+          </i>
+        </button>
+        <div class="js-navigation collapse navbar-collapse" id="navBar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a href="javascript:;" title="網站導覽連結區, 快速鍵: Alt+C " id="AC" accesskey="C" name="C" class="quicklink2 nav-link">:::</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link">
+                工讀・實習
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link">
+                新鮮人
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a href="javascript:;" class="nav-link">
+                全職
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link">
+                兼職
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link nav-link-icon">
+                <img src="assets/images/ic_youtube.svg" alt="youtube">
+              </a>
+              <a href="javascript:;" class="nav-link nav-link-icon">
+                <img src="assets/images/ic_facebook.svg" alt="facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="t-wrapper">
+    <section class="main-search-bar">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-6 mt-10">
+            <div class="t-tab t-tab-v1">
+              <input id="item_v1-1" type="radio" name="tabsV1" class="hide" checked="">
+              <input id="item_v1-2" type="radio" name="tabsV1" class="hide">
+              <input id="item_v1-3" type="radio" name="tabsV1" class="hide">
+              <input id="item_v1-4" type="radio" name="tabsV1" class="hide">
+              <div id="tab-nav-v1" class="t-tab-nav" data-scroll="x">
+                <label for="item_v1-1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_v1-2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_v1-3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_v1-4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                 
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+
+            <div class="t-tab t-tab-v2">
+              <input id="item_v2-1" type="radio" name="tabsV2" class="hide" checked="">
+              <input id="item_v2-2" type="radio" name="tabsV2" class="hide">
+              <input id="item_v2-3" type="radio" name="tabsV2" class="hide">
+              <input id="item_v2-4" type="radio" name="tabsV2" class="hide">
+              <div id="tab-nav-v2" class="t-tab-nav" data-scroll="x">
+                <label for="item_v2-1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_v2-2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_v2-3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_v2-4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+            <div class="t-tab t-tab-v3">
+              <input id="item_v3-1" type="radio" name="tabsV3" class="hide" checked="">
+              <input id="item_v3-2" type="radio" name="tabsV3" class="hide">
+              <input id="item_v3-3" type="radio" name="tabsV3" class="hide">
+              <input id="item_v3-4" type="radio" name="tabsV3" class="hide">
+              <div id="tab-nav-v2" class="t-tab-nav" data-scroll="x">
+                <label for="item_v3-1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_v3-2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_v3-3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_v3-4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+            <div class="t-tab t-tab-v4">
+              <input id="item_v4-1" type="radio" name="tabsV5" class="hide" checked="">
+              <input id="item_v4-2" type="radio" name="tabsV5" class="hide">
+              <input id="item_v4-3" type="radio" name="tabsV5" class="hide">
+              <input id="item_v4-4" type="radio" name="tabsV5" class="hide">
+              <div id="tab-nav-v2" class="t-tab-nav" data-scroll="x">
+                <label for="item_v4-1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_v4-2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_v4-3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_v4-4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+
+                        <div class="t-tab t-tab-v6">
+              <input id="item_v6-1" type="radio" name="tabsV6" class="hide" checked="">
+              <input id="item_v6-2" type="radio" name="tabsV6" class="hide">
+              <input id="item_v6-3" type="radio" name="tabsV6" class="hide">
+              <input id="item_v6-4" type="radio" name="tabsV6" class="hide">
+              <div id="tab-nav-v2" class="t-tab-nav" data-scroll="x">
+                <label for="item_v6-1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_v6-2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_v6-3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_v6-4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-10">
+            <div class="t-tab t-tab-v5">
+              <input id="item_1" type="radio" name="tabsV4" class="hide" checked="">
+              <input id="item_2" type="radio" name="tabsV4" class="hide">
+              <input id="item_3" type="radio" name="tabsV4" class="hide">
+              <input id="item_4" type="radio" name="tabsV4" class="hide">
+              <div id="tab-nav-v1" class="t-tab-nav" data-scroll="x">
+                <label for="item_1" class="t-tab-nav-item" id="item_1_lab">
+                  找工作
+                </label>
+                <label for="item_2" class="t-tab-nav-item" id="item_2_lab">
+                  找公司
+                </label>
+                <label for="item_3" class="t-tab-nav-item" id="item_3_lab">
+                  找工作
+                </label>
+                <label for="item_4" class="t-tab-nav-item" id="item_4_lab">
+                  找公司
+                </label>
+              </div>
+              <div class="t-tab-contents t-tab-scale">
+                <div id="tab_content_1" class="t-tab-content">
+                  <form action="" class="t-search-inner">
+                    <div class="t-form-inline w-100 t-flex align-items-center justify-content-center">
+                      <div class="t-form-group t-flex align-items-center serach-form-group">
+                        <div class="t-input-group">
+                          <input type="text" class="t-form-control" placeholder="關鍵字(例：工作職稱、公司名、技能專長...)">
+                          <i class="svg-icon svg-icon-3">
+                            <svg>
+                              <use href="#ic-search"></use>
+                            </svg>
+                          </i>
+                        </div>
+                      </div>
+                      <div class="t-form-group t-flex align-items-center serach-form-group">
+                        <div class="t-input-group">
+                          <div id="s_areaPicker" type="text" class="t-form-control category-picker-input" data-picker-placeholder="選擇縣市 / 區域"></div><input type="hidden" id="areaVal" value="">
+                          <i class="svg-icon svg-icon-3">
+                            <svg>
+                              <use href="#ic-map"></use>
+                            </svg>
+                          </i>
+                        </div>
+                        <!-- <input id="s_areaPicker" type="text" class="t-form-control" placeholder="選擇縣市 / 區域"> -->
+                      </div>
+                      <div class="t-form-group t-flex align-items-center serach-form-group">
+                        <div class="t-input-group">
+                          <input id="s_dutyPicker" type="text" class="t-form-control" placeholder="選擇職務類別">
+                          <i class="svg-icon svg-icon-3">
+                            <svg>
+                              <use href="#ic-briefcase"></use>
+                            </svg>
+                          </i>
+                        </div>
+                      </div>
+                      <div class="t-inner-search-btn">
+                        <button type="search" class="btn btn--primary t-btn-search">
+                          <text>找工作</text>
+                          <i class="svg-icon svg-icon-2hx ml-2">
+                            <svg>
+                              <use href="#ic-search"></use>
+                            </svg>
+                          </i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="mt-6 t-flex justify-content-between align-items-center">
+                      <div class="t-form-filter">
+                        <input id="filter_lis" type="checkbox" class="chk-inp">
+                        <label class="chk-lab" for="filter_lis">
+                          <i class="checkbox checkbox--lg"></i>
+                          <text class="t-fs-18 t-fw-avy">只顯示政府認證企業</text>
+                        </label>
+                      </div>
+                      <div class="t-form-filter">
+                        <button class="btn btn--border--lightgrey btn--lg" type="button">
+                          <i class="svg-icon">
+                            <svg>
+                              <use href="#ic-filter"></use>
+                            </svg>
+                          </i>
+                          其他條件設定
+                          <label class="t-badge t-badge-grey ml-4">1</label>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div id="tab_content_2" class="t-tab-content">
+                  <h1 class="t-outline-grey">
+                    Taiwan Jobs 台灣就業通
+                  </h1>
+                  <h2 class="t-push-down">
+                    Taiwan Jobs 台灣就業通
+                  </h2>
+                  <h3 class="t-push-down">
+                    Taiwan Jobs 台灣就業通
+                  </h3>
+                  <h1 class="t-shaded">
+                    Taiwan Jobs 台灣就業通
+                  </h1>
+                  <h2 class="t-glow">
+                    Taiwan Jobs 台灣就業通
+                  </h2>
+                  <h3 class="t-outlined">
+                    Taiwan Jobs 台灣就業通
+                  </h3>
+                  <h3 class="t-gradient">
+                    Taiwan Jobs 台灣就業通
+                  </h3>
+                </div>
+                <div id="tab_content_3" class="t-tab-content">
+                  333
+                </div>
+                <div id="tab_content_4" class="t-tab-content">
+                  112
+                </div>
+              </div>
+            </div>
+            <h3 class="color-bright header">
+              Taiwan Jobs 台灣就業通
+            </h3>
+            <h3 class="color-bright header--pushDown">
+              Taiwan Jobs 台灣就業通
+            </h3>
+            <h1 class="t-heading-icon-block">
+              Taiwan Jobs 台灣就業通
+              <ul class="t-relative t-block">
+                <li class="dot dot-1"></li>
+                <li class="dot dot-2"></li>
+                <li class="dot dot-3"></li>
+                <li class="dot dot-4"></li>
+                <li class="dot dot-5"></li>
+              </ul>
+              <div class="t-heading-icon">
+                <i class="svg-icon">
+                  <svg>
+                    <use href="#ic-gps"></use>
+                  </svg>
+                </i>
+              </div>
+            </h1>
+            <h1 class="t-heading-group">
+              <big class="t-heading">Taiwan Jobs 台灣就業通</big>
+            </h1>
+            <h1 class="t-section-heading t-red-heading">
+              <div class="t-section-heading-main">
+                Taiwan Jobs 台灣就業通
+              </div>
+              <div class="t-section-heading-lab">
+                Taiwan Jobs 台灣就業通
+              </div>
+            </h1>
+            <h1 class="t-divider-heading-light-primary">
+              Taiwan Jobs 台灣就業通
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="t-footer t-primary-footer">
+    <section class="t-footer-top align-item-top">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
+            <div class="footer-main">
+              <h3 class="footer-heading">關於台灣就業通</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="javascript:;">關於我們</a>
+                </li>
+                <li>
+                  <a href="javascript:;">客服信箱</a>
+                </li>
+                <li>
+                  <a href="javascript:;">常見問題</a>
+                </li>
+                <li>
+                  <a href="javascript:;">隱私權政策</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
+            <h3 class="footer-heading">台灣就業通客服中心</h3>
+            <ul class="footer-main-info">
+              <li>
+                客服專線：<a href="assets/tel:0800777888">0800-777-888</a>
+              </li>
+              <li>
+                傳真專線：<a href="assets/tel:0277335388">02-77335388</a>
+              </li>
+              <li>
+                服務時間：週一至週日 24 小時全天服務
+              </li>
+              <li class="text-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
+            <h3 class="footer-heading">服務據點</h3>
+            <ul class="footer-main-info">
+              <li>
+                <a class="btn footer-btn" href="javascript:;">服務據點</a>
+              </li>
+              <li>
+                <p>上週瀏覽人次：<span class="text-primary">4502541</span></p>
+              </li>
+              <li>
+                <p>目前線上人數：<span class="text-primary">1044</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
+            <img src="assets/images/logo-grey.svg" alt="台灣就業通 TaiwanJobs">
+            <ul class="footer-main-info">
+              <li>
+                <a href="javascript:;" class="footer-link-icon">
+                  <img src="assets/images/ic_youtube.svg" alt="youtube">
+                </a>
+                <a href="javascript:;" class="footer-link-icon">
+                  <img src="assets/images/ic_facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li>
+                <img src="https://www.wda.gov.tw/images/a20.png" alt="無障礙" class="img-barrier">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="t-footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>勞動部勞動力發展署版權所有 © 2021 taiwanjobs All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- SVG Symbols -->
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="ic-user" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10Z" opacity=".4" />
+        <path d="M12 7a3.7 3.7 0 0 0 0 7.4h.1A3.7 3.7 0 0 0 12 7ZM18.8 19.4A10 10 0 0 1 12 22a10 10 0 0 1-6.8-2.6A4.3 4.3 0 0 1 7.1 17a9.6 9.6 0 0 1 9.8 0 4.2 4.2 0 0 1 1.9 2.4Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-burger" viewBox="0 0 24 24">
+      <g id="menu" transform="translate(-684 -380)">
+        <path d="M18,.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H18a.75.75,0,0,1,.75.75A.75.75,0,0,1,18,.75Z" transform="translate(687 387)" fill="currentColor" />
+        <path d="M-9919.249,5444.5a.751.751,0,0,1-.752-.751.751.751,0,0,1,.752-.75h18a.75.75,0,0,1,.749.75.75.75,0,0,1-.749.751Z" transform="translate(10606.25 -5051.75)" fill="currentColor" opacity="0.34" />
+        <path d="M18,.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H18a.75.75,0,0,1,.75.75A.75.75,0,0,1,18,.75Z" transform="translate(687 397)" fill="currentColor" />
+      </g>
+    </symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24">
+      <path fill="currentColor" d="m21.7 18.9-3.1-3.1c-.7 1.1-1.7 2.1-2.8 2.8l3.1 3.1c.4.4 1 .4 1.4 0l1.4-1.4c.4-.4.4-1 0-1.4Z" />
+      <path fill="currentColor" d="M11 20c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9Zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7Zm-3 7c0-1.7 1.3-3 3-3 .6 0 1-.4 1-1s-.4-1-1-1c-2.8 0-5 2.2-5 5 0 .6.4 1 1 1s1-.4 1-1Z" opacity=".36" />
+    </symbol>
+    <symbol id="ic-arrow-l" viewBox="0 0 24 24">
+      <path d="M9.60001 11H21C21.6 11 22 11.4 22 12C22 12.6 21.6 13 21 13H9.60001V11Z" fill="currentColor" />
+      <path opacity="0.3" d="M9.6 20V4L2.3 11.3C1.9 11.7 1.9 12.3 2.3 12.7L9.6 20Z" fill="currentColor" />
+    </symbol>
+    <symbol id="ic-arrow-r" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M14.4 11H3c-.6 0-1 .4-1 1s.4 1 1 1h11.4v-2Z" />
+      <path fill="currentColor" d="M14.4 20V4l7.3 7.3c.4.4.4 1 0 1.4L14.4 20Z" opacity=".36" />
+    </symbol>
+    <symbol id="ic-images" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M22 8v6l-2-1a2 2 0 0 0-2 0l-5 3a2 2 0 0 1-2 0h-1a2 2 0 0 0-2 0l-5 3a7 7 0 0 1-1-3V8c0-4 2-6 6-6h8c4 0 6 2 6 6Z" opacity=".4" />
+        <path d="M11 8a2 2 0 1 1-2-2 2 2 0 0 1 2 2Zm11 6v2c0 4-2 6-6 6H8c-3 0-5-1-5-3l5-3a2 2 0 0 1 2 0h1a2 2 0 0 0 2 0l5-4a2 2 0 0 1 2 0Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-briefcase" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M21 7c-.8-1-2.2-1.4-4.2-1.4h-.3c0-1.7 0-3.8-3.7-3.8h-1.6c-3.7 0-3.7 2-3.7 3.7h-.3c-2 0-3.4.6-4.3 1.5a4.5 4.5 0 0 0-.8 3.6v1.1a.2.2 0 0 0 .1 0 15 15 0 0 0 1.5 1 17.2 17.2 0 0 0 5.5 1.8c0 1 .5 2 2.7 2s2.6-1 2.7-2a16.8 16.8 0 0 0 5.7-2l.2-.2a12.8 12.8 0 0 0 1.3-.8l.1-.4v-.7a4.4 4.4 0 0 0-.8-3.4Zm-8 6.8c0 1 0 1.3-1.1 1.3s-1.3-.2-1.3-1.3v-1.2h2.5ZM9 5.6c0-1.8 0-2.4 2.2-2.4h1.6c2.3 0 2.3.6 2.3 2.3H8.9Z" />
+        <path d="M20.5 12.3h-.2a17 17 0 0 1-5.7 2.2c-.1 1-.5 2-2.7 2s-2.6-1-2.7-2a16.7 16.7 0 0 1-5.5-1.9l-.5-.2a15 15 0 0 1-1-.7l.6 6.5c.2 2 1 4 5.4 4h7.6c4.4 0 5.2-2 5.4-4l.7-6.8a12.5 12.5 0 0 1-1.4.9Z" opacity=".4" />
+      </g>
+    </symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M11.1 4.5C11.5 3.8 12.5 3.8 12.9 4.5L15 8.2C15.2 8.4 15.4 8.6 15.7 8.6L19.8 9.5C20.6 9.7 20.9 10.6 20.4 11.2L17.5 14.4C17.3 14.6 17.2 14.9 17.3 15.1L17.7 19.4C17.8 20.1 17 20.7 16.3 20.4L12.4 18.7C12.1 18.6 11.9 18.6 11.6 18.7L7.7 20.4C7 20.7 6.2 20.1 6.3 19.4L6.7 15.1C6.8 14.9 6.7 14.6 6.5 14.4L3.6 11.2C3.1 10.6 3.4 9.7 4.2 9.5L8.3 8.6C8.6 8.6 8.8 8.4 9 8.2L11.1 4.5Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-map" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M7.8 22a6 6 0 0 1-.7 0 6 6 0 0 1-1.7-.4C3.2 20.8 2 18.9 2 16.2V7.8C2 4.2 4.2 2 7.8 2h8.4c2.7 0 4.6 1.2 5.4 3.3a6 6 0 0 1 .4 1.8 5.6 5.6 0 0 1 0 .7v8.4a6.1 6.1 0 0 1-1 3.7 4 4 0 0 1-1.1 1 6.1 6.1 0 0 1-3.7 1.1Z" opacity=".4" />
+        <path d="m5.4 21.6.3-.4L21.6 5.3a6 6 0 0 1 .4 1.8L15 14l6 5.9a4 4 0 0 1-1.1 1L14 15.1 7.1 22a6 6 0 0 1-1.7-.4Zm2.3-9.4A4.7 4.7 0 0 1 6 8a3.1 3.1 0 0 1 3.1-2.4A3.1 3.1 0 0 1 12.2 8a4.6 4.6 0 0 1-1.7 4.3 2 2 0 0 1-1.4.6 2 2 0 0 1-1.4-.6Zm.5-3.7a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-gps" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M20 12a8 8 0 1 1-8-8 8 8 0 0 1 8 8Z" opacity=".4" />
+        <path d="M15.1 12A3.1 3.1 0 1 1 12 8.9a3.1 3.1 0 0 1 3.1 3.1ZM12.8 2v2a6 6 0 0 0-.8 0 6 6 0 0 0-.7 0V2a.8.8 0 0 1 .7-.8.8.8 0 0 1 .8.8ZM4 12a6.2 6.2 0 0 0 0 .8H2a.8.8 0 0 1-.8-.8.8.8 0 0 1 .8-.8h2a6.2 6.2 0 0 0 0 .8ZM12.8 20v2a.8.8 0 0 1-.8.7.8.8 0 0 1-.8-.7v-2a6 6 0 0 0 .8 0 6 6 0 0 0 .7 0ZM22.8 12a.8.8 0 0 1-.8.8h-2a6.2 6.2 0 0 0 0-.8 6.2 6.2 0 0 0 0-.8h2a.8.8 0 0 1 .8.8Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-route" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path fill="currentColor" d="M16.2 2H7.8C4.2 2 2 4.2 2 7.8v8.4C2 19.8 4.2 22 7.8 22h8.4c3.6 0 5.8-2.2 5.8-5.8V7.8C22 4.2 19.8 2 16.2 2Z" opacity=".4" />
+        <path fill="currentColor" d="M17.4 9 15 16.7a2 2 0 0 1-3.6 0l-.7-2a1.9 1.9 0 0 0-1.3-1.2l-2-.7a2 2 0 0 1 0-3.7L15 6.6a2 2 0 0 1 2.4 2.5Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-location" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M20.6 8.4A8.6 8.6 0 0 0 12 1.7a8.6 8.6 0 0 0-8.6 6.7c-1.2 5.2 2 9.6 4.8 12.3a5.4 5.4 0 0 0 7.6 0c2.8-2.7 6-7 4.8-12.3Z" opacity=".4" />
+        <path d="M15.2 10.3A3.1 3.1 0 1 1 12 7.2a3.1 3.1 0 0 1 3.2 3.1Z" />
+      </g>
+    </symbol>
+    <symbol id="ic-routing" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path d="M17 21.4c-1.1-1-2.4-2.8-2-4.8.9-3.5 6.1-3.5 7 0 .4 2-1 3.8-2 4.8a2.1 2.1 0 0 1-1.5.6 2.1 2.1 0 0 1-1.5-.6Zm.5-4.2a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1ZM4 9.4C3 8.4 1.6 6.6 2 4.6 3 1.1 8 1.1 9 4.6c.4 2-.8 3.8-2 4.8a2.1 2.1 0 0 1-1.4.6A2.1 2.1 0 0 1 4 9.4Zm.5-4.2a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1Z" opacity=".4" />
+        <path d="M9.3 19.8A2.7 2.7 0 0 1 6.8 18a2.7 2.7 0 0 1 .7-3l8-7a1.2 1.2 0 0 0 .4-1.4 1.2 1.2 0 0 0-1.2-.8H12a.8.8 0 0 1-.8-.8.8.8 0 0 1 .8-.7h2.7A2.7 2.7 0 0 1 17.3 6a2.7 2.7 0 0 1-.8 3l-8 7a1.2 1.2 0 0 0-.3 1.4 1.2 1.2 0 0 0 1.1.8H12a.8.8 0 0 1 .8.8.8.8 0 0 1-.8.8Zm8.2-2.6a1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1Zm-13-12a1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1Z" />
+      </g>
+    </symbol>
+    <symbol id="tapes" viewBox="0 0 124 48">
+      <g id="tape" fill="currentColor">
+        <path id="Base" d="M114.4.2c1.2 6.1 8.9 6 8.6 12a20.3 20.3 0 0 1 .5 2.8c0 1-3.4 3.3-3.4 4.2v2c0 .7 3.5 1.9 3.5 2.6l.1 4.7c0 1.1-2.4 4.5-2.3 7.3 0 3.5 2.4 4.5 1.2 6.3-2 3-12.8 2.9-21.5 2.7-8.8 0-17.6.3-26.6.3h-3.3c-6 0-13.7.2-19.9 0H48a399.6 399.6 0 0 0-35.7 1.7l-9 .3v-2.5c.4-1-1.4-2.6-1-3.7s2.7-1.8 2.9-3a40 40 0 0 0 .5-9c-.1-1.9-1.6-2.2-1.9-4-.1-1 1.1-3.3 1-4.2-.1-.4-4.7-1.8-4.8-2.1-.2-1.5.7-3.4.5-4.9-.6-3 2.1-4.7 1.7-8L2 3.3l20.8-.5h2a574 574 0 0 0 46.2-.5c16.5 5.4 25.2-3.6 41.4-2h1.9Z" opacity=".7" />
+        <g id="Dark_Areas">
+          <path id="Path_312" d="M15.1 19.9c7.5-.6 4.5 2.1 19.3-4.8s27.5-6.5 30.8-5.4S84 13.3 84 13.3s-18.2-.7-25 .7-14.6 2.8-20.2 5.4-23.8.5-23.8.5Z" opacity=".1" style="isolation:isolate" />
+          <path id="Path_313" d="M3.8 15.2c4.1-.9 10-2.1 11.1-2.5 2-.6 20-4.1 16-4L16.3 9c-1.6 0-7.8 2.6-13.3 2.1l.7 4Z" opacity=".1" style="isolation:isolate" />
+          <path id="Path_316" d="M106.5 6.6a42.4 42.4 0 0 1-24.2 5.7s14.5 1.9 18 1.8 6.3-1.7 11.1-2.6c3.6-.6 9.3 2.6 12.2 4.4v-1a20.3 20.3 0 0 0-.6-2.8c.1-2.8-1.5-4.3-3.4-5.6-3.1-.2-9.5-1.8-13.1.1Z" opacity=".1" style="isolation:isolate" />
+        </g>
+        <g id="Light_Areas">
+          <path id="Path_314" fill="#fff" d="M57.4 32.3c7.6 1.8 11.4-5 16.1-4.8s18.9-4.3 23.6-3.3l-16.2 4s-6.4-.5-9.6 2.1-8.3 3.3-8.3 3.3Z" opacity=".8" style="isolation:isolate" />
+          <path id="Path_315" fill="#fff" d="M38 34.3s5-5.5 7.8-4.6 8.5-.7 9.2-.2 7.5.8 7.5.8-6.3-2.4-8.8-2-8.9.2-10 .2-5.6 5.8-5.6 5.8Z" opacity=".8" style="isolation:isolate" />
+          <g id="Group_304" opacity=".3">
+            <path id="Path_317" fill="#fff" d="M19.7 27.9c2.1-.4 4.4-.5 6.3-1.5l2.9-1.7a25.5 25.5 0 0 1 3.1-1.2 54.5 54.5 0 0 1 6.4-1.7 30.2 30.2 0 0 1 6.6-.6c4.5.2 8.7 1.6 13 .8 2.2-.2 4.3-.8 6.4-1.2a13.9 13.9 0 0 1 6.6.2 14.6 14.6 0 0 0-6.5.4c-2 .5-4.2 1.1-6.4 1.5-4.4 1-8.9-.5-13-.6-4.4-.2-8.7 1-12.9 2a25.4 25.4 0 0 0-3 1l-3 1.6a11 11 0 0 1-3.2.8l-3.3.2Z" />
+          </g>
+          <path id="Path_318" fill="#fff" d="m15.7 33.7-3.9.5a46 46 0 0 1-3.8 0H5.6l-.2 2.5 2.6-.2c1.4 0 2.7-.2 4-.4l4-.9 15.5-3.5Z" opacity=".3" style="isolation:isolate" />
+          <path id="Path_319" fill="#fff" d="m49.8 40 4.8 5.1h16.6l-13.5-3.4s-6.2-4.4-7.3-4-12.2.3-12.2.3Z" opacity=".3" style="isolation:isolate" />
+        </g>
+      </g>
+    </symbol>
+  </svg>
+  <!-- JQuery -->
+  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="assets/javascript/bundles/turboframe_bundle.min.js"></script> -->
+  <!-- JQuery Migrate -->
+  <script src="assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <!-- Bootstrap v5.2.0  -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <!-- Core -->
+  <script src="assets/javascript/turboframes_justJavascript/turboframe_JsUtils.js"></script>
+  <script src="assets/javascript/core.js"></script>
+  <script src="assets/javascript/custom.js"></script>
+  <!-- Go Top -->
+  <script src="assets/javascript/components/JsHeader.js"></script>
+  <script src="assets/javascript/components/JsDarkMode.js"></script>
+  <script src="assets/javascript/components/JsTuScrolltop.js"></script>
+  <script src="assets/javascript/components/JsModal.js"></script>
+  <script>
+  $(function() {
+
+    // sliders
+    (function main_owl() {
+      var bigimage = $("#hero-main");
+      var thumbs = $("#hero-sub");
+      var arrow_lt = '<i class="tub-arrow-left" aria-hidden="true"><text></text><text></text></i>';
+      var arrow_rt = '<i class="tub-arrow-right" aria-hidden="true"><text></text><text></text></i>';
+      //var totalslides = 10;
+      var syncedSecondary = true;
+
+      bigimage
+        .owlCarousel({
+          items: 1,
+          slideSpeed: 10000,
+          nav: false,
+          autoplay: true,
+          dots: false,
+          loop: true,
+          lazyLoad: true,
+          responsiveRefreshRate: 200,
+          navText: [arrow_lt, arrow_rt]
+        })
+        .on("changed.owl.carousel", syncPosition);
+
+      thumbs
+        .on("initialized.owl.carousel", function() {
+          thumbs
+            .find(".owl-item")
+            .eq(0)
+            .addClass("current");
+        })
+        .owlCarousel({
+          items: 4,
+          dots: false,
+          nav: true,
+          navText: [arrow_lt, arrow_rt],
+          smartSpeed: 200,
+          slideSpeed: 5000,
+          slideBy: 4,
+          responsiveRefreshRate: 100
+        })
+        .on("changed.owl.carousel", syncPosition2);
+
+      function syncPosition(el) {
+        var count = el.item.count - 1;
+        var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
+        if (current < 0) {
+          current = count;
+        }
+        if (current > count) {
+          current = 0;
+        }
+        //to this
+        thumbs
+          .find(".owl-item")
+          .removeClass("current")
+          .eq(current)
+          .addClass("current");
+        var onscreen = thumbs.find(".owl-item.active").length - 1;
+        var start = thumbs
+          .find(".owl-item.active")
+          .first()
+          .index();
+        var end = thumbs
+          .find(".owl-item.active")
+          .last()
+          .index();
+
+        if (current > end) {
+          thumbs.data("owl.carousel").to(current, 100, true);
+        }
+        if (current < start) {
+          thumbs.data("owl.carousel").to(current - onscreen, 100, true);
+        }
+      }
+
+      function syncPosition2(el) {
+        if (syncedSecondary) {
+          var number = el.item.index;
+          bigimage.data("owl.carousel").to(number, 100, true);
+        }
+      }
+
+      thumbs.on("click", ".owl-item", function(e) {
+        e.preventDefault();
+        var number = $(this).index();
+        bigimage.data("owl.carousel").to(number, 300, true);
+      });
+    })();
+
+  });
+  </script>
+</body>
+
+</html>

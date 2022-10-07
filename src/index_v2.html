@@ -6,23 +6,17 @@
   <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no">
   <meta charset="UTF-8">
   <title>台灣就業通 </title>
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180"    href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
   <!-- iCon  -->
   <link rel="stylesheet" type="text/css" href="assets/vendor/icon-turbotech_blur-v1.0/style.css">
   <!-- CSS  -->
   <link rel="stylesheet" type="text/css" href="assets/css/all.css">
-  <!--[if lte IE 9]>
-        <script src="assets/vender/IE_Supports/html5shiv/dist/html5shiv.min.js"></script>
-        <script src="assets/vender/IE_Supports/respond/dest/respond.min.js"></script>
-        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.jquery.min.js"></script>
-        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.prototype.min.js"></script>
-        <script src="assets/vender/IE_Supports/Placeholders/dist/placeholders.yui3.min.js"></script>
-    <![endif]-->
 </head>
 
-<body class="index_primary">
+<body class="t-index">
+
   <header id="tuHeader" data-tu-header="true" class="t-header">
     <section class="t-header-top t-header__section" data-header-fix-moment-classes="hide">
       <div class="container">
@@ -59,7 +53,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -86,7 +80,7 @@
               </svg>
             </i>
             <text class="">全台灣</text>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -634,7 +628,6 @@
   </ul>
   <!-- ChangeMode -->
   <div class="t-float-change-mode" id="tuChangeMode">
-    <svg xmlns="http://www.w3.org/8000/svg" viewBox="0 0 64 64"></svg>
   </div>
   <!-- Scrolltop -->
   <a href="javascript:;" id="tuScrolltop" class="tu-scrolltop">
@@ -646,7 +639,7 @@
       <div id="lottie_load"></div>
     </div>
   </div> -->
-  <!-- SVG Symbols -->
+
   <!-- SVG Symbols -->
   <svg xmlns="http://www.w3.org/2000/svg" hidden>
     <symbol id="ic-user" viewBox="0 0 24 24">

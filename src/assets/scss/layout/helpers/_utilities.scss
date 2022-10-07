@@ -103,11 +103,11 @@
   }
 }
 
-.t-text-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+// .t-text-ellipsis {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
 
 .t-center-block {
   display: block !important;
@@ -120,13 +120,13 @@
   table-layout: fixed !important;
 }
 
-.t-in-bk-mid {
-  @include in-bk-mid;
-}
+// .t-in-bk-mid {
+//   @include in-bk-mid;
+// }
 
-.t-tb-cell-mid {
-  @include tb-cell-mid;
-}
+// .t-tb-cell-mid {
+//   @include tb-cell-mid;
+// }
 
 .t-visibility-visible {
   @include visually-visible;

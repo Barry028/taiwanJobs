@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 hr {
   margin: 1rem 0;
   border: 0;
@@ -5,13 +7,12 @@ hr {
   background-color: currentcolor;
   height: .0625rem;
   max-width: 100%;
+  width: 100%;
   background-position: 50%;
-
   &:before,
   &:after {
     content: '';
   }
-
   &[data-hr-width="2"] {
     height: .125rem;
   }
@@ -23,21 +24,25 @@ hr {
   &[data-hr-width="4"] {
     height: .25rem;
   }
-  /* <hr data-hr-style="dashed" data-hr-width="2">  */
+
+  // <hr data-hr-style="dashed" data-hr-width="2">
   &[data-hr-style="dashed"] {
     background: repeating-linear-gradient(to right, currentcolor 0px, currentcolor 4px, transparent 0px, transparent 10px);
   }
-  /* <hr data-hr-style="twill" data-hr-width="2">  */
+
+  //  <hr data-hr-style="twill" data-hr-width="2">
   &[data-hr-style="twill"] {
     padding: .25rem;
     background: repeating-linear-gradient(135deg, currentcolor 0px, currentcolor 1px, transparent 1px, transparent 6px);
   }
-  /* <hr data-hr-style="dotted" data-hr-width="2">  */
+
+  // <hr data-hr-style="dotted" data-hr-width="2">
   &[data-hr-style="dotted"] {
     background: radial-gradient(currentcolor 2px, transparent 2px);
     background-size: 6px 4px;
     padding: 0.125rem;
   }
+
   // <hr data-hr-style="dashed" data-hr-title="SEPARATOR">
   &[data-hr-title] {
     position: relative;
@@ -57,16 +62,18 @@ hr {
       transform: translate(-50%, -50%);
     }
   }
-  /* <hr data-hr-style="fade" data-hr-width="2"> */
+
+  //<hr data-hr-style="fade" data-hr-width="2">
   &[data-hr-style="fade"] {
     color: transparent;
     background-image: linear-gradient(90deg, rgba($grey-400, 0), rgba($grey-400, 1) 50%, rgba($grey-400, 0) 100%);
   }
-  /* <hr data-hr-style="border-fade" data-hr-width="2"> */
+
+  // <hr data-hr-style="border-fade" data-hr-width="2">
   &[data-hr-style="border-fade"] {
     color: transparent;
     border-width: 0 0 .125rem;
-    border-image: linear-gradient(90deg,rgba($grey-400, 0),rgba($grey-400, 1) 50%,rgba($grey-400, 0) 100%) 0 0 100%;
+    border-image: linear-gradient(90deg, rgba($grey-400, 0), rgba($grey-400, 1) 50%, rgba($grey-400, 0) 100%) 0 0 100%;
     border-style: solid;
   }
 }
@@ -254,8 +261,7 @@ hr {
 //   border-radius: 15px;
 // }
 
-
-// /* Wave */
+// /* Wave
 // @mixin wavy-border($color:#000, $stroke:1, $width:50, $height:25) {
 //   border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 #{$width} #{$height+$stroke}" width="#{$width}" height="#{$height+$stroke}"><path fill="none" stroke="#{$color}" stroke-width="#{$stroke}" d="M0,#{$height+($stroke/2)}c#{$width/4},0,#{$width/4}-#{$height},#{$width/2}-#{$height}s#{$width/4},#{$height},#{$width/2},#{$height}"/></svg>') 0 0 100% repeat;
 //   border-width: 0 0 #{$height+$stroke}px;
@@ -288,7 +294,7 @@ hr {
 //   right: -2px;
 // }
 
-// /* Shine */
+// /* Shine
 // .shine {
 //   height: 20px;
 //   width: 60%;
@@ -312,7 +318,7 @@ hr {
 //     hsla(0, 0%, 0%, 0));
 // }
 
-// /* Charlie */
+// /* Charlie
 // .charlie {
 //   position: relative;
 //   font-size: 1.5em;
@@ -362,7 +368,6 @@ hr {
 //          2em 0;
 //     }
 // }
-
 
 // &[data-hr-style="dotted-2"] {
 //   height: 1.25rem;

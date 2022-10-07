@@ -1,7 +1,30 @@
 @charset "utf-8";
 
-//  Symbols Lists
+//  Symbols Lists ver
 // --------------------------------------------------
+
+.t-definition-list-v {
+    display: flex;
+    line-height: 2;
+    font-size: 0.9375rem;
+    margin-bottom: 0.875rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  .t-definition-term-v {
+    color: $grey-400;
+    margin-bottom: 0.5rem;
+  }
+
+  .t-definition-description-v {
+    margin-left: .375rem;
+  }
+}
+
+
+
+
+
 .t-list {
   .t-list-item {
     position: relative;
@@ -32,6 +55,21 @@
         margin-bottom: .375rem;
       }
     }
+  }
+}
+
+.t-list-group-v {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .t-list-group-item-v {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    .t-list-group-v {}
   }
 }
 

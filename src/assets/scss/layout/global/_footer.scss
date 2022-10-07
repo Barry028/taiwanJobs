@@ -79,9 +79,9 @@ $footer-color: $white;
   background-color: $white;
   border-top: 2px solid lighten($secondary, 15%);
 
-  @media all and (max-width: $screen-sm-min) {
-    padding-bottom: 6rem;
-  }
+  // @media all and (max-width: $screen-sm-min) {
+  //   padding-bottom: 6rem;
+  // }
 
   .img-container-footer {
     margin-bottom: 1.25rem;

@@ -1,0 +1,1742 @@
+@charset "utf-8";
+
+//  Recruit > Details
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+
+
+%extend_abs {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+[data-separated="true"] {
+  color: $primary;
+}
+
+%extend_vtop {
+  padding: .25rem 0 .25rem 1rem;
+  width: 50%;
+  vertical-align: top;
+}
+
+.t-resume-page {
+  margin-bottom: 4rem;
+
+  .t-wrapper-inner {
+    :not(:last-of-type) {
+      .t-panel {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  [data-profile] {
+    position: relative;
+  }
+
+  .t-resume-item {
+    .t-resume-nums {
+      color: $white;
+
+      @include gradient-x($start-color: $gray-900, $end-color: $gray-600, $start-percent: 0%, $end-percent: 100%);
+
+      display: inline-flex;
+      align-items: center;
+      padding: 0.625rem 0.75rem 0.9375rem;
+      font-size: 0.8125rem;
+      font-family: $font-family-monospace;
+      white-space: nowrap;
+      text-align: center;
+      border-radius: $border-radius $border-radius 0 0;
+      margin-bottom: 0;
+      position: absolute;
+      right: 0.5rem;
+      top: -2.5rem;
+
+      strong {
+        letter-spacing: .125rem;
+        font-size: 125%;
+        color: $yellow;
+      }
+    }
+
+
+  }
+}
+
+// .t-profile-box {
+//   background-color: #fff;
+//   border-bottom: 2px solid #1c84c6;
+//   padding: .75rem .5rem .5rem;
+
+//   .edit_input {}
+
+//   .t-profile-status {
+//     margin: .5rem 0;
+
+//     .btn {
+//       //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//       border-radius: 4px;
+//       font-size: .8125rem;
+//       padding: .375rem;
+//     }
+//   }
+// }
+// .t-profile-item-side-heading {
+//   margin-top: 1rem;
+//   letter-spacing: 2px;
+//   font-size: 1.75rem;
+//   color: $primary-800;
+
+//   @include text-emboss($color: $primary-100, $depth: 2);
+// }
+
+// .t-profile-item-text {
+//   position: relative;
+//   flex: 0 0 auto;
+//   width: calc(100% - 10rem);
+//   align-items: center;
+//   justify-content: inherit;
+//   align-self: center;
+//   padding-left: 4rem;
+// }
+
+// .t-dl-group {
+//   border-left: 4px solid $primary-200;
+//   margin-bottom: 1rem;
+//   padding: 0.5rem 1.75rem;
+
+//   dt {}
+// }
+
+// dd {
+//   color: $lightgrey;
+//   width: fit-content;
+// }
+
+// .t-profile-box {
+//   background-color: #fff;
+//   border-bottom: 2px solid #1c84c6;
+//   padding: .75rem .5rem .5rem;
+
+//   .edit_input {}
+
+//   .t-profile-status {
+//     margin: .5rem 0;
+
+//     .btn {
+//       //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//       border-radius: 4px;
+//       font-size: .8125rem;
+//       padding: .375rem;
+//     }
+//   }
+// }
+
+// .menu-list-profile {
+//   background-color: #f0f3f5;
+
+//   .menu-title {
+//     font-size: .8125rem;
+//     padding: .5rem 1rem;
+//   }
+
+//   .label--unfinish {
+//     @extend %extend_abs;
+//   }
+
+//   .label--open {
+//     @extend %extend_abs;
+//   }
+
+//   li {
+//     background-color: #fff;
+//     margin-left: .25rem;
+//     margin-right: .25rem;
+//     padding: .125rem 0;
+
+//     //Instead of the line below you could use @include user-select($select)
+//     user-select: none;
+
+//     .toggle {
+//       @extend %extend_abs;
+//     }
+
+//     &:hover {
+//       background-color: #eef4f9;
+
+//       a {
+//         color: #6c757d;
+//       }
+//     }
+
+//     a {
+//       color: #b1b6bc;
+//       display: block;
+//       font-size: 0;
+//       line-height: 2.25rem;
+//       padding-left: 1rem;
+//       height: 2.25rem;
+//     }
+
+//     &.active {
+//       a {
+//         color: #3d3d3d;
+//         font-weight: bolder;
+//       }
+
+//       &:nth-of-type(9) {
+//         [class*="t-profile-icon"] {
+//           background-color: #ffd6de;
+
+//           i {
+//             color: #ff6b81;
+//           }
+//         }
+
+//         &.active [class^="t-profile-icon"] {
+//           background-color: #ffd6de;
+//         }
+//       }
+
+//       &:nth-child(-n + 5) {
+//         [class*="t-profile-icon"] {
+//           background-color: #b7e2f6;
+
+//           i {
+//             color: #1c84c6;
+//           }
+//         }
+
+//         &.active [class^="t-profile-icon"] {
+//           background-color: #b7e2f6;
+//         }
+
+//         [class^="t-profile-icon"] i {
+//           color: #1c84c6;
+//         }
+//       }
+
+//       &:nth-child(n + 6) {
+//         [class*="t-profile-icon"] {
+//           background-color: #caefe8;
+
+//           i {
+//             color: #1abc9c;
+//           }
+//         }
+
+//         &.active [class^="t-profile-icon"] {
+//           background-color: #caefe8;
+//         }
+
+//         [class^="t-profile-icon"] i {
+//           color: #1abc9c;
+//         }
+//       }
+
+//       &:nth-of-type(n + 10) {
+//         [class*="t-profile-icon"] {
+//           background-color: #fce1d8;
+
+//           i {
+//             color: #ff7f50;
+//           }
+//         }
+
+//         &.active [class^="t-profile-icon"] {
+//           background-color: #fce1d8;
+//         }
+
+//         [class^="t-profile-icon"] i {
+//           color: #ff7f50;
+//         }
+//       }
+//     }
+//   }
+
+//   .dashe-li {
+//     background-color: rgb(243, 243, 243);
+
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 2px;
+//     border: 1px #ccc dashed;
+
+//     &:hover {
+//       background-color: rgb(253, 253, 253);
+//     }
+//   }
+
+//   .time-update {
+//     color: #b1b6bc;
+//     font-size: .75rem;
+//     text-align: right;
+//     padding: .5rem;
+//   }
+
+//   lli.active:nth-of-type(9) [class^="t-profile-icon"] i {
+//     color: #ff6b81;
+//   }
+// }
+
+// .t-profile-icon {
+//   background-color: #dae1e5;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 50%;
+//   font-size: 1.25rem;
+//   margin: 0 1rem 0 0;
+//   height: 2rem;
+//   width: 2rem;
+// }
+
+// .t-panel-title {
+//   .title {
+//     font-size: 1rem;
+//     font-weight: bold;
+//   }
+
+//   .btn {
+//     position: absolute;
+//     top: 50%;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: translateY(-50%);
+//     padding-left: 0;
+//     padding-right: 0;
+
+//     &:nth-of-type(1) {
+//       right: .25rem;
+//     }
+
+//     &:nth-of-type(2) {
+//       right: 3.5rem;
+//     }
+//   }
+
+//   .btn--icon {
+//     width: 12rem;
+//   }
+// }
+
+// .t-profile-adv {
+//   background-image: url(../img/t-profile-ani.svg);
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   height: 13.5rem;
+// }
+
+// .t-panel-main {
+//   .t-profile-left-box {
+//     @extend %extend_vtop;
+
+//     border-right: 1px solid #efefef;
+//   }
+
+//   .t-profile-right-box {
+//     @extend %extend_vtop;
+//   }
+// }
+
+// @media all and (max-width: 768px) {
+//   .t-panel-main {
+//     .t-profile-left-box {
+//       width: 100%;
+//     }
+
+//     .t-profile-right-box {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// .profile_block-add {
+//   background-color: #fff;
+//   border: #e5e9f2 1px solid;
+
+//   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.024);
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+//   padding: 1.25rem 1rem;
+
+//   .profile_block-icon {
+//     height: 4rem;
+//     width: 4rem;
+
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 100%;
+//     font-size: 2.5rem;
+//   }
+
+//   .profile_block-text {
+//     width: calc(100% - 4rem);
+//     padding: 1rem;
+//   }
+// }
+
+// .profile_block-edit {}
+
+// .item-background {
+//   background: #f3f3f3;
+//   border: 1px #ccc dashed;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+//   padding: 1.5rem 1rem;
+
+//   p {
+//     font-size: .875rem;
+//     padding: 0.5rem 0;
+//   }
+
+//   .btn {
+//     width: 10rem;
+//   }
+// }
+
+// .profile_block-text {
+//   h6 {}
+
+//   p {}
+
+//   a {}
+
+//   .btn {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+// }
+
+// .bonus-icon {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+
+//   //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//   transform: translate(-50%, -50%);
+// }
+
+// .bonus-icon--green {
+//   background-color: #caefe8;
+
+//   i {
+//     color: #1abc9c;
+//   }
+// }
+
+// .bonus-icon--pink {
+//   background-color: #ffd6de;
+
+//   i {
+//     color: #ff6b81;
+//   }
+// }
+
+// .bonus-icon--orange {
+//   background-color: #fce1d8;
+
+//   i {
+//     color: #ff7f50;
+//   }
+// }
+
+// .list-card-header {
+//   padding: .5rem 0;
+// }
+
+// .list-card {
+//   .item-action-btn {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//   }
+
+//   &.academic_card {
+//     border-left: #7cc1e4 3px solid;
+//   }
+// }
+
+// .list-card-content {}
+
+// .academic_card {
+//   &:before {
+//     position: absolute;
+//     left: -3.5rem;
+//     top: 50%;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: translateY(-50%);
+//     height: 2.25rem;
+//     width: 2.25rem;
+//     background-color: #75b9e7;
+
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 50%;
+//     color: #fff;
+//     font-size: 1.25rem;
+//     line-height: 1.75;
+//     text-align: center;
+//     z-index: 2;
+//   }
+
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     left: -2.45rem;
+//     background-color: #fff;
+//     height: 50%;
+//     width: 5px;
+//     z-index: 1;
+//   }
+
+//   &:nth-of-type(1):before {
+//     content: '1';
+//   }
+
+//   &:nth-of-type(2):before {
+//     content: '2';
+//   }
+
+//   &:nth-of-type(3):before {
+//     content: '3';
+//   }
+
+//   &:nth-of-type(4):before {
+//     content: '4';
+//   }
+
+//   &:first-of-type:after {
+//     top: -1px;
+//   }
+
+//   &:last-of-type:after {
+//     bottom: -1px;
+//   }
+// }
+
+// .workexperience-year {
+//   width: 5rem;
+// }
+
+// .workexperience-card {
+//   width: calc(100% - 5rem);
+
+//   &:last-of-type {
+//     margin-bottom: 0;
+//   }
+
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: -2rem;
+//     height: 1rem;
+//     width: 1rem;
+//     background-color: #c5c5c5;
+//     border: 3px solid #fff;
+
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 50%;
+//   }
+// }
+
+// .workexperience-card-content {
+//   margin-left: 2.5rem;
+
+//   .job-about {
+//     margin-left: 1rem;
+//   }
+
+//   .job-name-item {
+//     margin: .5rem 0;
+//     padding-left: 1rem;
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//       height: 100%;
+//       width: 3px;
+//     }
+
+//     &.full-time:before {
+//       background: #d4e9f8;
+//     }
+
+//     &.part-time:before {
+//       background: #fed9cc;
+//     }
+//   }
+
+//   .job-description {
+//     margin-top: 0.75rem;
+//   }
+
+//   .job-description-title {
+//     padding: .5rem 0;
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 0;
+
+//       //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//       transform: translateY(-50%);
+//       background-color: #ebebeb;
+//       height: 1px;
+//       width: 100%;
+//     }
+
+//     .title {
+//       background: #fff;
+//       font-size: .8125rem;
+//       padding: .5rem 1.5rem .5rem 0;
+//     }
+//   }
+// }
+
+// .work-experience-panel {
+//   margin-left: 5rem;
+// }
+
+// .skill-tag {
+//   background-color: #fcfcfc;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px;
+//   border: solid 1px #cecece;
+//   display: inline-block;
+//   font-size: .8125rem;
+//   margin: .25rem .5rem 0 0;
+//   padding: .25rem .5rem;
+
+//   //Instead of the line below you could use @include user-select($select)
+//   user-select: none;
+// }
+
+// .major-edit-content {
+//   border-left: solid 3px #ccc;
+//   margin: 1rem;
+//   padding: 0 1rem;
+// }
+
+// .major-tag {
+//   background-color: #f7fcff;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px;
+//   border: 1px solid #a2c7e0;
+//   color: #4c8fbd;
+//   cursor: pointer;
+//   display: inline-block;
+//   font-size: .8125rem;
+//   margin: .25rem .5rem 0 0;
+//   padding: .25rem .5rem;
+
+//   //Instead of the line below you could use @include user-select($select)
+//   user-select: none;
+// }
+
+// .activities-panel {
+//   width: 22.125rem;
+// }
+
+// .reference-item {
+//   .reference-item-content {
+//     padding: .25rem .5rem;
+//   }
+
+//   &.male {
+//     border-left: rgb(28, 132, 198) 3px solid;
+
+//     .reference-item-img {
+//       background-color: #d9edf7;
+//     }
+
+//     .reference-item-text {
+//       border-color: rgba(28, 132, 198, 0.24);
+//     }
+//   }
+
+//   &.female {
+//     border-left: rgb(255, 107, 129) 3px solid;
+
+//     .reference-item-img {
+//       background-color: #fcdae0;
+//     }
+
+//     .reference-item-text {
+//       border-color: rgba(255, 107, 129, 0.24);
+//     }
+//   }
+// }
+
+// .reference-item-content {
+//   .reference-item-img {
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 50%;
+//     height: 5rem;
+//     width: 5rem;
+//   }
+
+//   .reference-item-text {
+//     border-left: 2px solid;
+//     margin: .5rem 1rem;
+//     padding: 0 .5rem;
+//   }
+// }
+
+// .reference-item-text {
+//   ul {
+//     margin: .25rem 0 0;
+//   }
+
+//   li {
+//     color: #b1b6bc;
+//     font-size: .875rem;
+//   }
+// }
+
+// .reference_add {
+//   background-color: #f3f3f3;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px;
+//   border: 1px #ccc dashed;
+//   padding: 3.3rem;
+//   width: 100%;
+// }
+
+// .license_content {
+//   padding-top: .5rem;
+//   padding-bottom: .5rem;
+
+//   .license-left {
+//     padding: 0 .25rem;
+//     text-align: center;
+//     width: 5rem;
+//   }
+
+//   .license-right {
+//     padding: 0 .25rem;
+//     width: calc(100% - 5rem);
+//   }
+// }
+
+// .license-item-group {
+//   .license-item-title {
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 2px 2px 0 0;
+//     width: 7.375rem;
+//   }
+
+//   .choose_wrap {
+//     margin-top: .125rem;
+
+//     input[type=checkbox] {
+//       + label {
+//         margin: 0;
+//         padding: .25rem 0;
+//         text-align: center;
+//         width: 3.6875rem;
+
+//         &:nth-of-type(1) {
+//           //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//           border-radius: 0 0 0 2px;
+//           border-width: 1px 0 1px 1px;
+//         }
+
+//         &:nth-of-type(2) {
+//           //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//           border-radius: 0 0 2px 0;
+//         }
+//       }
+
+//       &:checked + label:nth-of-type(2) {
+//         border-left-color: #fff;
+//       }
+//     }
+//   }
+// }
+
+// .license-item--complate {
+//   margin: 0.375rem 0;
+// }
+
+// .license-item-title--complate {
+//   border: solid 1px #dde6f3;
+//   font-size: .875rem;
+//   padding: .25rem .75rem;
+//   text-align: justify;
+//   text-align-last: justify;
+//   background-color: #dde6f3;
+//   letter-spacing: 1px;
+//   width: 7.5rem;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px 0 0 2px;
+// }
+
+// .license-item-content--complate {
+//   border: solid 1px #dde6f3;
+//   font-size: .875rem;
+//   padding: .25rem .75rem;
+//   text-align: justify;
+//   text-align-last: justify;
+//   background-color: #fff;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 0 2px 2px 0;
+// }
+
+// .license-item-title {
+//   border: solid 1px #dde6f3;
+//   font-size: .875rem;
+//   padding: .25rem .75rem;
+//   text-align: justify;
+//   text-align-last: justify;
+//   background-color: #dde6f3;
+//   letter-spacing: 1px;
+// }
+
+// .language-edit {
+//   margin: 1rem 0;
+//   width: 30rem;
+// }
+
+// .language-group {
+//   border-top: dotted 1px #dbe1e6;
+//   margin-top: 1rem;
+//   padding: .5rem 0 .5rem 0;
+// }
+
+// .language-title {
+//   background-color: #7997bf;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px;
+
+//   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//   box-shadow: 0 0.375rem 0 0 #59687b;
+//   color: #fff;
+//   font-size: 1.125rem;
+//   height: 2.125rem;
+//   width: 2.5rem;
+//   line-height: 2.25rem;
+//   text-align: center;
+
+//   //Instead of the line below you could use @include user-select($select)
+//   user-select: none;
+// }
+
+// .dialect-title {
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2px;
+//   background-color: #7997bf;
+
+//   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//   box-shadow: 0 0.375rem 0 0 #59687b;
+//   color: #fff;
+//   font-size: .9375rem;
+//   width: 2.5rem;
+//   height: 2.125rem;
+//   line-height: 2.25rem;
+
+//   //Instead of the line below you could use @include user-select($select)
+//   user-select: none;
+//   text-align: center;
+// }
+
+// .slider-bar-radio {
+//   background: #dde3ee;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 12px;
+//   font-size: 0;
+//   height: 12px;
+//   width: 100%;
+//   margin: 1rem 0;
+//   text-align: center;
+
+//   input[type=radio] {
+//     display: none;
+//   }
+
+//   label {
+//     cursor: pointer;
+//     display: inline-block;
+//     font-size: .8125rem;
+//     height: 4rem;
+//     line-height: 1.5rem;
+//     margin: 1.75rem 0 0 0;
+//     text-align: center;
+
+//     &:after {
+//       content: '';
+//       background: #dde3ee;
+
+//       //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//       border-radius: 50%;
+
+//       //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//       box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.16);
+//       display: block;
+//       position: absolute;
+//       left: 1.625rem;
+//       top: -2rem;
+//       height: 1.25rem;
+//       width: 1.25rem;
+//       z-index: 1;
+//       left: 50%;
+
+//       //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//       transform: translateX(-50%);
+//     }
+//   }
+
+//   &.language {
+//     label {
+//       width: 25%;
+//     }
+
+//     input[type="radio"] {
+//       &:nth-of-type(3):checked + label:before {
+//         left: -200%;
+//         width: 250%;
+//       }
+
+//       &:nth-of-type(4):checked + label:before {
+//         left: -300%;
+//         width: 400%;
+//       }
+//     }
+//   }
+
+//   &.dialect {
+//     label {
+//       width: 33.333333%;
+//     }
+
+//     input[type="radio"]:nth-of-type(3):checked + label:before {
+//       left: -200%;
+//       width: 300%;
+//     }
+//   }
+
+//   input[type="radio"] {
+//     &:checked + label {
+//       color: #1c84c6;
+//       font-weight: bold;
+
+//       &:after {
+//         background: #1c84c6;
+//         height: 1.5rem;
+//         width: 1.5rem;
+//         top: -2.125rem;
+//       }
+
+//       &:before {
+//         opacity: 1;
+//       }
+//     }
+
+//     + label:before {
+//       content: '';
+//       background: #b1d0e9;
+
+//       //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//       border-radius: 12px;
+//       height: 12px;
+//       width: 0;
+//       position: absolute;
+//       left: 0;
+//       top: -1.75rem;
+//       opacity: 0;
+//     }
+
+//     &:nth-of-type(1):checked + label:before {
+//       left: 0;
+//       width: 50%;
+//     }
+
+//     &:nth-of-type(2):checked + label:before {
+//       left: -100%;
+//       width: 150%;
+//     }
+//   }
+// }
+
+// .autobiography-text-content {
+//   line-height: 2;
+//   padding: .5rem;
+
+//   p {
+//     padding: 0 0 .75rem 0;
+//     font-size: .875rem;
+//   }
+// }
+
+// .t-panel-foot {
+//   background: #fdfeff;
+//   border-top: 1px solid #ebebeb;
+//   border-bottom: 1px solid #ebebeb;
+//   height: 4.5rem;
+//   line-height: 3.25rem;
+//   padding: .5rem;
+//   text-align: right;
+
+//   .btn {
+//     margin: 0 .5rem;
+//     width: 8.75rem;
+//   }
+// }
+
+// .graduate-txt {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+
+//   //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//   transform: translate(-50%, -50%);
+// }
+
+// .dgradio-sb {
+//   border: 2px solid #cdd4db;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+//   height: 2rem;
+//   margin: 2.5rem 2rem;
+
+//   &:before {
+//     position: absolute;
+//     bottom: -2rem;
+//     color: #6c757d;
+//     font-size: .75rem;
+
+//     // content: '';
+//     left: -2rem;
+//   }
+
+//   &:after {
+//     position: absolute;
+//     bottom: -2rem;
+//     color: #6c757d;
+//     font-size: .75rem;
+
+//     // content: '';
+//     right: -2rem;
+//   }
+
+//   .dg-item {
+//     appearance: none;
+//     display: none;
+
+//     &:checked + .dg-label:before {
+//       border-bottom-color: #3d3d3d;
+//     }
+//   }
+
+//   .dg-label {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 100%;
+//     line-height: 1;
+
+//     //Instead of the line below you could use @include transform-style($style)
+//     transform-style: preserve-3d;
+
+//     .dg-bg {
+//       position: absolute;
+//       top: 0;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       height: 100%;
+//       line-height: 1;
+//       background: #75b9e7;
+//       border: 2px solid #fff;
+//       border-right: transparent;
+//       z-index: -1;
+//     }
+
+//     &.dg-10 {
+//       width: 10%;
+//       z-index: 10;
+//     }
+
+//     &.dg-20 {
+//       width: 20%;
+//       z-index: 9;
+//     }
+
+//     &.dg-30 {
+//       width: 30%;
+//       z-index: 8;
+//     }
+
+//     &.dg-40 {
+//       width: 40%;
+//       z-index: 7;
+//     }
+
+//     &.dg-50 {
+//       width: 50%;
+//       z-index: 6;
+//     }
+
+//     &.dg-60 {
+//       width: 60%;
+//       z-index: 5;
+//     }
+
+//     &.dg-70 {
+//       width: 70%;
+//       z-index: 4;
+//     }
+
+//     &.dg-80 {
+//       width: 80%;
+//       z-index: 3;
+//     }
+
+//     &.dg-90 {
+//       width: 90%;
+//       z-index: 2;
+//     }
+
+//     &.dg-100 {
+//       width: 100%;
+//       z-index: 1;
+//     }
+
+//     &:nth-of-type(2) {
+//       &:before {
+//         display: none;
+//       }
+
+//       .dg-bg {
+//         background: rgb(117, 185, 231);
+//         background: radial-gradient(circle, rgba(117, 185, 231, 1) 60%, rgba(255, 255, 255, 1) 80%);
+//         filter: progid:dximagetransform.microsoft.gradient(startcolorstr="#75b9e7", endcolorstr="#ffffff", gradienttype=1);
+//       }
+//     }
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       border-left: 6px solid transparent;
+//       border-right: 6px solid transparent;
+//       border-top: 6px solid #3d3d3d;
+//       width: 0;
+//       height: 0;
+//       top: -8px;
+//       left: auto;
+//       right: -4px;
+
+//       //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+//       transition: border .5s ease;
+//     }
+
+//     &:after {
+//       content: attr(data-caption);
+//       position: absolute;
+//       display: block;
+//       font-size: .9375rem;
+//       font-weight: bolder;
+//       letter-spacing: 1px;
+//       top: -1.875rem;
+//       right: 0;
+
+//       //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//       transform: translateX(50%);
+
+//       //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+//       transition: opacity .5s ease;
+//     }
+
+//     &:hover:before {
+//       //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+//       transition: border .5s ease;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 768px) {
+//   .dgradio-sb {
+//     font-size: .875rem;
+
+//     .dg-label {
+//       letter-spacing: normal;
+//       word-wrap: break-word;
+
+//       &:after {
+//         letter-spacing: normal;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .dgradio-sb {
+//     font-size: .8125rem;
+//   }
+// }
+
+// .magic-main {
+//   padding-bottom: 1rem;
+
+//   .magic-logo {
+//     padding: 1.25rem .5rem;
+//   }
+
+//   .magic-content {
+//     font-size: 0;
+//   }
+// }
+
+// .mg-bg-lt {
+//   background: url(../img/bg-magic-lt.svg) no-repeat;
+//   background-size: 26.375rem 36.625rem;
+// }
+
+// .mg-bg-rb {
+//   background: url(../img/bg-magic-rb.svg) no-repeat;
+//   background-size: 43.25rem 36.875rem;
+//   background-position: right bottom;
+// }
+
+// .mg-bg-pop {
+//   background: url(../img/bg-magic-mask.svg) no-repeat;
+//   background-position: center center;
+// }
+
+// .magic-ctrl {
+//   display: inline-block;
+//   vertical-align: top;
+//   width: 50%;
+
+//   .magic-bubble {
+//     &.bubble--left {
+//       background-color: #1098ad;
+//       color: #fff;
+//       margin: 0 2rem;
+//     }
+
+//     &.bubble--right {
+//       background-color: #cef4f7;
+//       margin: .75rem 2rem 0;
+//     }
+//   }
+
+//   .magic-people {
+//     margin: 1rem 0;
+
+//     img {
+//       height: 5rem;
+//       width: 5rem;
+//     }
+//   }
+
+//   .bubble--left:before {
+//     content: '';
+//     position: absolute;
+//     bottom: -.75rem;
+//     height: 0;
+//     width: 0;
+//     border: 1.5rem solid transparent;
+//     border-bottom: none;
+//     z-index: -1;
+//     border-top-color: #1098ad;
+//     right: 1rem;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: matrix(-1, 1, 1, 0, 0, 0);
+//   }
+
+//   .bubble--right:before {
+//     content: '';
+//     position: absolute;
+//     bottom: -.75rem;
+//     height: 0;
+//     width: 0;
+//     border: 1.5rem solid transparent;
+//     border-bottom: none;
+//     z-index: -1;
+//     border-top-color: #cef4f7;
+//     left: 1rem;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: matrix(-1, -1, -1, 0, 0, 0);
+//   }
+// }
+
+// .magic-bubble {
+//   display: inline-block;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 8px;
+//   font-size: .875rem;
+//   padding: .75rem 1rem;
+//   text-align: left;
+//   z-index: 1;
+// }
+
+// @media screen and (max-width: 768px) {
+//   .magic-start {
+//     .start-btn {
+//       margin-bottom: .5rem;
+//     }
+
+//     .more {
+//       margin: .75rem 0 0;
+//       position: relative;
+//       right: initial;
+//       top: initial;
+
+//       //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//       transform: initial;
+//     }
+//   }
+
+//   .magic-ctrl .magic-bubble {
+//     &.bubble--right {
+//       margin-right: 2rem;
+//       margin-left: 1rem;
+//     }
+
+//     &.bubble--left {
+//       margin-right: 1rem;
+//       margin-left: 2rem;
+//     }
+//   }
+// }
+
+// .magic-start {
+//   .start-btn {
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 4px;
+//     margin: 0 auto;
+//     padding: .5rem 1rem;
+//     width: 16rem;
+//   }
+
+//   .more {
+//     font-size: .875rem;
+//     position: absolute;
+//     top: 50%;
+//     right: 7.5rem;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: translate(0, -50%);
+//   }
+// }
+
+// .loading-text {
+//   padding: 1.5rem 0 1rem;
+//   animation: blink infinite ease-in-out 1s alternate;
+// }
+
+// @keyframes blink {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// .loading {
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 2rem;
+//   height: 2rem;
+//   background: #e6e7eb;
+//   width: 50%;
+//   margin: 0 auto .5rem;
+
+//   &:after {
+//     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//     border-radius: 2rem;
+//     height: 2rem;
+//     content: '';
+//     background-image: repeating-linear-gradient(-45deg, #65cde0, #65cde0 20px, #52a6b2 20px, #52a6b2 30px);
+//     position: absolute;
+//     width: 100%;
+//     z-index: 1;
+//     animation: loading 5s linear infinite;
+//     filter: progid:dximagetransform.microsoft.gradient(startcolorstr="#65cde0", endcolorstr="#52a6b2", gradienttype=1);
+//   }
+// }
+
+// @keyframes loading {
+//   0% {
+//     width: 0;
+//   }
+
+//   70% {
+//     opacity: 1;
+//     width: 100%;
+//   }
+
+//   90% {
+//     opacity: 0;
+//     width: 100%;
+//   }
+
+//   100% {
+//     opacity: 0;
+//     width: 0;
+//   }
+// }
+
+// .autobiography-magic {
+//   background: url(../img/magican-adv-bg.svg) no-repeat center center;
+//   background-size: cover;
+
+//   img {
+//     //Instead of the line below you could use @include user-select($select)
+//     user-select: none;
+//   }
+
+//   .magic-logo {
+//     display: block;
+//     padding: 1rem;
+//     width: 12rem;
+//   }
+
+//   p {
+//     color: #467274;
+//     font-size: 1.125rem;
+//     font-weight: bold;
+//     padding: 1rem 2rem 1rem 1rem;
+//   }
+
+//   .btn {
+//     //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//     box-shadow: 0 0 6px rgba(23, 162, 184, 0.4);
+//     padding: .5rem 0;
+//     width: 12rem;
+//     z-index: 1;
+//   }
+// }
+
+// .autobiography-magic-cnt {
+//   padding-bottom: 1rem;
+// }
+
+// @media all and (max-width: 580px) {
+//   .autobiography-magic {
+//     p {
+//       //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//       text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff;
+//     }
+
+//     .btn {
+//       margin-left: 1rem;
+//     }
+//   }
+
+//   .mask_auto {
+//     background-size: 12rem;
+//   }
+// }
+
+// .autobiography-magic-tab {
+//   .magic-logo {
+//     width: 8.5rem;
+//     height: 2rem;
+//   }
+
+//   input {
+//     display: none;
+
+//     &:checked + label {
+//       border: 1px solid #e5e9f2;
+//       border-top: 2px solid #15aabf;
+//       border-bottom: 3px solid #fff;
+//       border-bottom: 3px solid #fff\9;
+//       color: #3d3d3d;
+//       font-weight: bolder;
+//       z-index: 1;
+//     }
+//   }
+
+//   label {
+//     border: 1px solid transparent;
+//     color: #b1b6bc;
+//     font-size: .9375rem;
+//     margin: 0 0 -1px;
+//     padding: .5rem 1rem;
+//     text-align: center;
+
+//     //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+//     transition: all 0.25s ease-in-out;
+
+//     &:first-of-type {
+//       margin-left: 2rem;
+//     }
+
+//     &:hover {
+//       color: #6c757d;
+//       cursor: pointer;
+//     }
+//   }
+
+//   div {
+//     display: none;
+//     border-top: 1px solid #e5e9f2;
+//     padding: 1rem 0 0;
+//     animation: index-panel-fadein .75s;
+//   }
+
+//   textarea {
+//     line-height: 1.75;
+//     width: 100%;
+//   }
+
+//   .btn {
+//     position: absolute;
+//     right: .25rem;
+//     top: .5rem;
+//   }
+// }
+
+// .t-profile-item {
+//   &.not-finish {}
+
+//   .t-profile-main {
+//     font-size: 0;
+//     padding: .25rem 0;
+//   }
+// }
+
+// & {
+//   &.finish {
+//     border-left-color: #a8d8ef;
+//   }
+
+//   &.confirm {
+//     position: absolute;
+//     left: 11.5rem;
+//     top: 50%;
+
+//     //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//     transform: translate(0, -50%);
+//     font-style: initial;
+//   }
+// }
+
+// .t-profile-content {
+//   padding: 1.25rem 1rem .75rem;
+// }
+
+// .t-profile-type {
+//   .type {}
+// }
+
+// .time {
+//   color: #a7b1b6;
+//   float: right;
+// }
+
+// i {
+//   vertical-align: middle;
+//   color: #68bbe3;
+//   font-size: 1.25rem;
+
+//   &.edit {}
+// }
+
+// .btn {
+//   font-size: .75rem;
+//   margin-right: .5rem;
+// }
+
+// .edit_line {
+//   > {}
+// }
+
+// .t-profile-toolsbar {
+//   background: #f8fafb;
+//   border-top: 1px solid #eff3f5;
+//   padding: .5rem 1rem;
+
+//   > .btn {}
+// }
+
+// @media all and (max-width: 480px) {
+//   .t-profile-toolsbar {
+//     padding-left: .375rem;
+//     padding-right: .375rem;
+
+//     .toggle {}
+//   }
+
+//   .btn {
+//     &:not(:last-child) {}
+//   }
+// }
+
+// .t-profile-sidebar {
+//   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+//   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+//   float: left;
+//   width: 16rem;
+
+//   .t-profile-sidebar-header {
+//     background-color: #1c84c6;
+//     padding: .5rem;
+
+//     font {
+//       color: #fff;
+//       font-size: .9375rem;
+//       padding-left: .5rem;
+//     }
+//   }
+
+//   &.sticky {
+//     top: 0;
+//   }
+// }
+
+// .profile_block .btn {
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+// }
+
+// .step-line:after {
+//   content: '';
+//   position: absolute;
+//   left: 1.5rem;
+//   top: 50%;
+
+//   //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//   transform: translateY(-50%);
+//   background-color: #badef6;
+//   height: 100%;
+//   width: 4px;
+// }
+
+// .work-experience-line:before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 3.5rem;
+//   height: 100%;
+//   width: 2px;
+//   background-color: #ccc;
+//   border: 3px #fff solid;
+// }
+
+// .corp-duty-item input {
+//   margin: .25rem 0;
+// }
+
+// .language-row select {
+//   margin: .25rem 0;
+// }
+
+// .license-left img {
+//   //Instead of the line below you could use @include user-select($select)
+//   user-select: none;
+// }
+
+// .license-right .license-item-group {
+//   margin: 0.125rem;
+// }
+
+// .magic-logo img {
+//   width: 14rem;
+//   height: 2.25rem;
+// }
+
+// .magic-img-peoples img {
+//   height: 8rem;
+//   width: 20rem;
+//   animation: blink infinite ease-in-out 1.25s alternate;
+// }
+
+// #autoMagic1:checked ~ #autoMagic1-content {
+//   display: block;
+// }
+
+// #autoMagic2:checked ~ #autoMagic2-content {
+//   display: block;
+// }
+
+// #autoMagic3:checked ~ #autoMagic3-content {
+//   display: block;
+// }
+
+// .t-profile-main .update-btn {
+//   position: absolute;
+//   right: 0;
+//   top: 50%;
+
+//   //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+//   transform: translateY(-50%);
+
+//   span {}
+// }
+
+// input.edit_input {
+//   width: 15rem;
+// }
+
+// .t-profile-sidebar-header .t-profile-menu {
+//   background-color: #75b9e7;
+//   border: 1px solid #aed0e4;
+
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+//   cursor: pointer;
+//   padding: 1rem 1.25rem;
+//   z-index: 999;
+
+//   &:hover {
+//     opacity: 0.9;
+//   }
+// }
+
+// .t-profile-menu span {
+//   background-color: #fff;
+//   display: block;
+//   position: absolute;
+//   left: calc(50% - .8125rem);
+//   top: calc(50% - 1px);
+//   height: 2px;
+//   width: 1.625rem;
+
+//   &:before {
+//     content: '';
+//     background-color: #fff;
+//     display: block;
+//     height: 2px;
+//     position: absolute;
+//     width: 1.625rem;
+//     top: 7px;
+//   }
+
+//   &:after {
+//     content: '';
+//     background-color: #fff;
+//     display: block;
+//     height: 2px;
+//     position: absolute;
+//     width: 1.625rem;
+//     top: -7px;
+//   }
+// }

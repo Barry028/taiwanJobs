@@ -3,24 +3,32 @@
 //==  Prototypes -> Texts Color 
 //====================================================
 @each $color, $value in $element-colors {
-  .text-#{$color} {
+  .t-fc-#{$color} {
     color: $value !important;
   }
 
-  %text-#{$color} {
+  %t-fc-#{$color} {
     color: $value !important;
   }
 }
+@each $color, $value in $brand-colors {
+  .t-fc-#{$color} {
+    color: $value !important;
+  }
 
+  %t-fc-#{$color} {
+    color: $value !important;
+  }
+}
 @each $color, $value in $element-colors {
-  .link-#{$color} {
+  .t-link-#{$color} {
     color: $value !important;
 
     &:hover {
       color: lighten($value, 20%) !important;
     }
   }
-  %link-#{$color} {
+  %t-link-#{$color} {
     color: $value !important;
     &:hover {
       color: lighten($value, 20%) !important;

@@ -2,41 +2,65 @@
 
 //  Mixins > Text Emphasis
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// @include text-bg-underline-variant($parent: & , $color: $secondary);
+// @each $color,
+// $value in $element-colors {
+//   @include text-bg-underline-variant("[data-bg-under='#{$color}']", $value);
+// }
 
-
-@mixin text-emphasis-variant($parent, $color) {
+@mixin text-bg-underline-variant($parent, $color) {
   #{$parent} {
     position: relative;
-    color: $color !important;
-  }
+    display: inline-flex;
+    transition: $transition;
 
-  a#{$parent}:hover,
-  a#{$parent}:focus {
-    color: darken($color, 10%) !important;
-  }
-}
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      height: 0.5rem;
+      width: 100%;
 
-@mixin text-underline-variant($parent, $color) {
-  #{$parent} {
-    position: relative;
-    border-bottom: 0.1875rem solid tint-color($color, 60%);
+      @include gradient-x(tint-color($primary, 40%), tint-color($primary, 60%), -20%);
+
+      background-size: 100% 0.5rem;
+      background-repeat: no-repeat;
+      background-position-x: 0;
+      background-position-y: 100%;
+      border-radius: .125rem;
+
+      @include opacity(0.36);
+
+      transition: $transition;
+      transform: rotate(-0.25deg);
+    }
   }
 
   a#{$parent} {
-    color: shade-color($color, 10%);
+    color: shade-color($color, 20%);
 
     &:hover,
     &:focus {
-      color: shade-color($color, 20%);
-      border-bottom-color: tint-color($color, 40%);
-      text-decoration: none;
+      color: darken($color, 10%);
+
+      @include gradient-x(shade-color($primary, 20%), tint-color($primary, 20%), -20%);
+
+      // @include gradient-x(darken($color, 10%), lighten($color, 10%), -20%);
+   
     }
   }
 }
 
-@mixin text-bg-before-underline-variant($parent, $color) {
+// @each $color,
+// $value in $element-colors {
+//   @include text-underline-before-variant("[data-bg-under=#{$color}]", $value);
+// }
+@mixin text-underline-before-variant($parent, $color) {
   #{$parent} {
     position: relative;
+    display: inline-flex;
+    transition: $transition;
 
     &:before {
       content: '';
@@ -47,6 +71,7 @@
       width: 100%;
       background-color: lighten($color, 4%);
       border-radius: 2px;
+      transition: $transition;
 
       @include opacity(0.48);
     }
@@ -66,45 +91,60 @@
   }
 }
 
-// @include text-bg-underline-variant($parent: & , $color: $secondary);
-@mixin text-bg-underline-variant($parent, $color) {
+// @each $color,
+// $value in $theme-colors {
+//   @include text-underline-variant(".[data-bd-under='#{$color}']", $value);
+// }
+@mixin text-underline-variant($parent, $color) {
   #{$parent} {
     position: relative;
-    display: inline-block;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -0.25rem;
-      height: 0.5rem;
-      width: 100%;
-
-      @include gradient-x(lighten($color, 4%), lighten($color, 10%), -20%);
-
-      background-size: 100% 0.5rem;
-      background-repeat: no-repeat;
-      background-position-x: 0;
-      background-position-y: 100%;
-      border-radius: .375rem;
-
-      @include opacity(0.48);
-
-      transform: rotate(-0.5deg);
-    }
+    display: inline-flex;
+    border-bottom: 0.1875rem solid tint-color($color, 40%);
+    transition: $transition;
   }
 
   a#{$parent} {
-    color: $color;
+    color: shade-color($color, 30%);
 
     &:hover,
     &:focus {
-      color: darken($color, 10%);
-
-      @include gradient-x(darken($color, 10%), lighten($color, 10%), -20%);
+      color: shade-color($color, 20%);
+      border-bottom-color: tint-color($color, 40%);
+      text-decoration: none;
     }
   }
 }
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    position: relative;
+    color: $color !important;
+    transition: $transition;
+  }
+
+  a#{$parent}:hover,
+  a#{$parent}:focus {
+    color: darken($color, 10%) !important;
+  }
+}
+
+@mixin text-underline-hv-lt2rt($parent , $color, $width: 0.25rem) {
+  #{$parent} {
+    position: relative;
+    display: inline-flex;
+    @include gradient-x(tint-color($color, 80%), tint-color($color, 95%), 100%);
+    background-repeat: no-repeat;
+    background-size: 0 $width;
+    background-position: 10% 100%;
+
+    &:hover {
+      background-size: 100% #{$width * 2};
+      text-decoration: none;
+    }
+  }
+}
+
+
 
 @mixin text-underline-hv-variant($parent, $color) {
   #{$parent} {
@@ -112,8 +152,8 @@
     background: linear-gradient(currentColor, currentColor) no-repeat;
     background-size: 0% .1875rem;
     background-position: left bottom;
-    transition: $transition-base;
     display: inline;
+    transition: $transition;
 
     &:hover {
       background: linear-gradient(lighten($color, 10%), lighten($color, 10%)) no-repeat;
@@ -130,7 +170,7 @@
     background: linear-gradient(90deg, $color 50%, transparent 0) repeat-x;
     background-size: 0.25rem .125rem;
     background-position: 0 bottom;
-    transition: $transition-base;
+    transition: $transition;
 
     &:hover {
       background-position: 100% bottom;
@@ -142,9 +182,9 @@
   #{$parent} {
     color: $color;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
-    transition: 0.25s ease-in-out;
+    transition: $transition;
 
     // padding-right: .5rem;
 
@@ -180,7 +220,7 @@
     position: relative;
     display: inline;
     text-decoration: none;
-    transition: 5s ease-in-out;
+    transition: $transition;
     background: linear-gradient(to bottom, $color 0%, $color 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;

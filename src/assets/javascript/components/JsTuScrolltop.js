@@ -1,12 +1,11 @@
 "use strict"; 
-// Class definition
 
 const JsTuScrolltop = function (element, options) {
   ////////////////////////////
   // ** Private variables  ** //
   ////////////////////////////
-  var that = this;
-  var body = document.getElementsByTagName("BODY")[0];
+  const that = this;
+  const body = document.getElementsByTagName("BODY")[0];
 
   if (typeof element === "undefined" || element === null) {
     return;
@@ -21,7 +20,7 @@ const JsTuScrolltop = function (element, options) {
   // ** Private methods  ** //
   ////////////////////////////
 
-  var _construct = function _construct() {
+  const _construct = function _construct() {
     if (JsUtils.data(element).has("scrolltop")) {
       that = JsUtils.data(element).get("scrolltop");
     } else {
@@ -29,7 +28,7 @@ const JsTuScrolltop = function (element, options) {
     }
   };
 
-  var _init = function _init() {
+  const _init = function _init() {
     // Variables
     that.options = JsUtils.deepExtend({}, defaultOptions, options);
     that.uid = JsUtils.getUniqueId("scrolltop");
@@ -39,7 +38,7 @@ const JsTuScrolltop = function (element, options) {
     JsUtils.data(that.element).set("scrolltop", that);
   };
 
-  var _handlers = function _handlers() {
+  const _handlers = function _handlers() {
     var timer;
     window.addEventListener(
       "scroll",
@@ -54,7 +53,7 @@ const JsTuScrolltop = function (element, options) {
     });
   };
 
-  var _scroll = function _scroll() {
+  const _scroll = function _scroll() {
     var offset = parseInt(_getOption("offset"));
     var pos = JsUtils.getScrollTop(); // current vertical position
 
@@ -69,12 +68,12 @@ const JsTuScrolltop = function (element, options) {
     }
   };
 
-  var _go = function _go() {
+  const _go = function _go() {
     var speed = parseInt(_getOption("speed"));
     JsUtils.scrollTop(0, speed);
   };
 
-  var _getOption = function _getOption(name) {
+  const _getOption = function _getOption(name) {
     if (that.element.hasAttribute("data-tu-scrolltop-" + name) === true) {
       var attr = that.element.getAttribute("data-tu-scrolltop-" + name);
       var value = JsUtils.getResponsiveValue(attr);
@@ -97,7 +96,7 @@ const JsTuScrolltop = function (element, options) {
     }
   };
 
-  var _destroy = function _destroy() {
+  const _destroy = function _destroy() {
     JsUtils.data(that.element).remove("scrolltop");
   };
 

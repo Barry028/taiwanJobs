@@ -43,7 +43,7 @@ $enable-validation-icons:                true !default;
 $enable-negative-margins:                false !default;
 $enable-deprecation-messages:            true !default;
 $enable-important-utilities:             true !default;
-$legacy-support-for-ie:                  true !default;
+$legacy-support-for-ie:                  false !default;
 $enable-responsive-font-sizes:           false !default;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -57,8 +57,8 @@ $yiq-contrasted-threshold:        204    !default;
 
 $yiq-text-dark:                   $dark  !default;
 $yiq-text-light:                  $white !default;
-$min-contrast-ratio:              2.4    !default; // 4.5
-
+$min-contrast-ratio:              4.5    !default; // 4.5
+$max-contrast-ratio:              7      !default; // 7
 $color-contrast-dark:             $dark  !default;
 $color-contrast-light:            $white !default;
 

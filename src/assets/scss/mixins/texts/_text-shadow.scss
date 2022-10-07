@@ -36,7 +36,6 @@
     $theShadow: #{-$num} $num $shadow;
     $value: append($value, $theShadow, comma);
   }
-
   text-shadow: $value;
 }
 
@@ -52,6 +51,48 @@
     text-shadow: $x1 $y1 $blur1 $color1;
   }
 }
+
+// @include shade(text, #aaa, #333, 10, 135deg, true);
+@mixin shade($type, $color: #3498db, $borderColor: $white, $depth: 20, $angle: 135deg, $long: false, $fade: false) {
+  $angle: $angle - 90;
+  $x: 1.1 * cos($angle) + 0px;
+  $y: 1.1 * sin($angle) + 0px;
+  $darken: lightness($color) / $depth / 2;
+  $opacify: 0;
+  $shadow: ();
+
+  @if $long == true {
+    $darken: 0;
+  }
+
+  @if $fade == true {
+    $opacify: opacity($color) / $depth;
+
+    // added this for rendering in some browsers, remove if you like.
+    @include translateZ(0);
+  }
+
+  @for $i from 1 through $depth {
+    $shadow: $shadow, ($i * $x) ($i * $y) 0 hsla(hue($color), saturation($color), lightness($color) - $i * $darken, 1 - $i * $opacify);
+  }
+
+  #{$type}-shadow: 1.5px 1.5px 0 $borderColor, 0px 1.5px 0 $borderColor, -1.5px -1.5px 0 $borderColor, -1.5px -1.5px 0 $borderColor, -1.5px 1.5px 0 $borderColor, 1.5px -1.5px 0 $borderColor, $shadow;
+}
+
+// @include outline($grey-100);
+@mixin outline($color: $white) {
+  text-shadow: 1.5px 1.5px 0 $color, -1.5px -1.5px 0 $color, -1.5px -1.5px 0 $color, -1.5px 1.5px 0 $color, 1.5px -1.5px 0 $color;
+}
+
+
+
+
+
+
+
+
+
+
 
 // text-shadow: super-text-shadow(rgb(69,255,253), 20);
 @function super-text-shadow($color, $depth: 10, $offset-x: 1px, $offset-y: 1px, $blur: 0) {

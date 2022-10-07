@@ -53,7 +53,8 @@
     opacity: $btn-disabled-opacity;
     box-shadow: none;
   }
-  
+
+
   // Link
   &.btn--link {
     border: 0;
@@ -84,13 +85,20 @@
     @include button-reset;
   }
 
+  &.btn--in--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
   &.btn--icon {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     min-width: 12rem;
 
-    font {
+    text {
       padding-right: 2.5rem;
     }
 
@@ -178,14 +186,28 @@
     }
 
     // Sizes
+    &.btn--xs {
+      padding: 0;
+      height: $input-height-xs;
+      width: $input-height-xs;
+    }
+
     &.btn--sm {
+      padding: 0;
       height: $input-height-sm;
       width: $input-height-sm;
     }
 
     &.btn--lg {
+      padding: 0;
       height: $input-height-lg;
       width: $input-height-lg;
+    }
+
+    &.btn--xl {
+      padding: 0;
+      height: $input-height-xl;
+      width: $input-height-xl;
     }
 
     i,
@@ -228,22 +250,18 @@
   i {
     display: inline-flex;
     font-size: $font-size-base;
-    padding-right: 0.35rem;
+    padding-right: 0;
     vertical-align: middle;
     line-height: 0;
   }
 
-  // Svg icon
   .svg-icon {
     flex-shrink: 0;
     line-height: 0;
 
     // margin-right: 0.5rem;
+ 
   }
-
-
-
-
 }
 
 a.btn.disabled,

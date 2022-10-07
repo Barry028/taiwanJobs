@@ -1,4 +1,7 @@
-// Resize anything
+@charset "utf-8";
+
+//  Mixins > Resize
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @mixin resizable($direction) {
   overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`

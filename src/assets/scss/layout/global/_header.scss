@@ -1,10 +1,11 @@
-//
+@charset "utf-8";
+
 //  Layout -> Header 
 // --------------------------------------------------
 .t-header {
   position: relative;
   background-color: $white;
-  // border: $border 2px solid;
+  border-bottom: $border 2px solid;
   width: 100%;
   transition: $transition-header;
   z-index: $zindex-header;
@@ -37,7 +38,7 @@
       vertical-align: middle;
 
       &.active {
-        .t-header-top-list-link  {
+        .t-header-top-list-link {
           color: $primary-100;
         }
       }
@@ -53,7 +54,7 @@
           transform: translate3D(0, -50%, 0);
           width: 1px;
           height: 50%;
-          background-color: rgba($white, .4);
+          background-color: rgba($white, 0.4);
         }
       }
 
@@ -70,11 +71,8 @@
     }
   }
 
-  .t-header-inner {}
 
-  .t-header-section {}
+  &.is-fix {
+    @include mask-filter-v2($white, 0.3125rem, 0.0625rem);
+  }
 }
-
-
-
-

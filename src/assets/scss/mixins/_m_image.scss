@@ -1,18 +1,8 @@
-// Image Mixins
-@mixin img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+@charset "utf-8";
 
-// Retina image
-// Short retina mixin for setting background-image and -size.
+// @include img-retina;
 @mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
   background-image: url($file-1x);
-
-  // Autoprefixer takes care of adding -webkit-min-device-pixel-ratio and -o-min-device-pixel-ratio,
-  // but doesn't convert dppx=>dpi.
-  // There's no such thing as unprefixed min-device-pixel-ratio since it's nonstandard.
-  // Compatibility info: https://caniuse.com/#feat=css-media-resolution
   @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     // Standardized
     background-image: url($file-2x);
@@ -22,11 +12,30 @@
   @include deprecate("`img-retina()`", "v4.3.0", "v5");
 }
 
+// @include img-fluid;
+// Image Mixins
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+// @include img-square;
+// Image square Mixins
+@mixin img-square {
+  aspect-ratio: 1 / 1;
+}
+// @include img-video;
+// Video Mixins
+@mixin img-video {
+  aspect-ratio: 16 / 9;
+}
 
+// @include mg-ratio($w: 100, $h: 100);
+@mixin img-ratio($w: 100, $h: 100) {
+  aspect-ratio: attr(width) / attr(height);
+}
 
-
-// @include img-bg-ratio($parent :'t-job-detail-bg' $ratio: 100%, $fill: cover)
-@mixin img-bg-ratio($parent ,$ratio: 100%, $fill: cover) {
+// @include img-bg-ratio('t-job-detail-bg',100%, cover)
+@mixin img-bg-ratio($parent, $ratio: 100%, $fill: cover) {
   .#{$parent}-container {
     position: relative;
     border-radius: inherit;
@@ -53,29 +62,27 @@
   }
 }
 
-
-
-// @include mg-ratio($w: 100, $h: 100);
-@mixin img-ratio($w: 100, $h: 100) {
-  aspect-ratio: attr(width) / attr(height);
-}
-// @include ratio($w: 100%, $h: 100%, $fit: cover);
+// @include ratio(100%, 100%, cover);
 @mixin object-fit($w: 100%, $h: 100%, $fit: cover) {
   position: absolute;
   width: $w;
   height: $w;
-  object-fit: $fi;
+  object-fit: $fit;
 }
+
 // @include ratio(16, 9);
-@mixin ratio($x,$y, $pseudo: false) {
-    $padding: unquote( ( $y / $x ) * 100 + '%' );
-    @if $pseudo {
-        &:before {
-            @include pseudo($pos: relative);
-            width: 100%;
-            padding-top: $padding;
-        }
-    } @else {
-        padding-top: $padding;
+@mixin ratio($x, $y, $pseudo: false) {
+  $padding: unquote($y / $x * 100 + "%");
+
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+
+      width: 100%;
+      padding-top: $padding;
     }
+  }
+  @else {
+    padding-top: $padding;
+  }
 }

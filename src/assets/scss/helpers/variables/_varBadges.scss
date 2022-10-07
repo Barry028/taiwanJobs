@@ -1,42 +1,27 @@
-
-
 // Badge
 // =========================================================
 
-// Type
-$badge-font-weight:                 $font-weight-medium;
-$badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-font-weight:                  $font-weight-bold !default;
+$badge-font-size:                    $font-size-xxs !default;
+$badge-font-family:                  $font-family-monospace !default;
+$badge-font-weight:                  $font-weight-bold !default;
+$badge-color:                        $white !default;
+$badge-padding-y:                    0.375rem !default;
+$badge-padding-x:                    0.375rem !default;
+$badge-border-radius:                $border-radius-sm !default;
 
-// Badges
-$badge-font-size: 0.85rem !default;
-$badge-font-size-sm: 0.85rem !default;
-$badge-font-size-lg: 1rem !default;
-$badge-font-weight: $font-weight-bolder !default;
-$badge-color: $body-bg !default;
-$badge-padding-y: 0.5em !default;
-$badge-padding-x: 0.85em !default;
-$badge-border-radius: $border-radius !default;
-$badge-size: 1.75rem !default;
+$badge-line-height:                  1!default;
+// Custom variable
+$badge-size-sm:                      1.5rem !default;
+$badge-font-size-sm:                 0.85rem !default;
 
 // Custom variable
-$badge-size-sm: 1.5rem !default;
+$badge-size-lg:                      2rem !default;
+$badge-font-size-lg:                 1rem !default;
+$badge-size:                         1.75rem !default;
 
-// Custom variable
-$badge-size-lg: 2rem !default;
-//== Badges
-$badge-font-size:                   $font-size-xxs        !default;
-$badge-font-family:                 $font-family-monospace        !default;
-$badge-font-weight:                 $font-weight-bold 		!default;
-$badge-line-height:					        $line-height-sm       !default;
-$badge-color:                       $grey                 !default;
-$badge-bg-color:                    $default-dark                 !default;
-$badge-padding-y:                   .125rem !default;
-$badge-padding-x:                   .4375rem !default;
-$badge-border-radius:               $border-radius !default;
-$badge-transition:                  $btn-transition !default;
-$badge-focus-width:                 $input-btn-focus-width !default;
+$badge-color:                        $grey !default;
+$badge-bg-color:                     $default-dark !default;
+
+$badge-transition:                   $btn-transition !default;
+$badge-focus-width:                  $input-btn-focus-width !default;

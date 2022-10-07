@@ -2,21 +2,28 @@
 
 // Varibles Colors 
 // ========================================================
-$enable-css-variable:                               true;
+$enable-css-variable:                                         true;
 
 $primary: 				                                      #D10303;
-$secondary: 			                                     #CA7B1E;
-$tertiary:				                                      #4667CC;
-$quaternary: 			                                      #1BC5BD;
-$success: 				                                      #50CD89;
-$danger: 				                                       #F1416C;
-$warning: 				                                        #FFC700;
-$info: 					                                        #009EF7;
-$navy:                                                          #1C3879;
-$dimNavy:                                                       #414796;
-$neutral:                                                       #1E2540;
+$secondary: 			                                      #CA7B1E;
+$tertiary:				                                      #952CE2;
+$quaternary: 			                                      #58B7D2;
 
-$primary-25:  																				 	                   tint-color($primary, 95%);
+$success: 				                                      #00855C;
+$danger: 				                                      #FF6A47;
+
+$warning: 				                                      #FFC700;
+$info: 					                                      #0083D5;
+
+$navy:                                                        #324C78;
+$dimNavy:                                                     #624489;
+$neutral:                                                     #1E2540;
+
+// #BEA6A0  #FF986F  #FFE5E3 #FFBCDA #FF8598 #C9AFAE #FFF6F2 #56423D  #C1FAFF #FFE6D9
+//  #EDE9D0 #A5AE9D #FFF4ED #EDE9D0#C44F70 #FF85A3 #AB7B79 #3A001E  #477F8F#005169
+
+
+$primary-25:  										   tint-color($primary, 95%);
 $primary-50:                                           tint-color($primary, 90%);
 $primary-100:                                          tint-color($primary, 80%);
 $primary-200:                                          tint-color($primary, 60%);
@@ -217,34 +224,57 @@ $dark-soft:                                                  rgba($dark, .075);
 $neutral-soft:                                               rgba($neutral, .075);
 $dimNavy-soft:                                               rgba($dimNavy, .075);
 $navy-soft:                                                  rgba($navy, .075);
-
 //== Theme Soft Colors
-$primary-light:                                             $primary-200;
-$secondary-light:                                           $secondary-200;
-$tertiary-light:                                            $tertiary-200;
-$quaternary-light:                                          $quaternary-200;
-$success-light:                                             $success-200;
-$info-light:                                                $info-200;
-$warning-light:                                             $warning-200;
-$danger-light:                                              $danger-200;
-$dark-light:                                                $grey-200;
-$neutral-light:                                             $neutral-200;
-$dimNavy-light:                                             $dimNavy-200;
-$navy-light:                                                $navy-200;
+$primary-light:                                             $primary-100;
+$secondary-light:                                           $secondary-100;
+$tertiary-light:                                            $tertiary-100;
+$quaternary-light:                                          $quaternary-100;
+$success-light:                                             $success-100;
+$info-light:                                                $info-100;
+$warning-light:                                             $warning-100;
+$danger-light:                                              $danger-100;
+$dark-light:                                                $grey-100;
+$grey-light:                                                $grey-50;
+$white-light:                                               $grey-25;
+$neutral-light:                                             $neutral-100;
+$dimNavy-light:                                             $dimNavy-100;
+$navy-light:                                                $navy-100;
 
 //== Theme Inverse Colors
-$primary-inverse:                                              if(isDarkMode(), $primary-800, $primary-200);
-$secondary-inverse:                                            if(isDarkMode(), $secondary-800, $secondary-200);
-$tertiary-inverse:                                             if(isDarkMode(), $tertiary-800, $tertiary-200);
-$quaternary-inverse:                                           if(isDarkMode(), $quaternary-800, $quaternary-200);
-$success-inverse:                                              if(isDarkMode(), $success-800, $success-200);
-$info-inverse:                                                 if(isDarkMode(), $info-800, $info-200);
-$warning-inverse:                                              if(isDarkMode(), $warning-800, $warning-200);
-$danger-inverse:                                               if(isDarkMode(), $danger-800, $danger-200);
-$dark-inverse:                                                 if(isDarkMode(), $grey-800, $grey-200);
+$primary-inverse:                                             $primary-800;
+$secondary-inverse:                                           $secondary-800;
+$tertiary-inverse:                                            $tertiary-800;
+$quaternary-inverse:                                          $quaternary-800;
+$success-inverse:                                             $success-800;
+$info-inverse:                                                $info-800;
+$warning-inverse:                                             $warning-800;
+$danger-inverse:                                              $danger-800;
+$dark-inverse:                                                $grey-800;
+$grey-inverse:                                                $grey-600;
+$white-inverse:                                               $gray-800;
+
+$neutral-inverse:                                             $neutral-800;
+$dimNavy-inverse:                                             $dimNavy-800;
+$navy-inverse:                                                $navy-800;
+
+//== Theme Inverse Colors
+// $primary-inverse:                                              if(isDarkMode(), $primary-800, $primary-200);
+// $secondary-inverse:                                            if(isDarkMode(), $secondary-800, $secondary-200);
+// $tertiary-inverse:                                             if(isDarkMode(), $tertiary-800, $tertiary-200);
+// $quaternary-inverse:                                           if(isDarkMode(), $quaternary-800, $quaternary-200);
+// $success-inverse:                                              if(isDarkMode(), $success-800, $success-200);
+// $info-inverse:                                                 if(isDarkMode(), $info-800, $info-200);
+// $warning-inverse:                                              if(isDarkMode(), $warning-800, $warning-200);
+// $danger-inverse:                                               if(isDarkMode(), $danger-800, $danger-200);
+// $dark-inverse:                                                 if(isDarkMode(), $grey-800, $grey-200);
+// $grey-inverse:                                                 $grey-200;
+
+
+$white-inverse:                                                $white;
 $neutral-inverse:                                              if(isDarkMode(), $neutral-800, $neutral-200);
 $dimNavy-inverse:                                              if(isDarkMode(), $dimNavy-800, $dimNavy-200);
 $navy-inverse:                                                 if(isDarkMode(), $navy-800, $navy-200);
+
 
 // fusv-disable
 $blue-100: tint-color($blue, 80%);

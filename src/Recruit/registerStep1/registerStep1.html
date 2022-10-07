@@ -60,7 +60,7 @@
                 <a href="javascript:;" class="t-header-top-list-link">就服員專區</a>
               </li>
               <li class="t-header-top-list-item">
-                <a href="javascript:;" class="t-header-top-list-link" id="AccesskeyInfo">快速鍵使用說明</a>
+                <a href="javascript:;" class="t-header-top-list-link" data-bs-toggle="modal" data-bs-target="#accesskeyInfo">快速鍵使用說明</a>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@
               <font></font>
             </i>
             <font class="">全台灣</font>
-            <a id="globalArea" href="javascript:;" class="t-area-link">
+            <a data-bs-toggle="modal" data-bs-target="#globalArea" href="javascript:;" class="t-area-link">
               <small>[切換地區]</small>
             </a>
           </div>
@@ -147,20 +147,20 @@
         <div class="row justify-content-center">
           <div class="col-sm-6">
 			  <img src="../../assets/images/recruit/img-step01.svg" alt="STEP.1 填寫公司基本資料" class="t-center-block my-6">
-			  <div class="login-card t-shadow mt-5 mb-5 rounded--12">
-			  <h1 class="t-title mb-5">求才廠商<span>註冊</span>
-				  <div class="t-float-right"><span class="t-text-yellow">STEP.1</span><span>填寫公司基本資料</span></div></h1>
+			  <div class="t-login-card t-shadow mt-5 mb-5 rounded--12">
+			  <h1 class="t-login-title mb-5">求才廠商<span>註冊</span>
+				  <div class="t-float-right"><span class="t-t-fc-yellow">STEP.1</span><span>填寫公司基本資料</span></div></h1>
             <form action="" method="post" class="t-form t-txt-left">
               <div class="t-form col-12">
                 <div class="t-form-group">
 					<div class="form-help"><input class="form-check-input" type="checkbox" id="" name="" value="" > 無統編</div>
-                  <label data-required class="mb-2 t-font-w-500" for="">統一編號</label>
+                  <label data-required class="mb-2 t-fw-500" for="">統一編號</label>
                   <div class="input-group">
                     <input autocomplete="off" class="t-form-control rounded--36" id="MPuniform" name="register" placeholder="請輸入公司統一編號" title="請輸入公司統一編號" type="text" value="">
                     <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-businessman.svg" alt="uniform">
                     </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入公司統一編號</font>
+                    <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入公司統一編號</font>
                   </div>
                 </div>
                 <div class="t-form-group">
@@ -170,7 +170,7 @@
                     <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-company.svg" alt="companyName">
                     </i>
-                    <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入公司名稱</font>
+                    <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入公司名稱</font>
                   </div>
                 </div>
              	<div class="t-form-group">
@@ -180,7 +180,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-email.svg" alt="Email">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入認證用電子信箱</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入認證用電子信箱</font>
                 </div>
               </div>
               	<div class="t-form-group">
@@ -190,7 +190,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-tag.svg" alt="type">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請選擇公司行業別</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請選擇公司行業別</font>
                 </div>
               </div>
               	<div class="t-form-group">
@@ -200,7 +200,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-user.svg" alt="type">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入聯絡人姓名</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入聯絡人姓名</font>
                 </div>
               </div>
               	<div class="t-form-group">
@@ -210,7 +210,7 @@
                   <i class="svg-icon svg-icon-1hx" aria-hidden="true">
                       <img src="../../assets/images/recruit/icon-contact.svg" alt="phone">
                   </i>
-                  <font class="tooltip tooltip-top-right n-tooltip--v1">請輸入聯絡電話</font>
+                  <font class="t-tooltip t-tooltip--v1 t-tooltip-top-right">請輸入聯絡電話</font>
                 </div>
               </div>
 				  <div class="t-form-group t-txt-center">
@@ -235,7 +235,7 @@
 				  <div class="clear-fix my-4 px-4">
 				  	<img src="../../assets/images/recruit/img-note02.svg" alt="特殊行業說明" class="t-float-right ml-3">
 					  <div class="note-board-pink mr-5 px-2 py-1 rounded--4">
-						  <p><span>特殊行業－壽險業、殯葬業、傳直銷業、八大行業、人力仲介業、人力派遣業等六項行業，因行業屬性不同，將依勞動力發展署行業審核標準進行審核，詳細規定請參見「<a href="">審核標準</a>」，如有其他疑問，可撥打客服專線 <a href="tel:0800-777-888" class="text-danger">0800-777-888</a> 詢問。</span></p>
+						  <p><span>特殊行業－壽險業、殯葬業、傳直銷業、八大行業、人力仲介業、人力派遣業等六項行業，因行業屬性不同，將依勞動力發展署行業審核標準進行審核，詳細規定請參見「<a href="">審核標準</a>」，如有其他疑問，可撥打客服專線 <a href="tel:0800-777-888" class="t-fc-danger">0800-777-888</a> 詢問。</span></p>
 					  </div>
 				  </div>
               </div>
@@ -286,7 +286,7 @@
               <li>
                 服務時間：週一至週日 24 小時全天服務
               </li>
-              <li class="text-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
+              <li class="t-fc-lightgrey">本網站建議使用 IE10 以上版本瀏覽器及以1024ｘ768以上解析度，以獲得最佳瀏覽體驗</li>
             </ul>
           </div>
           <div class="col-6 col-sm-6 col-lg mb-7 mb-lg-0">
@@ -296,10 +296,10 @@
                 <a class="btn footer-btn" href="javascript:;">服務據點</a>
               </li>
               <li>
-                <p>上週瀏覽人次：<span class="text-primary">4502541</span></p>
+                <p>上週瀏覽人次：<span class="t-fc-primary">4502541</span></p>
               </li>
               <li>
-                <p>目前線上人數：<span class="text-primary">1044</span></p>
+                <p>目前線上人數：<span class="t-fc-primary">1044</span></p>
               </li>
             </ul>
           </div>

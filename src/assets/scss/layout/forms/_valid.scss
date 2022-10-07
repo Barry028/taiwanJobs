@@ -1,4 +1,3 @@
-
 .invalid-tooltip {
   line-height: 1.45;
   max-width: 100%;
@@ -63,8 +62,12 @@
 
 .input-group {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
 
-  >i:first-of-type {
+  > i:first-of-type {
     color: $lightgrey;
     font-size: 1.25rem;
 
@@ -78,7 +81,7 @@
     padding-left: 4rem;
 
     &:focus {
-      +i {
+      + i {
         color: $primary;
       }
     }

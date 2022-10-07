@@ -9,6 +9,116 @@
 //     threshold: [1, 0.5, 0]
 //   }
 // });
+
+const JsStickyBlocks = function(areas, targets) {
+
+  var areas = document.querySelectorAll(areas);
+  var targets = document.querySelectorAll(targets);
+
+  if (areas.length === 0) {
+    return
+  }
+
+  const checkFixed = (targets, area) => {
+
+    const height = [];
+    // console.log(targets)
+    targets.forEach(target => {
+      target.style.paddingTop = '';
+      target.style.paddingBottom = '';
+      height.push(target.offsetHeight);
+    });
+
+    const heightLen = height.length;
+    const areaPosi = area.getBoundingClientRect().top;
+    const areaHeight = area.clientHeight;
+    const endPosi = areaPosi + areaHeight;
+
+    targets.forEach((target, index) => {
+
+      let topHeight = 0;
+      if (index === 1) {
+        topHeight = height[0];
+
+      } else if (index > 1) {
+        topHeight = height.slice(0, index);
+        topHeight = topHeight.reduce((a, x) => a + x);
+      }
+      target.style.paddingTop = topHeight + 'px';
+
+      let bottomHeight = 0;
+      if (index !== heightLen - 1) {
+        bottomHeight = height.slice(index + 1, heightLen);
+        bottomHeight = bottomHeight.reduce((a, x) => a + x);
+        target.style.paddingBottom = bottomHeight + 'px';
+      }
+      let targetHeight = target.clientHeight;
+      const parent = target.parentNode;
+      const parentPosi = parent.getBoundingClientRect().top;
+      const startPosi = parent.getBoundingClientRect().top;
+      parent.style.height = '';
+      const parentHeight = parent.clientHeight;
+      if (targetHeight > parentHeight) {
+        // console.log(targetHeight)
+        parent.style.height = targetHeight + 'px';
+      }
+      if (0 > startPosi && targetHeight < endPosi) {
+        target.classList.add('is-fix');
+        target.style.top = '';
+      } else if (0 <= startPosi) {
+        target.classList.remove('is-fix');
+        target.style.top = '';
+      } else {
+        target.classList.remove('is-fix');
+        topHeight = 0;
+        if (index < heightLen - 1) {
+          topHeight = height.slice(index + 1, heightLen);
+          topHeight = topHeight.reduce((a, x) => a + x);
+        }
+        target.style.transform = '';
+        target.style.top = (areaHeight - ((-areaPosi) - (-parentPosi)) - targetHeight + bottomHeight - topHeight) + 'px';
+      }
+
+    });
+  }
+
+  areas.forEach(area => {
+
+    if (targets.length > 0) {
+
+      const listener = {
+        handleEvent: () => {
+
+          checkFixed(targets, area);
+        }
+      };
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            window.addEventListener('scroll', listener, {
+              passive: true
+            });
+          } else {
+            window.removeEventListener('scroll', listener, {
+              passive: true
+            });
+          }
+        });
+      });
+
+      observer.observe(area);
+
+
+      const resizeObserver = new ResizeObserver(() => {
+        checkFixed(targets, area);
+      });
+
+      resizeObserver.observe(area);
+    }
+  });
+}
+
+
 // JsScrollStickyObserver
 const JsScrollStickyObserver = function(element, options) {
   const that = this;
@@ -112,7 +222,7 @@ const JsScrollStickyObserver = function(element, options) {
           let headerHeight = header.offsetHeight;
           element.style.transform = "translateY(" + headerHeight + "px)";
         }
-      } else if (document.documentElement.scrollTop === 0){
+      } else if (document.documentElement.scrollTop === 0) {
 
         _destroy()
       }
@@ -128,7 +238,7 @@ const JsScrollStickyObserver = function(element, options) {
     element.classList.remove(stopClassName);
     element.style.width = '';
     element.style.transform = '';
-    
+
     observer.unobserve(element);
   };
 

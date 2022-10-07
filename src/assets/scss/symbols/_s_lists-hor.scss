@@ -5,7 +5,7 @@
 
 .t-definition-list {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   line-height: $t-line-height-card;
   font-size: 0.9375rem;
   margin-bottom: 0.625rem;
@@ -19,6 +19,19 @@
 
   .t-definition-description {
     margin-left: 2rem;
+  }
+}
+
+.t-dl-group {
+  border-left: 4px solid $primary-200;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.75rem;
+
+  .t-dl-group-term {}
+
+  .t-dl-group-description {
+    color: $lightgrey;
+    width: fit-content;
   }
 }
 

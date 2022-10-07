@@ -1,4 +1,4 @@
-//
+@charset "utf-8";
 //  Layout -> Navbars 
 // --------------------------------------------------
 .quicklink,
@@ -13,21 +13,21 @@
 .navbar {
   position: relative;
   margin-bottom: $navbar-margin-bottom;
-  border: 1px solid transparent;
 
-  @include clearfix;
-
-  text-align-last: justify;
-  text-align: justify;
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .navbar-group {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
   }
 
   .navbar-brand {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
     padding-top: $navbar-brand-padding-y;
     padding-bottom: $navbar-brand-padding-y;
     margin-right: $navbar-padding-x;
@@ -45,8 +45,7 @@
   }
 
   .navbar-item {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
 
     .t-area-link {
       color: $lightgrey;
@@ -63,7 +62,7 @@
       @include in-bk-mid;
 
       padding: .125rem .625rem;
-      border-radius: 8px;
+      border-radius: .5rem;
       cursor: default;
       user-select: none;
 
@@ -84,16 +83,12 @@
   }
 
   .navbar-collapse {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
     padding-right: $navbar-padding-horizontal;
     padding-left: $navbar-padding-horizontal;
     overflow-x: visible;
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba($white, 0.12);
-
-    @include clearfix;
-
+    border-top: .125rem solid transparent;
+    box-shadow: inset 0 0.125rem 0 rgba($white, 0.12);
     -webkit-overflow-scrolling: touch;
 
     &.show {
@@ -101,13 +96,11 @@
     }
 
     @media (max-width: 768px) {
-      width: auto;
       border-top: 0;
-      box-shadow: none;
+      width: 100%;
       display: block;
 
       &.collapse {
-        // display: block;
         height: auto;
         padding-bottom: 0;
         overflow: visible;
@@ -116,6 +109,7 @@
       &.show {
         overflow-y: visible;
         border-top: 2px solid $grey-200;
+        display: block;
       }
 
       .navbar-fixed-top &,
@@ -128,7 +122,8 @@
   }
 
   .nav.navbar-nav {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: 100%;
 
     .nav-item {
@@ -289,7 +284,6 @@
       }
     }
 
-    /* Scroll on mobile devices */
     .t-nav-mobile-scroll {
       @media (max-width: 768px) {
         overflow-y: auto;
