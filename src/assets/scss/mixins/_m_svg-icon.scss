@@ -2,6 +2,9 @@
 
 // SVG Icon
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+%svg-transition {
+  transition: fill 0.25s ease;
+}
 
 @mixin svg-variant($parent, $color) {
   #{$parent} {
@@ -12,13 +15,14 @@
 @mixin svg-icon-color($color, $important: false) {
   svg {
     [fill]:not(.permanent):not(g) {
-      transition: fill 0.3s ease;
+      @extend %svg-transition;
+
       fill: $color valueif($important, !important, null);
     }
 
     &:hover {
       [fill]:not(.permanent):not(g) {
-        transition: fill 0.3s ease;
+        @extend %svg-transition;
       }
     }
   }
@@ -27,7 +31,7 @@
 @mixin svg-icon-transition {
   svg {
     [fill]:not(g) {
-      transition: fill 0.3s ease;
+      @extend %svg-transition;
     }
   }
 }

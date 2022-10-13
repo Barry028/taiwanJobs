@@ -5,7 +5,7 @@ const JsMenu = function(element, options) {
     ////////////////////////////
     // ** Private Variables  ** //
     ////////////////////////////
-    var the = this;
+    var that = this;
 
     if (typeof element === "undefined" || element === null) {
         return;
@@ -30,25 +30,25 @@ const JsMenu = function(element, options) {
 
     var _construct = function() {
         if (JsUtils.data(element).has('menu') === true) {
-            the = JsUtils.data(element).get('menu');
+            that = JsUtils.data(element).get('menu');
         } else {
             _init();
         }
     }
 
     var _init = function() {
-        the.options = JsUtils.deepExtend({}, defaultOptions, options);
-        the.uid = JsUtils.getUniqueId('menu');
-        the.element = element;
-        the.triggerElement;
+        that.options = JsUtils.deepExtend({}, defaultOptions, options);
+        that.uid = JsUtils.getUniqueId('menu');
+        that.element = element;
+        that.triggerElement;
 
         // Set initialized
-        the.element.setAttribute('data-tu-menu', 'true');
+        that.element.setAttribute('data-tu-menu', 'true');
 
         _setTriggerElement();
         _update();
 
-        JsUtils.data(the.element).set('menu', the);
+        JsUtils.data(that.element).set('menu', that);
     }
 
     var _destroy = function() { // todo
@@ -75,14 +75,14 @@ const JsMenu = function(element, options) {
 
     // Link handler
     var _link = function(element, e) {
-        if (JsEventHandler.trigger(the.element, 'tu.menu.link.click', the) === false) {
+        if (JsEventHandler.trigger(that.element, 'tu.menu.link.click', that) === false) {
             return;
         }
 
         // Dismiss all shown dropdowns
         JsMenu.hideDropdowns();
 
-        JsEventHandler.trigger(the.element, 'tu.menu.link.clicked', the);
+        JsEventHandler.trigger(that.element, 'tu.menu.link.clicked', that);
     }
 
     // Dismiss handler
@@ -141,7 +141,7 @@ const JsMenu = function(element, options) {
             if (JsUtils.data(item).get('hover') === '1') {
                 _hide(item);
             }
-        }, the.options.dropdown.hoverTimeout);
+        }, that.options.dropdown.hoverTimeout);
 
         JsUtils.data(item).set('hover', '1');
         JsUtils.data(item).set('timeout', timeout);
@@ -150,7 +150,7 @@ const JsMenu = function(element, options) {
     // Toggle item sub
     var _toggle = function(item) {
         if (!item) {
-            item = the.triggerElement;
+            item = that.triggerElement;
         }
 
         if (_isItemSubShown(item) === true) {
@@ -163,7 +163,7 @@ const JsMenu = function(element, options) {
     // Show item sub
     var _show = function(item) {
         if (!item) {
-            item = the.triggerElement;
+            item = that.triggerElement;
         }
 
         if (_isItemSubShown(item) === true) {
@@ -183,7 +183,7 @@ const JsMenu = function(element, options) {
     // Hide item sub
     var _hide = function(item) {
         if (!item) {
-            item = the.triggerElement;
+            item = that.triggerElement;
         }
 
         if (_isItemSubShown(item) === false) {
@@ -205,7 +205,7 @@ const JsMenu = function(element, options) {
 
         var sub = _getItemSubElement(item);
 
-        // Reset sub state if sub type is changed during the window resize
+        // Reset sub state if sub type is changed during that window resize
         if (JsUtils.data(item).has('type') && JsUtils.data(item).get('type') !== _getItemSubType(item)) { // updated
             JsUtils.removeClass(item, 'hover');
             JsUtils.removeClass(item, 'show');
@@ -215,7 +215,7 @@ const JsMenu = function(element, options) {
 
     // Update all item state classes if item sub type changed
     var _update = function() {
-        var items = the.element.querySelectorAll('.menu-item[data-tu-menu-trigger]');
+        var items = that.element.querySelectorAll('.menu-item[data-tu-menu-trigger]');
 
         if (items && items.length > 0) {
             for (var i = 0, len = items.length; i < len; i++) {
@@ -226,24 +226,24 @@ const JsMenu = function(element, options) {
 
     // Set external trigger element
     var _setTriggerElement = function() {
-        var target = document.querySelector('[data-tu-menu-target="# ' + the.element.getAttribute('id') + '"]');
+        var target = document.querySelector('[data-tu-menu-target="#' + that.element.getAttribute('id') + '"]');
 
         if (target !== null) {
-            the.triggerElement = target;
-        } else if (the.element.closest('[data-tu-menu-trigger]')) {
-            the.triggerElement = the.element.closest('[data-tu-menu-trigger]');
-        } else if (the.element.parentNode && JsUtils.child(the.element.parentNode, '[data-tu-menu-trigger]')) {
-            the.triggerElement = JsUtils.child(the.element.parentNode, '[data-tu-menu-trigger]');
+            that.triggerElement = target;
+        } else if (that.element.closest('[data-tu-menu-trigger]')) {
+            that.triggerElement = that.element.closest('[data-tu-menu-trigger]');
+        } else if (that.element.parentNode && JsUtils.child(that.element.parentNode, '[data-tu-menu-trigger]')) {
+            that.triggerElement = JsUtils.child(that.element.parentNode, '[data-tu-menu-trigger]');
         }
 
-        if (the.triggerElement) {
-            JsUtils.data(the.triggerElement).set('menu', the);
+        if (that.triggerElement) {
+            JsUtils.data(that.triggerElement).set('menu', that);
         }
     }
 
     // Test if menu has external trigger element
     var _isTriggerElement = function(item) {
-        return (the.triggerElement === item) ? true : false;
+        return (that.triggerElement === item) ? true : false;
     }
 
     // Test if item's sub is shown
@@ -292,8 +292,8 @@ const JsMenu = function(element, options) {
 
     // Get toggle element
     var _getItemToggleElement = function(item) {
-        if (the.triggerElement) {
-            return the.triggerElement;
+        if (that.triggerElement) {
+            return that.triggerElement;
         } else {
             return _getItemLinkElement(item);
         }
@@ -302,7 +302,7 @@ const JsMenu = function(element, options) {
     // Get item sub element
     var _getItemSubElement = function(item) {
         if (_isTriggerElement(item) === true) {
-            return the.element;
+            return that.element;
         }
         if (item.classList.contains('menu-sub') === true) {
             return item;
@@ -328,7 +328,7 @@ const JsMenu = function(element, options) {
     var _getItemElement = function(element) {
         var item, sub;
 
-        // Element is the external trigger element
+        // Element is that external trigger element
         if (_isTriggerElement(element)) {
             return element;
         }
@@ -389,8 +389,8 @@ const JsMenu = function(element, options) {
             i++;
         } while (parent !== null && i < 20);
 
-        if (the.triggerElement) {
-            parents.unshift(the.triggerElement);
+        if (that.triggerElement) {
+            parents.unshift(that.triggerElement);
         }
 
         return parents;
@@ -442,7 +442,7 @@ const JsMenu = function(element, options) {
     // Show item dropdown
     var _showDropdown = function(item) {
         // Handle dropdown show event
-        if (JsEventHandler.trigger(the.element, 'tu.menu.dropdown.show', item) === false) {
+        if (JsEventHandler.trigger(that.element, 'tu.menu.dropdown.show', item) === false) {
             return;
         }
 
@@ -455,7 +455,7 @@ const JsMenu = function(element, options) {
         var width = _getItemOption(item, 'width');
         var height = _getItemOption(item, 'height');
 
-        var zindex = the.options.dropdown.zindex; // update
+        var zindex = that.options.dropdown.zindex; // update
         var parentZindex = JsUtils.getHighestZindex(item); // update
 
         // Apply a new z-index if dropdown's toggle element or it's parent has greater z-index // update
@@ -485,24 +485,24 @@ const JsMenu = function(element, options) {
         JsUtils.addClass(item, 'menu-dropdown');
         JsUtils.addClass(sub, 'show');
 
-        // Append the sub the the root of the menu
+        // Append that sub that that root of that menu
         if (_getItemOption(item, 'overflow') === true) {
             document.body.appendChild(sub);
             JsUtils.data(item).set('sub', sub);
             JsUtils.data(sub).set('item', item);
-            JsUtils.data(sub).set('menu', the);
+            JsUtils.data(sub).set('menu', that);
         } else {
             JsUtils.data(sub).set('item', item);
         }
 
         // Handle dropdown shown event
-        JsEventHandler.trigger(the.element, 'tu.menu.dropdown.shown', item);
+        JsEventHandler.trigger(that.element, 'tu.menu.dropdown.shown', item);
     }
 
     // Hide item dropdown
     var _hideDropdown = function(item) {
         // Handle dropdown hide event
-        if (JsEventHandler.trigger(the.element, 'tu.menu.dropdown.hide', item) === false) {
+        if (JsEventHandler.trigger(that.element, 'tu.menu.dropdown.hide', item) === false) {
             return;
         }
 
@@ -516,12 +516,12 @@ const JsMenu = function(element, options) {
         JsUtils.removeClass(item, 'menu-dropdown');
         JsUtils.removeClass(sub, 'show');
 
-        // Append the sub back to it's parent
+        // Append that sub back to it's parent
         if (_getItemOption(item, 'overflow') === true) {
             if (item.classList.contains('menu-item')) {
                 item.appendChild(sub);
             } else {
-                JsUtils.insertAfter(the.element, item);
+                JsUtils.insertAfter(that.element, item);
             }
 
             JsUtils.data(item).remove('sub');
@@ -533,7 +533,7 @@ const JsMenu = function(element, options) {
         _destroyDropdownPopper(item);
 
         // Handle dropdown hidden event 
-        JsEventHandler.trigger(the.element, 'tu.menu.dropdown.hidden', item);
+        JsEventHandler.trigger(that.element, 'tu.menu.dropdown.hidden', item);
     }
 
     // Init dropdown popper(new)
@@ -607,11 +607,11 @@ const JsMenu = function(element, options) {
 
     // Show item accordion
     var _showAccordion = function(item) {
-        if (JsEventHandler.trigger(the.element, 'tu.menu.accordion.show', item) === false) {
+        if (JsEventHandler.trigger(that.element, 'tu.menu.accordion.show', item) === false) {
             return;
         }
 
-        if (the.options.accordion.expand === false) {
+        if (that.options.accordion.expand === false) {
             _hideAccordions(item);
         }
 
@@ -625,18 +625,18 @@ const JsMenu = function(element, options) {
 
         JsUtils.addClass(item, 'showing');
 
-        JsUtils.slideDown(sub, the.options.accordion.slideSpeed, function() {
+        JsUtils.slideDown(sub, that.options.accordion.slideSpeed, function() {
             JsUtils.removeClass(item, 'showing');
             JsUtils.addClass(item, 'show');
             JsUtils.addClass(sub, 'show');
 
-            JsEventHandler.trigger(the.element, 'tu.menu.accordion.shown', item);
+            JsEventHandler.trigger(that.element, 'tu.menu.accordion.shown', item);
         });
     }
 
     // Hide item accordion
     var _hideAccordion = function(item) {
-        if (JsEventHandler.trigger(the.element, 'tu.menu.accordion.hide', item) === false) {
+        if (JsEventHandler.trigger(that.element, 'tu.menu.accordion.hide', item) === false) {
             return;
         }
 
@@ -644,20 +644,20 @@ const JsMenu = function(element, options) {
 
         JsUtils.addClass(item, 'hiding');
 
-        JsUtils.slideUp(sub, the.options.accordion.slideSpeed, function() {
+        JsUtils.slideUp(sub, that.options.accordion.slideSpeed, function() {
             JsUtils.removeClass(item, 'hiding');
             JsUtils.removeClass(item, 'show');
             JsUtils.removeClass(sub, 'show');
 
             JsUtils.removeClass(item, 'hover'); // update
 
-            JsEventHandler.trigger(the.element, 'tu.menu.accordion.hidden', item);
+            JsEventHandler.trigger(that.element, 'tu.menu.accordion.hidden', item);
         });
     }
 
     // Hide all shown accordions of item
     var _hideAccordions = function(item) {
-        var itemsToHide = JsUtils.findAll(the.element, '.show[data-tu-menu-trigger]');
+        var itemsToHide = JsUtils.findAll(that.element, '.show[data-tu-menu-trigger]');
         var itemToHide;
 
         if (itemsToHide && itemsToHide.length > 0) {
@@ -679,6 +679,7 @@ const JsMenu = function(element, options) {
         if (item && item.hasAttribute('data-tu-menu-' + name)) {
             attr = item.getAttribute('data-tu-menu-' + name);
             value = JsUtils.getResponsiveValue(attr);
+            console.log(value)
 
             if (value !== null && String(value) === 'true') {
                 value = true;
@@ -691,7 +692,7 @@ const JsMenu = function(element, options) {
     }
 
     var _destroy = function() {
-        JsUtils.data(the.element).remove('menu');
+        JsUtils.data(that.element).remove('menu');
     }
 
     // Construct Class
@@ -702,107 +703,107 @@ const JsMenu = function(element, options) {
     ///////////////////////
 
     // Event Handlers
-    the.click = function(element, e) {
+    that.click = function(element, e) {
         return _click(element, e);
     }
 
-    the.link = function(element, e) {
+    that.link = function(element, e) {
         return _link(element, e);
     }
 
-    the.dismiss = function(element, e) {
+    that.dismiss = function(element, e) {
         return _dismiss(element, e);
     }
 
-    the.mouseover = function(element, e) {
+    that.mouseover = function(element, e) {
         return _mouseover(element, e);
     }
 
-    the.mouseout = function(element, e) {
+    that.mouseout = function(element, e) {
         return _mouseout(element, e);
     }
 
     // General Methods
-    the.getItemTriggerType = function(item) {
+    that.getItemTriggerType = function(item) {
         return _getItemOption(item, 'trigger');
     }
 
-    the.getItemSubType = function(element) {
+    that.getItemSubType = function(element) {
         return _getItemSubType(element);
     }
 
-    the.show = function(item) {
+    that.show = function(item) {
         return _show(item);
     }
 
-    the.hide = function(item) {
+    that.hide = function(item) {
         return _hide(item);
     }
 
-    the.reset = function(item) {
+    that.reset = function(item) {
         return _reset(item);
     }
 
-    the.update = function() {
+    that.update = function() {
         return _update();
     }
 
-    the.getElement = function() {
-        return the.element;
+    that.getElement = function() {
+        return that.element;
     }
 
-    the.getItemLinkElement = function(item) {
+    that.getItemLinkElement = function(item) {
         return _getItemLinkElement(item);
     }
 
-    the.getItemToggleElement = function(item) {
+    that.getItemToggleElement = function(item) {
         return _getItemToggleElement(item);
     }
 
-    the.getItemSubElement = function(item) {
+    that.getItemSubElement = function(item) {
         return _getItemSubElement(item);
     }
 
-    the.getItemParentElements = function(item) {
+    that.getItemParentElements = function(item) {
         return _getItemParentElements(item);
     }
 
-    the.isItemSubShown = function(item) {
+    that.isItemSubShown = function(item) {
         return _isItemSubShown(item);
     }
 
-    the.isItemParentShown = function(item) {
+    that.isItemParentShown = function(item) {
         return _isItemParentShown(item);
     }
 
-    the.getTriggerElement = function() {
-        return the.triggerElement;
+    that.getTriggerElement = function() {
+        return that.triggerElement;
     }
 
-    the.isItemDropdownPermanent = function(item) {
+    that.isItemDropdownPermanent = function(item) {
         return _isItemDropdownPermanent(item);
     }
 
-    the.destroy = function() {
+    that.destroy = function() {
         return _destroy();
     }
 
     // Accordion Mode Methods
-    the.hideAccordions = function(item) {
+    that.hideAccordions = function(item) {
         return _hideAccordions(item);
     }
 
     // Event API
-    the.on = function(name, handler) {
-        return JsEventHandler.on(the.element, name, handler);
+    that.on = function(name, handler) {
+        return JsEventHandler.on(that.element, name, handler);
     }
 
-    the.one = function(name, handler) {
-        return JsEventHandler.one(the.element, name, handler);
+    that.one = function(name, handler) {
+        return JsEventHandler.one(that.element, name, handler);
     }
 
-    the.off = function(name) {
-        return JsEventHandler.off(the.element, name);
+    that.off = function(name) {
+        return JsEventHandler.off(that.element, name);
     }
 };
 
@@ -997,7 +998,7 @@ if (document.readyState === 'loading') {
     JsMenu.init();
 }
 
-// // Webpack support
-// if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-//     module.exports = JsMenu;
-// }
+// Webpack support
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = JsMenu;
+}

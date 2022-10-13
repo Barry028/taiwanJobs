@@ -1,0 +1,68 @@
+
+
+// box-shadow: bottom-shadow($depth: 1 , $shadow: $primary), top-shadow($depth: 1 , $shadow: $primary);
+@function top-shadow($depth: 1, $shadow: $dark) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba($shadow, nth(0.12 0.16 0.19 0.25 0.3, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/// Computes a bottom-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function bottom-shadow($depth: 1, $shadow: $dark) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba($shadow, nth(0.24 0.23 0.23 0.22 0.22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+
+
+// text-shadow: long-shadow($depth: 6, $shadowColor: rgba($dark, 0.08))
+@function long-shadow($depth: 10, $shadowColor: rgba($dark, 0.08)) {
+  $shadow: -1px 1px $shadowColor;
+
+  @for $i from 1 through $depth {
+    $shadow: #{$shadow}, #{$i}px #{$i}px #{$shadowColor};
+  }
+
+  @return $shadow;
+}
+
+// text-shadow: super-text-shadow(rgb(69,255,253), 20);
+@function super-text-shadow($color, $depth: 10, $offset-x: 1px, $offset-y: 1px, $blur: 0) {
+  $shadow: ();
+
+  @for $i from 0 through $depth {
+    $x: $offset-x + $i;
+    $y: $offset-y + $i;
+
+    $shadow: append($shadow, #{$x $y $blur $color}, "comma");
+  }
+
+  @return $shadow;
+}
+
+// @debug textStroke(10px, #f00)
+@function textStroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke * -1;
+
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, ($i * 1px) ($j * 1px) $color, comma);
+    }
+  }
+
+  @return $shadow;
+}
+
+
+
+
+
+

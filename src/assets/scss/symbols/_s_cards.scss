@@ -19,3 +19,36 @@
   }
 
 }
+
+.t-card-glass {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(132deg, $primary-50 0%, $primary-25 99.25%);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1.25rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background-image: linear-gradient(312.25deg, $primary-200 0%, rgba($white, 0) 66.25%);
+    z-index: -1;
+    border-radius: 1.125rem;
+  }
+
+  .t-card-glass-inner {
+    background-color: $white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2.5rem 5rem $primary-100;
+    border-radius: .875rem;
+  }
+}

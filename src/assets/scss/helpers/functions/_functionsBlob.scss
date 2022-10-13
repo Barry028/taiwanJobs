@@ -34,16 +34,6 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025 0
   @return $string;
 }
 
-// Replace letters
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
 
 // Encode symbols
 @function url-encode($string) {

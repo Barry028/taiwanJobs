@@ -2,46 +2,9 @@
 
 //   Components -> Buttons -> Buttons circles
 // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn--circle {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: $btn-font-weight;
-  user-select: none;
-  white-space: nowrap;
-  color: inherit;
-  margin: auto;
-  padding: 1.25rem 1.5rem;
-  transition: $transition;
-
-  @include btn-hover {
-    color: color-contrast($primary);
-
-    &:before {
-      background-color: $primary;
-      width: 108%;
-    }
-  }
-
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -.625rem;
-    transform: translateY(-50%);
-    display: inherit;
-    border-radius: 1.875rem;
-    background-color: rgba($primary, 0);
-    border: 0.125rem solid rgba($primary-400, 0.6);
-    border-right-color: transparent;
-    width: 1.25rem * 3;
-    height: 1.25rem * 3;
-    transition: $transition;
-    z-index: -1;
+// 
+@if $enable-custom-buttons-left-circle==true {
+  .btn--circle {
+    @include button-circle-variant;
   }
 }

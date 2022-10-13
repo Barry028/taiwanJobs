@@ -1,15 +1,9 @@
 
 @charset "utf-8";
 
-//  Mixins > Overlay
+//  Mixins > Shape
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-@mixin overlay() {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+
 
 @mixin shape($edges-number: 6, $main-radius: 30%, $rounding-radius: 10%, $rotated: true, $precision: 20) {
 	$central-angle: divide(360deg, $edges-number);
@@ -36,4 +30,4 @@
 	}
 	
 	clip-path: polygon($points);
-}
+}  

@@ -10,23 +10,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/recruit/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/recruit/favicon-16x16.png">
   <link rel="stylesheet" type="text/css" href="../../assets/css/all_recruit.css">
-<script>
-  (function(d) {
-    var config = {
-      kitId: 'soy4top',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
-
+  <script>
+    !function(e){var t,a={kitId:"qeg3xhb",scriptTimeout:3e3,async:!0},c=e.documentElement,i=setTimeout(function(){c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},a.scriptTimeout),n=e.createElement("script"),s=!1,e=e.getElementsByTagName("script")[0];c.className+=" wf-loading",n.src="https://use.typekit.net/"+a.kitId+".js",n.async=!0,n.onload=n.onreadystatechange=function(){if(t=this.readyState,!(s||t&&"complete"!=t&&"loaded"!=t)){s=!0,clearTimeout(i);try{Typekit.load(a)}catch(e){}}},e.parentNode.insertBefore(n,e)}(document);
+  </script>
 </head>
 
-<body id="tuBody" class="t-header-fixed">
+<body id="tuBody" class="t-header-fixed t-bg-mesh-primary">
   <!-- Header -->
   <header id="tuHeader" data-tu-header="true" class="t-header">
-    <section class="t-header-top t-header__section" data-header-fix-moment-classes="hide">
+    <section class="t-header-top">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
@@ -68,50 +60,49 @@
         </div>
       </div>
     </section>
-    <nav class="navbar navbar-expand-md">
-      <div class="container">
-        <button class="navbar-toggler navbar-toggler-left" type="button" aria-label="主要選單" aria-expanded="false" aria-controls="navBar" data-bs-toggle="collapse" data-bs-target="#navBar">
-          <i class="svg-icon svg-icon-2hx">
-            <svg>
-              <use href="#ic-burger"></use>
-            </svg>
-          </i>
-        </button>
-        <div class="navbar-group">
-          <a href="javascript:;" class="navbar-brand">
-            <img class="navbar-brand-logo" src="../../assets/images/logo-recruit.svg" alt="台灣就業通 TaiwanJobs">
-          </a>
-          <h2 data-grad-under="secondary" class="t-fs-18">
-            就業通系統測試資料 (請勿投遞履歷)
-          </h2>
+    <section class="t-header-main">
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <button class="navbar-toggler navbar-toggler-left" type="button" aria-label="主要選單" aria-expanded="false" aria-controls="navBar" data-bs-toggle="collapse" data-bs-target="#navBar">
+            <i class="svg-icon svg-icon-2hx">
+              <svg>
+                <use href="#ic-burger"></use>
+              </svg>
+            </i>
+          </button>
+          <div class="navbar-group">
+            <a href="javascript:;" class="navbar-brand">
+              <img class="navbar-brand-logo" src="../../assets/images/logo-recruit.svg" alt="台灣就業通 TaiwanJobs">
+            </a>
+            <h2 data-grad-under="secondary" class="t-fs-18 hidden-sm">
+              就業通系統測試資料 (請勿投遞履歷)
+            </h2>
+          </div>
+          <div class="t-flex align-items-center" id="tuHeaderUserMenuToggle">
+            <button class="btn" data-tu-menu-trigger="click" data-tu-menu-attach="parent" data-tu-menu-placement="bottom-end">
+              <div class="t-md-flex flex-column align-items-end justify-content-center">
+                <i class="svg-icon t-fc-primary mr-0">
+                  <svg><use href="#ic-user-outline"></use></svg>
+                </i>
+                <span class="hidden-sm ml-2">Hi，BarrY，您好</span>
+                <i class="svg-icon hidden-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg"><use href="#ic-character-b"></use>
+                  </i>
+              </div>
+            </button>
+          </div>
         </div>
-        <button class="navbar-toggler navbar-toggler-right" type="button" aria-label="會員登入 / 註冊" aria-expanded="false" aria-controls="" data-toggle="collapse" data-target="">
-          <i class="svg-icon svg-icon-2hx">
-            <svg>
-              <use href="#ic-user"></use>
-            </svg>
-          </i>
-        </button>
-        <div class="js-navigation collapse navbar-collapse" id="navBar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <a href="javascript:;" title="網站導覽連結區, 快速鍵: Alt+C " id="AC" accesskey="C" name="C" class="quicklink2 nav-link">:::</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <section class="t-header-navs">
-      <div class="container">
-        <nav class="navbar navbar-expand-custom navbar-mainbg">
-          <!--  <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            </button> -->
-          <ul class="menu menu-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch flex-grow-1" id="#tuHeaderMenu" data-tu-menu="true">
+      </nav>
+    </section>
+    <section class="t-header-menu">
+      <nav class="navbar navbar-expand-md collapse navbar-collapse" id="navBar">
+        <div class="container">
+          <ul class="t-header-navs menu menu-rounded menu-column menu-sm-row align-items-stretch flex-grow-1" id="#tuHeaderMenu" data-tu-menu="true">
             <li class="menu-item">
               <a class="menu-link active" href="javascript:void(0);">
-                <i class="svg-icon pr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-home"></use>
+                <i class="svg-icon ">
+                  <svg>
+                    <use href="#ic-home-outline"></use>
                   </svg>
                 </i>
                 首頁
@@ -119,15 +110,13 @@
             </li>
             <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
               <a class="menu-link">
-                <i class="svg-icon pr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-setting"></use>
-                  </svg>
-                </i>
+                <i class="svg-icon"><svg>
+                    <use href="#ic-corp-outline"></use>
+                  </svg></i>
                 公司資料
-                <i class="svg-icon svg-icon-1hx pl-4">
+                <i class="svg-icon ">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-arrow-b"></use>
+                    <use href="#ic-character-b"></use>
                   </svg>
                 </i>
               </a>
@@ -156,363 +145,19 @@
             </li>
             <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
               <a class="menu-link">
-                <i class="svg-icon pr-2">
+                <i class="svg-icon">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-board"></use>
+                    <use href="#ic-brifecase-outline"></use>
                   </svg>
                 </i>
                 職務管理
-                <i class="svg-icon svg-icon-1hx pl-4">
+                <i class="svg-icon ">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-arrow-b"></use>
+                    <use href="#ic-character-b"></use>
                   </svg>
                 </i>
               </a>
               <div id="menuBoard" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px" data-tu-menu="true">
-                <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                  <span class="menu-link py-3">
-                    <span class="menu-icon">
-                      <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-                      <span class="svg-icon svg-icon-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="black"></path>
-                          <path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="black"></path>
-                          <path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="black"></path>
-                        </svg>
-                      </span>
-                      <!--end::Svg Icon-->
-                    </span>
-                    <span class="menu-title">Pages</span>
-                    <span class="menu-arrow"></span>
-                  </span>
-                  <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Profile</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/overview.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Overview</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/projects.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Projects</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/campaigns.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Campaigns</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/documents.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Documents</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/followers.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Followers</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/profile/activity.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Activity</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Wizards</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/horizontal.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Horizontal</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/vertical.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Vertical</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/two-factor-authentication.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Two Factor Auth</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/create-app.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Create App</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/create-campaign.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Create Campaign</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/create-account.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Create Account</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/create-project.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Create Project</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/wizards/offer-a-deal.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Offer a Deal</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Search</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/search/horizontal.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Horizontal</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/search/vertical.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Vertical</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/modals/search/users.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Users</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/modals/search/select-location.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Location</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Blog</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/blog/home.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Blog Home</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/blog/post.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Blog Post</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="menu-item">
-                      <a class="menu-link py-3" href="../../demo16/dist/pages/about.html">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">About Us</span>
-                      </a>
-                    </div>
-                    <div class="menu-item">
-                      <a class="menu-link py-3" href="../../demo16/dist/pages/contact.html">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Contact Us</span>
-                      </a>
-                    </div>
-                    <div class="menu-item">
-                      <a class="menu-link py-3" href="../../demo16/dist/pages/team.html">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Our Team</span>
-                      </a>
-                    </div>
-                    <div class="menu-item">
-                      <a class="menu-link py-3" href="../../demo16/dist/pages/licenses.html">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Licenses</span>
-                      </a>
-                    </div>
-                    <div class="menu-item">
-                      <a class="menu-link py-3" href="../../demo16/dist/pages/sitemap.html">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Sitemap</span>
-                      </a>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Pricing</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/pricing/pricing-1.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Pricing 1</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/pricing/pricing-2.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Pricing 2</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">Careers</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/careers/list.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Careers List</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/careers/apply.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Careers Apply</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-tu-menu-trigger="{default:'click', lg: 'hover'}" data-tu-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
-                      <span class="menu-link py-3">
-                        <span class="menu-bullet">
-                          <span class="bullet bullet-dot"></span>
-                        </span>
-                        <span class="menu-title">FAQ</span>
-                        <span class="menu-arrow"></span>
-                      </span>
-                      <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/faq/classic.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Classic</span>
-                          </a>
-                        </div>
-                        <div class="menu-item">
-                          <a class="menu-link py-3" href="../../demo16/dist/pages/faq/extended.html">
-                            <span class="menu-bullet">
-                              <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Extended</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="menu-item">
                   <a href="javascript:;" class="menu-link">
                     系統管理
@@ -537,15 +182,15 @@
             </li>
             <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
               <a class="menu-link" href="javascript:void(0);">
-                <i class="svg-icon svg-icon-1hx pr-2">
+                <i class="svg-icon">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-teacher"></use>
+                    <use href="#ic-seeker-outline"></use>
                   </svg>
                 </i>
                 人才查詢
-                <i class="svg-icon svg-icon-1hx pl-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <use href="#ic-arrow-b"></use>
+                <i class="svg-icon ">
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <use href="#ic-character-b"></use>
                   </svg>
                 </i>
               </a>
@@ -574,180 +219,685 @@
             </li>
             <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
               <a class="menu-link" href="javascript:void(0);">
-                <i class="svg-icon svg-icon-1hx pr-2">
+                <i class="svg-icon">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-teacher"></use>
+                    <use href="#ic-direct-outline"></use>
                   </svg>
                 </i>
                 人才管理
-                <i class="svg-icon svg-icon-1hx pl-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <use href="#ic-arrow-b"></use>
-                  </svg>
-                </i></a>
-            </li>
-            <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
-              <a class="menu-link" href="javascript:void(0);">
-                <i class="svg-icon svg-icon-1hx pr-2">
+                <i class="svg-icon ">
                   <svg xmlns="http://www.w3.org/2000/svg">
-                    <use href="#ic-teacher"></use>
-                  </svg>
-                </i> 無紙化徵才
-                <i class="svg-icon svg-icon-1hx pl-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <use href="#ic-arrow-b"></use>
+                    <use href="#ic-character-b"></use>
                   </svg>
                 </i>
               </a>
             </li>
-            <button class="btn btn--soft--dark">
-              <i class="svg-icon svg-icon-1x">
+            <li class="menu-item" data-tu-menu-trigger="click" data-tu-menu-placement="bottom-start" data-tu-menu-target="">
+              <a class="menu-link" href="javascript:void(0);">
+                <i class="svg-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <use href="#ic-note-outline"></use>
+                  </svg>
+                </i> 無紙化徵才
+              </a>
+            </li>
+            <button class="btn btn--soft--white">
+              <i class="svg-icon">
                 <svg class="text-white">
                   <use href="#ic-search"></use>
                 </svg>
               </i>
             </button>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </section>
   </header>
   <!-- Main -->
   <main class="t-wrapper">
     <section class="t-membercenter-section">
       <div class="container flex-row-fluid">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 row-cols-xl-4">
           <div class="col">
             <div class="t-panel t-panel-mini">
-              <div class="mask t-mask-card-v1"></div>
-              <div class="t-symbol t-symbol-square symbol-75px">
-                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white rounded--20" aria-hidden="true">
+              <div class="mask t-mask-panel-v1"></div>
+              <div class="t-symbol t-symbol-square symbol-60px">
+                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white" aria-hidden="true">
                   <svg>
                     <use href="#ic-briefcase"></use>
                   </svg>
                 </i>
               </div>
-              <div class="t-panel-main flex-column">
+              <div class="t-panel-main flex-column"><li class="item">
+      <div class="inner">
+        <h4 class="name">22k+</h4>
+        <p class="descr">Trusted Clients</p>
+      </div>
+    </li>
                 <h4 class="t-panel-main-heading">已刊登職缺</h4>
                 <a data-under="primary" class="t-panel-mini-link" href="javascript:;" title="24 筆職缺" data-separated="true">24</a>
+                <label class="t-badge t-badge-danger t-badge--rounded t-badge--border t-shadow-label" aria-label="未讀 3 筆">未讀<big>3</big>筆</label>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="t-panel t-panel-mini">
-              <div class="mask t-mask-card-v1"></div>
-              <div class="t-symbol t-symbol-square symbol-75px">
-                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white rounded--20" aria-hidden="true">
+              <div class="mask t-mask-panel-v1"></div>
+              <div class="t-symbol t-symbol-square symbol-60px">
+                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white" aria-hidden="true">
                   <svg>
-                    <use href="#ic-briefcase"></use>
+                    <use href="#ic-resume"></use>
                   </svg>
                 </i>
               </div>
               <div class="t-panel-main flex-column">
                 <h4 class="t-panel-main-heading">求職者應徵</h4>
                 <a data-under="primary" class="t-panel-mini-link" href="javascript:;" title="1,123 求職者應徵" data-separated="true">1123</a>
+                <label class="t-badge t-badge-danger t-badge--rounded t-badge--border t-shadow-label" aria-label="未讀 3 筆">未讀<big>3</big>筆</label>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="t-panel t-panel-mini">
-              <div class="mask t-mask-card-v1"></div>
-              <div class="t-symbol t-symbol-square symbol-75px">
-                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white rounded--20" aria-hidden="true">
+              <div class="mask t-mask-panel-v1"></div>
+              <div class="t-symbol t-symbol-square symbol-60px">
+                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white" aria-hidden="true">
                   <svg>
-                    <use href="#ic-briefcase"></use>
+                    <use href="#ic-seeker"></use>
                   </svg>
                 </i>
               </div>
               <div class="t-panel-main flex-column">
                 <h4 class="t-panel-main-heading">人才來訪數</h4>
                 <a data-under="primary" class="t-panel-mini-link" href="javascript:;" title="24 筆職缺" data-separated="true">234</a>
+                <label class="t-badge t-badge-danger t-badge--rounded t-badge--border t-shadow-label" aria-label="今日來訪11位">今日來訪<big>11</big>位</label>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="t-panel t-panel-mini">
-              <div class="mask t-mask-card-v1"></div>
-              <div class="t-symbol t-symbol-square symbol-75px">
-                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white rounded--20" aria-hidden="true">
+              <div class="mask t-mask-panel-v1"></div>
+              <div class="t-symbol t-symbol-square symbol-60px">
+                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white" aria-hidden="true">
                   <svg>
-                    <use href="#ic-briefcase"></use>
+                    <use href="#ic-messages"></use>
                   </svg>
                 </i>
               </div>
               <div class="t-panel-main flex-column">
                 <h4 class="t-panel-main-heading">通知紀錄</h4>
                 <a data-under="primary" class="t-panel-mini-link" href="javascript:;" title="24 筆職缺" data-separated="true">166</a>
+                <label class="t-badge t-badge-danger t-badge--rounded t-badge--border t-shadow-label" aria-label="未讀3則">未讀<big>3</big>則</label>
               </div>
             </div>
           </div>
         </div>
-        <!-- center -->
+        <!-- Center -->
         <div class="row">
+          <!-- Left -->
           <div class="col-xl-3 col-md-3">
-            <div class="t-panel t-panel-mini">
-              <div class="mask t-mask-card-v1"></div>
-              <div class="t-symbol t-symbol-square symbol-75px">
-                <i class="svg-icon svg-icon-2x t-symbol-label t-bg-grad-primary t-fc-white rounded--20" aria-hidden="true">
-                  <svg>
-                    <use href="#ic-briefcase"></use>
-                  </svg>
-                </i>
+            <!-- 公司資料 -->
+            <div class="t-panel">
+              <div class="t-panel-top">
+                <!-- image upload -->
+                <div data-overlay="upload" class="t-corp-img-overlay t-image-input t-image-input-empty" data-tu-image-input="true" style="background-image : url(../../assets/images/placeholder-bot.svg)">
+                  <div class="t-image-input-wrapper"></div>
+                  <label class="btn btn--in--icon btn--dark w-8 h-8" data-tu-image-input-action="change" data-bs-toggle="tooltip" data-bs-dismiss="click" title="上傳大頭照" aria-label="上傳大頭照">
+                    <i class="svg-icon ml-0 mr-0"><svg>
+                        <use href="#ic-edit"></use>
+                      </svg></i>
+                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg, .svg">
+                    <input type="hidden" name="avatar_remove">
+                  </label>
+                  <button class="btn btn--in--icon btn--dark w-8 h-8" data-tu-image-input-action="cancel" data-bs-toggle="tooltip" data-bs-dismiss="click" title="取消" aria-label="取消">
+                    <i class="svg-icon ml-0 mr-0"><svg>
+                        <use href="#ic-redo"></use>
+                      </svg></i>
+                  </button>
+                  <label class="btn btn--in--icon btn--dark w-8 h-8" data-tu-image-input-action="remove" data-bs-toggle="tooltip" data-bs-dismiss="click" title="移除大頭照" aria-label="移除大頭照">
+                    <i class="svg-icon ml-0 mr-0"><svg>
+                        <use href="#ic-close"></use>
+                      </svg></i>
+                  </label>
+                </div>
+                <!-- Corp Name -->
+                <h4 class="t-panel-title mt-2">
+                  就業通系統測試資料 (請勿投遞履歷)
+                </h4>
               </div>
-              <div class="t-panel-main flex-column">
-                <h4 class="t-panel-main-heading">已刊登職缺</h4>
-                <a data-under="primary" class="t-panel-mini-link" href="javascript:;" title="24 筆職缺" data-separated="true">24</a>
+              <div class="t-panel-bottom">
+                <dl class="t-definition-list">
+                  <dt class="t-definition-term">
+                    統一編號
+                  </dt>
+                  <dd class="t-definition-description">
+                    88860303
+                  </dd>
+                </dl>
+                <dl class="t-definition-list">
+                  <dt class="t-definition-term">
+                    產業類別
+                  </dt>
+                  <dd class="t-definition-description">
+                    電腦軟體設計業
+                  </dd>
+                </dl>
+                <dl class="t-definition-list">
+                  <dt class="t-definition-term">
+                    員工
+                  </dt>
+                  <dd class="t-definition-description">
+                    24 人
+                  </dd>
+                </dl>
+                <dl class="t-definition-list">
+                  <dt class="t-definition-term">
+                    資本額
+                  </dt>
+                  <dd class="t-definition-description">
+                    3,000,000
+                  </dd>
+                </dl>
+                <dl class="t-definition-list">
+                  <dt class="t-definition-term">
+                    聯絡人
+                  </dt>
+                  <dd class="t-definition-description">
+                    HR 林 先生
+                  </dd>
+                </dl>
+                <a class="btn btn--primary btn--block t-pill" href="javascript:;">
+                  編輯公司資料
+                  <i class="svg-icon"><svg>
+                      <use href="#ic-edit"></use>
+                    </svg></i>
+                </a>
+                <a class="btn btn--border--primary btn--block t-pill" href="javascript:;">
+                  公司頁面預覽
+                  <i class="svg-icon"><svg>
+                      <use href="#ic-eye"></use>
+                    </svg></i>
+                </a>
+              </div>
+            </div>
+            <!-- 安穩僱用計畫 -->
+            <div class="t-panel">
+              <div class="t-panel-main">
+                <div class="t-panel-main-title">
+                  <h5 data-grad-under="quaternary" class="t-fs-18">
+                    安穩僱用計畫
+                  </h5>
+                </div>
+                <p class="t-para mt-4">
+                  頭家雇用給獎助、勞工受僱給獎勵
+                </p>
+                <picture class="mb-4">
+                  <source type="image/svg+xml" srcset="../../assets/images/hire-img.svg" />
+                  <img src="../../assets/images/hire-img.svg" alt="安穩僱用計畫" width="220" height="146">
+                </picture>
+                <a class="btn btn--quaternary btn--pointer btn--block t-pill" href="javascript:;">
+                  立即報名
+                </a>
+              </div>
+            </div>
+            <!-- 僱用奬助線上申請 -->
+            <div class="t-panel">
+              <div class="t-panel-main">
+                <div class="t-panel-main-title">
+                  <h5 data-grad-under="quaternary" class="t-fs-18">
+                    僱用奬助線上申請
+                  </h5>
+                </div>
+                <p class="t-para mt-4">
+                  頭家雇用給獎助、勞工受僱給獎勵
+                </p>
+                <picture class="mb-4">
+                  <source type="image/svg+xml" srcset="../../assets/images/grants-img.svg" />
+                  <img src="../../assets/images/grants-img.svg" alt="僱用奬助線上申請" width="220" height="146">
+                </picture>
+                <a class="btn btn--quaternary btn--pointer btn--block t-pill" href="javascript:;">
+                  立即報名
+                </a>
               </div>
             </div>
           </div>
+          <!-- Right -->
           <div class="col-xl-9 col-md-9">
+            <!-- 近期管理職缺 -->
             <div class="t-panel">
               <div class="t-panel-heading">
                 <i class="svg-icon svg-icon-2x t-fc-grey" aria-hidden="true">
                   <svg>
-                    <use href="#ic-brifecase-timer"></use>
+                    <use href="#ic-brifecase-timer-outline"></use>
                   </svg>
                 </i>
-
                 <h3 class="t-panel-heading-txt">近期管理職缺</h3>
-                <a href="javascript:;">查看更多職缺</a>
+                <a class="btn btn--circle btn--xxs" href="javascript:;">
+                  查看更多職缺
+                  <i class="svg-icon">
+                    <svg>
+                      <use href="#ic-arrow-double"></use>
+                    </svg>
+                  </i>
+                </a>
               </div>
               <div class="t-panel-main">
                 <div class="t-panel-main-fuild">
-                  <ul class="t-timeline">
-                    <li class="t-timeline-item">
-                      <div class="t-timeline-info t-timeline-float">
-                        2011/09 ~ 2016/02
+                  <!-- Table -->
+                  <div class="t-table-cnt t-table-responsive--data table--dark">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="t-table">
+                      <thead>
+                        <tr>
+                          <th align="left" scope="col">職缺資訊</th>
+                          <th scope="col">求職者應徵</th>
+                          <th scope="col">推薦名單</th>
+                          <th scope="col">來訪記錄</th>
+                        </tr>
+                      </thead>
+                      <tbody id="">
+                        <!-- tr 1 -->
+                        <tr>
+                          <td data-th="職缺資訊" align="left" class="td-full">
+                            <ul class="t-list-txts-sm mb-2">
+                              <li class="t-list-txts-item">
+                                <label class="t-badge t-badge-light-quaternary" title="全職" aria-label="全職">全</label>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <time class="t-fc-grey">
+                                  2021/07/22
+                                </time>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <span class="t-fc-lightgrey">
+                                  職缺編號：10555397
+                                </span>
+                              </li>
+                            </ul>
+                            <a href="javascript:;">
+                              求才測試履歷 20210720 (請勿投遞履歷)
+                              勿應徵(行政助理)
+                            </a>
+                          </td>
+                          <td data-th="求職者應徵" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='4' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              208
+                            </a>
+                          </td>
+                          <td data-th="推薦名單" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='3' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              712
+                            </a>
+                          </td>
+                          <td data-th="來訪記錄" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='2' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              699
+                            </a>
+                          </td>
+                        </tr>
+                        <!-- tr 2 -->
+                        <tr>
+                          <td data-th="職缺資訊" align="left" class="td-full">
+                            <ul class="t-list-txts-sm mb-2">
+                              <li class="t-list-txts-item">
+                                <label class="t-badge t-badge-light-danger" title="兼職" aria-label="兼職">兼</label>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <time class="t-fc-grey">
+                                  2021/07/22
+                                </time>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <span class="t-fc-lightgrey">
+                                  職缺編號：10555397
+                                </span>
+                              </li>
+                            </ul>
+                            <a href="javascript:;">
+                              求才測試履歷 20210720 (請勿投遞履歷)
+                              勿應徵(行政助理)
+                            </a>
+                          </td>
+                          <td data-th="求職者應徵" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='4' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              208
+                            </a>
+                          </td>
+                          <td data-th="推薦名單" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='3' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              712
+                            </a>
+                          </td>
+                          <td data-th="來訪記錄" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='2' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              699
+                            </a>
+                          </td>
+                        </tr>
+                        <!-- tr 3 -->
+                        <tr>
+                          <td data-th="職缺資訊" align="left" class="td-full">
+                            <ul class="t-list-txts-sm mb-2">
+                              <li class="t-list-txts-item">
+                                <label class="t-badge t-badge-light-quaternary" title="全職" aria-label="全職">全</label>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <time class="t-fc-grey">
+                                  2021/07/22
+                                </time>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <span class="t-fc-lightgrey">
+                                  職缺編號：10555397
+                                </span>
+                              </li>
+                            </ul>
+                            <a href="javascript:;">
+                              求才測試履歷 20210720 (請勿投遞履歷)
+                              勿應徵(行政助理)
+                            </a>
+                          </td>
+                          <td data-th="求職者應徵" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='4' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              208
+                            </a>
+                          </td>
+                          <td data-th="推薦名單" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='3' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              712
+                            </a>
+                          </td>
+                          <td data-th="來訪記錄" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='2' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              699
+                            </a>
+                          </td>
+                        </tr>
+                        <!-- tr 4 -->
+                        <tr>
+                          <td data-th="職缺資訊" align="left" class="td-full">
+                            <ul class="t-list-txts-sm mb-2">
+                              <li class="t-list-txts-item">
+                                <label class="t-badge t-badge-light-danger" title="兼職" aria-label="兼職">兼</label>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <time class="t-fc-grey">
+                                  2021/07/22
+                                </time>
+                              </li>
+                              <li class="t-list-txts-item">
+                                <span class="t-fc-lightgrey">
+                                  職缺編號：10555397
+                                </span>
+                              </li>
+                            </ul>
+                            <a href="javascript:;">
+                              求才測試履歷 20210720 (請勿投遞履歷)
+                              勿應徵(行政助理)
+                            </a>
+                          </td>
+                          <td data-th="求職者應徵" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='4' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              208
+                            </a>
+                          </td>
+                          <td data-th="推薦名單" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='3' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              712
+                            </a>
+                          </td>
+                          <td data-th="來訪記錄" align="center">
+                            <a class="t-link-dark t-fs-22 t-fw-500" data-decoration-offset='2' data-decoration-height='3' data-decoration="underline" href="javascript:;">
+                              699
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <hr data-hr-style="fade">
+                  <div class="t-panel-footer">
+                    <a class="btn btn--border--primary t-pill" href="javascript:;">
+                      <i class="svg-icon"><svg>
+                          <use href="#ic-add"></use>
+                        </svg></i>
+                      新增職缺
+                    </a>
+                    <a class="btn btn--primary t-pill" href="javascript:;">
+                      查看更多職缺
+                      <i class="svg-icon"><svg>
+                          <use href="#ic-arrow-r"></use>
+                        </svg></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 申請中的企業補助方案 -->
+            <div class="t-panel">
+              <div class="t-panel-heading">
+                <i class="svg-icon svg-icon-2x t-fc-grey" aria-hidden="true">
+                  <svg>
+                    <use href="#ic-programming-arrow-outline"></use>
+                  </svg>
+                </i>
+                <h3 class="t-panel-heading-txt">申請中的企業補助方案</h3>
+                <a class="btn btn--circle btn--xxs" href="javascript:;">
+                  查看更多補助方案
+                  <i class="svg-icon">
+                    <svg>
+                      <use href="#ic-arrow-double"></use>
+                    </svg>
+                  </i>
+                </a>
+              </div>
+              <div class="t-panel-main px-0 py-0">
+                <div class="t-panel-main-fuild">
+                  <ul class="t-list-grid-card t-list-grid-card-2-cols">
+                    <li class="t-list-grid-card-item t-list-grid-card-item-primary">
+                      <div class="mask mask_card"></div>
+                      <label class="t-badge">青年輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
                       </div>
-                      <div class="t-timeline-marker"></div>
-                      <div class="t-timeline-content">
-                        <h4 class="t-timeline-title">私立德明財經科技大學</h4>
-                        <ul class="t-list-txts">
-                          <li class="t-list-txts-item">
-                            企業管理系
-                          </li>
-                          <li class="t-list-txts-item">
-                            博士
-                          </li>
-                        </ul>
-                      </div>
+                      <footer class="t-list-grid-card-footer">
+                        <a class="btn" href="javascript:;">
+                          查看進度
+                        </a>
+                        <article class="t-progress-container t-txt-right">
+                          <text class="t-progress-txt">
+                            計畫進度
+                            <strong>60%</strong>
+                          </text>
+                          <div class="t-progress-wrap">
+                            <span class="t-progress-bar t-progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></span>
+                          </div>
+                        </article>
+                      </footer>
                     </li>
-                    <li class="t-timeline-item">
-                      <div class="t-timeline-info t-timeline-float">
-                        2005/09 ~ 2008/06
+                    <li class="t-list-grid-card-item t-list-grid-card-item-secondary">
+                      <label class="t-badge">失業輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
                       </div>
-                      <div class="t-timeline-marker"></div>
-                      <div class="t-timeline-content">
-                        <h4 class="t-timeline-title">私立德明財經科技大學</h4>
-                        <ul class="t-list-txts">
-                          <li class="t-list-txts-item">
-                            企業管理系
-                          </li>
-                          <li class="t-list-txts-item">
-                            博士
-                          </li>
-                        </ul>
+                      <footer class="t-list-grid-card-footer">
+                        <a class="btn" href="javascript:;">
+                          查看進度
+                        </a>
+                        <article class="t-progress-container t-txt-right">
+                          <text class="t-progress-txt">
+                            計畫進度
+                            <strong>60%</strong>
+                          </text>
+                          <div class="t-progress-wrap">
+                            <span class="t-progress-bar t-progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></span>
+                          </div>
+                        </article>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-tertiary">
+                      <label class="t-badge">在職輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
                       </div>
+                      <footer class="t-list-grid-card-footer">
+                        <a class="btn" href="javascript:;">
+                          查看進度
+                        </a>
+                        <article class="t-progress-container t-txt-right">
+                          <text class="t-progress-txt">
+                            計畫進度
+                            <strong>60%</strong>
+                          </text>
+                          <div class="t-progress-wrap">
+                            <span class="t-progress-bar t-progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></span>
+                          </div>
+                        </article>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-quaternary">
+                      <label class="t-badge">青年輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <footer class="t-list-grid-card-footer">
+                        <a class="btn" href="javascript:;">
+                          查看進度
+                        </a>
+                        <article class="t-progress-container t-txt-right">
+                          <text class="t-progress-txt">
+                            計畫進度
+                            <strong>60%</strong>
+                          </text>
+                          <div class="t-progress-wrap">
+                            <span class="t-progress-bar t-progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></span>
+                          </div>
+                        </article>
+                      </footer>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 公告訊息 -->
+            <div class="t-panel">
+              <div class="t-panel-heading">
+                <i class="svg-icon svg-icon-2x t-fc-grey" aria-hidden="true">
+                  <svg>
+                    <use href="#ic-bill-outline"></use>
+                  </svg>
+                </i>
+                <h3 class="t-panel-heading-txt">公告訊息</h3>
+                <a class="btn btn--circle btn--xxs" href="javascript:;">
+                  查看更多公告訊息
+                  <i class="svg-icon">
+                    <svg>
+                      <use href="#ic-arrow-double"></use>
+                    </svg>
+                  </i>
+                </a>
+              </div>
+              <div class="t-panel-main px-0 py-0">
+                <div class="t-panel-main-fuild">
+                  <ul class="t-list-grid-card t-list-grid-card-3-cols">
+                    <li class="t-list-grid-card-item t-list-grid-card-item-success">
+                      <label class="t-badge">青年輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-danger">
+                      <label class="t-badge">失業輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-warning">
+                      <label class="t-badge">在職輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-info">
+                      <label class="t-badge">青年輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-tertiary">
+                      <label class="t-badge">在職輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
+                    </li>
+                    <li class="t-list-grid-card-item t-list-grid-card-item-quaternary">
+                      <label class="t-badge">青年輔助</label>
+                      <h6 class="t-list-grid-card-title">僱用本國籍照顧服務員僱用獎助</h6>
+                      <div class="t-list-grid-card-text">
+                        鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而鼓勵應屆畢業青年於後疫情時期的就業市場回溫時，儘早投入就業，及早了解就業市場趨勢與加強規劃尋職方向，避免因本次疫情對就業猶豫而 ...
+                      </div>
+                      <hr data-hr-style="fade">
+                      <footer class="t-list-grid-card-footer">
+                        <time class="t-fc-lightgrey t-fs-14" datetime="2022-10-10">
+                          <i class="svg-icon"><svg>
+                              <use href="#ic-date"></use>
+                            </svg></i>
+                          更新時間 : 2022 / 10 / 10
+                        </time>
+                      </footer>
                     </li>
                   </ul>
                 </div>
@@ -755,19 +905,7 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
-    <style>
-      
-input::file-selector-button {
-    font-weight: bold;
-    color: dodgerblue;
-    padding: 0.5em;
-    border: thin solid grey;
-    border-radius: 3px;
-}
-
-    </style>
   </main>
   <!-- Footer -->
   <footer id="tuFooter" class="t-footer t-primary-footer">
@@ -855,7 +993,7 @@ input::file-selector-button {
   <ul class="t-float-toolsbar">
     <li class="t-float-toolsbar-item t-float-toolsbar-item--highlight">
       <a class="t-float-toolsbar-link" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" title="輔助專區">
-        <i class="svg-icon svg-icon-2x"><svg>
+        <i class="svg-icon"><svg>
             <use href="#ic-business-plan"></use>
           </svg></i>
         <text class="t-float-toolsbar-link-txt">輔助專區</text>
@@ -863,7 +1001,7 @@ input::file-selector-button {
     </li>
     <li class="t-float-toolsbar-item">
       <a class="t-float-toolsbar-link" href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" title="網站地圖">
-        <i class="svg-icon svg-icon-2x"><svg>
+        <i class="svg-icon"><svg>
             <use href="#ic-sitemap"></use>
           </svg></i>
         <text class="t-float-toolsbar-link-txt">網站地圖</text>
@@ -889,22 +1027,132 @@ input::file-selector-button {
       <div id="lottie_load"></div>
     </div>
   </div> -->
-
-
   <!-- SVG Symbols (Outlines) -->
   <svg id="Outlines" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden="true">
-    <!-- <i class="svg-icon"><svg><use href="#ic-brifecase-timer"></use></svg></i> -->
-    <symbol id="ic-brifecase-timer" viewBox="0 0 24 24">
-      <title>brifecase-timer</title>
+    <!-- <i class="svg-icon"><svg><use href="#ic-user-outline"></use></svg></i> -->
+    <symbol id="ic-user-outline" viewBox="0 0 24 24">
+      <title>USER</title>
+      <g fill="currentColor">
+        <path d="M12 23a3 3 0 0 1-2-1l-2-2a2 2 0 0 0-1 0H6a4 4 0 0 1-4-4V5a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v11a4 4 0 0 1-4 4h-1a2 2 0 0 0-1 0l-2 2a3 3 0 0 1-2 1ZM6 3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h1a4 4 0 0 1 2 1l2 2a1 1 0 0 0 2 0l2-2a4 4 0 0 1 2-1h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z" />
+        <path d="M9 16a3 3 0 0 1-1-2 3 3 0 0 1 1-3 6 6 0 0 1 3-1 6 6 0 0 1 3 1 3 3 0 0 1 1 3 3 3 0 0 1-1 2 6 6 0 0 1-3 1 6 6 0 0 1-3-1Zm1-3a1 1 0 0 0-1 1 1 1 0 0 0 1 1 4 4 0 0 0 2 0 4 4 0 0 0 2 0 1 1 0 0 0 1-1 1 1 0 0 0-1-1 4 4 0 0 0-2-1 4 4 0 0 0-2 1Zm2-3a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-1 2 3 3 0 0 1-2 1Zm-1-3a1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-note-outline"></use></svg></i> -->
+    <symbol id="ic-note-outline" viewBox="0 0 24 24">
+      <title>NOTE</title>
+      <g fill="currentColor">
+        <path d="M13.1 1.8a11.2 11.2 0 0 1 2.6.3l1.6.4c2.4.5 3.9 1.4 4.7 2.7s1 3 .4 5.4l-1 4.2a8.1 8.1 0 0 1-2 4 5 5 0 0 1-3.6 1.4H15a11.3 11.3 0 0 1-1.7-.4l-1.7-.4C9.2 19 7.8 18 7 16.7s-1-3-.4-5.4l1-4.2a11.1 11.1 0 0 1 .7-2.3 5 5 0 0 1 4.8-3Zm2.7 16.9c2.3 0 3.5-1.2 4.1-4.2l1-4.2c.5-2 .4-3.3-.2-4.3S19 4.4 17 4l-1.7-.4a9.7 9.7 0 0 0-2.2-.3 3.4 3.4 0 0 0-3.4 2.1 9.7 9.7 0 0 0-.7 2l-1 4.3c-.4 1.9-.4 3.2.2 4.2s1.8 1.6 3.7 2l1.7.5a9.8 9.8 0 0 0 1.5.2h.7Z" />
+        <path d="m3 17.5-1.2-4c-.7-2.2-.7-3.9 0-5.2s2-2.4 4.2-3l1.6-.6a10.3 10.3 0 0 1 1.3-.3.7.7 0 0 1 .7.2.8.8 0 0 1 0 .8 9.6 9.6 0 0 0-.6 2l-1 4.3c-.4 1.9-.4 3.2.2 4.2s1.8 1.6 3.7 2l1.7.5a9.6 9.6 0 0 0 1.5.2.8.8 0 0 1 .7.6.7.7 0 0 1-.3.8 10 10 0 0 1-2.6 1.2l-1.5.5a9.9 9.9 0 0 1-3 .6c-3.4 0-4.7-2.8-5.3-4.8ZM6.6 6.6C4.7 7.2 3.5 8 3 9s-.5 2.3.1 4.2L4.5 17a6.9 6.9 0 0 0 1.6 3 3.1 3.1 0 0 0 2.3.8 8.3 8.3 0 0 0 2.5-.5l1.6-.5.1-.1-1-.2C9.2 18.9 7.8 18 7 16.7s-1-3-.4-5.4l1-4.2q0-.5.2-.9Zm7.9 7.3-3-.8a.7.7 0 0 1-.5-.9.7.7 0 0 1 1-.5l2.8.7a.8.8 0 0 1 .6 1 .8.8 0 0 1-.7.5.7.7 0 0 1-.2 0Zm3-3.4-5-1.2a.7.7 0 0 1-.5-1 .8.8 0 0 1 1-.5L17.6 9a.7.7 0 0 1 .5 1 .8.8 0 0 1-.7.5.7.7 0 0 1-.2 0Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-direct-outline"></use></svg></i> -->
+    <symbol id="ic-direct-outline" viewBox="0 0 24 24">
+      <title>DIRECT</title>
+      <g fill="currentColor">
+        <path d="M15 22.8H9c-2.8 0-4.6-.6-6-1.9S1.3 17.8 1.3 15V9c0-2.8.6-4.6 1.9-6s3-1.7 5.8-1.7h6c2.8 0 4.6.6 6 1.9s1.8 3.1 1.8 5.9v6c0 2.8-.6 4.6-1.9 6s-3.1 1.8-5.9 1.8Zm-6-20c-2.3 0-3.9.4-4.8 1.4S2.7 6.7 2.7 9v6c0 2.3.5 3.9 1.5 4.8s2.5 1.4 4.8 1.4h6c2.3 0 3.9-.4 4.8-1.4s1.4-2.5 1.4-4.8V9c0-2.3-.4-3.9-1.4-4.8S17.3 2.7 15 2.7Z" />
+        <path d="M10.2 17.8a2.7 2.7 0 0 1-2.4-1.6l-1-1.8a1.2 1.2 0 0 0-1-.6H2a.8.8 0 0 1-.7-.8.8.8 0 0 1 .7-.7h3.8a2.7 2.7 0 0 1 2.4 1.5l1 1.8a1.2 1.2 0 0 0 1 .7h3.6a1.2 1.2 0 0 0 1-.7l1-1.8a2.7 2.7 0 0 1 2.4-1.6H22a.8.8 0 0 1 .7.8.8.8 0 0 1-.7.7h-3.8a1.2 1.2 0 0 0-1 .7l-1 1.8a2.7 2.7 0 0 1-2.4 1.6Zm-.7-7a.8.8 0 0 1-.8-.8.8.8 0 0 1 .8-.8h5a.8.8 0 0 1 .8.8.8.8 0 0 1-.8.8Zm.8-3a.8.8 0 0 1-.7-.8.8.8 0 0 1 .7-.7h3.4a.7.7 0 0 1 .7.7.8.8 0 0 1-.7.7Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-brifecase-outline"></use></svg></i> -->
+    <symbol id="ic-brifecase-outline" viewBox="0 0 24 24">
+      <title>BRIFECASE</title>
+      <g fill="currentColor">
+        <path d="M16 22.8H8c-2 0-3.5-.5-4.4-1.3a4.5 4.5 0 0 1-1.3-3l-.8-8a4.6 4.6 0 0 1 1-3.8c.8-1 2.3-1.5 4.5-1.5h10c2.2 0 3.7.5 4.6 1.5a4.6 4.6 0 0 1 .8 3.8l-.7 8a4.5 4.5 0 0 1-1.3 3c-1 .8-2.4 1.3-4.4 1.3ZM3.8 18.4a3 3 0 0 0 .8 2 5 5 0 0 0 3.4.9h8a5 5 0 0 0 3.4-.9 3 3 0 0 0 .8-2l.8-8a3.2 3.2 0 0 0-.6-2.7c-.6-.6-1.7-1-3.4-1H7c-1.7 0-2.9.4-3.4 1a3.2 3.2 0 0 0-.6 2.6Z" />
+        <path d="M9.6 15.9a2.3 2.3 0 0 1-.3-1.2 17.2 17.2 0 0 1-7.1-2.8.7.7 0 0 1-.2-1 .8.8 0 0 1 1-.2 15.6 15.6 0 0 0 6.2 2.5V13c0-.6 0-1 .4-1.4s.8-.4 1.4-.4h2c.6 0 1 0 1.4.4s.3.8.3 1.4v.1a15.8 15.8 0 0 0 6.5-2.7.8.8 0 0 1 1 .2.8.8 0 0 1-.1 1 17.3 17.3 0 0 1-7.4 3 2.3 2.3 0 0 1-.3 1.2 2.8 2.8 0 0 1-2.4 1 2.8 2.8 0 0 1-2.4-1Zm1.1-2.9v1a2.1 2.1 0 0 0 .2 1c0 .2.5.2 1.1.2s1 0 1.1-.2a2.2 2.2 0 0 0 .1-1v-1.3h-2.5v.3Zm4.5-7v-.8a3.6 3.6 0 0 0-.2-1.8c-.3-.4-1-.6-2.2-.6h-1.6c-1.2 0-2 .2-2.2.6a3.6 3.6 0 0 0-.3 1.8V6a.8.8 0 0 1-.7.7.8.8 0 0 1-.8-.7v-.8c0-1.8 0-4 4-4h1.6c4 0 4 2.2 4 4V6a.8.8 0 0 1-.8.7.7.7 0 0 1-.7-.7Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-seeker-outline"></use></svg></i> -->
+    <symbol id="ic-seeker-outline" viewBox="0 0 24 24">
+      <title>SEEKER</title>
+      <g fill="currentColor">
+        <path d="M11.5 21.8A10.2 10.2 0 0 1 1.2 11.4 10.2 10.2 0 0 1 11.6 1.2a.8.8 0 0 1 .8.8.8.8 0 0 1-.8.8 8.8 8.8 0 0 0-6.2 14.9 8.8 8.8 0 0 0 15-6.2.8.8 0 0 1 1.4 0 10.2 10.2 0 0 1-10.2 10.3Z" />
+        <path d="m21.5 22.5-2-2a.8.8 0 0 1 0-1 .8.8 0 0 1 1 0l2 2a.8.8 0 0 1 0 1 .8.8 0 0 1-.5.2.7.7 0 0 1-.5-.2ZM14 10.1a2.1 2.1 0 0 1-1-1.8 2.1 2.1 0 0 1 1-1.7 4.5 4.5 0 0 1 2.4-.7 4.5 4.5 0 0 1 2.5.7 2.1 2.1 0 0 1 1 1.7 2.1 2.1 0 0 1-1 1.8 4.5 4.5 0 0 1-2.5.7 4.5 4.5 0 0 1-2.4-.7Zm.6-2.6a1 1 0 0 0-.6.8 1 1 0 0 0 .6.9 3.4 3.4 0 0 0 1.8.5 3.4 3.4 0 0 0 1.9-.5 1 1 0 0 0 .5-.9 1 1 0 0 0-.5-.8 3.4 3.4 0 0 0-1.9-.4 3.4 3.4 0 0 0-1.8.4Zm1.7-2.2A2.5 2.5 0 0 1 14 2.8 2.5 2.5 0 0 1 16.5.4a2.5 2.5 0 0 1 2.4 2.4 2.5 2.5 0 0 1-2.4 2.5Zm.1-1.1a1.4 1.4 0 0 0 1.3-1.4 1.4 1.4 0 0 0-1.4-1.3A1.4 1.4 0 0 0 15 2.9a1.4 1.4 0 0 0 1.3 1.3.7.7 0 0 1 .1 0Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-bill-outline"></use></svg></i> -->
+    <symbol id="ic-bill-outline" viewBox="0 0 24 24">
+      <title>BILL</title>
+      <g fill="currentColor">
+        <path d="m9.7 21.5-5.2-4a3.9 3.9 0 0 1-1.6-3V3.2H2a.8.8 0 0 1-.8-.7.8.8 0 0 1 .8-.7h20a.8.8 0 0 1 .8.7.8.8 0 0 1-.8.8h-1v11.2a3.9 3.9 0 0 1-1.5 3l-5.2 4a3.8 3.8 0 0 1-2.3.7 3.9 3.9 0 0 1-2.3-.7Zm-5.3-7a2.4 2.4 0 0 0 1 1.9l5.2 3.9a2.4 2.4 0 0 0 1.4.4 2.4 2.4 0 0 0 1.4-.4l5.2-4a2.4 2.4 0 0 0 1-1.8V3.2H4.4Z" />
+        <path d="M8 13.8a.8.8 0 0 1-.8-.8.8.8 0 0 1 .8-.7h8a.8.8 0 0 1 .8.7.8.8 0 0 1-.8.7Zm0-5a.8.8 0 0 1-.8-.8.8.8 0 0 1 .8-.7h8a.8.8 0 0 1 .8.7.8.8 0 0 1-.8.8Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-programming-arrow-outline"></use></svg></i> -->
+    <symbol id="ic-programming-arrow-outline" viewBox="0 0 24 24">
+      <title>PROGRAMMING-ARROW</title>
+      <g fill="currentColor">
+        <path d="M18.3 16V6.5A1.2 1.2 0 0 0 17 5.3h-3l1.5 1.1a.8.8 0 0 1 0 1 .8.8 0 0 1-.5.4.7.7 0 0 1-.5-.2l-3-2.5a.7.7 0 0 1-.2-.6.8.8 0 0 1 .2-.6l3-2.5a.7.7 0 0 1 1 .1.8.8 0 0 1 0 1L14 3.9h3a2.8 2.8 0 0 1 2.7 2.7V16a.7.7 0 0 1-.7.8.8.8 0 0 1-.8-.8Zm-14 0V9a.8.8 0 0 1 .7-.8.8.8 0 0 1 .8.8v7a.8.8 0 0 1-.8.8.8.8 0 0 1-.8-.8Z" opacity=".4" />
+        <path d="M15.3 19a3.8 3.8 0 0 1 3.7-3.8 3.8 3.8 0 0 1 3.8 3.8 3.8 3.8 0 0 1-3.8 3.7 3.8 3.8 0 0 1-3.8-3.7Zm1.4 0a2.3 2.3 0 0 0 2.3 2.3 2.3 2.3 0 0 0 2.3-2.3 2.3 2.3 0 0 0-2.3-2.3 2.3 2.3 0 0 0-2.3 2.3ZM1.3 19A3.8 3.8 0 0 1 5 15.2 3.8 3.8 0 0 1 8.8 19 3.8 3.8 0 0 1 5 22.7 3.8 3.8 0 0 1 1.2 19Zm1.4 0A2.3 2.3 0 0 0 5 21.3 2.3 2.3 0 0 0 7.3 19 2.3 2.3 0 0 0 5 16.7 2.3 2.3 0 0 0 2.7 19ZM1.3 5.2a4 4 0 0 1 4-4 4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4Zm1.6 0a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5 2.5 2.5 0 0 0-2.5 2.5Z" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-home-outline"></use></svg></i> -->
+    <symbol id="ic-home-outline" viewBox="0 0 24 24">
+      <title>HOME</title>
+      <g fill="currentColor">
+        <path d="M11.6 1.3a5 5 0 0 1 2.8.8l6.2 4.3a5.5 5.5 0 0 1 2.1 4.1v7.3a5 5 0 0 1-5 5H6.3a5 5 0 0 1-5-5v-7.4a5.5 5.5 0 0 1 2-4l5.4-4.2a5 5 0 0 1 3-1Zm6.2 20a3.5 3.5 0 0 0 3.4-3.5v-7.3a4 4 0 0 0-1.4-2.8l-6.2-4.4a3.5 3.5 0 0 0-2-.5 3.5 3.5 0 0 0-2.1.6L4 7.6a4 4 0 0 0-1.3 2.8v7.4a3.5 3.5 0 0 0 3.4 3.4Z" />
+        <path d="M12 18.8h-1.5A3.8 3.8 0 0 1 6.8 15v-3a3.8 3.8 0 0 1 3.7-3.8h3a3.8 3.8 0 0 1 3.8 3.8v3a3.8 3.8 0 0 1-3.8 3.8Zm1.5-1.6a2.3 2.3 0 0 0 2.3-2.2v-.8h-3v3ZM8.3 15a2.2 2.2 0 0 0 2.2 2.3h.8v-3h-3Zm7.5-2.2V12a2.3 2.3 0 0 0-2.3-2.2h-.7v3Zm-4.5 0v-3h-.8A2.2 2.2 0 0 0 8.3 12v.8Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-corp-outline"></use></svg></i> -->
+    <symbol id="ic-corp-outline" viewBox="0 0 24 24">
+      <title>CORP</title>
+      <g fill="currentColor">
+        <path d="M13 22.8H5A3.4 3.4 0 0 1 1.3 19v-8A3.4 3.4 0 0 1 5 7.2h4.3V5A3.4 3.4 0 0 1 13 1.2h6A3.4 3.4 0 0 1 22.8 5v14a3.4 3.4 0 0 1-3.8 3.8Zm6-1.6c1.6 0 2.2-.6 2.2-2.2V5c0-1.6-.6-2.3-2.2-2.3h-6c-1.6 0-2.2.7-2.2 2.3v14c0 1.6.6 2.2 2.2 2.2h.3V18a1.8 1.8 0 0 1 1.7-1.8h2a1.8 1.8 0 0 1 1.8 1.8v3.3ZM14.7 18v3.3h2.5V18a.3.3 0 0 0-.2-.3h-2a.3.3 0 0 0-.3.3Zm-12-7v8c0 1.6.7 2.3 2.3 2.3h4.8a4 4 0 0 1-.5-1.7v-11H5c-1.6 0-2.3.7-2.3 2.3Z" />
+        <path d="M5.3 17v-4a.8.8 0 0 1 .7-.7.8.8 0 0 1 .8.7v4a.8.8 0 0 1-.8.8.8.8 0 0 1-.8-.8Zm12-4V8a.7.7 0 0 1 .7-.7.8.8 0 0 1 .8.7v5a.8.8 0 0 1-.8.8.8.8 0 0 1-.8-.8Zm-4 0V8a.7.7 0 0 1 .7-.7.7.7 0 0 1 .7.7v5a.7.7 0 0 1-.7.8.8.8 0 0 1-.8-.8ZM5 8.8a.8.8 0 0 1-.8-.8V6A2.8 2.8 0 0 1 7 3.3h3.1a.7.7 0 0 1 .6.3.7.7 0 0 1 .1.6 3.4 3.4 0 0 0 0 .8v3a.8.8 0 0 1-.8.8ZM5.8 6v1.3h3.5V4.7H7A1.2 1.2 0 0 0 5.7 6Z" opacity=".4" />
+      </g>
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-brifecase-timer-outline"></use></svg></i> -->
+    <symbol id="ic-brifecase-timer-outline" viewBox="0 0 24 24">
+      <title>BRIFECASE-TIMER</title>
       <g fill="currentColor">
         <path d="M7.3 14.3a17.2 17.2 0 0 1-5.1-2.4.8.8 0 0 1-.2-1 .8.8 0 0 1 1-.2 15.8 15.8 0 0 0 4.5 2A4.8 4.8 0 0 1 12 9.5a4.8 4.8 0 0 1 4.5 3.3 15.4 15.4 0 0 0 4.7-2.3.8.8 0 0 1 1 .2.8.8 0 0 1-.1 1 17 17 0 0 1-5.4 2.6A4.8 4.8 0 0 1 12 19a4.8 4.8 0 0 1-4.7-4.6Zm1.5-.1a3.3 3.3 0 0 0 3.2 3.3 3.3 3.3 0 0 0 3.3-3.3A3.3 3.3 0 0 0 12 11a3.3 3.3 0 0 0-3.2 3.2Zm1.6 1.4a.7.7 0 0 1 .2-1l.8-.5a.2.2 0 0 0 .1-.2v-1a.8.8 0 0 1 .8-.7.8.8 0 0 1 .7.8v.9a1.7 1.7 0 0 1-.9 1.5l-.7.4a.7.7 0 0 1-.4.1.7.7 0 0 1-.6-.3ZM15.3 6v-.8a3.6 3.6 0 0 0-.3-1.8c-.3-.4-1-.6-2.2-.6h-1.6c-1.2 0-1.9.2-2.2.6a3.6 3.6 0 0 0-.2 1.8V6a.8.8 0 0 1-.8.8.8.8 0 0 1-.7-.8v-.8c0-1.8 0-4 3.9-4h1.6c4 0 4 2.2 4 4V6a.8.8 0 0 1-.8.8.7.7 0 0 1-.7-.8Z" opacity=".4" />
         <path d="M16 22.8H8c-2 0-3.5-.5-4.4-1.3a4.5 4.5 0 0 1-1.3-3l-.8-8a4.6 4.6 0 0 1 1-3.8c.8-1 2.3-1.5 4.5-1.5h10c2.2 0 3.7.5 4.6 1.5a4.6 4.6 0 0 1 .8 3.8l-.7 8a4.5 4.5 0 0 1-1.3 3c-1 .8-2.4 1.3-4.4 1.3ZM3.8 18.4a3 3 0 0 0 .8 2 5 5 0 0 0 3.4.9h8a5 5 0 0 0 3.4-.9 3 3 0 0 0 .8-2l.8-8a3.2 3.2 0 0 0-.6-2.7c-.6-.6-1.7-1-3.4-1H7c-1.7 0-2.9.4-3.4 1a3.2 3.2 0 0 0-.6 2.6Z" />
       </g>
     </symbol>
   </svg>
-
   <!-- SVG Symbols (Shades) -->
   <svg id="Shades" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" hidden="true">
+    <!-- <i class="svg-icon"><svg><use href="#ic-resume"></use></svg></i> -->
+    <symbol id="ic-resume" viewBox="0 0 24 24">
+      <title>RESUME</title>
+      <path fill="currentColor" d="M20 14h-2v-4h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1Zm1 5v-2c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Zm0-12V5c0-.6-.4-1-1-1h-2v4h2c.6 0 1-.4 1-1Z" />
+      <path fill="currentColor" d="M17 22H3c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v18c0 .6-.4 1-1 1ZM10 7a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Zm3.3 9c.7 0 1.2-.7 1-1.3a4.6 4.6 0 0 0-4.2-2.7c-2 0-3.6 1.1-4.2 2.7-.3.6.3 1.3 1.5 1.3h5.9Z" opacity=".6" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-page"></use></svg></i> -->
+    <symbol id="ic-page" viewBox="0 0 24 24">
+      <title>PAGE</title>
+      <path fill="currentColor" d="M19 22H5c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h9l6 6v13c0 .6-.4 1-1 1Zm-6.5-4c0-.6.1-.5-.5-.5H8.5c-.6 0-.5-.1-.5.5s-.1.5.5.5L12 18c.6 0 .5.6.5 0Zm4-5c0-.6.1-.5-.5-.5H8.5c-.6 0-.5-.1-.5.5s-.1.5.5.5h7c.6 0 1 .1 1-.5Zm-4-5c0-.6.1-.5-.5-.5H8c-.6 0-.5-.1-.5.5s-.1.5.5.5h4c.6 0 .5.1.5-.5Z" opacity=".3" />
+      <rect width="6" height="2" x="7" y="17" fill="currentColor" rx="1" />
+      <rect width="10" height="2" x="7" y="12" fill="currentColor" rx="1" />
+      <rect width="6" height="2" x="7" y="7" fill="currentColor" rx="1" />
+      <path fill="currentColor" d="M15 8h5l-6-6v5c0 .6.4 1 1 1Z" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-seeker"></use></svg></i> -->
+    <symbol id="ic-seeker" viewBox="0 0 24 24">
+      <title>SEEKERS</title>
+      <path fill="currentColor" d="M3 6c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1H4v1c0 .6-.4 1-1 1Zm19-1V3c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1s.4 1 1 1h1v1c0 .6.4 1 1 1s1-.4 1-1ZM6 21c0-.6-.4-1-1-1H4v-1c0-.6-.4-1-1-1s-1 .4-1 1v2c0 .6.4 1 1 1h2c.6 0 1-.4 1-1Zm16 0v-2c0-.6-.4-1-1-1s-1 .4-1 1v1h-1c-.6 0-1 .4-1 1s.4 1 1 1h2c.6 0 1-.4 1-1Zm-6-10V9a4 4 0 0 0-4-4 4 4 0 0 0-4 4v2c-.8 0-1.5.7-1.5 1.5S7.2 14 8 14v1a4 4 0 0 0 4 4 4 4 0 0 0 4-4v-1c.8 0 1.5-.7 1.5-1.5S16.8 11 16 11Zm-2.6 4c.3 0 .6.3.5.6A2 2 0 0 1 12 17a2 2 0 0 1-1.9-1.3c-.1-.3.1-.7.5-.7h2.8Z" opacity=".4" />
+      <path fill="currentColor" d="m9.2 12.9-.1-.3c-.1-.4.2-.9.6-1 .4-.1.9.2 1 .6v.3l-1.5.4Zm5.6 0 .1-.3a.9.9 0 0 0-.6-1 .9.9 0 0 0-1 .6v.3l1.5.4ZM16 7.3l.7-1-1.3-.1-1-.5c-.6-.5-1.4-.7-2.2-.8-2.3-.1-4.1 1.9-4.1 4.2v2.3c.8-.7 1.3-1.6 1.5-2.4 1.4.1 3.8-.3 4.9-.7.2 1.1.8 2.2 1.6 3.1V9l-.3-1.5.2-.2Z" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-date"></use></svg></i> -->
+    <symbol id="ic-date" viewBox="0 0 24 24">
+      <title>DATE</title>
+      <path fill="currentColor" d="M19 3.4c-.6 0-1 .4-1 1v4h-4v-4c0-.6-.4-1-1-1s-1 .4-1 1v4H8v-4c0-.6-.4-1-1-1s-1 .4-1 1v4H2v-4c0-.6-.4-1-1-1s-1 .4-1 1v15c0 .6.4 1 1 1h18c.6 0 1-.4 1-1v-15c0-.6-.4-1-1-1Zm-1 7v3h-4v-3h4Zm-6 0v3H8v-3h4Zm0 5v3H8v-3h4Zm-6-5v3H2v-3h4Zm-4 5h4v3H2v-3Zm12 3v-3h4v3h-4Z" opacity=".3" />
+      <path fill="currentColor" d="M19 .4H1c-.6 0-1 .4-1 1v3c0 .6.4 1 1 1h18c.6 0 1-.4 1-1v-3c0-.6-.4-1-1-1Z" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-arrow-double"></use></svg></i> -->
+    <symbol id="ic-arrow-double" viewBox="0 0 24 24">
+      <title>ARROW DOUBLE</title>
+      <path fill="currentColor" d="M9.6 11.4 5.5 7.2A1 1 0 0 1 7 5.8l5.5 5.6c.4.4.4 1 0 1.4L7 18.3a1 1 0 0 1-1.5-1.6l4.1-4.1a1 1 0 0 0 0-1.2Z" opacity=".5" />
+      <path fill="currentColor" d="m15.6 11.4-4.2-4.2A1 1 0 0 1 13 5.8l5.6 5.6c.4.4.4 1 0 1.4L13 18.4a1 1 0 0 1-1.5-1.6l4.2-4.1a1 1 0 0 0 0-1.2Z" />
+    </symbol>
+    <!-- <i class="svg-icon"><svg><use href="#ic-redo"></use></svg></i> -->
+    <symbol id="ic-redo" viewBox="0 0 24 24">
+      <title>REDO</title>
+      <g fill="currentColor">
+        <path d="M7.8 2h8.4C19.8 2 22 4.2 22 7.8v8.4c0 3.6-2.2 5.8-5.8 5.8H7.8C4.2 22 2 19.8 2 16.2V7.8C2 4.2 4.2 2 7.8 2Z" opacity=".4" />
+        <path d="M17.5 9.2 16 7.6a.8.8 0 0 0-1.1 1l.3.4h-5.1a3.8 3.8 0 1 0 0 7.6H15a.8.8 0 1 0 0-1.5h-5a2.3 2.3 0 0 1 0-4.6h5.2l-.3.2a.8.8 0 0 0 0 1.1.7.7 0 0 0 1 0l1.6-1.6a.8.8 0 0 0 0-1Z" />
+      </g>
+    </symbol>
     <!-- <i class="svg-icon"><svg><use href="#ic-lovely"></use></svg></i> -->
     <symbol id="ic-lovely" viewBox="0 0 24 24">
       <title>lovely</title>
@@ -1103,11 +1351,13 @@ input::file-selector-button {
     </symbol>
     <!-- <i class="svg-icon"><svg><use href="#ic-character-b"></use></svg></i> -->
     <symbol id="ic-character-b" viewBox="0 0 24 24">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4" />
+      <title>CHARACTER BOTTOM</title>
+      <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
     </symbol>
     <!-- <i class="svg-icon"><svg><use href="#ic-character-t"></use></svg></i> -->
     <symbol id="ic-character-t" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M14.7 12.7a1 1 0 0 1-1.4 0L10 9.4l-3.3 3.3a1 1 0 0 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4z" clip-rule="evenodd" />
+      <title>CHARACTER TOP</title>
+      <path d="M12.5657 11.3657L16.75 15.55C17.1642 15.9643 17.8358 15.9643 18.25 15.55C18.6642 15.1358 18.6642 14.4643 18.25 14.05L12.7071 8.50716C12.3166 8.11663 11.6834 8.11663 11.2929 8.50715L5.75 14.05C5.33579 14.4643 5.33579 15.1358 5.75 15.55C6.16421 15.9643 6.83579 15.9643 7.25 15.55L11.4343 11.3657C11.7467 11.0533 12.2533 11.0533 12.5657 11.3657Z" fill="currentColor" />
     </symbol>
     <!-- <i class="svg-icon"><svg><use href="#ic-arrow-l-d"></use></svg></i> -->
     <symbol id="ic-arrow-l-d" viewBox="0 0 24 24">
@@ -1391,6 +1641,8 @@ input::file-selector-button {
   <script src="../../assets/javascript/observer/Jsinfinite.js"></script>
   <!-- JsBuildSideNav -->
   <script src="../../assets/javascript/observer/JsBuildNav.js"></script>
+  <!-- JsUploadImages -->
+  <script src="../../assets/javascript/forms/JsUploadImages.js"></script>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
 

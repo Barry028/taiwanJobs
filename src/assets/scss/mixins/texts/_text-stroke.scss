@@ -2,7 +2,7 @@
 
 //  Mixins > Text stroke
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-// @include stroke($w: 1px, $color: currentColor)
+// @include stroke(1px,currentColor);
 @mixin stroke($w: 1px, $color: currentColor) {
   -webkit-text-stroke: $w $color;
 }
@@ -19,12 +19,17 @@
   -webkit-text-stroke-color: $strokeColor;
 }
 
-// @include text-typo($width: 4px, $stroke: transparent, $text1: $primary, $text2: $dark)
-@mixin text-typo($width: 4px, $stroke: transparent, $text1: $primary, $text2: $dark) {
-  -webkit-text-fill-color: transparent;
+// @include text-typo(2px,$dark,transparent,$secondary,$dark);
+@mixin text-typo($width: 4px,
+$stroke: transparent,
+$fill: $dark,
+$text1: $primary,
+$text2: $dark) {
+  -webkit-text-fill-color: $fill;
   -webkit-text-stroke-width: $width;
   -webkit-text-stroke-color: $stroke;
-  text-shadow: 8px 8px $text1, 20px 20px $text2;
+  text-shadow: #{$width*2} #{$width*2} $text1,
+  #{$width*5} #{$width*5} $text2;
 }
 
 // @include svg-stroke($dilate: 0.125, $erode: 4)
@@ -43,7 +48,8 @@
 }
 
 // @include text-outline($primary-800,  0.0375em, 0.15em, $dark, $primary-300,transparent);
-// @include text-outline($primary,  0.0375em, 0.15em, linear-gradient(top, rgba($grey-400, 1) 0%, rgba($grey-800, 1) 58%, rgba($dark, 1) 100%), $primary-300, transparent);
+// @include text-outline($primary,  0.0375em, 0.15em, linear-gradient(to top, rgba($grey-400, 1) 0%, rgba($grey-800, 1) 58%, rgba($dark, 1) 100%), $primary-300, transparent);
+// @include text-outline($primary,0.0375em,0.15em,linear-gradient(to top,rgba($secondary, 0.6) 0%,rgba($secondary, 1) 58%,rgba($dark, 1) 100%),$secondary,$primary);
 @mixin text-outline($color: $primary, $stroke-width: 0.0375em, $stroke-outline: 0.15em, $fill: linear-gradient(top, rgba($grey-400, 1) 0%, rgba($grey-800, 1) 58%, rgba($dark, 1) 100%), $stroke: $primary-300, $text-fill-color: transparent) {
   position: relative;
   font-weight: 700;
@@ -66,22 +72,8 @@
   }
 }
 
-// function
-@function textStroke($stroke, $color) {
-  $shadow: ();
-  $from: $stroke * -1;
-
-  @for $i from $from through $stroke {
-    @for $j from $from through $stroke {
-      $shadow: append($shadow, ($i * 1px) ($j * 1px) 0 $color, comma);
-    }
-  }
-
-  @return $shadow;
-}
-
 @mixin stroke-outline-shadow {
-  --stroke-color: _var('primary' , $primary);
+  --stroke-color: _var('primary', $primary);
   --stroke-width: .25rem;
   // letter-spacing: var(--stroke-width);
   // color: $white;

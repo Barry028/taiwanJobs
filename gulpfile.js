@@ -22,6 +22,8 @@ const reporter = require('gulp-reporter');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const url = require("postcss-url")
+
+const webp = require('gulp-webp');
 // const imagemin = require('gulp-imagemin');
 // const webp = require('gulp-webp');
 // 合併檔案
@@ -77,6 +79,30 @@ gulp.task("sass", function() {
   );
 });
 
+
+// exports.default = () => (
+//   gulp.src('src/image.jpg')
+//     .pipe(webp())
+//     .pipe(gulp.dest('dist'))
+// );
+
+
+function webpFun() {
+  return gulp.src(['./src/assets/images/*.{jpg,png}',
+    './src/assets/images/*/*.{jpg,png}',
+  ])
+    .pipe(webp())
+    .pipe(gulp.dest('./dist/image/'))
+}
+
+
+gulp.task("webp", function() {
+  return Observable.return(
+    webpFun()
+  );
+});
+
+
 function scssTask() {
   var plugins = [nested];
   return src('./src/assets/scss/*.scss')
@@ -95,7 +121,7 @@ function scssTask() {
           features: {
             'nesting-rules': true
           },
-          browsers: 'last 2 versions',
+          browsers: 'last 1 versions',
         })
       ]))
     .pipe(sass().on('error', sass.logError))
@@ -230,6 +256,7 @@ function watchTask() {
     scssTask,
     babelEs5,
     purgeSass,
+    webpFun
     // imgs
     // readToolMethod
     // browsersyncReload
@@ -240,6 +267,7 @@ exports.default = series(
   scssTask,
   babelEs5,
   purgeSass,
+  webpFun
   // imgs
   // readToolMethod
 );

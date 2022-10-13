@@ -2,9 +2,32 @@
 
 //  Layout -> Header 
 // --------------------------------------------------
+@mixin btStyleBd {
+  position: relative;
+  border-radius: $bt-style-border-radius;
+  white-space: nowrap;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: -.3125rem;
+    left: -.3125rem;
+    width: calc(100% + .625rem);
+    height: calc(100% + .625rem);
+    display: block;
+    overflow: hidden;
+    border-radius: $bt-style-border-radius;
+    box-shadow: 0 0.5rem 2.25rem 0 rgba($dark, 0.2);
+    background-color: rgba($dark, 0.04);
+    transition: background-color 200ms 200ms ease;
+    z-index: -1;
+  }
+}
+
 .t-header {
   position: relative;
-  background-color: $white;
+
+  // background-color: $white;
   border-bottom: $border 2px solid;
   width: 100%;
   transition: $transition-header;
@@ -13,29 +36,26 @@
   .t-header-top {
     background-color: $dark;
     color: $white;
-    text-align: justify;
     text-align-last: justify;
+    text-align: justify;
 
     @media (max-width: $screen-sm-min) {
       display: none;
     }
 
     .t-header-top-lf-list {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 0;
+      display: inline-flex;
     }
 
     .t-header-top-rf-list {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 0;
+      display: inline-flex;
     }
 
     .t-header-top-list-item {
       position: relative;
-      display: inline-block;
-      vertical-align: middle;
+      padding: 0.5rem 0 .375rem 0;
+      display: flex;
+      align-items: center;
 
       &.active {
         .t-header-top-list-link {
@@ -51,18 +71,17 @@
           position: absolute;
           right: -0.625rem;
           top: 50%;
-          transform: translate3D(0, -50%, 0);
+          transform: translate(0, -50%);
           width: 1px;
           height: 50%;
-          background-color: rgba($white, 0.4);
+          background-color: rgba($white, 0.24);
         }
       }
 
       .t-header-top-list-link {
         display: block;
         color: currentColor;
-        font-size: .875rem;
-        padding: .5rem 0;
+        font-size: 0.8125rem;
 
         &:hover {
           @include opacity(0.66);
@@ -71,8 +90,119 @@
     }
   }
 
-
   &.is-fix {
     @include mask-filter-v2($white, 0.3125rem, 0.0625rem);
+  }
+
+  .t-header-main {
+    padding: .5rem 0;
+    background-color: $white;
+
+    .navbar {
+      // background-color: transparent;
+   
+    }
+  }
+
+  .t-header-menu {
+    position: relative;
+    white-space: nowrap;
+
+    @extend .justify-content-between;
+
+    @extend .align-items-center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -50%;
+      background-color: $white;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .navbar {
+      
+      @include sm {
+        // display: none;
+      }
+
+      @include sm-min {
+        display: block;
+      }
+    }
+
+    .t-header-navs {
+      padding: 0.25rem;
+
+      @include gradient-directional($start-color: $primary, $end-color: $primary-800, $deg: 45deg);
+      @include btStyleBd;
+    }
+
+    .menu {
+      gap: 0.25rem;
+    }
+
+    .menu-item {
+      color: $primary-800;
+      font-size: 0.9375rem;
+
+      &:not(:last-child) {
+        // margin-bottom: 0.5rem;
+     
+      }
+
+      .menu-link {
+        background-color: rgba($white, 0.04);
+        border-color: rgba($white, 0.08);
+        border-radius: $border-radius-lg;
+        padding: 0.625rem 1rem;
+        color: $white;
+
+        @include hover {
+          background-color: rgba($white, 0.24);
+        }
+
+
+        @include focus {
+          background-color: rgba($dark, 0.12);
+        }
+
+
+        @include active {
+          background-color: rgba($dark, 0.36);
+        }
+
+
+        .svg-icon {
+          &:first-child {
+            margin-right: .75rem;
+          }
+
+          &:not(:first-child) {
+            &:last-child {
+              margin-left: .875rem;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-sub {
+      max-width: $menu-sub-max-width;
+
+      .menu-link {
+        color: $grey-800;
+        font-size: 80%;
+
+        @include menu-pointer($iconColor: $primary, $fontColor: $primary-800, $hoverBg: $primary-100);
+      }
+    }
+  }
+
+  > .navbar {
+    background-color: $white;
   }
 }

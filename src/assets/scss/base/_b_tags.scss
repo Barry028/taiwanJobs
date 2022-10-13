@@ -8,19 +8,32 @@ samp {
 }
 
 a {
-  cursor: pointer;
-  color: $link-color;
-  text-decoration: $link-decoration;
-  transition: $transition-base;
 
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+  &:not([data-decoration]):not([class*='btn']) {
+    cursor: pointer;
+    color: $link-color;
+    // text-decoration: $link-decoration;
+    text-decoration-color: transparent;
+    transition: $transition-link;
+
+    @include hover {
+      color: $link-hover-color;
+      text-decoration-color: currentcolor;
+      // filter: hue-rotate(180deg); text-decoration: $link-hover-decoration; transition: $transition-filter-link;
+    }
+    &[href^="http"]:empty:before {
+      content: attr(href);
+    }
   }
-}
 
-a[href^="http"]:empty:before {
-  content: attr(href);
+  &[data-decoration] {
+    transition: $transition-filter-link;
+
+    @include hover {
+      filter: hue-rotate(90deg);
+      transition: $transition-filter-link;
+    }
+  }
 }
 
 figure,
@@ -186,6 +199,10 @@ svg {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}
+
+img {
+  border-radius: $border-radius-xs;
 }
 
 [data-unit-before]:before,

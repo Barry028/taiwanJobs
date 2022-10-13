@@ -17,7 +17,7 @@ $cursors:         auto, default, pointer, move, zoom-in, zoom-out, help, wait, g
 // Opacity
 $opacity-values: (
 	0: 0, 
-	5: 0.05, 
+	5: 0.06, 
 	10: 0.1, 
 	15: 0.15, 
 	20: 0.2, 
@@ -192,28 +192,28 @@ $drawer: (
     if(
       isDarkMode(),
       0px 0px 30px rgba($dark, 0.1),
-      0px 1px 9px -3px rgba($dark, 0.05)
+      0px 1px 9px -3px rgba($dark, 0.06)
     ),
   bg-color: $body-bg,
   transition-speed: 0.3s,
   overlay-bg-color: if(isDarkMode(), rgba($black, 0.4), rgba($black, 0.2)),
-  overlay-animation-speed: 0.3s,
+  overlay-animation-speed: 0.25s,
 ) !default;
 
 // Menu
 $menu: (
   dropdown: (
     box-shadow: $dropdown-box-shadow,
-    z-index: 105,
-    background-color: $body-bg,
+    z-index: 109,
+    background-color: $white,
     border-radius: $border-radius,
     animation: true,
-    animation-speed: 0.3s,
+    animation-speed: 0.25s,
     animation-move-offset: 0.75rem,
   ),
   accordion: (
     indention: 1rem,
-    arrow-transition: transform 0.3s ease,
+    arrow-transition: transform 0.25s ease,
   ),
   item: (
     self: (
@@ -227,7 +227,7 @@ $menu: (
       padding-x: 1rem,
       bg-color: (
         hover: $hover-bg,
-        show: $hover-bg,
+        show: rgba($white,0.24),
         here: $hover-bg,
         active: $active-bg,
       ),
@@ -274,12 +274,12 @@ $scrollbar: (
 
 // Overlay
 $overlay: (
-  bg: rgba($black, 0.05),
+  bg: rgba($black, 0.06),
 ) !default;
 
 // BlockUI
 $blockui: (
-  overlay-bg: rgba($black, 0.05),
+  overlay-bg: rgba($black, 0.06),
 ) !default;
 
 // Rating
@@ -293,48 +293,47 @@ $rating: (
 // Social Network Colors Used With Boostrap Buttons(see: https://brandcolors.net)
 $social-colors: (
   facebook: (
-    base: #3b5998,
-    inverse: #ffffff,
-    light: rgba(#3b5998, 0.1),
-    active: darken(#3b5998, 7.5%),
+    base: $facebook,
+    inverse: $white,
+    light: rgba($facebook, 0.12),
+    active: darken($facebook, 7.5%),
   ),
   google: (
-    base: #dd4b39,
-    inverse: #ffffff,
-    light: rgba(#dd4b39, 0.1),
-    active: darken(#dd4b39, 7.5%),
+    base: $google,
+    inverse: $white,
+    light: rgba($google, 0.12),
+    active: darken($google, 7.5%),
   ),
   twitter: (
-    base: #1da1f2,
-    inverse: #ffffff,
-    light: rgba(#1da1f2, 0.1),
-    active: darken(#1da1f2, 7.5%),
+    base: $twitter,
+    inverse: $white,
+    light: rgba($twitter, 0.12),
+    active: darken($twitter, 7.5%),
   ),
   instagram: (
-    base: #e1306c,
-    inverse: #ffffff,
-    light: rgba(#e1306c, 0.1),
-    active: darken(#e1306c, 7.5%),
+    base: $instagram,
+    inverse: $white,
+    light: rgba($instagram, 0.12),
+    active: darken($instagram, 7.5%),
   ),
   youtube: (
-    base: #ff0000,
-    inverse: #ffffff,
-    light: rgba(#ff0000, 0.1),
-    active: darken(#ff0000, 7.5%),
+    base: $youtube,
+    inverse: $white,
+    light: rgba($youtube, 0.12),
+    active: darken($youtube, 7.5%),
   ),
   linkedin: (
-    base: #0077b5,
-    inverse: #ffffff,
-    light: rgba(#0077b5, 0.1),
-    active: darken(#0077b5, 7.5%),
+    base: $linkedin,
+    inverse: $white,
+    light: rgba($linkedin, 0.12),
+    active: darken($linkedin, 7.5%),
   ),
 ) !default;
 //
 
 // Layout Config
-//
 $aside-config: (
-  z-index: 101,
+  z-index: 102,
   padding-x: 1.5rem,
   menu-indention: 0.75rem,
   width: 16.5625rem
@@ -384,14 +383,7 @@ $card-group-number-of-cards: 4 !default;
 // ) !default;
 
 // // Utilities maps
-// //
-// // Extends the default `$theme-colors` maps to help create our utilities.
-
-// Come v6, we'll de-dupe these variables. Until then, for backward compatibility, we keep them to reassign.
-// scss-docs-start utilities-colors
 $utilities-colors: $theme-colors-rgb !default;
-
-// scss-docs-end utilities-colors
 
 // scss-docs-start utilities-text-colors
 $utilities-text: map-merge(
@@ -410,7 +402,6 @@ $utilities-text-colors: map-loop(
   "text"
 ) !default;
 
-// scss-docs-end utilities-text-colors
 
 // scss-docs-start utilities-bg-colors
 $utilities-bg: map-merge(
@@ -429,9 +420,8 @@ $utilities-bg-colors: map-loop(
   "bg"
 ) !default;
 
-// scss-docs-end utilities-bg-colors
 
-// scss-docs-start utilities-border-colors
+
 $utilities-border: map-merge(
   $utilities-colors,
   (
@@ -446,8 +436,6 @@ $utilities-border-colors: map-loop(
   "border"
 ) !default;
 
-// scss-docs-end utilities-border-colors
-
 $negative-spacers: if(
   $enable-negative-margins,
   negativify-map($spacers),
@@ -458,7 +446,6 @@ $gutters: $spacers !default;
 
 $utilities: () !default;
 
-// stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
     "align": (

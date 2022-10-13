@@ -92,37 +92,37 @@ $list-comment-margin-y: 2.5rem !default;
 // =========================================================
 
 // Colors
-$list-checked-item-color: $body-color !default;
-$list-checked-item-hover-color: $link-color !default;
+$list-icon-item-color: $body-color !default;
+$list-icon-item-hover-color: $link-color !default;
 
 // Width & Heights
-$list-checked-pseudo-width: 1.25rem !default;
-$list-checked-pseudo-height: 1.25rem !default;
-$list-checked-sm-pseudo-width: 1rem !default;
-$list-checked-sm-pseudo-height: 1rem !default;
-$list-checked-lg-pseudo-width: 1.5rem !default;
-$list-checked-lg-pseudo-height: 1.5rem !default;
+$list-icon-pseudo-width: 1.25rem !default;
+$list-icon-pseudo-height: 1.25rem !default;
+$list-icon-sm-pseudo-width: 1rem !default;
+$list-icon-sm-pseudo-height: 1rem !default;
+$list-icon-lg-pseudo-width: 1.5rem !default;
+$list-icon-lg-pseudo-height: 1.5rem !default;
 
 // Others
-$list-checked-pseudo-soft-bg-opacity-value: 0.1 !default;
+$list-icon-pseudo-soft-bg-opacity-value: 0.1 !default;
 
 // Type
-$list-checked-pseudo: url("data:image/svg+xml,<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13.3035 4.76425C13.5718 4.44865 14.0451 4.41027 14.3607 4.67853C14.6763 4.9468 14.7147 5.42012 14.4464 5.73572L8.07144 13.2357C7.79896 13.5563 7.31616 13.5901 7.00171 13.3105L3.62671 10.3105C3.31713 10.0354 3.28924 9.5613 3.56443 9.25172C3.83962 8.94213 4.31367 8.91424 4.62326 9.18943L7.42515 11.68L13.3035 4.76425Z' fill='#{$form-select-indicator-color}'/></svg>") !default;
+$list-checked-pseudo: url("data:image/svg+xml,<svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13.3035 4.76425C13.5718 4.44865 14.0451 4.41027 14.3607 4.67853C14.6763 4.9468 14.7147 5.42012 14.4464 5.73572L8.07144 13.2357C7.79896 13.5563 7.31616 13.5901 7.00171 13.3105L3.62671 10.3105C3.31713 10.0354 3.28924 9.5613 3.56443 9.25172C3.83962 8.94213 4.31367 8.91424 4.62326 9.18943L7.42515 11.68L13.3035 4.76425Z' fill='#{$grey-200}'/></svg>") !default;
 
 // Padding
-$list-checked-item-padding-x: $list-checked-pseudo-width + 0.75rem !default;
-$list-checked-sm-item-padding-x: $list-checked-sm-pseudo-width + 0.5rem !default;
-$list-checked-lg-item-padding-x: $list-checked-lg-pseudo-width + 1rem !default;
+$list-icon-item-padding-x: $list-icon-pseudo-width + 0.75rem !default;
+$list-icon-sm-item-padding-x: $list-icon-sm-pseudo-width + 0.5rem !default;
+$list-icon-lg-item-padding-x: $list-icon-lg-pseudo-width + 1rem !default;
 
 // Margins
-$list-checked-item-margin-y: 0.5rem !default;
-$list-checked-lg-item-margin-y: 1.25rem !default;
-$list-checked-pseudo-margin-y: 0.125rem !default;
-$list-checked-bg-pseudo-margin-y: 0.125rem !default;
-$list-checked-sm-pseudo-margin-y: 0.3125rem !default;
-$list-checked-sm-bg-pseudo-margin-y: 0.25rem !default;
-$list-checked-lg-pseudo-margin-y: 0 !default;
-$list-checked-lg-bg-pseudo-margin-y: 0.0625rem !default;
+$list-icon-item-margin-y: 0.5rem !default;
+$list-icon-lg-item-margin-y: 1.25rem !default;
+$list-icon-pseudo-margin-y: 0.125rem !default;
+$list-icon-bg-pseudo-margin-y: 0.125rem !default;
+$list-icon-sm-pseudo-margin-y: 0.3125rem !default;
+$list-icon-sm-bg-pseudo-margin-y: 0.25rem !default;
+$list-icon-lg-pseudo-margin-y: 0 !default;
+$list-icon-lg-bg-pseudo-margin-y: 0.0625rem !default;
 
 // List Pointer
 // =========================================================
@@ -143,22 +143,14 @@ $list-pointer-lg-pseudo-height: 1.75rem !default;
 $list-pointer-pseudo-soft-bg-opacity-value: 0.1 !default;
 
 // Type
-$list-pointer-pseudo: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#{$form-select-indicator-color}' d='M15.78,11.28a.75.75,0,0,1,.22.53v.38a.77.77,0,0,1-.22.53l-5.14,5.13a.5.5,0,0,1-.71,0l-.71-.71a.49.49,0,0,1,0-.7L13.67,12,9.22,7.56a.5.5,0,0,1,0-.71l.71-.7a.5.5,0,0,1,.71,0Z'/></svg>") !default;
+$list-pointer-pseudo: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='#{$grey-200}' d='M15.78,11.28a.75.75,0,0,1,.22.53v.38a.77.77,0,0,1-.22.53l-5.14,5.13a.5.5,0,0,1-.71,0l-.71-.71a.49.49,0,0,1,0-.7L13.67,12,9.22,7.56a.5.5,0,0,1,0-.71l.71-.7a.5.5,0,0,1,.71,0Z'/></svg>") !default;
 
 // Padding
-$list-pointer-item-padding-x: $list-pointer-pseudo-width + 0.5rem !default;
+$list-pointer-item-padding-x:    $list-pointer-pseudo-width + 0.5rem !default;
 $list-pointer-sm-item-padding-x: $list-pointer-sm-pseudo-width + 0.5rem !default;
 $list-pointer-lg-item-padding-x: $list-pointer-lg-pseudo-width + 1rem !default;
 
-// Margins
-$list-pointer-item-margin-y: 0.5rem !default;
-$list-pointer-lg-item-margin-y: 1.25rem !default;
-$list-pointer-pseudo-margin-y: 0.1875rem !default;
-$list-pointer-bg-pseudo-margin-y: 0.25rem !default;
-$list-pointer-sm-pseudo-margin-y: 0.3125rem !default;
-$list-pointer-sm-bg-pseudo-margin-y: 0.25rem !default;
-$list-pointer-lg-pseudo-margin-y: 0 !default;
-$list-pointer-lg-bg-pseudo-margin-y: 0.0625rem !default;
+
 
 // List Separator
 // =========================================================
@@ -218,16 +210,16 @@ $lines-item-width: $border-width !default;
 
 
 
-// List Equal Height
+// List Grid Card
 // =========================================================
 
 // Borders
-$list-equal-height-border-width: 0.125rem !default;
-$list-equal-height-border-color: $border-color !default;
+$list-grid-card-border-width: 0.125rem !default;
+$list-grid-card-border-color: $border-color !default;
 
 // Padding
-$list-equal-height-item-padding-y: 2rem !default;
-$list-equal-height-item-padding-x: $list-equal-height-item-padding-y !default;
+$list-grid-card-item-padding-y: 1.25rem !default;
+$list-grid-card-item-padding-x: $list-grid-card-item-padding-y !default;
 
 
 

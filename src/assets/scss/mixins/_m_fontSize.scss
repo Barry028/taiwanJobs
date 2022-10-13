@@ -2,6 +2,8 @@
 
 //  Mixins > font Size
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
 @mixin font-scale($params) {
   &.js-font-scale {
     &-up {
@@ -42,43 +44,47 @@
   }
 }
 
-// will override defaults
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+
 $layout-max-width: 720px;
-$font-bound-min: 320px;
+$font-bound-min:   320px;
+$font-bound-max:   720px;
+$font-lock-min:    400px  !default;
+$font-lock-max:    1000px !default;
 
-// will override defaults
-$font-bound-max: 720px;
+//  font-size
+@mixin font-size($min, $max: null, $lock-min: $font-lock-min, $lock-max: $font-lock-max, $last: null) {
+  // & {
+  //   font-size: $min;
+  // }
 
-//  default font scale bounding
-$font-lock-min: 400px !default;
-$font-lock-max: 1000px !default;
+  @if $max {
+    @media (min-width: $lock-min) and (max-width: $lock-max) {
+      & {
+        font-size: calc( #{$min} +  #{num($max) - num($min)} *  (100vw - #{$lock-min}) /  #{num($lock-max) - num($lock-min)} );
+      }
+    }
 
-// ==============================
-// Font size mixin
-// ==============================
-
-// //  font-size
-// @mixin font-size($min, $max: null, $lock-min: $font-lock-min, $lock-max: $font-lock-max) {
-//   & {
-//     font-size: $min;
-//   }
-
-//   @if $max {
-//     @media (min-width: $lock-min) and (max-width: $lock-max) {
-//       & {
-//         font-size: calc( #{$min} +  #{num($max) - num($min)} *  (100vw - #{$lock-min}) /  #{num($lock-max) - num($lock-min)} );
-//       }
-//     }
-
-//     @media (min-width: $lock-max) {
-//       & {
-//         font-size: $max;
-//       }
-//     }
-//   }
-// }
+    @if $last == true {
+      @media (min-width: $lock-max) {
+        & {
+          font-size: $max;
+        }
+      }
+    }
+  }
+}
 
 //  strip units helper function
 @function num($input) {
   @return $input / ($input * 0 + 1);
 }
+// html {
+//   @include font-size(14px, 16px, 320px, $screen-xs-min);
+//   @include font-size(16px, 18px, $screen-xs-min, $screen-sm-min);
+//   @include font-size(18px, 20px, $screen-sm-min, $screen-md-min, $last: true);
+// }
+

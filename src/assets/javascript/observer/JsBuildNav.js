@@ -15,12 +15,20 @@ const JsBuildNav = function(elements, container) {
   }
 
   // 不支援 IntersectionObserver 時，退出
-  if (!("IntersectionObserver" in window) &&
-    !("IntersectionObserverEntry" in window) &&
-    !("intersectionRatio" in window.IntersectionObserverEntry.prototype)
-  ) {
-    return;
+  // if (!("IntersectionObserver" in window) &&
+  //   !("IntersectionObserverEntry" in window) &&
+  //   !("intersectionRatio" in window.IntersectionObserverEntry.prototype)
+  // ) {
+  //   return;
+  // }
+  // 如果瀏覽器不支援 Intersection Observer 的話就引入 Polyfill
+  if (!window.IntersectionObserver) {
+      const polyfillUrl = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry'
+      const polyfillScript = document.createElement('script')
+      polyfillScript.setAttribute('src', polyfillUrl)
+      document.body.appendChild(polyfillScript)
   }
+
   //////////////////////////////
   // **   buildSideNav   ** //
   //////////////////////////////

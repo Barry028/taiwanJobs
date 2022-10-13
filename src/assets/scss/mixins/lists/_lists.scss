@@ -6,7 +6,12 @@
   list-style: none;
 }
 
-
+@mixin list-column {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: start;
+  margin-bottom: 2rem;
+}
 
 @mixin list-counter(
     $textShadow: 1vmin 0 4vmin  , 

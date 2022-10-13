@@ -2,94 +2,11 @@
 
 //  Recruit > MemberCenter
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.t-membercenter-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-@mixin btStyleBd {
-  position: relative;
-  border-radius: $bt-style-border-radius;
-  white-space: nowrap;
-
-  &:after {
-    position: absolute;
-    content: '';
-    top: -.3125rem;
-    left: -.3125rem;
-    width: calc(100% + .625rem);
-    height: calc(100% + .625rem);
-    display: block;
-    overflow: hidden;
-    border-radius: $bt-style-border-radius;
-    box-shadow: 0 0.5rem 2.25rem 0 rgba($dark, 0.2);
-    background-color: rgba($dark, 0.04);
-    transition: background-color 200ms 200ms ease;
-    z-index: -1;
-  }
-}
-
-
-
-.t-header-navs {
-  padding: 0.25rem 0.75rem;
-  white-space: nowrap;
-
-  @extend .justify-content-between;
-
-  @extend .align-items-center;
-
-  @include btStyleBd;
-
-  @include gradient-directional($start-color: $primary, $end-color: $primary-800, $deg: 45deg);
-
-  .menu {
-    gap: 0.25rem;
-  }
-
-  .menu-item {
-    color: $primary-800;
-
-    &:not(:last-child) {
-      // margin-bottom: 0.5rem;
-   
-    }
-
-    .menu-link {
-      background-color: rgba($white, 0.04);
-      border-color: rgba($white, 0.08);
-      padding: 0.625rem 1.25rem;
-      color: $white;
-
-      @include hover {
-        background-color: rgba($white, 0.2);
-      }
-
-
-      @include focus {
-        background-color: rgba($dark, 0.08);
-      }
-
-
-      @include active {
-        background-color: rgba($dark, 0.28);
-      }
-    }
-  }
-
-  .menu-sub {
-    max-width: $menu-sub-max-width;
-
-    .menu-link {
-      color: $grey-800;
-      font-size: 80%;
-
-      @include pointer($iconColor: $primary, $fontColor: $primary-800, $hoverBg: $primary-50);
-    }
-  }
-}
-
-
-.t-membercenter-section{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  .t-panel { 
-    margin-bottom: 2.5rem;
+  .t-panel {
+    margin-bottom: 1.5rem;
   }
 }

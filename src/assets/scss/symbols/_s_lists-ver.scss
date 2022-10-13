@@ -4,13 +4,14 @@
 // --------------------------------------------------
 
 .t-definition-list-v {
-    display: flex;
-    line-height: 2;
-    font-size: 0.9375rem;
-    margin-bottom: 0.875rem;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
+  display: flex;
+  line-height: 2;
+  font-size: 0.9375rem;
+  margin-bottom: 0.875rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+
   .t-definition-term-v {
     color: $grey-400;
     margin-bottom: 0.5rem;
@@ -21,9 +22,7 @@
   }
 }
 
-
-
-
+//////////////////////////////////////////////////////////////////////
 
 .t-list {
   .t-list-item {
@@ -58,6 +57,8 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////
+
 .t-list-group-v {
   margin-top: 1rem;
   display: flex;
@@ -72,6 +73,8 @@
     .t-list-group-v {}
   }
 }
+
+//////////////////////////////////////////////////////////////////////
 
 .t-list-groups-ver {
   font-size: 0.9375rem;
@@ -128,3 +131,64 @@
     }
   }
 }
+
+//////////////////////////////////////////////////////////////////////
+
+.t-list-marker {
+  display: block;
+  text-align: left;
+
+  .t-list-marker-item {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-top: 0.125rem;
+
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: inherit;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &::after {
+      height: 0.25rem;
+      width: 0.25rem;
+      background: $primary-300;
+      left: 0.25rem;
+    }
+
+    &::before {
+      height: 0.75rem;
+      width: 0.75rem;
+      background: rgba($primary-300, 0.48);
+      left: 0;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

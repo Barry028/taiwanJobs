@@ -1,3 +1,5 @@
+
+
 // Menu group
 .menu-group {
   display: flex;
@@ -23,7 +25,7 @@
 }
 
 // Menu item
-.menu-item {
+.menu-item.menu-item {
   display: block;
   padding: 0;
 
@@ -31,17 +33,19 @@
   .menu-link {
     cursor: pointer;
     display: flex;
+    color: $primary-900;
     align-items: center;
     padding: 0;
     flex: 0 0 100%;
     padding: get($menu, link, self, padding-y) get($menu, link, self, padding-x);
     transition: none;
     outline: none !important;
+    text-decoration: none;
 
     &:hover {
-      // background-color: $primary-50;
-      // color: $primary-800;
-      // transition: $transition-base;
+      background-color: $primary-50;
+      color: $primary-800;
+      transition: $transition-base;
     }
 
     // Menu Icon

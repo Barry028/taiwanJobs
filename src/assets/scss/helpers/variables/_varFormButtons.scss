@@ -1,18 +1,18 @@
 
 
-$spinner-width:           2rem !default;
-$spinner-height:          $spinner-width !default;
-$spinner-vertical-align:  -.125em !default;
-$spinner-border-width:    .25em !default;
-$spinner-animation-speed: .75s !default;
+$spinner-width:                2rem !default;
+$spinner-height:               $spinner-width !default;
+$spinner-vertical-align:       -.125rem !default;
+$spinner-border-width:         .125rem !default;
+$spinner-animation-speed:      .75s !default;
 
-$spinner-width-sm:        1rem !default;
-$spinner-height-sm:       $spinner-width-sm !default;
-$spinner-border-width-sm: .2em !default;
+$spinner-width-sm:             1rem !default;
+$spinner-height-sm:            $spinner-width-sm !default;
+$spinner-border-width-sm:      0.125em !default;
 
-$spinner-border-width:     0.185em !default;
-$spinner-animation-speed:  0.65s !default;
-$spinner-border-width-sm:  0.145em !default;
+$spinner-border-width:         0.185em !default;
+$spinner-animation-speed:      0.65s !default;
+$spinner-border-width-sm:      0.145em !default;
 
 //== Close
 $close-font-size:                   $font-size-base * 1.5 			!default;
@@ -20,17 +20,14 @@ $close-font-weight:                 $font-weight-bold 				!default;
 $close-color:                       $dark 							!default;
 $close-text-shadow:                 0 1px 0 $white 					!default;
 
-
-
 $cursor-disabled:                   not-allowed !default;
-
 
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
-$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+$btn-white-space:             null !default; 
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
@@ -43,8 +40,8 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-medium !default;
-$btn-font-weight-bold:             $font-weight-bold !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-font-weight-bold:        $font-weight-bold !default;
+
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        .66 !default;
@@ -54,12 +51,31 @@ $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-600 !default;
 
-// Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$btn-duration:                0.225s !default;
+$btn-timing:                  ease-in-out !default;
+
+// $btn-transition:              color $btn-duration $btn-timing, 
+// 																														background-color $btn-duration $btn-timing, 
+// 																														border-color $btn-duration $btn-timing, 
+// 																														box-shadow $btn-duration $btn-timing !default;
+
+$btn-transition:              color $btn-duration $btn-timing, 
+																														background-color $btn-duration $btn-timing, 
+																														border-color $btn-duration $btn-timing, 
+																														box-shadow $btn-duration $btn-timing,
+																														transform $btn-duration $btn-timing !default;
+
+// $btn-transition:              color $btn-duration $btn-timing, 
+// 																														background-color $btn-duration $btn-timing, 
+// 																														border-color $btn-duration $btn-timing, 
+// 																														box-shadow $btn-duration $btn-timing,
+// 																														transform $btn-duration $btn-timing !default;
+
+
 
 $btn-hover-bg-shade-amount:       15% !default;
 $btn-hover-bg-tint-amount:        15% !default;
@@ -69,6 +85,11 @@ $btn-active-bg-shade-amount:      20% !default;
 $btn-active-bg-tint-amount:       20% !default;
 $btn-active-border-shade-amount:  25% !default;
 $btn-active-border-tint-amount:   10% !default;
+
+
+
+
+
 // scss-docs-end btn-variables
 // scss-docs-start close-variables
 $btn-close-width:            1em !default;
@@ -83,7 +104,7 @@ $btn-close-hover-opacity:    .75 !default;
 $btn-close-focus-opacity:    1 !default;
 $btn-close-disabled-opacity: .25 !default;
 $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
-// scss-docs-end close-variables
+
 
 //== Buttons
 $btn-padding-y:               	$input-btn-padding-y 			  	!default;
@@ -91,7 +112,7 @@ $btn-padding-x:               	$input-btn-padding-x 				  !default;
 $btn-font-family:             	$input-btn-font-family 				!default;
 $btn-font-size:               	$input-btn-font-size 				  !default;
 $btn-line-height:             	$input-btn-line-height 				!default;
-$btn-radius: 										$input-btn-radius           	!default;
+$btn-radius: 										        $input-btn-radius           	!default;
 
 $btn-padding-y-xxs:            	$input-btn-padding-y-xxs 			!default;
 $btn-padding-x-xxs:            	$input-btn-padding-x-xxs 			!default;
@@ -121,27 +142,38 @@ $btn-line-height-xl:          	$input-btn-line-height-xl 			!default;
 $btn-border-width:            	$input-btn-border-width 			!default;
 $btn-focus-width:              $input-btn-focus-width           !default;
 $btn-font-weight:             	500     				               !default;
-$btn-box-shadow:              	0 .125rem .375rem rgba($dark, .12)                                 !default;
-$btn-focus-box-shadow:        	0 .125rem .375rem rgba($dark, .12) ,0 0 0 0.25rem rgba($dark, .48) !default;
+
+
+$btn-box-shadow:              	0 .125rem .375rem rgba($dark, .12)         !default;
+$btn-box-shadow-value:         0 .125rem .375rem                          !default;
+
+
+
+$btn-focus-box-shadow:        	0 .125rem .375rem rgba($dark, .12) ,
+																															0 0 0 0.25rem rgba($dark, .48) !default;
+$btn-focus-box-shadow-value:   0 0 0 0.25rem !default;
+
+
+
+
 $btn-active-box-shadow:       	0 0.625rem .25rem rgba($dark, .12)                                 !default;
-$btn-3d-shadow: 				        0 4px 0 0 rgba($white, .15),0 0 20px 0 rgba($black, .075)		         !default;
-$btn-link-disabled-color:     	$grey-600 							!default;
+$btn-3d-shadow: 				           0 4px 0 0 rgba($white, .15),0 0 20px 0 rgba($black, .075)		         !default;
+$btn-link-disabled-color:     	$grey-600 							    !default;
 
-$btn-disabled-opacity:          0.65                !default;
-$btn-block-spacing-y:           0.5rem                !default;
+$btn-disabled-opacity:          0.66                !default;
+$btn-block-spacing-y:           1rem                !default;
 
-// Allows for customizing button radius independently from global border radius
 $btn-border-radius:           	$border-radius--px 						!default;
-$btn-border-radius-xl:          $border-radius-xl--px         !default;
+$btn-border-radius-xl:         $border-radius-xl--px         !default;
 $btn-border-radius-lg:        	$border-radius-lg--px					!default;
 $btn-border-radius-md:        	$btn-border-radius 					   !default;
 $btn-border-radius-sm:        	$border-radius-sm--px					   !default;
 $btn-border-radius-xs:        	$border-radius-xs--px 					!default;
 $btn-border-radius-xxs:       	$border-radius-xxs--px					!default;
 
-$btn-transition:              	all .175s ease-in-out                   !default;
 
-$custom-forms-transition:     	background-color 0.15s ease-in-out,
+$custom-forms-transition:     	
+								background-color 0.15s ease-in-out,
 								border-color 0.15s ease-in-out,
 								box-shadow 0.15s ease-in-out 		!default;
 
@@ -163,6 +195,7 @@ $btn-white-bg-color: $white !default;
 $btn-white-bg-disabled-color: $disabled-bg-color !default;
 
 // Borders
+$btn-border-width:  2px;
 $btn-border-radius: $input-border-radius;
 $btn-border-radius-sm: $input-border-radius-sm;
 $btn-border-radius-lg: $input-border-radius-lg;
@@ -172,11 +205,17 @@ $btn-white-border-color: $btn-outline-secondary-color !default;
 $btn-white-font-weight: $font-weight-medium !default;
 
 // Shadows
-$btn-box-shadow-value: 0 4px 11px !default;
-$btn-white-box-shadow-hover: 0px 3px 6px -2px rgba($gray-600, 0.25) !default;
+$btn-box-shadow-value:                   0 4px .75rem !default;
+$btn-white-box-shadow-hover:             0px 3px 6px -2px rgba($gray-600, 0.24) !default;
+$btn-white-box-shadow-focus:             0px 6px 8px 0px  rgba($gray-700, 0.32) !default;
+$btn-white-box-shadow-active:            0px 1.5px 3px -1px rgba($gray-600, 0.16) !default;
 
-// Transitions
-$btn-transition: all $transition-timing-sm $transition-function !default;
+$t-btn-box-shadow:                       0 0.75rem 1.125rem -0.5rem        !default;
+$t-btn-box-shadow-hover:                 0 0.375rem 1rem -0.375rem       !default;
+$t-btn-box-shadow-active:                0 0.5rem 1.375rem -0.625rem         !default;
+$t-btn-box-shadow-focus:                 0 0.875rem 1.375rem -0.125rem       !default;
+
+
 
 // Button Icon
 // =========================================================

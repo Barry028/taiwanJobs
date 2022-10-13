@@ -15,14 +15,14 @@
   }
 
   @include btn-hover {
-    background-color: $color;
-    border-color: $color;
-    color: $color-hover;
+    background-color: rgba($color, 0.66);
+    border-color: rgba($color, 0.36);
+    color: color-yiq($color-hover);
   }
 
 
   @include btn-focus {
-    box-shadow: 0 0 0 4px rgba($color, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba($color, 0.36);
   }
 
 

@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 //  Layout -> Navbars 
 // --------------------------------------------------
 .quicklink,
@@ -13,6 +14,9 @@
 .navbar {
   position: relative;
   margin-bottom: $navbar-margin-bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   > .container {
     display: flex;
@@ -24,6 +28,26 @@
   .navbar-group {
     display: flex;
     align-items: center;
+
+    .navbar-item {
+      display: flex;
+      color: $primary;
+
+      .svg-icon {
+        margin-right: 0.25rem;
+      }
+
+      .t-area-txt {}
+
+      .t-area-link {
+        margin-left: 0.25rem;
+        color: $lightgrey;
+
+        &:hover {
+          color: $link;
+        }
+      }
+    }
   }
 
   .navbar-brand {
@@ -46,14 +70,6 @@
 
   .navbar-item {
     display: flex;
-
-    .t-area-link {
-      color: $lightgrey;
-
-      &:hover {
-        color: $link;
-      }
-    }
 
     @at-root .t-area-btn {
       background-color: $primary-50;
@@ -124,39 +140,95 @@
   .nav.navbar-nav {
     display: flex;
     align-items: center;
+    margin-bottom: 0;
     width: 100%;
 
+    @include sm {
+      flex-direction: column;
+    }
+
+
     .nav-item {
+      position: relative;
       text-align: center;
       text-align-last: center;
       display: block;
+      font-size: 0.875rem;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid $grey-100;
+      @include sm {
+        display: flex;
+        width: 100%;
       }
 
-      &.active {
-        color: $primary-400;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &[data-sub="true"] {
+        > .nav-link {
+
+          @include list-group-arrow($color: $primary-800, $background: $white, $size: 0.5rem);
+        }
+
+        .menu-sub {
+          .menu-item {
+            position: relative;
+
+            &:not(:last-child) {
+              @include list-group-divider($grey-100, 0.0625rem);
+            }
+
+            .menu-link {
+              padding-right: 3.5rem;
+
+              @include menu-pointer($primary, $primary-800, $primary-50);
+            }
+          }
+        }
+
+        .menu-sub-dropdown {
+          @include sm-min {
+            min-width: 12rem;
+          }
+
+
+          @include sm {
+            width: 100%;
+          }
+        }
+      }
+
+      &.show {
+        .nav-link {
+          color: $primary-400;
+        }
       }
     }
 
     .nav-link:not(.quicklink):not(.quicklink2) {
-      display: block;
-      padding-right: 0;
-      padding-left: 0;
-      font-size: 1.25rem;
-      padding: 1rem 0;
+      display: flex;
       color: $dark;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      @include sm {
+        width: 100%;
+        flex-direction: column;
+      }
+
 
       &:hover {
         color: $secondary;
       }
 
       &.nav-link-icon {
-        display: inline-block;
-        vertical-align: middle;
-        border-radius: 6px;
+        border-radius: .375rem;
         color: $white;
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
 
         &:hover {
           @include opacity(0.6);
@@ -175,6 +247,7 @@
   }
 
   &.navbar-expand {
+
     @each $breakpoint in map-keys($grid-breakpoints) {
       $next: breakpoint-next($breakpoint, $grid-breakpoints);
       $infix: breakpoint-infix($next, $grid-breakpoints);
@@ -182,27 +255,11 @@
       &#{$infix} {
         @include media-breakpoint-up($next) {
           .navbar-nav {
-            .dropdown-menu {
-              position: absolute;
-            }
-
             .nav-item {
-              display: inline-block;
-              vertical-align: middle;
+              display: flex;
 
               &:not(:last-child) {
                 border-bottom: none;
-              }
-            }
-
-            .nav-link:not(.quicklink):not(.quicklink2) {
-              font-size: 1rem;
-              padding-right: $navbar-nav-link-padding-x;
-              padding-left: $navbar-nav-link-padding-x;
-              color: $navbar-nav-link-color;
-
-              &:hover {
-                color: $navbar-nav-link-color-hover;
               }
             }
           }
@@ -212,8 +269,7 @@
           }
 
           .navbar-collapse {
-            display: inline-block;
-            vertical-align: middle;
+            display: flex;
           }
 
           .navbar-toggler {

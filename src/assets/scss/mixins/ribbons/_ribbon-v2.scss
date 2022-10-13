@@ -2,15 +2,14 @@
 
 //   Mixins > ribbon v2
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// @each $color, $value in $element-colors {
+//   @include ribbon-d($color, 1rem, $value);
+// }
 
-@mixin ribbon-d($name: "primary",
-$fontSize: 2rem,
-$color: $primary,
-$darker: darken($color, 16%),
-$darkest: darken($color, 24%),
-$strokeColor: $white) {
-  .ribbon-d-$#{name} {
+@mixin ribbon-d($name: "primary", $fontSize: 2rem, $color: $primary, $darker: darken($color, 16%), $darkest: darken($color, 24%), $strokeColor: $white) {
+  .t-ribbon-d-#{$name} {
     background: $color;
+    color: color-contrast($color);
     font-size: $fontSize;
     padding: .5em 1em;
     position: relative;

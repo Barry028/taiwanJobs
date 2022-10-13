@@ -2,7 +2,14 @@
 
 //  Components -> Buttons -> Buttons Pointers
 // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+// @each $color, $value in $element-colors {
 
-.btn--pointer {
-  @include button-pointer($color: $primary, $width: 1.25rem, $height: 1.25rem)
-}
+//   .btn--pointer[class*='btn--#{$color}'] {
+//     position: relative;
+//     @include button-pointer($color: $value, $width: 1.25rem, $height: 1.25rem);
+//   }
+
+// }
+// .btn--pointer {
+//   @include button-pointer($color: $white, $width: 1.25rem, $height: 1.25rem);
+// }

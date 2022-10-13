@@ -13,7 +13,7 @@ html {
   font-size: $font-size-pixel-base;
   transition: 0.6s ease-in;
 
-  // 如果螢幕寬度為 576px 以下 就套用 css 設定
+  // // 如果螢幕寬度為 576px 以下 就套用 css 設定
   @media (max-width: $screen-xs-min) {
     font-size: $font-size-pixel-xxs;
 
@@ -48,12 +48,12 @@ html {
     @include font-scale($font-size-pixel-lg);
   }
 
-  // 如果螢幕寬度為 1400px 以上 就套用 css 設定
+  // 如果螢幕寬度為 1600px 以上 css 設定
   @media (min-width: $screen-xl-min) {
-    font-size: $font-size-pixel-xl;
-
-    @include font-scale($font-size-pixel-xl);
+    font-size: $font-size-pixel-xxl;
+    @include font-scale($font-size-pixel-xxl);
   }
+
 }
 
 body {
@@ -70,18 +70,18 @@ body {
   transition: 0.6s ease-in;
 }
 
-// // simple (no scale)  
-// p {
-//   @include font-size(15px);
-// }
-
-// //  fluid scale based on default bounding
-// :root {
-//   @include font-size(16px, 24px);
-// }
-
-// //  fluid scale based on custom bounding
-// //  (you could also change defaults) 
-// :root {
-//   @include font-size(16px, 24px, 320px, 960px);
-// }
+a,
+button,
+input,
+textarea,
+optgroup,
+select,
+[tabindex] {
+  &:focus-visible {
+    outline: 2px dashed rgba($primary, 0.72);
+    outline-offset: 2px;
+    border-radius: $border-radius-xs;
+    transition: $transition-filter-link;
+    box-shadow: 0 0 0 6px rgba($primary , 0.12);
+  }
+}

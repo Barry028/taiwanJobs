@@ -5,6 +5,242 @@
 ------------------------------------*/
 
 .t-card {
+  // scss-docs-start card-css-vars
+  --#{$prefix}card-spacer-y: #{$card-spacer-y};
+  --#{$prefix}card-spacer-x: #{$card-spacer-x};
+  --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
+  --#{$prefix}card-border-width: #{$card-border-width};
+  --#{$prefix}card-border-color: #{$card-border-color};
+  --#{$prefix}card-border-radius: #{$card-border-radius};
+  --#{$prefix}card-box-shadow: #{$card-box-shadow};
+  --#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
+  --#{$prefix}card-cap-padding-y: #{$card-cap-padding-y};
+  --#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
+  --#{$prefix}card-cap-bg: #{$card-cap-bg};
+  --#{$prefix}card-cap-color: #{$card-cap-color};
+  --#{$prefix}card-height: #{$card-height};
+  --#{$prefix}card-color: #{$card-color};
+  --#{$prefix}card-bg: #{$card-bg};
+  --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+  --#{$prefix}card-group-margin: #{$card-group-margin};
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--#{$prefix}card-height);
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}card-bg);
+  background-clip: border-box;
+  border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+
+  @include border-radius(var(--#{$prefix}card-border-radius));
+
+  box-shadow: var(--#{$prefix}card-box-shadow);
+
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  > .list-group {
+    border-top: inherit;
+    border-bottom: inherit;
+
+    &:first-child {
+      border-top-width: 0;
+
+      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+    }
+
+    &:last-child {
+      border-bottom-width: 0;
+
+      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+    }
+  }
+
+  > .t-card-header + .list-group,
+  > .list-group + .t-card-footer {
+    border-top: 0;
+  }
+}
+
+.t-card-body {
+  flex: 1 1 auto;
+  padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+  color: var(--#{$prefix}card-color);
+}
+
+// .t-card-title {
+//   margin-bottom: var(--#{$prefix}card-title-spacer-y);
+// }
+
+.t-card-subtitle {
+  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y));
+  margin-bottom: 0;
+}
+
+.t-card-text:last-child {
+  margin-bottom: 0;
+}
+
+.t-card-link {
+  &:hover {
+    text-decoration: if($link-hover-decoration == underline, none, null);
+  }
+
+  + .t-card-link {
+    margin-left: var(--#{$prefix}card-spacer-x);
+  }
+}
+// Optional textual caps
+
+.t-card-header {
+  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
+  margin-bottom: 0;
+
+  // Removes the default margin-bottom of <hN>
+  color: var(--#{$prefix}card-cap-color);
+  background-color: var(--#{$prefix}card-cap-bg);
+  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+
+  &:first-child {
+    @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0);
+  }
+}
+
+.t-card-footer {
+  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
+  color: var(--#{$prefix}card-cap-color);
+  background-color: var(--#{$prefix}card-cap-bg);
+  border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+
+  &:last-child {
+    @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+  }
+}
+
+// Header navs
+.t-card-header-tabs {
+  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x));
+
+  // stylelint-disable-line function-disallowed-list
+  margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y));
+
+  // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x));
+
+  // stylelint-disable-line function-disallowed-list
+  border-bottom: 0;
+
+  .nav-link.active {
+    background-color: var(--#{$prefix}card-bg);
+    border-bottom-color: var(--#{$prefix}card-bg);
+  }
+}
+
+.t-card-header-pills {
+  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x));
+
+  // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x));
+
+  // stylelint-disable-line function-disallowed-list
+}
+
+// Card image
+.t-card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--#{$prefix}card-img-overlay-padding);
+
+  @include border-radius(var(--#{$prefix}card-inner-border-radius));
+}
+
+.t-card-img,
+.t-card-img-top,
+.t-card-img-bottom {
+  width: 100%;
+
+}
+
+.t-card-img,
+.t-card-img-top {
+  @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+}
+
+.t-card-img,
+.t-card-img-bottom {
+  @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+}
+
+.t-card-group {
+  // The child selector allows nested `.t-card` within `.t-card-group`
+  // to display properly.
+  > .t-card {
+    margin-bottom: var(--#{$prefix}card-group-margin);
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+
+    // The child selector allows nested `.t-card` within `.t-card-group`
+    // to display properly.
+    > .t-card {
+      // Flexbugs #4: https://github.t-com/philipwalton/flexbugs#flexbug-4
+      flex: 1 0 0%;
+      margin-bottom: 0;
+
+      + .t-card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:not(:last-child) {
+          @include border-end-radius(0);
+
+          .t-card-img-top,
+          .t-card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-right-radius: 0;
+          }
+
+          .t-card-img-bottom,
+          .t-card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        &:not(:first-child) {
+          @include border-start-radius(0);
+
+          .t-card-img-top,
+          .t-card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-left-radius: 0;
+          }
+
+          .t-card-img-bottom,
+          .t-card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.t-card {
   &[href] {
     transition: $card-transition;
 
@@ -164,72 +400,72 @@
   }
 }
 
-.t-card-sm {
-  > .t-card-body,
-  > .t-card-header,
-  > .t-card-footer,
-  > .t-card-img-overlay,
-  > .t-collapse .t-card-body {
-    padding: $card-spacer-y-sm $card-spacer-x-sm;
-  }
+// .t-card-sm {
+//   > .t-card-body,
+//   > .t-card-header,
+//   > .t-card-footer,
+//   > .t-card-img-overlay,
+//   > .t-collapse .t-card-body {
+//     padding: $card-spacer-y-sm $card-spacer-x-sm;
+//   }
 
-  .t-card-table {
-    > tbody > tr:first-child > td {
-      padding-top: $card-spacer-y-sm;
-    }
+//   .t-card-table {
+//     > tbody > tr:first-child > td {
+//       padding-top: $card-spacer-y-sm;
+//     }
 
-    > tbody > tr:last-child > td {
-      padding-bottom: $card-spacer-y-sm;
-    }
+//     > tbody > tr:last-child > td {
+//       padding-bottom: $card-spacer-y-sm;
+//     }
 
-    > :not(caption) > * > * {
-      padding-right: $card-spacer-x-sm;
-      padding-left: $card-spacer-x-sm;
-    }
-  }
-}
+//     > :not(caption) > * > * {
+//       padding-right: $card-spacer-x-sm;
+//       padding-left: $card-spacer-x-sm;
+//     }
+//   }
+// }
 
-.t-card-lg {
-  > .t-card-body,
-  > .t-card-header,
-  > .t-card-footer,
-  > .t-card-img-overlay,
-  > .t-collapse .t-card-body {
-    padding: calc(1.5 * var(--#{$prefix}card-padding-y)) calc(1.5 * var(--#{$prefix}card-padding-x));
+// .t-card-lg {
+//   > .t-card-body,
+//   > .t-card-header,
+//   > .t-card-footer,
+//   > .t-card-img-overlay,
+//   > .t-collapse .t-card-body {
+//     padding: calc(1.5 * var(--#{$prefix}card-padding-y)) calc(1.5 * var(--#{$prefix}card-padding-x));
 
-    @include media-breakpoint-down(md) {
-      padding: calc(1.5 * var(--#{$prefix}card-padding-y)) calc(1.5 * var(--#{$prefix}card-padding-x));
-    }
-  }
+//     @include media-breakpoint-down(md) {
+//       padding: calc(1.5 * var(--#{$prefix}card-padding-y)) calc(1.5 * var(--#{$prefix}card-padding-x));
+//     }
+//   }
 
-  .t-card-table {
-    > tbody > tr:first-child > td {
-      padding-top: $card-spacer-y-lg;
+//   .t-card-table {
+//     > tbody > tr:first-child > td {
+//       padding-top: $card-spacer-y-lg;
 
-      @include media-breakpoint-down(md) {
-        padding-top: calc(1.5 * var(--#{$prefix}card-padding-y));
-      }
-    }
+//       @include media-breakpoint-down(md) {
+//         padding-top: calc(1.5 * var(--#{$prefix}card-padding-y));
+//       }
+//     }
 
-    > tbody > tr:last-child > td {
-      padding-bottom: $card-spacer-y-lg;
+//     > tbody > tr:last-child > td {
+//       padding-bottom: $card-spacer-y-lg;
 
-      @include media-breakpoint-down(md) {
-        padding-bottom: calc(1.5 * var(--#{$prefix}card-padding-y));
-      }
-    }
+//       @include media-breakpoint-down(md) {
+//         padding-bottom: calc(1.5 * var(--#{$prefix}card-padding-y));
+//       }
+//     }
 
-    > :not(caption) > * > * {
-      padding-right: $card-spacer-x-lg;
-      padding-left: $card-spacer-x-lg;
+//     > :not(caption) > * > * {
+//       padding-right: $card-spacer-x-lg;
+//       padding-left: $card-spacer-x-lg;
 
-      @include media-breakpoint-down(md) {
-        padding-right: calc(1.5 * var(--#{$prefix}card-padding-x));
-        padding-left: calc(1.5 * var(--#{$prefix}card-padding-x));
-      }
-    }
-  }
-}
+//       @include media-breakpoint-down(md) {
+//         padding-right: calc(1.5 * var(--#{$prefix}card-padding-x));
+//         padding-left: calc(1.5 * var(--#{$prefix}card-padding-x));
+//       }
+//     }
+//   }
+// }
 
 // Pinned
 .t-card-pinned {
@@ -358,3 +594,10 @@
     padding: $card-spacer-y-lg $card-spacer-x-lg;
   }
 }
+
+
+
+
+
+
+

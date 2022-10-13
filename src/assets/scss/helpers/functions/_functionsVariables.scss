@@ -48,7 +48,7 @@ $cssPrefix: $prefix !default;
   @return var(--#{$prefix}#{$var}, #{$value});
 }
 
-@function cssvar($name, $prefix: tu) {
+@function cssvar($name, $prefix: tu-) {
   @return var(--#{$prefix}#{$name});
 }
 

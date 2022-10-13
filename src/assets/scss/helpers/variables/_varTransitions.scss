@@ -4,33 +4,6 @@
 // TRANSITION
 // =========================================================
 
-$transition-fade:           opacity .15s linear !default;
-$transition-collapse:       height .35s ease !default;
-$transition-collapse-width: width .35s ease !default;
-
-$transition-timing: 0.3s          !default;
-$transition-timing-sm: 0.2s       !default;
-$transition-timing-md: 0.4s       !default;
-$transition-function: ease-in-out !default;
-
-
-$transition-base:             	 all 0.25s ease-in-out 			   !default;
-$transition-fast:               all 0.125s ease-in-out          !default;
-$transition-icon:               all 0.125s ease-in-out          !default;
-$transition-fade:             	 opacity 0.15s linear 			     !default;
-$transition-collapse:         	 height 0.35s ease ,
-                                max-height 0.35s ease 				 !default;
-$transition-input:         		   all 0.125s ease-in-out 			   !default;
-$transition-input-bt: 			       all 0.25s linear				       !default;
-$transition-3d-Button:          all 0.25s ease 					       !default;
-$transition-check-mark:			      all 0.3s cubic-bezier(0.12, 0.49, 0.17, 0.87)    !default;
-$transition-side:				           all 0.125s cubic-bezier(0.12, 0.49, 0.17, 0.87)  !default;
-$transition-tabs:               all 0.25s cubic-bezier(0.12, 0.49, 0.17, 0.87)  !default;
-$transition-header:             all 0.25s ease-in-out  !default;
-
-$transition-link:                color 0.2s ease, background-color 0.2s ease !default;
-$transition:                     $transition-base     !default;
-
 $linear:      "0.250, 0.250, 0.750, 0.750" !default;
 $ease:        "0.250, 0.100, 0.250, 1.000" !default;
 $ease-in:     "0.420, 0.000, 1.000, 1.000" !default;
@@ -64,3 +37,44 @@ $easeInOutExpo: "1.000, 0.000, 0.000, 1.000" !default;
 $easeInOutCirc: "0.785, 0.135, 0.150, 0.860" !default;
 $easeInOutBack: "0.680, -0.550, 0.265, 1.550" !default;
 
+$transition-timing:         0.25s          !default;
+$transition-timing-xs:      0.125s          !default;
+$transition-timing-sm:      0.2s       !default;
+$transition-timing-md:      0.3s       !default;
+$transition-timing-lg:      0.35s       !default;
+
+
+$transition-function:       ease-in-out !default;
+$transition-ease-in-out:    ease-in-out !default;
+$transition-ease-in:        ease-in     !default;
+$transition-ease-out:       ease-out    !default;
+$transition-ease:           ease        !default;
+$transition-linear:         linear      !default;  // cubic-bezier(unquote($easingValue))
+
+
+
+
+$transition-link:               background $transition-timing $transition-ease-in-out , 
+                                width $transition-timing $transition-ease-in-out , 
+                                color $transition-timing $transition-ease-in-out , 
+                                text-decoration $transition-timing $transition-ease-in-out    !default;
+                                
+$transition-filter:             filter $transition-timing $transition-ease-in-out             !default;
+$transition-filter-link:        $transition-link, $transition-filter                          !default;
+
+$transition-base:               all 0.25s  $transition-ease-in-out       !default;
+$transition-fast:               all 0.125s $transition-ease-in-out          !default;
+$transition-icon:               all 0.125s $transition-ease-in-out          !default;
+$transition-fade:             	 opacity 0.15s linear 			     !default;
+$transition-collapse:         	 height 0.35s ease ,
+                                max-height 0.35s ease 				 !default;
+$transition-collapse-width:     width .35s ease !default;
+$transition-input:         		   all 0.125s ease-in-out 			   !default;
+$transition-input-bt: 			       all 0.25s linear				       !default;
+$transition-3d-Button:          all 0.25s ease 					       !default;
+$transition-check-mark:			      all 0.3s   cubic-bezier(0.12, 0.49, 0.17, 0.87)    !default;
+$transition-side:				           all 0.125s cubic-bezier(0.12, 0.49, 0.17, 0.87)  !default;
+$transition-tabs:               all 0.25s  cubic-bezier(0.12, 0.49, 0.17, 0.87)  !default;
+$transition-header:             all 0.25s ease-in-out  !default;
+$transition-mask:               all 600ms ease;
+$transition:                     $transition-base     !default;

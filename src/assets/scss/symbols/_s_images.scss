@@ -2,7 +2,55 @@
 
 //  Symbols  Images
 // --------------------------------------------------
-$transition-mask: all 600ms ease;
+
+
+%img-overlay-after {
+  content: '';
+
+  @include absolute-center;
+
+  display: block;
+  opacity: 0;
+
+  @include size(2rem);
+
+  transition: $transition;
+  z-index: 1;
+  pointer-events: none;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+%img-overlay-before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($dark, 0);
+  opacity: 1;
+
+  @include scale(1.0625);
+
+  border: $primary-200 0.1875rem solid;
+  transition: $transition;
+  cursor: pointer;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+%img-overlay-before-hover {
+  border-color: $primary-400;
+  background-color: rgba($dark, 0.36);
+    backdrop-filter: blur(2px);
+  @include scale(1.125);
+}
+
+
+//////////////////////////////////////////////////////////////////////
 
 .t-card-mask-v1 {
   position: relative;
@@ -172,38 +220,18 @@ $transition-mask: all 600ms ease;
   }
 }
 
+//////////////////////////////////////////////////////////////////////
+
 .t-img-overlay {
   display: block;
   position: relative;
 
   &:before {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($dark, 0);
-    opacity: 1;
-    @include scale(1.0625);
-    border: $primary-100 0.1875rem solid;
-    transition: $transition;
+    @extend %img-overlay-before;
   }
 
   &:after {
-    content: '';
-
-    @include absolute-center;
-
-    display: block;
-    opacity: 0;
-
-    @include size(2rem);
-
-    z-index: 1;
-    transition: $transition;
+    @extend %img-overlay-after;
   }
 
   &[data-overlay="upload"] {
@@ -237,10 +265,46 @@ $transition-mask: all 600ms ease;
     }
 
     &:before {
-      @include scale(1.09375);
+      @extend %img-overlay-before-hover;
     }
   }
 }
+
+//////////////////////////////////////////////////////////////////////
+
+.t-corp-img-overlay {
+  outline: 2px $white solid;
+  outline-offset: -2px;
+  border-radius: $rounded-pill;
+
+  &:before {
+    @extend %img-overlay-before;
+  }
+
+  &:after {
+    @extend %img-overlay-after;
+  }
+
+  &[data-overlay="upload"] {
+    &:after {
+      @include svg-bg-icon(imgAdd, $white, center, contain);
+    }
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+
+    &:before {
+      
+      @extend %img-overlay-before-hover;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
 
 .t-detail-corp-img {
   flex: 0 0 auto;
@@ -249,6 +313,8 @@ $transition-mask: all 600ms ease;
   width: 4rem;
   height: 4rem;
 }
+
+//////////////////////////////////////////////////////////////////////
 
 .t-panel-item-img-container {
   position: relative;

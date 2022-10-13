@@ -2,7 +2,7 @@
 //  Components -> Pulse
 // --------------------------------------------------
 
-.pulse {
+.t-pulse {
   position: relative;
 
   @each $name,
@@ -15,7 +15,7 @@
   }
 }
 
-.pulse-ring {
+.t-pulse-ring {
   display: block;
   border-radius: 2.5rem;
   height: 2.5rem;

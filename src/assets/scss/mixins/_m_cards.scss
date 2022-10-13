@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+//   Mixins > Cards
+// –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// @include card-shadow;
+@mixin card-shadow {
+  box-shadow: $shadow-card;
+
+  @include hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+// @include card($card-border-radius)
+@mixin card($border-radius: $card-border-radius) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+
+  @include card-shadow;
+
+  background-color: $card-bg;
+  border-radius: $border-radius;
+  border: none;
+}
+// @include poster(0.75rem)
+@mixin poster($padding: 0.75rem) {
+  position: relative;
+  background-color: $card-bg;
+  box-shadow: $shadow-card;
+  filter: saturate(70%) contrast(85%);
+  padding: 0.75rem;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    left: 0;
+    position: absolute;
+  }
+
+  &:before {
+    height: 4%;
+    bottom: -4%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(177deg, rgba($black, 0.24) 10%, transparent 50%), linear-gradient(-177deg, rgba($black, 0.24) 10%, transparent 50%);
+    background-size: 49% 100%;
+    background-position: 2% 0, 98% 0;
+  }
+
+  &:after {
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, alpha($white, 0.1) 0.5%, alpha($black, 0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, alpha($white, 0.1) 0.5%, alpha($black, 0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, alpha($white, 0.1) 0.5%, alpha($black, 0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, alpha($black, 0.2), transparent 10%), linear-gradient(5deg, alpha($black, 0.2), transparent 15%), linear-gradient(-5deg, alpha($black, 0.1), transparent 10%), linear-gradient(5deg, alpha($black, 0.1), transparent 10%), linear-gradient(-265deg, alpha($black, 0.2), transparent 10%), linear-gradient(-5deg, alpha($black, 0.2), transparent 15%), linear-gradient(266deg, alpha($black, 0.2), transparent 10%);
+    background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+    background-position: right top, left center, left bottom, left  top, left  top, right top, left  center, right center, right center, left  bottom;
+  }
+}

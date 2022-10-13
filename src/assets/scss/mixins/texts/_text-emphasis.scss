@@ -22,7 +22,7 @@
       height: 0.5rem;
       width: 100%;
 
-      @include gradient-x(tint-color($primary, 40%), tint-color($primary, 60%), -20%);
+      @include gradient-x(tint-color($color, 10%), tint-color($color, 20%), -20% , 120%);
 
       background-size: 100% 0.5rem;
       background-repeat: no-repeat;

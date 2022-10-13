@@ -33,7 +33,6 @@ $navys: (
 	"900": $navy-900) !default;
 
 //== DimNavys Colors
-
 $dimNavys: (
 	"25":  $dimNavy-25,
 	"50":  $dimNavy-50,
@@ -336,27 +335,36 @@ $cyans: (
 	"cyan-900": $cyan-900) !default;
 
 ////////////////////////////////////////////////////////////////////////////////
-$line: #1BB91F;
+
 //== Brand Colors
 $brand-colors: () !default;
 $brand-colors: map-merge((
 	"facebook": $facebook,
 	"twitter": $twitter,
-	"google-plus": $google-plus,
 	"instagram": $instagram,
-	"pinterest": $pinterest,
 	"youtube": $youtube,
-	"slack": $slack,
-	"dribbble": $dribbble,
-	"dropbox": $dropbox,
-	"twitch": $twitch,
-	"paypal": $paypal,
-	"behance": $behance,
-	"reddit" : $reddit,
 	"github": $github,
 	"linkedin": $linkedin,
-	"line": $line), 
-$brand-colors);
+	"line": $line
+	), $brand-colors);
+// $brand-colors: map-merge((
+// 	"facebook": $facebook,
+// 	"twitter": $twitter,
+// 	"google-plus": $google-plus,
+// 	"instagram": $instagram,
+// 	"pinterest": $pinterest,
+// 	"youtube": $youtube,
+// 	"slack": $slack,
+// 	"dribbble": $dribbble,
+// 	"dropbox": $dropbox,
+// 	"twitch": $twitch,
+// 	"paypal": $paypal,
+// 	"behance": $behance,
+// 	"reddit" : $reddit,
+// 	"github": $github,
+// 	"linkedin": $linkedin,
+// 	"line": $line
+// 	), $brand-colors);
 
 //== Theme Colors
 $theme-colors: () !default;
@@ -443,13 +451,10 @@ $element-colors: map-merge((
 	"warning":     $warning,
 	"info":        $info,
 	"dark":        $dark,
-	"grey":        $grey,
 	"lightgrey":   $lightgrey,
 	"light":       $light,
 	"white":       $white,
 	"neutral":     $neutral,
-	"navy":        $navy,
-	"dimNavy":     $dimNavy,
 ), $element-colors);
 
 //== Element Soft Colors
@@ -469,7 +474,18 @@ $element-soft-colors: map-merge((
 	"soft-dimNavy":     $dimNavy-soft,
 ), $element-soft-colors);
 
-
+//== Element Soft Colors
+$card-theme-colors: () !default;
+$card-theme-colors: map-merge((
+	"primary":     $primary,
+	"secondary":   $secondary,
+	"tertiary":    $tertiary,
+	"quaternary":  $quaternary,
+	"success":     $success,
+	"danger":      $danger,
+	"warning":     $warning,
+	"info":        $info,
+), $card-theme-colors);
 
 
 //== Theme Inverse Colors
@@ -568,6 +584,18 @@ $colors: (
 	"dimNavy":   $dimNavy
 ) !default;
 
+//== Element Soft Colors
+$toggle-theme-colors: () !default;
+$toggle-theme-colors: map-merge((
+	"primary":     $primary,
+	"secondary":   $secondary,
+	"tertiary":    $tertiary,
+	"quaternary":  $quaternary,
+	"success":     $success,
+	"danger":      $danger,
+	"warning":     $warning,
+	"info":        $info,
+), $toggle-theme-colors);
 
 
 

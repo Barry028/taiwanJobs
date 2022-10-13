@@ -40,7 +40,7 @@
 [data-link="replace"] {
   overflow: hidden;
   position: relative;
-  display: inline-block;
+  // display: inline-block;
 
   &::before,
   &::after {
@@ -85,12 +85,11 @@
   color: $info;
   padding: 0 .25rem;
   margin: 0 -.25rem;
-  line-height: 1.5;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
   &:hover {
     color: $white;
-    box-shadow: inset 200px 0 0 0 $info;
+    box-shadow: inset 4rem 0 0 0 rgba($info, 0.48);
   }
 }
 
@@ -126,14 +125,15 @@
 
 // <a href="#" data-link="under-v1">this link</a>
 [data-link="under-v1"] {
-  background: linear-gradient(to right, rgba($info, 1), rgba($info, 1)), linear-gradient(to right, rgba($red, 1), rgba($pink, 1), rgba($blue, 1));
-  background-size: 100% .25rem, 0 0.25rem;
+  background: linear-gradient(to right, rgba($info, 1), rgba($teal, 1)), 
+  linear-gradient(to right, rgba($secondary, 1), rgba($primary, 1), rgba($quaternary, 1));
+  background-size: 100% .125rem, 0 0.125rem;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 
   &:hover {
-    background-size: 0 0.25rem, 100% 0.25rem;
+    background-size: 0 0.125rem, 100% 0.125rem;
   }
 }
 

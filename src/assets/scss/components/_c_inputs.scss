@@ -1,32 +1,6 @@
-//
+@charset "utf-8";
 //  Components -> inputs 
 // --------------------------------------------------
-// select {
-//     appearance: none;
-//     background: url("../img/sel-arrow.svg") no-repeat $white;
-//     background-size: 1rem;
-//     background-position: right .375rem center;
-//     // border: #e9eef1 1px solid;
-//     // border: #DDE3E8 1px solid;
-//     border: #E5E5E5 1px solid;
-//     border-radius: 4px;
-//     box-shadow: 0 0.125rem 0.25rem rgba($dark, 0.04);
-//     cursor: pointer;
-//     display: inline-block;
-//     font-size: .875rem;
-
-//     padding: .625rem  2rem .625rem  1rem;
-
-//     &::-ms-expand {
-//         display: none;
-//     }
-
-//     @include ie9 {
-//         background: $white;
-//     }
-// }
-
-
 .input--xs {
     &.input--xs {
         font-size: .75rem;

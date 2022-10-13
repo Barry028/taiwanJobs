@@ -38,7 +38,7 @@ $under-width: 0.025em;
 @each $name, $value in $element-colors {
 
   [data-under="#{$name}"] {
-    @include text-underfont($value, 200% 0.375rem, 500, 0.125rem);
+    @include text-underfont($value, 200% 0.25rem, 500, 0.125rem);
     @include link {
 
       &:hover {

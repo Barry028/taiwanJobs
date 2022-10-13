@@ -62,20 +62,20 @@
   }
 }
 
-
+// @include absolute-center;
 @mixin absolute-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
+// @include absolute-x-center;
 @mixin absolute-x-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-
+// @include absolute-y-center;
 @mixin absolute-y-center {
   position: absolute;
   top: 50%;

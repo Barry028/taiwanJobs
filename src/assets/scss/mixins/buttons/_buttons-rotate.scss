@@ -2,18 +2,30 @@
 
 //   Mixins > Buttons rotate
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-@mixin button-rotate {
+// @include  button-icon-rotate;
+@mixin button-icon-rotate {
   @include btn-hover {
-    transform: scale(1.125);
+    transform: scale(1.0375);
 
-    >i {
+    > i {
+      transition: $btn-transition;
       transform: rotate(290deg);
     }
   }
 }
+// @include button-scale;
+@mixin button-scale {
+  @include btn-hover {
+    transform: scale(1.125);
+  }
+}
 
-
+// @include button-scale-sm;
+@mixin button-scale-sm {
+  @include btn-hover {
+    transform: scale(1.025);
+  }
+}
 // .t-fl-halftone{
 // filter: blur(2px) contrast(3000%) grayscale(1);
 // mix-blend-mode: screen;}

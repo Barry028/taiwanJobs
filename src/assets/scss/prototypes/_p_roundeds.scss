@@ -63,16 +63,17 @@
 // --radius-blob-4: 63% 37% 37% 63%/43% 37% 63% 57%;
 // --radius-blob-5: 49% 51% 48% 52%/57% 44% 56% 43%;
 
-.t-rounded {
-  border-radius: 1e5px;
+.t-rounded,
+.t-pill {
+  border-radius: 1e5px!important;
 }
 
 @for $i from 0 through 25 {
-  .rounded--#{$i * 4} {
+  .t-rounded-#{$i * 4} {
     border-radius: #{$i * 4}px !important;
   }
 
-  %rounded--#{$i * 4} {
+  %t-rounded-#{$i * 4} {
     border-radius: #{$i * 4}px !important;
   }
 }

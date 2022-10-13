@@ -72,12 +72,15 @@
 
   .t-section-heading-main {
     position: relative;
-    display: inline-block;
-    font-size: 2rem;
+
+    // display: inline-block;
+    font-size: 2.25rem;
+    letter-spacing: 1.5px;
 
     &::first-letter {
       font-size: 150%;
       color: $primary-600;
+      margin-right: 0.05em;
     }
 
     &::before {
@@ -115,6 +118,7 @@
     vertical-align: bottom;
   }
 }
+
 // Graf 
 // <h1 class="t-heading-group">
 //   <big class="t-heading">Taiwan Jobs 台灣就業通</big>
@@ -147,6 +151,7 @@
     }
   }
 }
+
 // <h1 class="t-heading-icon-block">
 // Taiwan Jobs 台灣就業通 
 //  <ul class="t-relative t-block">

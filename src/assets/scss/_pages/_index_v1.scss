@@ -4,7 +4,6 @@
 // --------------------------------------------------
 
 .t-index-sec {
-  
   .t-wrapper {
     position: relative;
     padding-bottom: 4rem;
@@ -53,7 +52,7 @@
         border-radius: 10px;
       }
 
-      .mian-serach-form {
+      .main-serach-form {
         position: relative;
         text-align: left;
 
@@ -569,42 +568,4 @@
   }
 
   .main-footer {}
-}
-
-.hot-links-list {
-  margin: 1.25rem auto 0;
-
-  // font-size: 0;
-  text-align: left;
-  max-width: 80%;
-
-  @media (max-width: $screen-sm-min) {
-    margin-top: 5.55rem;
-  }
-
-  .links-list-title {
-    font-size: 1.125rem;
-    margin-right: 1.5rem;
-
-    @include in-bk-mid;
-  }
-
-  .links-list-item {
-    @include in-bk-mid;
-
-    margin: .5rem 0;
-
-    @media (max-width: $screen-sm-min) {
-      margin: .25rem 0;
-    }
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-
-    .links-list-link {
-      color: $primary-700;
-      font-size: 1.125rem;
-    }
-  }
 }

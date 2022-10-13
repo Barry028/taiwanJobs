@@ -8,14 +8,14 @@ $variable-prefix:           tu-              !default;
 $prefix:                    $variable-prefix !default;
 $cssPrefix:                 $prefix          !default;
 
-$primary:				                                          v('primary' , $primary)       !default;
+$primary:				                                           v('primary' , $primary)       !default;
 $secondary:			                                          v('secondary' , $secondary)   !default;
-$tertiary:				                                        v('tertiary' , $tertiary)     !default;
-$quaternary:			                                        v('quaternary' , $quaternary) !default;
-$success:				                                          v('success' , $success)       !default;
-$danger:				                                          v('danger' , $danger)         !default;
-$warning:				                                          v('warning' , $warning)       !default;
-$info:					                                          v('info' , $info)             !default;
+$tertiary:				                                          v('tertiary' , $tertiary)     !default;
+$quaternary:			                                         v('quaternary' , $quaternary) !default;
+$success:				                                           v('success' , $success)       !default;
+$danger:				                                            v('danger' , $danger)         !default;
+$warning:				                                           v('warning' , $warning)       !default;
+$info:					                                             v('info' , $info)             !default;
 
 $navy:                                                     #1C3879 ;
 $dimNavy:                                                  #414796 ;
@@ -23,7 +23,7 @@ $neutral:                                                  #1E2540 ;
 // @debug $primary;
 
 
-$primary-25: 																				  v('primary-25' , $primary-25) !default;
+$primary-25: 																				                     v('primary-25' , $primary-25) !default;
 $primary-50:                                          v('primary-50' , $primary-50) !default;
 $primary-100:                                         v('primary-100' , $primary-100) !default;
 $primary-200:                                         v('primary-200' , $primary-200) !default;

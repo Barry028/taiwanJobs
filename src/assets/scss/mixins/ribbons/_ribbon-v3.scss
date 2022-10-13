@@ -3,7 +3,6 @@
 //   Mixins > ribbon v3
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 @mixin t-ribbon($background: $primary) {
-  .t-ribbon {
     position: relative;
     z-index: 1;
     transition: $transition-base;
@@ -34,5 +33,4 @@
       bottom: -4px;
       background-image: -webkit-linear-gradient(right, transparent 0%, rgba($dark, 0.4) 100%);
     }
-  }
 }
