@@ -20,10 +20,10 @@
                     offset: 300,
                     speed: 100
                 });
-                // Botostrap Tootltips
-                $('[data-toggle="tooltip"]').tooltip();
-                // Botostrap Popover
-                $('[data-toggle="popover"]').popover();
+                // // Botostrap Tootltips
+                // $('[data-toggle="tooltip"]').tooltip();
+                // // Botostrap Popover
+                // $('[data-toggle="popover"]').popover();
 
 
                 // if ($('#Header').length) {
