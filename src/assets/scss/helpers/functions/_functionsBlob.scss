@@ -52,7 +52,7 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025 0
 @function tt-svg($string) {
   @return url("data:image/svg+xml,#{url-encode($string)}");
 }
-
+$ceaser-legacy: true;
 @function ceaser($type: $ease) {
   @if $ceaser-legacy {
     $easingValue: returnEaseType($type);

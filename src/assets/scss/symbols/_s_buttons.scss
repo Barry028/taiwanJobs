@@ -44,7 +44,69 @@
 }
 
 //////////////////////////////////////////////////////////////////////
+.t-eye-toggle {
+  .t-eye-toggle-input {
+    display: none;
 
+    .svg-icon {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        background-color: $dark;
+        width: .125rem;
+        height: 100%;
+        transform: rotate(45deg);
+        opacity: 0.4;
+      }
+    }
+
+    &:checked {
+      + .t-eye-toggle-label {
+        background-color: $tertiary-400;
+
+        .svg-icon {
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .t-eye-toggle-label {
+    @extend .btn;
+
+    padding: 0.25rem 1rem;
+    background-color: $grey-100;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    @include text-shaded(0.25px, $tertiary-100 ,10);
+    .svg-icon {
+      margin-right: 0.5rem;
+      margin-left: 0;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        background-color: $dark;
+        width: .125rem;
+        height: 100%;
+        transform: rotate(45deg);
+        opacity: 0.4;
+      }
+    }
+
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
 .t-star {
   cursor: pointer;
   color: $grey-50;
@@ -58,6 +120,8 @@
   use {
     pointer-events: none;
   }
+
+  
 
   @include active {
     color: $yellow;

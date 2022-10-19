@@ -2,6 +2,33 @@
 
 //   Mixins > Box Shadow
 // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// 
+@mixin shadow-box-v1($bg: $grey-100, $shadow: $grey-700, $w: .25rem) {
+  background-color: $bg;
+  box-shadow: 0 $w $bg, 0 -#{$w} $bg, #{$w} 0 $bg, -#{$w} 0 $bg,
+    0 0 0 #{$w} $shadow, 0 #{$w * 3} 0 #{$w} $shadow, 0 #{$w * 5} $shadow,
+    -#{$w * 2} 0 $shadow, #{$w * 2} 0 $shadow, -#{$w * 2} #{$w * 3} $shadow,
+    #{$w * 2} #{$w * 3} $shadow, 0 -#{$w * 2} $shadow;
+  // margin: 8px auto;
+}
+
+// .shadow {
+//   margin: 0 auto;
+//   display: inline-block;
+//   text-align: center;
+//   padding: 0.5rem 1.5rem;
+//   @include shadow-box-v1($bg: #eee, $shadow: #999, $w: 4px);
+// }
+
+
+@mixin shadow-box($value) {
+    box-shadow: 1px 1px $dark, 2px 2px $dark, 3px 3px $dark, 4px 4px $dark,
+    5px 5px $dark, 6px 6px $dark, 7px 7px $dark, 8px 8px $dark, 9px 9px $dark,
+    10px 10px $dark, 12px 12px $dark, 13px 13px $dark, 14px 14px $dark,
+    15px 15px $dark, 16px 16px $dark, 17px 17px $dark, 18px 18px $dark,
+    19px 19px $dark, 20px 20px $dark;
+}
+
 
 @mixin box-shadow($value) {
   box-shadow: $value;

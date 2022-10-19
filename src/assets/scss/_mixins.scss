@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 //==  Mixins
+@import "mixins/_m_states";
 @import "mixins/_m_backends";
 @import "mixins/_m_dir";
 @import "mixins/_m_alert";
@@ -65,7 +66,7 @@
 @import "mixins/_m_vendor-prefixes";
 @import "mixins/_m_visibility";
 @import "mixins/_m_shapes";
-@import "mixins/_m_states";
+
 @import "mixins/_m_skeletons";
 @import "mixins/_m_symbols";
 @import "mixins/_m_triangle";
@@ -73,5 +74,8 @@
 @import "mixins/_m_wraps";
 @import "mixins/_m_selectBg";
 @import "mixins/_m_pattern";
+@import "mixins/_m_toggle";
+@import "mixins/_m_checkbox";
+// @import "mixins/_m_pixels";
 
 

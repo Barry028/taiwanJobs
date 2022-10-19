@@ -35,6 +35,15 @@ $under-width: 0.025em;
   @extend %t-underline;
 }
 
+
+[data-underline="custom"] {
+@include text_gradient_under(
+  $color1: #84fab0, 
+  $color2: #8fd3f4, 
+  $w: 100%, 
+  $h: 0.5rem);
+}
+
 @each $name, $value in $element-colors {
 
   [data-under="#{$name}"] {

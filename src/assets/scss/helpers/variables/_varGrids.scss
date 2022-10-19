@@ -66,7 +66,7 @@ $content-spacing: (
 
 // Header
 $header-config: (
-  z-index: 97,
+  z-index: 99,
   bg-color: $body-bg,
   box-shadow: if(isDarkMode(), none, 0px 10px 30px 0px rgba(82,63,105,0.08)),
   border-color: if(isDarkMode(), $gray-100, #F2F2F2),

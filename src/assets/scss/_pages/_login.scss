@@ -30,7 +30,9 @@ $background_color_4: #DEE2E6;
 }
 
 .t-login-card {
-  background-color: $background_color_2;
+  position: relative;
+  background-color: $white;
+  border-radius: $border-radius;
 
   .t-login-heading {
     position: relative;
@@ -86,6 +88,17 @@ $background_color_4: #DEE2E6;
       font-weight: 400;
     }
   }
+
+
+
+ .t-form {
+    padding: 2rem 1.5rem;
+
+      .t-form-inner {
+        line-height: 1.75;
+    }
+  }
+  
 
   .form-help {
     a {
