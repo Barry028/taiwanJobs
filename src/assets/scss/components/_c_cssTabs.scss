@@ -493,6 +493,10 @@
         transition: $transition-base;
         padding: $tab-pill-item-padding;
         border-radius: $tab-pill-border-radius;
+
+        @include sm{
+          font-size: 1.25rem
+        }
       }
 
       ~ .t-tab-contents {
@@ -507,6 +511,8 @@
       letter-spacing: $tab-letter-spacing;
       color: $primary-900;
       background: $primary-50;
+      font-weight: 700;
+      font-size: 1.3125rem;
     }
 
     @for $i from 1 through 5 {

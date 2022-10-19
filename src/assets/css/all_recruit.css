@@ -955,7 +955,6 @@
 html {
   height: 100%;
   font-size: 16px;
-  transition: 0.6s ease-in;
 }
 
 @media (max-width: 576px) {
@@ -1194,7 +1193,6 @@ body {
   min-height: 100%;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  transition: 0.6s ease-in;
 }
 
 a:focus-visible,
@@ -18624,10 +18622,17 @@ input[type=button].btn--block {
   border-radius: 100000px;
 }
 
+@media (max-width: 768px) {
+  .t-tab-pill > .t-tab-nav .t-tab-nav-item {
+    font-size: 1.25rem;
+  }
+}
 .t-tab-pill > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5), .t-tab-pill > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4), .t-tab-pill > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3), .t-tab-pill > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2), .t-tab-pill > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1) {
   letter-spacing: 0.03125rem;
   color: #1c2449;
   background: #edf0fa;
+  font-weight: 700;
+  font-size: 1.3125rem;
 }
 
 .t-tab-pill-top > .t-tab-nav {
