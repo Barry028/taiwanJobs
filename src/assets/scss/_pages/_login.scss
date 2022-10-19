@@ -69,7 +69,7 @@ $background_color_4: #DEE2E6;
   }
 
   .t-login-title {
-    @include bg-gradient-circles($primary, $primary-300);
+    @include bg-gradient-circles($primary-600, $primary-400);
 
     color: $white;
     font-size: 2.25rem;
@@ -89,16 +89,13 @@ $background_color_4: #DEE2E6;
     }
   }
 
-
-
- .t-form {
+  .t-form {
     padding: 2rem 1.5rem;
 
-      .t-form-inner {
-        line-height: 1.75;
+    .t-form-inner {
+      line-height: 1.75;
     }
   }
-  
 
   .form-help {
     a {

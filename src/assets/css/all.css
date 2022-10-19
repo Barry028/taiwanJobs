@@ -35469,7 +35469,7 @@ a[data-bd-under=neutral]:hover, a[data-bd-under=neutral]:focus {
 }
 
 .t-login-card .t-login-title {
-  background-image: repeating-radial-gradient(circle at 15% center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(209, 3, 16, 0.16) 10%, rgba(209, 3, 16, 0.16) 16%), linear-gradient(to right, #e36868, #D10310);
+  background-image: repeating-radial-gradient(circle at 15% center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(171, 6, 10, 0.16) 10%, rgba(171, 6, 10, 0.16) 16%), linear-gradient(to right, #da3535, #ab060a);
   color: #ffffff;
   font-size: 2.25rem;
   font-weight: 500;
