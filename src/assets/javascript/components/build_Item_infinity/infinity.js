@@ -1,5 +1,6 @@
 var url =
   "https://cdn.jsdelivr.net/gh/Barry028/TurboFrame@main/src/json/taiwan_zipCode.json";
+  
 var fetchByPromise = function(url, method) {
   // 發起請求,返回給調用者一個 Promise 對象
   return new Promise(function(resolve, reject) {
@@ -116,9 +117,9 @@ function jsonFormatAndBuild(json) {
     let newArrObj = [];
     for (let i = 0; i < data.length; i++) {
       let newData = data[i];
-                 console.log( newData['Area'])
+      console.log(newData['Area'])
       if (!maps[newData['City']]) {
-           console.log( newData.length)
+        console.log(newData.length)
         newArrObj.push({
           ID: newData['City'],
           Area: newData['Area'],
@@ -171,22 +172,22 @@ function jsonFormatAndBuild(json) {
       const values = Object.values(data[i]);
 
       let formatObj = function(lensData) {
-        const newFormatObj = {
-          _lens_: getUniqueId(i) // 產生變數 id (因為一次只載入 20 筆)
-        };
-        let obj = dataArray.forEach(function(item, i) {
-          const newContent = {};
-          let name = item;
-          for (let i = 0; i < lensData; i++) {
-            objN = Object.assign(newFormatObj, {
-              [dataArray[i]]: values[i],
-            })
-          }
-          return objN;
-        })
-        return newFormatObj;
-      }
-      // console.log( formatObj(lensData))
+          const newFormatObj = {
+            _lens_: getUniqueId(i) // 產生變數 id (因為一次只載入 20 筆)
+          };
+          let obj = dataArray.forEach(function(item, i) {
+            const newContent = {};
+            let name = item;
+            for (let i = 0; i < lensData; i++) {
+              objN = Object.assign(newFormatObj, {
+                [dataArray[i]]: values[i],
+              })
+            }
+            return objN;
+          })
+          return newFormatObj;
+        }
+        // console.log( formatObj(lensData))
       inner = options.html;
       var inner = stringBind(inner, formatObj(lensData));
       element.className = options.buildTagClassName;

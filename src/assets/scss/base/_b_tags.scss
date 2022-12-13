@@ -9,7 +9,7 @@ samp {
 
 a {
 
-  &:not([data-decoration]):not([class*='btn']) {
+  // &:not([data-decoration]):not([class*='btn']) {
     cursor: pointer;
     color: $link-color;
     // text-decoration: $link-decoration;
@@ -24,7 +24,7 @@ a {
     &[href^="http"]:empty:before {
       content: attr(href);
     }
-  }
+  // }
 
   &[data-decoration] {
     transition: $transition-filter-link;

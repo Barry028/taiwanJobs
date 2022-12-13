@@ -63,8 +63,6 @@
 
             $(window).on('load', function() {
 
-                $.TuCore.helpers.detectIE();
-
                 // paceOptions = {
                 //   ajax: false, // disabled
                 //   document: false, // disabled

@@ -1220,7 +1220,7 @@ samp {
   margin: 0.5rem 0;
 }
 
-a:not([data-decoration]):not([class*=btn]) {
+a {
   cursor: pointer;
   color: #D10303;
   text-decoration-color: transparent;
@@ -1229,12 +1229,12 @@ a:not([data-decoration]):not([class*=btn]) {
   transition: background 0.25s ease-in-out, width 0.25s ease-in-out, color 0.25s ease-in-out, text-decoration 0.25s ease-in-out, -webkit-text-decoration 0.25s ease-in-out;
 }
 
-a:not([data-decoration]):not([class*=btn]):hover, a:not([data-decoration]):not([class*=btn]).hover {
+a:hover, a.hover {
   color: #950202;
   text-decoration-color: currentcolor;
 }
 
-a:not([data-decoration]):not([class*=btn])[href^=http]:empty:before {
+a[href^=http]:empty:before {
   content: attr(href);
 }
 
@@ -18594,16 +18594,45 @@ input[type=button].btn--block {
   color: #121328;
 }
 
+.t-tab-line-bottom > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1), .t-tab-line-top > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1) {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.t-tab-line-bottom > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2), .t-tab-line-top > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2) {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.t-tab-line-bottom > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3), .t-tab-line-top > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3) {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.t-tab-line-bottom > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4), .t-tab-line-top > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4) {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.t-tab-line-bottom > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5), .t-tab-line-top > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5) {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 .t-tab-line-bottom .t-tab-nav-item:after {
   bottom: -0.125rem;
 }
 
-.t-tab-line-bottom .t-tab-line-top > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5):after, .t-tab-line-bottom .t-tab-line-top > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4):after, .t-tab-line-bottom .t-tab-line-top > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3):after, .t-tab-line-bottom .t-tab-line-top > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2):after, .t-tab-line-bottom .t-tab-line-top > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1):after, .t-tab-line-bottom > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5):after, .t-tab-line-bottom > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4):after, .t-tab-line-bottom > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3):after, .t-tab-line-bottom > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2):after, .t-tab-line-bottom > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1):after {
+.t-tab-line-bottom > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5):after, .t-tab-line-bottom > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4):after, .t-tab-line-bottom > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3):after, .t-tab-line-bottom > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2):after, .t-tab-line-bottom > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1):after {
   width: 100%;
 }
 
 .t-tab-line-top .t-tab-nav-item:after {
   top: -0.25rem;
+}
+
+.t-tab-line-top > input:nth-child(5):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(5):after, .t-tab-line-top > input:nth-child(4):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(4):after, .t-tab-line-top > input:nth-child(3):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(3):after, .t-tab-line-top > input:nth-child(2):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(2):after, .t-tab-line-top > input:nth-child(1):checked ~ .t-tab-nav > .t-tab-nav-item:nth-child(1):after {
+  width: 100%;
 }
 
 .t-tab-pill > .t-tab-nav {
@@ -31354,10 +31383,12 @@ a[data-bd-under=neutral]:hover, a[data-bd-under=neutral]:focus {
 }
 
 .t-list .t-list-item .t-list-link-sm {
+  color: #850912;
   font-size: 80%;
 }
 
 .t-list .t-list-item .t-list-link {
+  color: #381021;
   display: block;
 }
 
@@ -32541,6 +32572,10 @@ a[data-bd-under=neutral]:hover, a[data-bd-under=neutral]:focus {
   padding: 1.5rem 0 2rem 0;
 }
 
+.t-search-bar-section .t-search-inner {
+  width: 100%;
+}
+
 @media (max-width: 992px) {
   .t-search-bar-section .t-search-inner .t-form-inline {
     flex-wrap: wrap;
@@ -33110,8 +33145,8 @@ a[data-bd-under=neutral]:hover, a[data-bd-under=neutral]:focus {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
   text-align: left;
-  max-width: 80%;
   margin-top: 2rem;
 }
 
@@ -35331,6 +35366,10 @@ a[data-bd-under=neutral]:hover, a[data-bd-under=neutral]:focus {
 
 .t-index .main-duty-list {
   padding: 2.75rem 0 4rem;
+}
+
+.t-index .main-duty-list img {
+  width: 100%;
 }
 
 .t-index .main-type-list {

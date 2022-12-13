@@ -34,6 +34,7 @@
     transition: $transition;
     font-size: 0.9375rem;
 
+
     @include hover {
       background-color: $gray-50;
     }
@@ -44,10 +45,12 @@
     }
 
     .t-list-link-sm {
+      color: $primary-700;
       font-size: 80%;
     }
 
     .t-list-link {
+      color: $primary-900;
       display: block;
 
       &:not(:last-child) {
@@ -143,7 +146,6 @@
     padding-left: 1.5rem;
     padding-top: 0.125rem;
 
-
     &:not(:last-child) {
       margin-bottom: 0.5rem;
     }
@@ -175,20 +177,3 @@
 }
 
 //////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,9 +6,7 @@
 
   // JsYoutubeThumb API Youtube 截圖
   const JsYoutubeThumb = (function() {
-
     var video, results;
-
     return {
 
       init: function(elems, size) {
@@ -409,10 +407,10 @@
       ignorePageElID: 'detailHeader'
     });
 
-    // const CorpLogo = new JsImagePlaceholder(".js-placeholder", {
-    //   bgColor: '#d2d3d9',
-    //   textColor: '#4b5166'
-    // });
+    const CorpLogo = new JsImagePlaceholder(".js-placeholder", {
+      bgColor: '#d2d3d9',
+      textColor: '#4b5166'
+    });
 
     let stars = CoreCollects('.t-btn-fav');
     let moneys = CoreSeparated('[data-separated]');

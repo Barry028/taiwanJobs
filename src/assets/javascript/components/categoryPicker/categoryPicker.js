@@ -73,9 +73,7 @@ const JsCategoryPicker = function(element, config) {
   const _init = function _init() {
     that.uid = JsUtils.getUniqueId('category_picker');
     _loadDate(data);
-
     _openClick(element);
-
     JsUtils.data(element).set('category-picker', that);
   };
 
@@ -257,7 +255,6 @@ const JsCategoryPicker = function(element, config) {
     element.addEventListener('keydown', function(e) {
       let lv1Cnt = element.getElementsByClassName('list-level-one')[0];
       let lv2Cnt = element.getElementsByClassName('list-level-two--focus')[0];
-      console.log(e)
       switch (e.keyCode) {
         case 37: // 左
           if (e.target.className === 't-checkbox-group') {

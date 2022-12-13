@@ -432,8 +432,10 @@
       }
 
       @for $i from 1 through 5 {
-        >input:nth-child(#{$i}):checked~.t-tab-nav>.t-tab-nav-item:nth-child(#{$i}) {
+        > input:nth-child(#{$i}):checked~.t-tab-nav>.t-tab-nav-item:nth-child(#{$i}) {
           @extend %tab-line-check-item;
+          font-size: 1.25rem;
+          font-weight: 500;
         }
       }
     }
@@ -472,7 +474,7 @@
       @for $i from 1 through 5 {
         >input:nth-child(#{$i}):checked~.t-tab-nav>.t-tab-nav-item:nth-child(#{$i}) {
           &:after {
-            @extend %tab-line-check-item-bottom;
+            @extend %tab-line-check-item-top;
           }
         }
       }

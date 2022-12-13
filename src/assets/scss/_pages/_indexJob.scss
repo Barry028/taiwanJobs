@@ -131,6 +131,10 @@ $hero-box-shadow: 0 0.625rem 1.875rem $primary-100;
   .main-duty-list {
     padding: $section-padding;
 
+    img {
+      width: 100%;
+    }
+
     .t-job-card {}
   }
 
